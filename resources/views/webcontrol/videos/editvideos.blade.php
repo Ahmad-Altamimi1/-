@@ -105,7 +105,7 @@
                         <div class="col-md-12 col-sm-12 col-12">
                             <p for="tital">صورة الفيديو (ان لم تقم برفع صورة جديدة سيتم عرض الصورة القديمة)</p>
                             <img style="max-height: 200px; text-align: center;"
-                                src="{{ asset('storage/' . $video->IMG . '') }}" alt="">
+                                src="{{ asset('uploads/' . $video->IMG . '') }}" alt="">
                             <input type="file" id="IMG" name="IMG" class="dropify" />
                             <div class="row">
                                 <div style="color: red;" class="col-sm">
@@ -167,6 +167,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
     <script>
         let editor;
         ClassicEditor

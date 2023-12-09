@@ -307,7 +307,7 @@ class postcontrol extends Controller
         $saveddata = new Post;
         $saveddata->TOPIC = request('TOPIC');
         $group=groups::where('id','=', request('TOPIC'))->first();
-        
+
                                                     $string = $group->TAG;
                                                     $str_arr = explode(',', $string);
                                                     $lastNonEmpty = null;
@@ -416,7 +416,12 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         $saveddata->DATE_SCHEDULER = request('DATE_SCHEDULER');
         $saveddata->TEXT2 = 0;
         $saveddata->TEXT3 = 0;
-        $saveddata->IMG = request('IMG')->store('uploads', 'public');
+        if (request('IMG')) {
+            $image = request('IMG');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/'), $imageName);
+            $saveddata->IMG = "uploads/". $imageName;
+        }
         $saveddata->WRITER = Auth::user()->id;
         $saveddata->EDITOR = Auth::user()->id;
         $saveddata->REED = 0;
@@ -481,7 +486,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         $imageName = time() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('uploads/'), $imageName);
         $saveddata->IMG = $imageName;
-        
+
         $saveddata->TEXT = request('TEXT');
         $saveddata->REED = 0;
         $saveddata->save();
@@ -681,7 +686,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         $id->REFERENCES = request('REFERENCES');
         $id->Monthsofpregnancy =  request('ofpregnancy');
         if (request('IMG')) {
-           
+
             $image = request('IMG');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('uploads/'), $imageName);
@@ -691,7 +696,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         return redirect("posts");
     }
 
-    
+
     public function editpicture(pictures $id)
     {
 
@@ -767,7 +772,10 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         $id->DESCRIPTION = request('DESCRIPTION');
         $id->TEXT1 = request('TEXT');
         if (request('IMG')) {
-            $id->IMG = request('IMG')->store('uploads', 'public');
+            $image = request('IMG');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/'), $imageName);
+            $id->IMG = "uploads/". $imageName;
         }
         $id->update();
         return redirect("videos");
@@ -872,11 +880,11 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         $tags = poststags::all();
 
         $sortingOption = request('sort');
-      
+
         switch ($sortingOption) {
             case 'popularity':
                 $postintag = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->paginate(4);
-                
+
                 break;
             case 'new':
                 $postintag = Post::where("TAG", "=", $tag)->orderBy('DATE_SCHEDULER', 'asc')->paginate(4);
@@ -889,7 +897,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
 $pageid= $tag;
 
         $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
-        
+
         if ($request->ajax()) {
             return view('pages.tag', compact('postintag', 'pageid', 'popularpost', 'tags'));
         }
@@ -900,7 +908,7 @@ $pageid= $tag;
         $post = Post::findOrFail($id);
         $postongroup = groups::where('id', '=', $post->TOPIC)->first();
         $tags = poststags::all();
-        
+
         $string = $postongroup->TAG;
         $Categories = explode(',', $string);
 
@@ -912,7 +920,7 @@ $pageid= $tag;
         }
         $similar_and_popular_post = Post::where("TAG", "=", $post->TAG)->orderBy('SHOW', 'asc')->first();
 
-        $recentposts = Post::where('id',"!=",$id)->orderBy('DATE_SCHEDULER', 'asc')->take(4)->get(); 
+        $recentposts = Post::where('id',"!=",$id)->orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $secondPost = Post::where('id', '>', $post->id)
             ->orderBy('id', 'asc')
             ->first();
@@ -921,7 +929,7 @@ $previousPost = Post::where('id', '<', $post->id)
     ->first();
     $sharebutton = \Share::page(
         url('/المقال/'.$id),
-        
+
     )->facebook()->linkedin()->telegram()->twitter();
         return view('pages.details',compact('post', 'previousPost', 'secondPost', 'recentposts', 'tags', 'sharebutton', 'similar_and_popular_post', 'Otherposts', 'Categories'));
 
@@ -969,7 +977,7 @@ $previousPost = Post::where('id', '<', $post->id)
         return redirect("posts/groups");
     }
 
-    
+
     public function destroypictures(pictures $id)
     {
         File::delete("storage/" . $id->IMG1);

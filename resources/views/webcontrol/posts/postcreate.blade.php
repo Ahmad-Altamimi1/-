@@ -10,7 +10,7 @@
             display: none;
         }
     </style>
-    <?php 
+    <?php
     header('Access-Control-Allow-Credentials: true');
     ?>
     <section style="direction: rtl; text-align: right;" class="hk-sec-wrapper">
@@ -49,7 +49,7 @@
                         </div>
                     </div>ْ
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-12 col-sm-12 col-12">
                             <div class="form-group">
                                 <label for="tital">تصنيف المقال</label>
@@ -111,39 +111,45 @@
                         {{-- <div class="row"> --}}
 
                             {{-- <div class="col-md-12 col-sm-12 col-12"> --}}
-                                <main class="page w-100 ">
-                                    <h4>ارفع الصورة</h4>
-                                    <!-- input file -->
-                                    <div class="box">
-                                        <input type="file" id="file-input" accept="image/*">
-                                    </div>
-                                    <!-- leftbox -->
-                                    <div class="box-2">
-                                        <div class="result hide" style="height: 500px" ></div>
-                                    </div>
-                                    <!--rightbox-->
-                                    <div class="box-2 img-result hide">
-                                        <!-- result of crop -->
-                                        <img id="myImage"  class="cropped" src="" style="height: 500px" alt="">
-                                    </div>
-                                    <!-- input file -->
-                                    <div class="box">
-                                        <div class="options ">
-                                            <input type="number" class="img-w" value="300" min="100" 
-                                                max="1200" />
-                                        </div>
-                                        <!-- save btn -->
-                                        <div id="oldImage" style="display: none;"></div>
-                                        <button class="btn save hide">تأكيد الصورة</button>
-                                        <input type="hidden" name="image_data" id="image_data" />
-                                    </div>
-                                </main>
+
 
                             {{-- </div> --}}
                         {{-- </div> --}}
-                    </div>
+                    </div> -->
+                    <div class="row">
 
-                    {{-- <div class="row">
+<div class="col-md-12 col-sm-12 col-12">
+    <div class="form-group">
+        <label for="tital">تصنيف المقال</label>
+        <select id="TOPIC" name="TOPIC" class="form-control  @error('TOPIC') is-invalid @enderror select2">
+            <option value="" selected></option>
+            @foreach ($groups as $group)
+            <option value="{{ $group->id }}">
+                <?php
+                        $string = $group->TAG;
+                        $str_arr = explode(',', $string);
+                        ?>
+                @foreach ($str_arr as $stag)
+                @foreach ($poststags as $singletag)
+                @if ($stag == $singletag->id)
+                {{ $singletag->TITLE . '>' }}
+                @endif
+                @endforeach
+                @endforeach
+            </option>
+            @endforeach
+        </select>
+        @error('TOPIC')
+        <span class="invalid-feedback" role="alert">
+            <strong>تصنيف المقال مطلوب</strong>
+        </span>
+        @enderror
+    </div>
+</div>
+
+
+</div>
+                     <div class="row">
 
                     <div class="col-md-12 col-sm-12 col-12">
                         <label for="tital">صورة المقال</label>
@@ -156,23 +162,10 @@
                             @enderror
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
+                <input type="hidden" name="ofpregnancy" value="1">
 
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-12">
-                            <div class="form-group pt-3">
-                                <label for="ofpregnancy">هل هو من أشهر الحمل ؟</label>
-                                <select id="ofpregnancy" class="form-control @error('ofpregnancy') is-invalid @enderror"
-                                    name="ofpregnancy">
-                                    <option value="1" {{ old('ofpregnancy') == '1' ? 'selected' : '' }}>نعم</option>
-                                    <option value="0" {{ old('ofpregnancy') == '0' ? 'selected' : '' }} selected>لا
-                                    </option>
-                                </select>
-
-                            </div>
-                        </div>
-                    </div>
 
 
                     <div class="row">

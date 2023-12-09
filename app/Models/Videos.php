@@ -10,3 +10,7 @@ class Videos extends Model
     public $timestamps = false;
     use HasFactory;
 }
+function tag()
+{
+    return $this->belongsTo(poststags::class, 'TAG', "id");
+}

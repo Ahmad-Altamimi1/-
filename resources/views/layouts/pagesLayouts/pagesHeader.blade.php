@@ -38,6 +38,8 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -227,7 +229,7 @@
                                     <div class="ltn__main-menu">
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
-                                            <li class="menu-icon"><a href="#"> طبكم</a>
+                                            <li class="menu-icon"><a href="/postss/groups/1/show"> طبكم</a>
                                             <li class="menu-icon"><a href="#"> مستشار أنجابي</a>
                                             <li class="menu-icon"><a href="#">مدونة أنجاب </a>
                                             <li class="menu-icon"><a href="#">منوعات أنجابي </a>
@@ -328,7 +330,7 @@
                                                 <!-- </ul>
                                             </li> -->
 
-                                            <li><a href="{{ route('home') }}"> أنجابي TV</a></li>
+                                            <li><a href="{{ route('allTV') }}"> أنجابي TV</a></li>
                                     </div>
                                 </nav>
                             </div>
@@ -387,7 +389,7 @@
                 <div class="ltn__utilize-menu-head">
                                <div class="" style="text-align: right ;width:100%;margin:8px 0;padding: 10px 0;">
 
-                       جميع ألاقسام
+                       جميع ألأقسام
                     </div>
                     <button class="ltn__utilize-close">×</button>
                 </div>
@@ -397,7 +399,35 @@
                 <div class="ltn__utilize-menu">
                     <ul>
                         <li><a href="route('tv_show')"> أنجابي TV</a></li>
-       @foreach ($allgroups as $group)
+                        <?php
+$groupstitles = [];
+$allgroupnew = [];
+
+foreach ($allgroups as $group) {
+    if (!in_array($group->TITLE, $groupstitles)) {
+        $mergedTags = $group->TAG;
+
+        foreach ($allgroups as $groupseconde) {
+            if ($group->TITLE == $groupseconde->TITLE && $group->id != $groupseconde->id) {
+                $mergedTags .= ',' . $groupseconde->TAG;
+            }
+        }
+
+        $group->TAG = $mergedTags;
+        $allgroupnew[] = $group;
+        $groupstitles[] = $group->TITLE;
+    }
+}
+?>
+
+<?php
+// print_r($groupstitles)
+
+?>
+
+       @foreach ($allgroupnew as $group)
+
+
                                                         <?php
                                                         $string = $group->TAG;
                                                         $str_arr = '';
@@ -412,6 +442,7 @@
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
                                                                     @if (in_array($singletag->id, $str_arr))
+
                                                                         <li>
                                                                             <a href="{{ route('showtag', ['tag' => $singletag->id]) }}"
                                                                                 style="; text-align: right; ">

@@ -21,10 +21,11 @@ use App\Models\Post;
 */
 Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");
-Route::get('TV', [HomeController::class, "tv_show"])->name("tv_show");
+Route::get('TV/{id}', [HomeController::class, "tv_show"])->name("tv_show");
+Route::get('allTV', [HomeController::class, "allTV"])->name("allTV");
 Route::get('/showtag/{tag}', [postcontrol::class, "showtag"])->name("showtag");
-Route::get('/posts/groups/{id}/show', [GroupController::class, "showgroup"])->name("showgroup");
-Route::get('/posts/{id}', [postcontrol::class,"show"])->name('ShoWarticle');
+Route::get('/postss/groups/{id}/show', [GroupController::class, "showgroup"])->name("showgroup");
+Route::get('/postss/{id}', [postcontrol::class,"show"])->name('ShoWarticle');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -109,7 +110,7 @@ Route::get('/showdayaction', [App\Http\Controllers\webcontrol::class, 'showdayac
 Route::post('/showdaysaction', [App\Http\Controllers\webcontrol::class, 'showdaysaction'])->name('showdaysaction');
 Route::patch('/tags/delete/{id}', [App\Http\Controllers\postcontrol::class, 'destroytags'])->name('destroytags');
 
-// start user side route    
+// start user side route
 // Start Slider in Admin DashBored|
 Route::get('/sliders', [SlidersController::class, 'show'])->name('showSlider');
 Route::get('/slider/create', [SlidersController::class, 'create'])->name('slider.create');

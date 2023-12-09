@@ -2,11 +2,45 @@
 
 @section('content')
 
+<style>
+    .tags{
+display: flex;
+gap: 20px;
+margin: 19px 0;
+    }
+    .tag{
+        border:1px solid #eee;
+        border-radius:6px;
+        color:black;
+        padding:5px 12px ;
+cursor: pointer;
+    }
+.tag:hover{
+    background:pink;
 
+}
+</style>
     <section style="direction: rtl; text-align: right;" class="hk-sec-wrapper">
         <h5 class="hk-sec-title">إضافة مجموعة جديد</h5>
-        <p>ترتيب التصنيفات في المجموعة حسب الترتيب الذي تختاره</p>
-        
+        <div class="row">
+    <div class="tags">
+    <?php
+$groupstitles = [];
+?>
+
+@foreach($groups as $group)
+    @if (!in_array($group->TITLE, $groupstitles))
+        <p class="tag" data-group-id="{{ $group->id }}">{{ $group->TITLE }}</p>
+        <?php
+            $groupstitles[] = $group->TITLE;
+        ?>
+    @endif
+@endforeach
+
+    </div>
+</div>
+<p>ترتيب التصنيفات في المجموعة حسب الترتيب الذي تختاره</p>
+
         <div class="row">
             <div class="col-sm">
                 <form action="/storegroups" enctype="multipart/form-data" method="POST">
@@ -17,7 +51,7 @@
                                 <label for="tital">عنوان المجموعة</label>
                                 <input id="tital" type="text"
                                     class="form-control @error('tital') is-invalid @enderror" name="tital"
-                                    value="{{ old('tital') }}" autocomplete="tital" autofocus>
+                                    value="" autocomplete="tital" autofocus>
                                 @error('tital')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>عنوان المجموعة مطلوب</strong>
@@ -59,7 +93,7 @@
                                 </div>
 
                             </div>
-                            
+
                         @endfor
                     </div>
 
@@ -167,7 +201,7 @@
             </div>
         </div>
     </section> --}}
-    {{-- 
+    {{--
     @foreach ($groups as $post)
         <div class="modal fade" id="exampleModal{{ $post->id }}" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -195,6 +229,34 @@
             </div>
         </div>
     @endforeach --}}
+<script >
+ document.addEventListener('DOMContentLoaded', function () {
+    console.log('dd');
+        var tags = document.querySelectorAll('.tag');
+        tags.forEach(function (tag) {
+            tag.addEventListener('click', function () {
+                var groupId = this.getAttribute('data-group-id');
+                var groupTitle = this.textContent.trim();
+                var titleInput = document.getElementById('tital');
+
+                titleInput.value = groupTitle;
+
+                // If you want to do something with groupId, you can use it here
+                // For example, you can make an AJAX request to get more details based on groupId
+                // var xhr = new XMLHttpRequest();
+                // xhr.open('GET', '/get-group-details/' + groupId, true);
+                // xhr.onreadystatechange = function () {
+                //     if (xhr.readyState === 4 && xhr.status === 200) {
+                //         var response = JSON.parse(xhr.responseText);
+                //         // Do something with the response
+                //     }
+                // };
+                // xhr.send();
+            });
+        });
+    });
+
+</script>
 
 
 @endsection

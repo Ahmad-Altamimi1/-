@@ -5,6 +5,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Models\Homeslider;
 use App\Models\poststags;
+use App\Models\Videos;
 
 use function PHPSTORM_META\map;
 
@@ -44,9 +45,38 @@ class HomeController extends Controller
 
         return view('pages.home',compact('slidercontent','recentposts', 'tags', 'Monthsofpregnancy', 'havevideo', 'defaultPosts', 'first_tag'));
     }
-    public function tv_show(){
-        return view('pages.TV');
+    public function tv_show($id){
+        $video=Videos::find($id);
+        $string = $video->TAG;
+        $Categories = explode(',', $string);
+        try {
+            $video->increment('show');
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+        $Othervideos= Videos::where("TAG", "=", $video->TAG)->orderBy('SHOW', 'asc')->take(4)->get();
+        $similar_and_popular_post = Videos::where("TAG", "=", $video->TAG)->orderBy('SHOW', 'asc')->first();
+        $tags = poststags::all();
+
+        $recentposts = Videos::where('id',"!=",$id)->orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
+        $secondPost = Videos::where('id', '>', $video->id)
+            ->orderBy('id', 'asc')
+            ->first();
+$previousPost = Videos::where('id', '<', $video->id)
+    ->orderBy('id', 'desc')
+    ->first();
+    $sharebutton = \Share::page(
+        url('/'.$id),
+
+    )->facebook()->linkedin()->telegram()->twitter();
+        return view('pages.TV',compact('video', 'previousPost', 'secondPost', 'recentposts', 'tags', 'sharebutton', 'similar_and_popular_post', 'Othervideos', 'Categories'));
     }
+        public function alltv(){
+        $lastvideos=Videos::take(3)->get();
+        $videos=Videos::all();
+        return view('pages.alltv',compact('videos','lastvideos'));
+    }
+
     public function getPosts(Request $request)
     {
         $isPopular = $request->input('isPopular', false);
@@ -61,5 +91,5 @@ class HomeController extends Controller
 
         return response()->json(['html' => $view]);
     }
-    
+
 }

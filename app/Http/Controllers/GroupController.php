@@ -11,7 +11,14 @@ class GroupController extends Controller
     public function showgroup($id)
     {
         $group = groups::findorfail($id);
-        $string = $group->TAG;
+        $title=$group->TITLE;
+        $tagsinallgroups="";
+        foreach (groups::all() as  $value) {
+         if ($value->TITLE==$title) {
+            $tagsinallgroups .= $value->TAG .",";
+         }
+        }
+        $string = $tagsinallgroups . $group->TAG;
         $tagsId = explode(',', $string);
         $alltags = poststags::all();
         $tags = [];

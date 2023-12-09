@@ -1,6 +1,10 @@
 @extends('layouts.dashboard')
 
 @section('content')
+<?php
+// phpinfo();
+?>
+
     <section style="text-align: right; " class="hk-sec-wrapper">
         <h5 class="hk-sec-title">المقالات والأخبار (<?php echo count($posts); ?>)</h5>
         <a class="btn btn-primary" type="button" href="/posts/create">إضافة مقال جديد</a>

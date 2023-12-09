@@ -12,7 +12,7 @@
         <h5 class="hk-sec-title">إضافة فيديو جديد</h5>
         <div class="row">
             <div class="col-sm">
-   
+
                 <form action="/storevideos" enctype="multipart/form-data" method="POST">
                     @csrf
 
@@ -159,6 +159,8 @@
             </div>
         </div>
     </section>
+<script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
+        
     <script>
         let editor;
         ClassicEditor

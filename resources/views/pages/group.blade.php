@@ -95,6 +95,23 @@
                 transform: translateY(2rem);
                 opacity: 0;
             }
+            .card-img-top{
+                aspect-ratio:6/4
+            }
+            .more{
+                width: 100%;
+                display: flex;
+                justify-content:center;
+                border-radius:6px;
+margin:20px ;
+            }
+            .more a {
+                padding: 8px 70px;
+                background:#d54368;
+                color:white;
+                border-radius:6px;
+                
+            }
         </style>
         <div class="col-lg-12 ">
             <div class="section-title-area text-center">
@@ -140,37 +157,40 @@
                     <div class="col-lg-12 mb-4">
                         <div class="section-title-area text-center">
                             <h2 class="section-title section-title-border">{{ $tag->TITLE }}</h2>
-                            {{ $tag->id }}
 
                         </div>
                     </div>
                     {{-- @dd($tag->id) --}}
-                        @foreach (\App\Models\Post::where('TAG','=',$tag->id) as $post)
+                    <div class="content" style="    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 25px;
 
-                        <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">sssssssss</a>
-                            <div class="card">
-                                <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image">
+">
+                        @foreach (\App\Models\Post::where('TAG','=',$tag->id)-> take(4)->get() as $post)
+                        <div class="card" style="max-width:200px ;margin-left:10px:">
+                            <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">
+                            <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->TITLE }}</h5>
                                     <p class="card-text">{{ $post->DESCRIPTION }}</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
-
+                            </a>
 
                             </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
+                    <div class="more">
                     <a href="{{ route('showtag', ['tag' => $tag->id]) }}">
                         اظهار المزيد
                     </a>
+                    </div>
                 @endforeach
 
 
 
-
             </div>
-
-
 
         </div>
     @endsection

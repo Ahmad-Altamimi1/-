@@ -46,6 +46,40 @@
                     </div>
 
 
+                    <!-- <div class="text-right row">
+                        <div class="text-right col-md-12 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label for="TOPIC">تصنيف المقال</label>
+                                <select id="TOPIC" name="TOPIC"
+                                    class="form-control  @error('TOPIC') is-invalid @enderror select2">
+                                    <option value="" selected></option>
+                                    @foreach ($groups as $group)
+                                        <option @if ($group->id == $post->TOPIC) {{ 'selected' }} @endif
+                                            value="{{ $group->id }}">
+                                            <?php
+                                            $string = $group->TAG;
+                                            $str_arr = explode(',', $string);
+                                            ?>
+                                            @foreach ($str_arr as $stag)
+                                                @foreach ($poststags as $singletag)
+                                                    @if ($stag == $singletag->id)
+                                                        {{ $singletag->TITLE . '>' }}
+                                                    @endif
+                                                @endforeach
+                                            @endforeach
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @error('TOPIC')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>تصنيف المقال مطلوب</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                    </div> -->
+
                     <div class="text-right row">
                         <div class="text-right col-md-12 col-sm-12 col-12">
                             <div class="form-group">
@@ -79,7 +113,6 @@
                         </div>
 
                     </div>
-
                     <div class="row">
 
                         <div class="col-md-12 col-sm-12 col-12">
@@ -97,18 +130,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
-    <div class="col-md-12 col-sm-12 col-12">
-        <div class="form-group pt-3">
-            <label for="ofpregnancy">هل هي من أشهر الحمل ؟</label>
-            <select id="ofpregnancy" class="form-control @error('ofpregnancy') is-invalid @enderror" name="ofpregnancy">
-                <option value="1" {{  $post->Monthsofpregnancy == '1' ? 'selected' : '' }}>نعم</option>
-                <option value="0" {{ $post->Monthsofpregnancy  == '0' ? 'selected' : '' }} >لا</option>
-            </select>
-           
-        </div>
-    </div>
-</div>
+<input type="hidden" name="ofpregnancy" value="1">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-12">
                             <div class="form-group pt-3">
