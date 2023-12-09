@@ -40,20 +40,20 @@ h3{
                         <div class="ltn__breadcrumb-list">
                             <ul style="display: flex;flex-direction:row-reverse ;justify-content:center">
                                 <br>
-                                <span><a href="{{ route('home') }}">الصفحة الرئيسية</a> 
-                                
+                                <span><a href="{{ route('home') }}">الصفحة الرئيسية</a>
+
                                      @foreach ($Categories as $stag)
                                     @foreach ($tags as $singletag)
                                     @if ($stag == $singletag->id  )
                                     <span> <a href="{{ count($singletag->posts) > 0 ? route('showtag', ['tag' => $singletag->id]) : '#' }}"
 >  {{  '/'. $singletag->TITLE  }}</a></span>
-                                   
+
                                     @endif
                                     @endforeach
                                     @endforeach
-                            
+
                                 </span>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -123,31 +123,31 @@ h3{
                                 </div>
                             </div> --}}
 
-                            
+
                         </div>
-                        
+
                         <!-- blog-tags-social-media -->
                         <div class="ltn__blog-tags-social-media mt-20 row" style="flex-direction: row-reverse;">
                             <div class="ltn__tagcloud-widget col-lg-7" style="flex-direction: row-reverse;">
                                 <h4>:الفئات</h4>
                                 <h4></h4>
 
-                                
+
                                 <ul >
                                                               @foreach ($tags as $tag)
-                                    
+
                          @if (count($tag->posts)>0)
                                     <li>
     <a href="{{ route('showtag', ['tag' => $tag->id]) }}">
         {{ $tag->TITLE }}
     </a>
 </li>
-      
+
                                 @else
-                                    
+
                                 @endif
                                 @endforeach
-                             
+
                                 </ul>
                             </div>
                             <div class="ltn__social-media text-right col-lg-5" style="flex-direction: row-reverse;">
@@ -170,26 +170,26 @@ h3{
                 <div class="row ltn__product-slider-item-four-active slick-arrow-1">
                     <!-- ltn__product-item -->
                     @foreach ($Otherposts as $Otherpost)
-                        
+
                     <div class="col-12">
                         <div class="ltn__product-item text-center">
                             <div class="product-img">
                                 <a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}"><img src="{{ asset('../'. $Otherpost->IMG) }}" alt="#"></a>
                                 <div class="product-badge">
-                                
+
                                 </div>
-                               
+
                             </div>
                             <div class="product-info">
                                 <h2 class="product-title"><a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}">{{ $Otherpost->TITLE }}</a></h2>
                                 <div class="product-price">
-                                 
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
-              
+
                 </div>
             </div>
         </div>
@@ -202,11 +202,11 @@ h3{
                                 <div class="blog-prev-next-info" style="display: flex; flex-direction : column">
                                     <p><a href="{{ route('ShoWarticle', ['id' => $previousPost->id]) }}"> </a></p>
 
-                                
+
                                    <h3 class="ltn__blog-title"><a href="{{ route('ShoWarticle', ['id' => $previousPost->id]) }}"></a></h3>
 
                                 </div>
-                                
+
                                 @endisset
                             </div>
 
@@ -217,7 +217,7 @@ h3{
                                     <p><a href="{{ route('ShoWarticle', ['id' => $secondPost->id]) }}"> </a></p>
 
 
-                      
+
                                     <h3 class="ltn__blog-title"><a href="{{ route('ShoWarticle', ['id' => $secondPost->id]) }}"></a></h3>
                                 </div>
                                 <div class="blog-prev-next-img">
@@ -228,13 +228,13 @@ h3{
                             </div>
                         </div>
                         <hr>
-                    
+
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <aside class="sidebar-area blog-sidebar ltn__right-sidebar">
                         <!-- Search Widget -->
-                   
+
                         <!-- Author Widget -->
                         <div class="widget ltn__author-widget">
                          <h2 class="ltn__widget-title">المقالات المشابهه</h2>
@@ -261,7 +261,7 @@ h3{
 
                                 <ul>
                                     @foreach ($recentposts as $recentpost)
-                                        
+
                                     <li>
                                         <div class="popular-post-widget-item clearfix">
                                             <div class="popular-post-widget-img">
@@ -275,23 +275,23 @@ h3{
                                                             <a href="#">by: {{ $recentpost->WRITER }}</a>
                                                         </li>
                                                                         <li class="ltn__blog-comment">
-                                                                            
+
                                         <span style="font-size: 12px" >  <i class="fa fa-eye" aria-hidden="true"></i> {{ $recentpost->SHOW }}</span>
-                                     
+
                                     </li>
                                                         <li>
                                                             {{-- <span>{{ \Carbon\Carbon::parse($recentpost->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}</span> --}}
                                                         </li>
-                                      
+
                                                     </ul>
                                                 </div>
-                                                
+
                                                 <h6 class="ltn__blog-title blog-title-line " style="text-align: right"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}" class="recnt_title"> {{ $recentpost->TITLE }}</a></h6>
                                             </div>
                                         </div>
                                     </li>
                                     @endforeach
-                                
+
                                 </ul>
                             </div>
                         <!-- Category Widget -->
@@ -305,14 +305,14 @@ h3{
         {{ $tag->TITLE }}
     </a>
 </li>
-      
+
                                 @else
-                                    
+
                                 @endif
-                                    
+
                              @endforeach
 
-                       
+
                             </ul>
                         </div>
                         <!-- Tagcloud Widget -->
@@ -325,7 +325,7 @@ h3{
                                     <li><a href="#" title="Facebook"><i class="icon-social-facebook"></i></a></li>
                                     <li><a href="#" title="Twitter"><i class="icon-social-twitter"></i></a></li>
                                     <li><a href="#" title="Pinterest"><i class="icon-social-pinterest"></i></a></li>
-                                    <li><a href="#" title="Instagram"><i class="icon-social-instagram"></i></a></li>                                    
+                                    <li><a href="#" title="Instagram"><i class="icon-social-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -339,9 +339,9 @@ h3{
                                             <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <p>Carsafe - #Gutenberg ready 
+                                            <p>Carsafe - #Gutenberg ready
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                 Theme for Car Service, Auto Parts, Car Dealer available on
                                                 @website
                                                 <a href="https://website.net">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
@@ -360,9 +360,9 @@ h3{
                                             <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <p>Carsafe - #Gutenberg ready 
+                                            <p>Carsafe - #Gutenberg ready
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                 Theme for Car Service, Auto Parts, Car Dealer available on
                                                 @website
                                                 <a href="https://website.net">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
@@ -381,9 +381,9 @@ h3{
                                             <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <p>Carsafe - #Gutenberg ready 
+                                            <p>Carsafe - #Gutenberg ready
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                 Theme for Car Service, Auto Parts, Car Dealer available on
                                                 @website
                                                 <a href="https://website.net">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
@@ -407,7 +407,7 @@ h3{
                         <div class="widget ltn__banner-widget d-none">
                             <a href="shop.html"><img src="../pages/img/banner/1.jpg" alt="Banner Image"></a>
                         </div>
-                        
+
                     </aside>
                 </div>
             </div>
@@ -416,47 +416,7 @@ h3{
     <!-- PAGE DETAILS AREA END -->
 
     <!-- BRAND LOGO AREA START -->
-    <div class="ltn__brand-logo-area  ltn__brand-logo-1 section-bg-1 pt-35 pb-35 plr--5">
-        <div class="container-fluid">
-            <div class="row ltn__brand-logo-active">
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/1.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/2.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/3.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/4.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/5.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/1.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/2.png" alt="Brand Logo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- BRAND LOGO AREA END -->
     <!-- Add these links in the head section of your HTML file -->
 <link rel="stylesheet" href="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}">

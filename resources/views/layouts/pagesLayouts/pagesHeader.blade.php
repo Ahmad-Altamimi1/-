@@ -221,6 +221,24 @@
                                         style="margin: 0;">
                                     <ul id="searchResults"></ul>
                                 </div> --}}
+                                <?php
+                                use App\Models\Post;
+                                use App\Models\poststags;
+
+                                $First_trimester = Post::where('Monthsofpregnancy', '=', '1')
+                                    ->take(3)
+                                    ->get();
+                                $Second_trimester = Post::where('Monthsofpregnancy', '=', '1')
+                                    ->skip(3)
+                                    ->take(3)
+                                    ->get();
+                                $Third_trimester = Post::where('Monthsofpregnancy', '=', '1')
+                                    ->skip(6)
+                                    ->take(3)
+                                    ->get();
+                                    $alltags_from_home=poststags::all();
+                                    $tags=$alltags_from_home
+                                ?>
                             </div>
                         </div>
                         <div class="col header-menu-column">
@@ -229,31 +247,14 @@
                                     <div class="ltn__main-menu">
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
-                                            <li class="menu-icon"><a href="/postss/groups/1/show"> طبكم</a>
-                                            <li class="menu-icon"><a href="#"> مستشار أنجابي</a>
-                                            <li class="menu-icon"><a href="#">مدونة أنجاب </a>
-                                            <li class="menu-icon"><a href="#">منوعات أنجابي </a>
-                                            <li class="menu-icon"><a href="#">صحة العائلة </a>
-                                            <li class="menu-icon"><a href="#">العناية الشخصية</a>
-                                                <?php
-                                                use App\Models\Post;
-                                                use App\Models\poststags;
+                                            <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'مستشار أنجابي')->first()->id]) }}">مستشار أنجابي</a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'مدونة أنجاب')->first()->id]) }}">مدونة أنجاب </a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'منوعات أنجابي')->first()->id]) }}">منوعات أنجابي </a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
 
-                                                $First_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                                    ->take(3)
-                                                    ->get();
-                                                $Second_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                                    ->skip(3)
-                                                    ->take(3)
-                                                    ->get();
-                                                $Third_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                                    ->skip(6)
-                                                    ->take(3)
-                                                    ->get();
-                                                    $alltags_from_home=poststags::all();
-                                                    $tags=$alltags_from_home
-                                                ?>
-                                            <li class="menu-icon"><a href="#">أشهر الحمل </a>
+                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
                                                 <ul class="mega-menu">
 
                                                     <li style="text-align: right"><a href="#">الثلث الثالث </a>

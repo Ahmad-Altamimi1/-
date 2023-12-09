@@ -8,7 +8,7 @@
 .img-hover-zoom--blur a img:hover {
   transition: transform 1s, filter 2s ease-in-out;
   filter: blur(2px);
-  
+
   transform: scale(1.2);
 }
 
@@ -38,7 +38,7 @@
 </style>
 
     <!-- BREADCRUMB AREA START -->
-    <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---"  
+    <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---"
     style="background-image:url(../{{ $postintag[0]->tag->IMG}})">
         <div class="container">
             <div class="row">
@@ -50,7 +50,7 @@ if (count($postintag)>0) {
 }else {
     $lastTagTitle =$postintag[0]->tag->TITLE;
 }
-   
+
 @endphp
 
                 <div class="col-lg-12">
@@ -68,7 +68,7 @@ if (count($postintag)>0) {
         </div>
     </div>
     <!-- BREADCRUMB AREA END -->
-    
+
     <!-- PRODUCT DETAILS AREA START -->
     <div class="ltn__product-area mb-100">
         <div class="container">
@@ -87,7 +87,7 @@ if (count($postintag)>0) {
                             <li>
                                <div class="short-by text-center">
                                     <select class="nice-select" id="sorting-options">
-     
+
     <option value="default">ترتيب عشوائي</option>
     <option value="popularity" data-sort="popularity"> الترتيب حسب الأكثر قراءه</option>
     <option value="new" data-sort="created_at">الترتيب حسب الأجدد</option>
@@ -99,7 +99,7 @@ if (count($postintag)>0) {
                                         <a class="active show" data-bs-toggle="tab" href="#liton_product_grid"><i class="icon-grid"></i></a>
                                         <a data-bs-toggle="tab" href="#liton_product_list"><i class="icon-menu"></i></a>
                                     </div>
-                                </div> 
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -117,13 +117,13 @@ if (count($postintag)>0) {
                                                 <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" alt="#" ></a>
                                                 <div class="product-badge">
                                                     @if ($popularpost->id==$postintags->id)
-                                                        
+
                                                     <ul>
                                                         <li class="badge-2">ألأكثر قراءه</li>
                                                     </ul>
                                                     @endif
                                                 </div>
-                                           
+
                                             </div>
                                             <div class="product-info">
                                                 <h2 class="product-title"><a href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
@@ -135,7 +135,7 @@ if (count($postintag)>0) {
                                         </div>
                                     </div>
                                     @endforeach
-                               
+
                                     <!--  -->
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ if (count($postintag)>0) {
 
                                               <div class="product-badge">
                                                     @if ($popularpost->id==$postintags->id)
-                                                        
+
                                                     <ul>
                                                         <li class="badge-2">ألأكثر قراءه</li>
                                                     </ul>
@@ -161,18 +161,18 @@ if (count($postintag)>0) {
                                                 </div>
                                             </div>
 
-                                            
+
                                            <div class="product-info">
                                                 <h2 class="product-title"><a href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
                                                 <div class="product-price">
 {{ \Carbon\Carbon::parse($postintags->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}
                                             </div>
-                                              
+
                                                 <div class="product-brief">
                                                            {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =20, $end = '...') }}
 </p>
                                                 </div>
-                                           
+
                                             </div>
                                         </div>
                                         @endforeach
@@ -212,47 +212,7 @@ if (count($postintag)>0) {
     <!-- PRODUCT DETAILS AREA END -->
 
     <!-- BRAND LOGO AREA START -->
-    <div class="ltn__brand-logo-area  ltn__brand-logo-1 section-bg-1 pt-35 pb-35 plr--5">
-        <div class="container-fluid">
-            <div class="row ltn__brand-logo-active">
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/1.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/2.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/3.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/4.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/5.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/1.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="../pages/img/brand-logo/2.png" alt="Brand Logo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
   <script src="{{ url('https://code.jquery.com/jquery-3.6.4.min.js') }}"></script>
 <script>
   $(document).ready(function() {
