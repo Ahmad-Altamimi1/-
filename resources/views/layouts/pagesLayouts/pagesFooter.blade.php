@@ -159,15 +159,25 @@ console.log(document.querySelector('#searchcontent'));
         searchContent.style.height = '100px';
         searchResults.appendChild(li);
     }
-    if (clickOnWindow) {
-    document.querySelector('#searchcontent').style.display = 'none';
-}
+
 }
 });
   function showPreloader() {
       var preloader = document.getElementById('preloader');
       preloader.classList.remove('d-none');
     }
+    document.addEventListener('click', function(event) {
+    var searchResults = document.querySelectorAll('#searchResults li');
+
+    // Iterate through each <li> element within #searchResults
+    searchResults.forEach(function(result) {
+        // Set display to 'none' for each <li> element
+        result.style.display = 'none';
+    });
+
+    // Set display to 'none' for #searchcontent
+    document.querySelector('#searchcontent').style.display = 'none';
+});
 
     // Function to hide the preloader
     function hidePreloader() {

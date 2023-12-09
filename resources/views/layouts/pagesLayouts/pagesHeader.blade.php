@@ -119,10 +119,10 @@
                             <div class="header-search-2" style="    padding: 22px 0 0 0 !important ;position: relative;">
 
 
-                                    <input type="text" id="searchInput" placeholder="Type to search"
-                                        style="margin: 0;">
+                                    <input type="text" id="searchInput" placeholder="بحث"
+                                        style="margin: 0;    text-align: right;">
                                         {{-- <span><i class="icon-magnifier"></i></span> --}}
-                                    <ul id="searchResults" style="position: absolute"></ul>
+                                    <ul id="searchResults" style="position: absolute right: 0;" ></ul>
                                     </button>
                                 {{-- </form> --}}
                             </div>
