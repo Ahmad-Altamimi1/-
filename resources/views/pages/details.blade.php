@@ -393,7 +393,7 @@ h3{
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div>  
                                     </div>
                                 </li>
                             </ul>
@@ -416,7 +416,7 @@ h3{
     <!-- PAGE DETAILS AREA END -->
 
     <!-- BRAND LOGO AREA START -->
-    
+
     <!-- BRAND LOGO AREA END -->
     <!-- Add these links in the head section of your HTML file -->
 <link rel="stylesheet" href="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}">

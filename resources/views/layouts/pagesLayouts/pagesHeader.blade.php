@@ -245,16 +245,21 @@
                             <div class="header-menu d-none d-xl-block">
                                 <nav>
                                     <div class="ltn__main-menu">
+                                        <?php
+
+use App\Models\groups;
+
+                                            ?>
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'مستشار أنجابي')->first()->id]) }}">مستشار أنجابي</a>
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'مدونة أنجاب')->first()->id]) }}">مدونة أنجاب </a>
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'منوعات أنجابي')->first()->id]) }}">منوعات أنجابي </a>
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشار أنجابي')->first()->id]) }}">مستشار أنجابي</a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة أنجاب')->first()->id]) }}">مدونة أنجاب </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات أنجابي')->first()->id]) }}">منوعات أنجابي </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
 
-                                            <li class="menu-icon"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
                                                 <ul class="mega-menu">
 
                                                     <li style="text-align: right"><a href="#">الثلث الثالث </a>
@@ -399,7 +404,7 @@
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
-                        <li><a href="route('tv_show')"> أنجابي TV</a></li>
+                        <li><a href="{{route('allTV')}}"> أنجابي TV</a></li>
                         <?php
 $groupstitles = [];
 $allgroupnew = [];

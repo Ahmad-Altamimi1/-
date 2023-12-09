@@ -79,20 +79,20 @@ if (count($postintag)>0) {
                             <li>
                                <div class="showing-product-number text-right">
     <span>
-        عرض {{ $postintag->firstItem() }} - {{ $postintag->lastItem() }} من {{ $postintag->total() }} النتائج
+        {{-- عرض {{ $postintag->firstItem() }} - {{ $postintag->lastItem() }} من {{ $postintag->total() }} النتائج --}}
     </span>
 </div>
 
                             </li>
                             <li>
                                <div class="short-by text-center">
-                                    <select class="nice-select" id="sorting-options">
+                                    {{-- <select class="nice-select" id="sorting-options">
 
     <option value="default">ترتيب عشوائي</option>
     <option value="popularity" data-sort="popularity"> الترتيب حسب الأكثر قراءه</option>
     <option value="new" data-sort="created_at">الترتيب حسب الأجدد</option>
 
-                                    </select>
+                                    </select> --}}
                                 </div>
                                 <div class="ltn__grid-list-tab-menu ">
                                     <div class="nav">
@@ -184,26 +184,7 @@ if (count($postintag)>0) {
                    <div class="ltn__pagination-area text-center">
     <div class="ltn__pagination ltn__pagination-2">
         <ul>
-            @if ($postintag->onFirstPage())
-                <li class="disabled"><span ></span></li>
-            @else
-                <li><a href="{{ $postintag->previousPageUrl() }}"><i class="icon-arrow-left"></i></a></li>
-            @endif
 
-            @foreach ($postintag->getUrlRange(1, $postintag->lastPage()) as $page => $url)
-                <li class="{{ $page == $postintag->currentPage() ? 'active' : '' }}">
-                    <a href="{{ $url }}">{{ $page }}</a>
-                </li>
-            @endforeach
-
-            @if ($postintag->hasMorePages())
-                <li><a href="{{ $postintag->nextPageUrl() }}"><i class="icon-arrow-right"></i></a></li>
-            @else
-                <li class="disabled"><span></span></li>
-            @endif
-        </ul>
-    </div>
-</div>
 
                 </div>
             </div>
@@ -212,7 +193,7 @@ if (count($postintag)>0) {
     <!-- PRODUCT DETAILS AREA END -->
 
     <!-- BRAND LOGO AREA START -->
-    
+
   <script src="{{ url('https://code.jquery.com/jquery-3.6.4.min.js') }}"></script>
 <script>
   $(document).ready(function() {

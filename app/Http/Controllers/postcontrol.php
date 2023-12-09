@@ -877,23 +877,72 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         return view('auth.passwords.change-password');
     }
     public function showtag(Request $request,$tag){
+
         $tags = poststags::all();
+        $allgroups=groups::all();
+        $postintag=[];
+        $groupnew = [];
+        $ids=[];
+foreach ($allgroups as  $value) {
+  $grouptag=  $value->TAG;
+  $grouparray = explode(',', $grouptag);
+
+    if (in_array($tag, $grouparray)) {
+$groupnew[]= $value;
+}
+
+        }
 
         $sortingOption = request('sort');
 
         switch ($sortingOption) {
             case 'popularity':
-                $postintag = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->paginate(4);
+                foreach ($groupnew as $group) {
+                    $grouptags=  $group->TAG;
+                    $grouparrays = explode(',', $grouptags);
+                    $index = array_search($tag, $grouparrays);
+                    $slicedArray = array_slice($grouparray, $index);
+                    foreach ($slicedArray as $tagid) {
+                        $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('SHOW', 'asc')->paginate(8);
+                    }
+            }
 
                 break;
             case 'new':
-                $postintag = Post::where("TAG", "=", $tag)->orderBy('DATE_SCHEDULER', 'asc')->paginate(4);
+                foreach ($groupnew as $group) {
+
+                    $grouptags=  $group->TAG;
+                    $grouparrays = explode(',', $grouptags);
+                    $index = array_search($tag, $grouparrays);
+                    $slicedArray = array_slice($grouparray, $index);
+                    foreach ($slicedArray as $tagid) {
+                        $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('DATE_SCHEDULER', 'asc')->paginate(8);
+
+
+                    }
+            }
                 break;
             default:
-                $postintag = Post::where("TAG", "=", $tag)->paginate(4);
+            foreach ($groupnew as $group) {
+                $grouptags=  $group->TAG;
+                $grouparrays = explode(',', $grouptags);
+                $index = array_search($tag, $grouparrays);
+                $slicedArray = array_slice($grouparray, $index-1);
+                foreach ($slicedArray as $tagid) {
+                    foreach (Post::where("TAG", "=", $tagid)->get() as $value) {
+if (!(in_array($tagid,$ids))) {
+$ids[]=$tagid;
+
+                        $postintag []=$value;
+                    }
+                    };
+
+                }
+        }
 
                 break;
             }
+
 $pageid= $tag;
 
         $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
@@ -909,7 +958,7 @@ $pageid= $tag;
         $postongroup = groups::where('id', '=', $post->TOPIC)->first();
         $tags = poststags::all();
 
-        $string = $postongroup->TAG;
+        $string= $postongroup->TAG;
         $Categories = explode(',', $string);
 
         $Otherposts= Post::where("TAG", "=", $post->TAG)->orderBy('SHOW', 'asc')->take(4)->get();
