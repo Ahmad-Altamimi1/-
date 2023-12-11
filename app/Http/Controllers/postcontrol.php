@@ -877,15 +877,50 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
         return view('auth.passwords.change-password');
     }
     public function showtag(Request $request,$tag){
-
+        $tagbyid = poststags::find($tag);
         $tags = poststags::all();
-        $allgroups=groups::all();
-        $postintag=[];
+        $allgroups = groups::all();
+        $postintag = [];
         $groupnew = [];
-        $ids=[];
-foreach ($allgroups as  $value) {
-  $grouptag=  $value->TAG;
-  $grouparray = explode(',', $grouptag);
+        $ids = [];
+
+        foreach ($allgroups as $value) {
+            $grouptag = $value->TAG;
+            $grouparray = explode(',', $grouptag);
+
+            if (in_array($tag, $grouparray)) {
+                $groupnew[] = $value;
+            }
+        }
+
+        foreach ($groupnew as $group) {
+            $grouptags = $group->TAG;
+            $grouparrays = explode(',', $grouptags);
+
+            $tagIndices = array_keys($grouparrays, $tag);
+
+            foreach ($tagIndices as $index) {
+                $slicedArray = array_slice($grouparrays, $index);
+
+                foreach ($slicedArray as $tagid) {
+                    if (!in_array($tagid, $ids)) {
+                        $ids[] = $tagid;
+
+                        $posts = Post::where("TAG", "=", $tagid)->get();
+
+                        if ($posts->isNotEmpty()) {
+                            foreach ($posts as $post) {
+                                $postintag[] = $post;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            $otherIds = array_diff($grouparrays, $slicedArray);
+
+
 
     if (in_array($tag, $grouparray)) {
 $groupnew[]= $value;
@@ -895,53 +930,55 @@ $groupnew[]= $value;
 
         $sortingOption = request('sort');
 
-        switch ($sortingOption) {
-            case 'popularity':
-                foreach ($groupnew as $group) {
-                    $grouptags=  $group->TAG;
-                    $grouparrays = explode(',', $grouptags);
-                    $index = array_search($tag, $grouparrays);
-                    $slicedArray = array_slice($grouparray, $index);
-                    foreach ($slicedArray as $tagid) {
-                        $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('SHOW', 'asc')->paginate(8);
-                    }
-            }
+//         switch ($sortingOption) {
+//             case 'popularity':
+//                 foreach ($groupnew as $group) {
+//                     $grouptags=  $group->TAG;
+//                     $grouparrays = explode(',', $grouptags);
+//                     $index = array_search($tag, $grouparrays);
+//                     $slicedArray = array_slice($grouparray, $index);
+//                     foreach ($slicedArray as $tagid) {
+//                         $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('SHOW', 'asc')->paginate(8);
+//                     }
+//             }
 
-                break;
-            case 'new':
-                foreach ($groupnew as $group) {
+//                 break;
+//             case 'new':
+//                 foreach ($groupnew as $group) {
 
-                    $grouptags=  $group->TAG;
-                    $grouparrays = explode(',', $grouptags);
-                    $index = array_search($tag, $grouparrays);
-                    $slicedArray = array_slice($grouparray, $index);
-                    foreach ($slicedArray as $tagid) {
-                        $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('DATE_SCHEDULER', 'asc')->paginate(8);
+//                     $grouptags=  $group->TAG;
+//                     $grouparrays = explode(',', $grouptags);
+
+//                     $index = array_search($tag, $grouparrays);
+//                     $slicedArray = array_slice($grouparray, $index);
+//                     foreach ($slicedArray as $tagid) {
+//                         $postintag[] = Post::where("TOPIC", "=", $tag)->orderBy('DATE_SCHEDULER', 'asc')->paginate(8);
 
 
-                    }
-            }
-                break;
-            default:
-            foreach ($groupnew as $group) {
-                $grouptags=  $group->TAG;
-                $grouparrays = explode(',', $grouptags);
-                $index = array_search($tag, $grouparrays);
-                $slicedArray = array_slice($grouparray, $index-1);
-                foreach ($slicedArray as $tagid) {
-                    foreach (Post::where("TAG", "=", $tagid)->get() as $value) {
-if (!(in_array($tagid,$ids))) {
-$ids[]=$tagid;
+//                     }
+//             }
+//                 break;
+//             default:
+//             foreach ($groupnew as $group) {
+//                 $grouptags=  $group->TAG;
+//                 $grouparrays = explode(',', $grouptags);
+//                 $index = array_search($tag, $grouparrays);
+//                 $slicedArray = array_slice($grouparrays, $index-1);
 
-                        $postintag []=$value;
-                    }
-                    };
+//                 foreach ($slicedArray as $tagid) {
+//                     foreach (Post::where("TAG", "=", $tagid)->get() as $value) {
+// if (!(in_array($tagid,$ids))) {
+// $ids[]=$tagid;
 
-                }
-        }
+//                         $postintag []=$value;
+//                     }
+//                     };
 
-                break;
-            }
+//                 }
+//         }
+
+//                 break;
+//             }
 
 $pageid= $tag;
 
@@ -950,16 +987,63 @@ $pageid= $tag;
         if ($request->ajax()) {
             return view('pages.tag', compact('postintag', 'pageid', 'popularpost', 'tags'));
         }
-        return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags'));
+        return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags','tagbyid','otherIds'));
     }
-    public function show($id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function showtest($id)
     {
         $post = Post::findOrFail($id);
         $postongroup = groups::where('id', '=', $post->TOPIC)->first();
         $tags = poststags::all();
+        $allgroups = groups::all();
+        $postintag = [];
+        $groupnew = [];
+        $ids = [];
+        foreach ($allgroups as $value) {
+            $grouptag = $value->TAG;
+            $grouparray = explode(',', $grouptag);
+            if (in_array($post->TAG, $grouparray)) {
+                $groupnew[] = $value;
+            }
+        }
+        foreach ($groupnew as $group) {
+            $grouptags = $group->TAG;
+            $grouparrays = explode(',', $grouptags);
+            $tagIndices = array_keys($grouparrays, $post->TAG);
+            foreach ($tagIndices as $index) {
+                $slicedArray = array_slice($grouparrays, $index);
+                foreach ($slicedArray as $tagid) {
+                    if (!in_array($tagid, $ids)) {
+                        $ids[] = $tagid;
+                        $post = Post::where("TAG", "=", $tagid)->first();
 
-        $string= $postongroup->TAG;
-        $Categories = explode(',', $string);
+                        if ($post !== null) {
+                            $postintag[] = $post;
+                        }
+                    }
+                }
+
+                $otherIds = array_diff($grouparrays, $slicedArray);
+            }
+        }
+
 
         $Otherposts= Post::where("TAG", "=", $post->TAG)->orderBy('SHOW', 'asc')->take(4)->get();
         try {
@@ -980,9 +1064,83 @@ $previousPost = Post::where('id', '<', $post->id)
         url('/المقال/'.$id),
 
     )->facebook()->linkedin()->telegram()->twitter();
-        return view('pages.details',compact('post', 'previousPost', 'secondPost', 'recentposts', 'tags', 'sharebutton', 'similar_and_popular_post', 'Otherposts', 'Categories'));
+        return view('pages.details',compact('post', 'previousPost', 'secondPost', 'recentposts', 'tags', 'sharebutton', 'similar_and_popular_post', 'Otherposts', 'otherIds'));
 
     }
+
+
+
+
+
+    public function show($id)
+    {
+        try {
+            $post = Post::findOrFail($id);
+            $postongroup = groups::find($post->TOPIC);
+            $tags = poststags::all();
+
+            $groupnew = groups::where('TAG', 'like', '%' . $post->TAG . '%')->get();
+$tagofpost= poststags::find($post->TAG);
+            $postintag = [];
+            $ids = [];
+
+            foreach ($groupnew as $group) {
+                $grouparrays = explode(',', $group->TAG);
+
+                $tagIndices = array_keys($grouparrays, $post->TAG);
+
+                foreach ($tagIndices as $index) {
+                    $slicedArray = array_slice($grouparrays, $index);
+
+                    foreach ($slicedArray as $tagid) {
+                        if (!in_array($tagid, $ids)) {
+                            $ids[] = $tagid;
+                            $relatedPost = Post::where("TAG", "=", $tagid)->first();
+
+                            if ($relatedPost !== null) {
+                                $postintag[] = $relatedPost;
+                            }
+                        }
+                    }
+                    $otherIds = array_diff($grouparrays, $slicedArray);
+                }
+            }
+
+            $otherPosts = Post::whereIn("TAG", $slicedArray)->orderBy('SHOW', 'asc')->take(4)->get();
+
+            $post->increment('show');
+
+            $similar_and_popular_post = Post::where("TAG", "=", $post->TAG)->orderBy('SHOW', 'asc')->first();
+
+            $recentposts = Post::where('id', '!=', $id)->orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
+            $secondPost = Post::where('id', '>', $post->id)->orderBy('id', 'asc')->first();
+            $previousPost = Post::where('id', '<', $post->id)->orderBy('id', 'desc')->first();
+
+            $sharebutton = \Share::page(url('/المقال/' . $id))->facebook()->linkedin()->telegram()->twitter();
+
+            return view('pages.details', compact('post', 'previousPost', 'secondPost', 'recentposts', 'tags', 'sharebutton', 'similar_and_popular_post', 'otherPosts', 'otherIds','tagofpost'));
+        } catch (ModelNotFoundException $exception) {
+
+            return redirect()->route('pages.404')->with('error', 'Post not found.');
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function changePasswordPost(Request $request)
     {
@@ -1078,5 +1236,16 @@ $previousPost = Post::where('id', '<', $post->id)
             ->get();
 
         return view('webcontrol.posts.search-results', ['poststags' => $poststags, 'searchQuery' => $searchQuery, 'posts' => $posts, 'users' => $users, 'filteredPosts' => $filteredPosts]);
+    }
+    public function popular_posts(Request $request){
+        $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(5)->get();
+    $mode = $request->input('mode');
+        if ($mode === 'recent') {
+            $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(5)->get();
+        } else if ($mode === 'popular') {
+            $popularPosts = Post::orderBy('SHOW', 'asc')->take(5)->get();
+        }
+
+        return view('partials.posts', ['popularPosts' => $popularPosts]);
     }
 }

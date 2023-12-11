@@ -226,6 +226,9 @@ padding: 0 22%;
 .slick-initialized .slick-slide{
         border-radius: 64px;
 }
+.click_active{
+
+}
         </style>
         </div>
     {{-- <div class="ltn__utilize-overlay"></div> --}}
@@ -272,7 +275,10 @@ padding: 0 22%;
     </div>
     </div>
 @endif
-    <div id="halfslider" style="width: 60%;padding-left:30px">
+<div class="allheader" style=" display: grid;
+grid-template-columns: 65% 30%;
+gap: 2%;">
+    <div id="halfslider" style="width: 100%;padding-left:30px">
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 ">
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
@@ -284,7 +290,7 @@ padding: 0 22%;
 
 
                 <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%;">
-                    <div class="ltn__slide-item-inner" style="    border-radius: 64px;">
+                    <div class="ltn__slide-item-inner" style="border-radius: 64px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 align-self-center">
@@ -323,27 +329,46 @@ padding: 0 22%;
 
             </div>
             <section class="ftco-section ftco-no-pb ftco-no-pt" style="">
-                @if (!$havevideo)
+
+        </div>
+    </div>
+    @if (!$havevideo)
     <div class="container">
         <!-- Popular Post Widget -->
         <div class="row">
-            <div class="col-md-7"></div>
+
             <div class="col-md-5 order-md-last" style="width:40%" >
             <div class="login-wrap p-4 p-md-5"  style="    WIDTH: 540PX;">
 
                             <div class="widget ltn__popular-post-widget" >
                                 <div class="flex" style="justify-content: justify-content:space-around;">
-                                <h2 class="ltn__widget-title  w-50 " >المقالات الحديثه</h2>
-                                <h2 class="ltn__widget-title w-50">المقالات المشهوره</h2>
+                                    <h2 class="ltn__widget-title w-50" data-mode="popular" id="popularPostsTitle" style="cursor: pointer">المقالات المشهوره</h2>
+                                    <h2 class="ltn__widget-title  w-50 " data-mode="recent" style="background: white;
+                                    color: black;
+                                    border-radius: 8px;
+                                    text-align: center;cursor: pointer" >المقالات الحديثه</h2>
+
+
                                 </div>
-                                <ul class=" flex" style="flex-wrap: wrap; column-gap: 20px;    justify-content: flex-end;">
+                                <div class="ajaxul">
+                                <ul class="flex" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;">
                                     @foreach ($recentposts as $recentpost)
 
                                     <li>
-                                        <div class="popular-post-widget-item ">
-                                            <div class="popular-post-widget-img">
-                                                <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#"></a>
-                                                <span class=" " style="text-align: right"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
+                                        <div class="popular-post-widget-item " style="background: white;
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        padding: 10px 0 0 0;
+                                        border-radius: 16px;
+                                        width: 100%;
+height: 100%;">
+                                            <div class="popular-post-widget-img" >
+                                                <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#" style=""></a>
+                                                <span class=" " style="width: 100%;
+                                                display: inline-block;
+                                                text-align: center;"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
                                             </div>
                                             <div class="popular-post-widget-brief">
                                                 <div class="ltn__blog-meta">
@@ -363,8 +388,8 @@ padding: 0 22%;
 
                                 </ul>
                             </div>
+                            </div>
                             @endif
-        </div>
     </div>
     </div>
     </div>
@@ -413,22 +438,34 @@ padding: 0 22%;
                     <img src="../pages/img/دوائر.png" alt="" style="    width: 79%;
 
     margin-top: -136px;">
-
+<?php
+use App\Models\poststags;
+?>
     <div  class="monthimg monthimg1">
-        <img src="../1111.jpg" alt="khkjh" >
-<p class="month_content ">الثلث الثاني</p>
+        <img src="../1111.jpg" alt="" >
+        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">
+
+
+<p class="month_content ">الثلث الأول</p>
+        </a>
     </div>
 
     <div  class="monthimg monthimg2">
-        <img src="../1111.jpg" alt="khkjh" >
+        <img src="../1111.jpg" alt="" >
+        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">
+
+
 <p class="month_content ">الثلث الثاني</p>
     </div>
+</a>
 
     <div  class="monthimg monthimg3">
-        <img src="../1111.jpg" alt="khkjh" >
-<p class="month_content ">الثلث الثاني</p>
-    </div>
+        <img src="../1111.jpg" alt="" >
+        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">
 
+<p class="month_content">الثلث الثالث</p>
+        </a>
+    </div>
                 </div>
 
 
@@ -472,7 +509,7 @@ padding: 0 22%;
                         <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-4 self-center" style="    transform: translateY(22px);
 ">
                             @foreach ( $first_tag->posts->skip(1)->take(4) as $post )
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-4 mb-4 hover-translate" style="border: 1px solid rgb(133, 129, 129)">
+                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-4 mb-4 hover-translate" style="    border: 2px solid #eee;">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
                                         <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full h-auto rounded-xl">
@@ -512,7 +549,7 @@ padding: 0 22%;
             <div class="row " style="display: flex">
                 <!-- Blog Item -->
                 @foreach($tags as $tag)
-                @if($tag->TITLE == "صحة الطفل")
+                @if($tag->TITLE == "فتاوى تخص المرأة")
                 @foreach($tag->posts->take(6) as $post)
 
                 <div class="col-lg-4">
@@ -562,7 +599,7 @@ padding: 0 22%;
 <section class="articles">
                 @foreach($tags as $tag)
 
-    @if($tag->TITLE == 'صحة الطفل')
+    @if($tag->TITLE == 'خرافات شعبية')
 
 
        @foreach ( $tag->posts->take(3) as $post )
@@ -686,14 +723,57 @@ padding: 0 22%;
 
 
     @endsection
-  <script>
-    // document.addEventListener("DOMContentLoaded", function() {
-    //   var loginWrap = document.querySelector('.login-wrap');
-    //   loginWrap.style.transform = 'translateX(-852px)';
-    // });
-  </script>
-  <script>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentMode = 'recent';
 
+            $('.ltn__widget-title').on('click', function () {
+                var mode = $(this).data('mode');
 
-  </script>
+                if (mode !== currentMode) {
+                    currentMode = mode;
+                    $('.ltn__widget-title').css({
+                background: 'initial',
+                color: 'initial'
+
+            });
+
+            $(this).css({
+                background: 'white',
+
+    color: 'black',
+    'border-radius': '8px',
+    'text-align': 'center'
+});
+
+                    $('.flex ul li').html('');
+                    $('.flex ul ').html('');
+                    console.log($('.ajaxul ul li').length);
+                    $.ajax({
+                        url: 'popular_posts',
+                        type: 'GET',
+                        data: { mode: mode },
+                        success: function (data) {
+                            $('.ajaxul ul').fadeOut('fast', function () {
+        $(this).html(data);
+        $(this).fadeIn('fast');
+    });
+                        },
+                        error: function (error) {
+                            console.error('Error fetching posts:', error);
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+
+<script>
+    $(document).ready(function () {
+        console.log($('.ajaxul').length); // Log the length of the selected element
+        // Other code
+    });
+</script>

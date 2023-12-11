@@ -27,11 +27,27 @@ text-decoration:none !important}
 h3{
     font-size: 27px !important;
 }
+.image_and_description{
+    position: relative;
+}
+.description_for_image{
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 30px;
+background-color: rgba(0, 0, 0, 0.675);
+padding: 5px 10px;
+color: white;
+text-align: right;
+font-size: 16px;
+z-index: 5;
+right: 0;
+}
     </style>
     <div class="ltn__utilize-overlay"></div>
 
     <!-- BREADCRUMB AREA START -->
-    <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---" style="background-image:url(../{{ $post->tag->IMG }})">
+    <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---" style="background-image:url(../uploads/{{ $post->tag->IMG }})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -42,16 +58,17 @@ h3{
                                 <br>
                                 <span><a href="{{ route('home') }}">الصفحة الرئيسية</a>
 
-                                     @foreach ($Categories as $stag)
+                                     @foreach ($otherIds as $stag)
                                     @foreach ($tags as $singletag)
                                     @if ($stag == $singletag->id  )
-                                    <span> <a href="{{ count($singletag->posts) > 0 ? route('showtag', ['tag' => $singletag->id]) : '#' }}"
+                                    <span> <a href="{{ route('showtag', ['tag' => $singletag->id])  }}"
 >  {{  '/'. $singletag->TITLE  }}</a></span>
 
                                     @endif
                                     @endforeach
                                     @endforeach
-
+                                    <span> <a href="{{ route('showtag', ['tag' => $tagofpost->id])  }}"
+                                        >  {{  '/'. $tagofpost->TITLE  }}</a></span>
                                 </span>
 
                             </ul>
@@ -87,7 +104,10 @@ h3{
                                 </ul>
                             </div>
                             <h3 class="ltn__blog-title blog-title-line" style="text-align: right"><a >{{ $post->TITLE }} </a></h3>
+                            <div class="image_and_description">
                             <img class="blog-details-main-image mb-15" src="../{{ $post->IMG }}" alt="Image" data-toggle="modal" data-target="#imageModal">
+                            <span class="description_for_image"> {{$post->PIC_Name}} </span>
+                        </div>
 <p style="word-break: break-all; text-align:right">  <?php echo $post->TEXT1 ?>  </p>
 <p>{{ $post->TEXT2 }}</p>
 <p>{{ $post->TEXT3 }}</p>
@@ -169,7 +189,7 @@ h3{
                 </div>
                 <div class="row ltn__product-slider-item-four-active slick-arrow-1">
                     <!-- ltn__product-item -->
-                    @foreach ($Otherposts as $Otherpost)
+                    @foreach ($otherPosts as $Otherpost)
 
                     <div class="col-12">
                         <div class="ltn__product-item text-center">
@@ -393,7 +413,7 @@ h3{
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
                                 </li>
                             </ul>

@@ -39,27 +39,32 @@
 
     <!-- BREADCRUMB AREA START -->
     <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---"
-    style="background-image:url(../{{ $postintag[0]->tag->IMG}})">
+    style="background-image:url(../uploads/{{ $tagbyid->IMG}})">
         <div class="container">
             <div class="row">
 
-@php
-if (count($postintag)>0) {
- $lastIndex = count($postintag) - 1;
-    $lastTagTitle = $postintag[$lastIndex]->tag->TITLE;
-}else {
-    $lastTagTitle =$postintag[0]->tag->TITLE;
-}
 
-@endphp
 
                 <div class="col-lg-12">
                     <div class="ltn__breadcrumb-inner text-center">
-                        <h1 class="ltn__page-title">{{ $lastTagTitle }}</h1>
+                        <h1 class="ltn__page-title">{{ $tagbyid->TITLE }}</h1>
                         <div class="ltn__breadcrumb-list">
                             <ul>
-                                <li>{{ $lastTagTitle}}</li>
-                                <li><a href="{{ ROUTE('home') }}">الصفحة الرئيسيه</a></li>
+                                <span><a href="{{ route('home') }}">الصفحة الرئيسية</a>
+
+                                    @foreach ($otherIds as $stag)
+
+                                   @foreach ($tags as $singletag)
+                                   @if ($stag == $singletag->id  )
+                                   <span> <a href="{{ route('showtag', ['tag' => $singletag->id])  }}"
+>  {{  '/'. $singletag->TITLE  }}</a></span>
+
+                                   @endif
+                                   @endforeach
+                                   @endforeach
+                                   <span> <a href="{{ route('showtag', ['tag' => $tagbyid->id])  }}"
+                                    >  {{  '/'. $tagbyid->TITLE  }}</a></span>
+                               </span>
                             </ul>
                         </div>
                     </div>
@@ -109,18 +114,23 @@ if (count($postintag)>0) {
                                 <div class="row" style="flex-direction: row-reverse; justify-content: center;">
                                     <!-- ltn__product-item -->
                                     <div class="ltn__utilize-overlay"></div>
+                                    @if(count($postintag)>0)
+
                                     @foreach ($postintag as $postintags)
                                     <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                                         <div class="ltn__product-item text-center">
 
                                             <div class="product-img img-hover-zoom img-hover-zoom--blur img-hover-zoom--xyz">
-                                                <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" alt="#" ></a>
+                                                <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" style="aspect-ratio: 6/4;" alt="#" ></a>
                                                 <div class="product-badge">
+                                                    @if($popularpost !=null)
+
                                                     @if ($popularpost->id==$postintags->id)
 
                                                     <ul>
                                                         <li class="badge-2">ألأكثر قراءه</li>
                                                     </ul>
+                                                    @endif
                                                     @endif
                                                 </div>
 
@@ -135,6 +145,9 @@ if (count($postintag)>0) {
                                         </div>
                                     </div>
                                     @endforeach
+                                    @else
+                                    <p style="text-align: center; font-size:">لا يوجد مقالات لعرضها</p>
+                                    @endif
 
                                     <!--  -->
                                 </div>
@@ -149,14 +162,17 @@ if (count($postintag)>0) {
 
                                         <div class="ltn__product-item">
                                             <div class="product-img">
-                                              <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" alt="#"></a>
+                                              <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" alt="#" style="aspect-ratio: 6/4;"></a>
 
                                               <div class="product-badge">
+                                                @if($popularpost !=null)
+
                                                     @if ($popularpost->id==$postintags->id)
 
                                                     <ul>
                                                         <li class="badge-2">ألأكثر قراءه</li>
                                                     </ul>
+                                                    @endif
                                                     @endif
                                                 </div>
                                             </div>

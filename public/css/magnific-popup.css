@@ -10,7 +10,7 @@
   background: #0b0b0b;
   opacity: 0.8; }
 .login-wrap{
- transform: translate(368px,-148px);
+ /* transform: translate(368px,-148px); */
      background: pink !important;
 }
 

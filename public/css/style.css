@@ -13,6 +13,14 @@ footer{
     padding-top: 35px;
 
 }
+.ltn__widget-title{
+
+    border-radius: 8px;
+    text-align: center;
+}
+.popular-post-widget-item {
+    
+}
 body{
   font-family: 'Cairo', sans-serif;
 font-family: 'EB Garamond', serif;
@@ -8945,7 +8953,7 @@ font-family: 'Oswald', sans-serif;
   -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
   box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
   z-index: 0;
-  margin-top: -550px;
+  /* margin-top: -550px; */
   border-radius: 64px;
     WIDTH: 540PX;
     height: 702px;

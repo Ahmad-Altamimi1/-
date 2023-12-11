@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Fiama - Flower Shop eCommerce HTML Template</title>
+    <title>أنجابي</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="{{ url('css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ url('css/jquery.timepicker.css') }}">
-    <link rel="shortcut icon" href="{{ url('assets/images/favicon.ico') }}" />
+    <link rel="shortcut icon" href="../انجابي فكتور-01-01.jpg" />
+
     <link rel="stylesheet" href="{{ url('assets/libs/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/tailwind.min.css') }}">
 
@@ -122,12 +123,20 @@
                                     <input type="text" id="searchInput" placeholder="بحث"
                                         style="margin: 0;    text-align: right;">
                                         {{-- <span><i class="icon-magnifier"></i></span> --}}
-                                    <ul id="searchResults" style="position: absolute right: 0;" ></ul>
+                                    <ul id="searchResults" style="position: absolute;
+                                    right: 0;
+                                    display: none;
+                                    width: 135px;
+                                    background: #d54368;
+    height: 227%;
+    border-radius: 12px;
+    color: white;
+    z-index: 1000;" ></ul>
                                     </button>
                                 {{-- </form> --}}
                             </div>
                                                         <div class="site-logo">
-                                                <a href="{{ route('home') }}"><img src="../انجابي فكتور-01-01.jpg"
+                                                <a href="{{ route('home') }}"><img src="{{asset('../انجابي فكتور-01-01.jpg')}}"
                                                         alt="Logo" style="
     width: 140px;
 "></a>
@@ -152,8 +161,7 @@
                                     <div class="header-search-wrap">
                                         <div class="header-search-1">
                                             <div class="search-icon">
-                                                <i class="icon-magnifier  for-search-show"></i>
-                                                <i class="icon-magnifier-remove  for-search-close"></i>
+
                                             </div>
                                         </div>
                                         <div class="header-search-1-form">
@@ -211,8 +219,7 @@
                             <div class="header-search-wrap">
                                 <div class="header-search-1">
                                     <div class="search-icon">
-                                        <i class="icon-magnifier  for-search-show"></i>
-                                        <i class="icon-magnifier-remove  for-search-close"></i>
+
                                     </div>
                                 </div>
                                 <div class="header-search-1-form " id="searchcontent" style="display: none">
@@ -262,7 +269,7 @@ use App\Models\groups;
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
                                                 <ul class="mega-menu">
 
-                                                    <li style="text-align: right"><a href="#">الثلث الثالث </a>
+                                                    <li style="text-align: right"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث </a>
                                                         <ul>
                                                             @foreach ($Third_trimester as $Third_trimester_month)
                                                                 <li style="text-align: right"><a
@@ -272,7 +279,7 @@ use App\Models\groups;
 
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#" style="text-align: right">الثلث الثاني</a>
+                                                    <li><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}" style="text-align: right">الثلث الثاني</a>
                                                         <ul>
                                                             @foreach ($Second_trimester as $Second_trimester_month)
                                                                 <li style="text-align: right"><a
@@ -282,7 +289,7 @@ use App\Models\groups;
 
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#" style="text-align: right">الثلث الأول</a>
+                                                    <li><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}" style="text-align: right">الثلث الأول</a>
                                                         <ul>
 
                                                             @foreach ($First_trimester as $First_trimester_month)

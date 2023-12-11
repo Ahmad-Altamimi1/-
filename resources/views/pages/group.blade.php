@@ -110,8 +110,23 @@ margin:20px ;
                 background:#d54368;
                 color:white;
                 border-radius:6px;
-                
+
             }
+.card{
+    border-radius: 12px;
+    max-width: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.card img{
+border-radius: 0 !important
+
+}
+.card img:hover{
+    transition: 0.4s;
+transform: scale(1.1)
+
+}
         </style>
         <div class="col-lg-12 ">
             <div class="section-title-area text-center">
@@ -128,7 +143,7 @@ margin:20px ;
                                 class="cardes">
                                 <div class='cardes-containers'>
                                     <h2 class="mm">{{ $tag->TITLE }}</h2>
-                                    <p class="SS">{{ $tag->DESCRIPTION }}</p>
+                                    <p class="SS" style="color:#d54368">{{ $tag->DESCRIPTION }}</p>
                                 </div>
                             </div>
                         </a>
@@ -170,7 +185,8 @@ margin:20px ;
                         @foreach (\App\Models\Post::where('TAG','=',$tag->id)-> take(4)->get() as $post)
                         <div class="card" style="max-width:200px ;margin-left:10px:">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">
-                            <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image">
+                                <div style="    overflow: hidden;">
+                            <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image"></div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->TITLE }}</h5>
                                     <p class="card-text">{{ $post->DESCRIPTION }}</p>

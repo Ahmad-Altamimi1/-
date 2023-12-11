@@ -26,6 +26,7 @@ Route::get('allTV', [HomeController::class, "allTV"])->name("allTV");
 Route::get('/showtag/{tag}', [postcontrol::class, "showtag"])->name("showtag");
 Route::get('/posts/groups/{id}', [GroupController::class, "showgroup"])->name("showgroup");
 Route::get('/postss/{id}', [postcontrol::class,"show"])->name('ShoWarticle');
+Route::get('popular_posts', [postcontrol::class,"popular_posts"])->name('popular_posts');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

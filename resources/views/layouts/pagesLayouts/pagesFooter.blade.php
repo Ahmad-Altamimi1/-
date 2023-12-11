@@ -13,7 +13,10 @@
                                 الموثوقة لإثراء الثقافة الصحية ونشرها في أوساط المجتمع العربي</p>
                         </div>
                         <div class="col-1">
-                            <ul style="text-align: end;" class="social-icons list-unstyled list-inline mb-0">
+                            <ul style="text-align: end;display: flex;
+
+                            flex-direction: column;
+                            align-items: center;" class="social-icons list-unstyled list-inline mb-0">
                                 <li class="list-inline-item"><a href="https://www.facebook.com/tabkom"><i
                                             class="fab fa-facebook-f"></i></a></li>
                                 <li class="list-inline-item"><a href="https://twitter.com/tebkum"><i
@@ -37,31 +40,33 @@
 
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa-solid fa-circle-info fa-2xl"></i>
+                                    <i class="fa fa-info-circle fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>عن طبكم</p>
                                     </a>
                                 </div>
                                 <div class="col-2">
-                                    <i class="fa-regular fa-address-book fa-2xl"></i>
+                                    <i class="fa fa-phone fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>اتصل بنا</p>
                                     </a>
                                 </div>
                                 <div class="col-2">
-                                    <i class="fa-solid fa-image fa-2xl"></i>
+                                    <i class="fa fa-picture-o fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>اعلن معنا</p>
                                     </a>
                                 </div>
                                 <div class="col-2">
-                                    <i class="fa-solid fa-book fa-2xl"></i>
+                                    <i class="fa fa-address-book-o fa-2xl" aria-hidden="true"></i>
+
                                     <a href="#">
+                                        <i class="fa fa-book" aria-hidden="true"></i>
                                         <p>سياستنا</p>
                                     </a>
                                 </div>
                                 <div class="col-2">
-                                    <i class="fa-solid fa-user fa-2xl"></i>
+                                    <i class="fa fa-user fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>شروط الإستخدام</p>
                                     </a>
@@ -145,16 +150,23 @@ console.log(document.querySelector('#searchcontent'));
     var containerHeight = results.length > 0 ? results.length * 70 : 30;
     document.querySelector('#searchcontent').style.height = containerHeight + 'px';
 
-        results.forEach(function(result) {
-            var li = document.createElement('li');
-   li.innerHTML = `<a href="/المقال/${result.id}">
-                  ${result.TITLE}
-                </a>`;
-            searchResults.appendChild(li);
+    results.forEach(function(result, index) {
+    var searchResultsul = document.querySelector('#searchResults');
 
-        });
+    searchResultsul.style.display = 'flex';
+
+    var li = document.createElement('li');
+    li.style.position = "absolute";
+    li.style.top = (index * 30) + "px";
+
+    li.innerHTML = `<a href="/المقال/${result.id}">
+                      ${result.TITLE}</a>`;
+    searchResults.appendChild(li);
+});
+
     } else {
         var li = document.createElement('li');
+        // li.style.position = "absolute";
         li.textContent = 'No results found';
         searchContent.style.height = '100px';
         searchResults.appendChild(li);
@@ -168,7 +180,8 @@ console.log(document.querySelector('#searchcontent'));
     }
     document.addEventListener('click', function(event) {
     var searchResults = document.querySelectorAll('#searchResults li');
-
+    var searchResultsul = document.querySelector('#searchResults');
+    searchResultsul.style.display = 'none';
     // Iterate through each <li> element within #searchResults
     searchResults.forEach(function(result) {
         // Set display to 'none' for each <li> element
@@ -185,14 +198,12 @@ console.log(document.querySelector('#searchcontent'));
       preloader.classList.add('d-none');
     }
 
-    // Example: Call showPreloader when the page loads
     document.addEventListener("DOMContentLoaded", function() {
       showPreloader();
 
-      // Example: Call hidePreloader after a delay (simulating some asynchronous task completion)
       setTimeout(function() {
         hidePreloader();
-      }, 3000); // Adjust the delay as needed
+      }, 3000);
     });
    </script>
 
