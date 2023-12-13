@@ -488,7 +488,7 @@ use App\Models\poststags;
                             <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out">
                                 <div class="flex-auto p-4">
                                     <div class="overflow-hidden relative">
-                                        @if ($first_tag->posts[0])
+                                        @if (count($first_tag->posts)>0)
 
                                         <img class="rounded-lg w-full" src="{{ asset($first_tag->posts[0]->IMG) }}" alt="" />
                                         @endif
