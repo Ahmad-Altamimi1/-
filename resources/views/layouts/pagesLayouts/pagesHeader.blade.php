@@ -233,17 +233,10 @@
                                 use App\Models\Post;
                                 use App\Models\poststags;
 
-                                $First_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                    ->take(3)
-                                    ->get();
-                                $Second_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                    ->skip(3)
-                                    ->take(3)
-                                    ->get();
-                                $Third_trimester = Post::where('Monthsofpregnancy', '=', '1')
-                                    ->skip(6)
-                                    ->take(3)
-                                    ->get();
+                                $First_trimester = poststags::where('TITLE', '=', 'الثلث الأول')->first();
+                                $Second_trimester = poststags::where('TITLE', '=', 'الثلث الثاني')->first();
+                                $Third_trimester = poststags::where('TITLE', '=', 'الثلث الثالث')->first();
+
                                     $alltags_from_home=poststags::all();
                                     $tags=$alltags_from_home
                                 ?>
@@ -269,12 +262,52 @@ use App\Models\groups;
 
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
                                                 <ul class="mega-menu">
+                                                    <?php
+$Third_trimester_months_ids=[];
+$Second_trimester_months_ids=[];
+$First_trimester_months_ids=[];
+                                                    $groupnew_First_trimester = groups::where('TAG', 'like', '%' . $First_trimester->id . '%')->get();
+                                                    $groupnew_Third_trimester = groups::where('TAG', 'like', '%' . $Third_trimester->id . '%')->get();
+                                                    $groupnew_Second_trimester= groups::where('TAG', 'like', '%' . $Second_trimester->id . '%')->get();
+                                                    $ids = [];
 
+foreach ($groupnew_Third_trimester as $group) {
+    $grouparrays = explode(',', $group->TAG);
+
+    $tagIndices = array_keys($grouparrays, $First_trimester->id);
+
+    foreach ($tagIndices as $index) {
+        $Third_trimester_months_ids = array_slice($grouparrays, $index);
+
+    }
+}
+foreach ($groupnew_First_trimester as $group) {
+    $grouparrays = explode(',', $group->TAG);
+
+    $tagIndices = array_keys($grouparrays, $First_trimester->id);
+
+    foreach ($tagIndices as $index) {
+        $First_trimester_months_ids = array_slice($grouparrays, $index);
+
+    }
+}
+foreach ($groupnew_Second_trimester as $group) {
+    $grouparrays = explode(',', $group->TAG);
+
+    $tagIndices = array_keys($grouparrays, $First_trimester->id);
+
+    foreach ($tagIndices as $index) {
+        $Second_trimester_months_ids = array_slice($grouparrays, $index);
+
+    }
+}
+                                            ?>
                                                     <li style="text-align: right"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث </a>
                                                         <ul>
-                                                            @foreach ($Third_trimester as $Third_trimester_month)
+
+                                                            @foreach ($Third_trimester_months_ids as $Third_trimester_month)
                                                                 <li style="text-align: right"><a
-                                                                        href="{{ route('ShoWarticle', ['id' => $Third_trimester_month->id]) }}">{{ $Third_trimester_month->TITLE }}</a>
+                                                                        href="{{ route('showtag', ['tag' => $Third_trimester_month]) }}">{{ poststags::where('id','=',$Third_trimester_month)->first()->TITLE  }}</a>
                                                                 </li>
                                                             @endforeach
 
@@ -282,9 +315,9 @@ use App\Models\groups;
                                                     </li>
                                                     <li><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}" style="text-align: right">الثلث الثاني</a>
                                                         <ul>
-                                                            @foreach ($Second_trimester as $Second_trimester_month)
+                                                            @foreach ($Second_trimester_months_ids as $Second_trimester_month)
                                                                 <li style="text-align: right"><a
-                                                                        href="{{ route('ShoWarticle', ['id' => $Second_trimester_month->id]) }}">{{ $Second_trimester_month->TITLE }}</a>
+                                                                        href="{{ route('showtag', ['tag' => $Second_trimester_month]) }}">{{ poststags::where('id','=',$Second_trimester_month)->first()->TITLE  }}</a>
                                                                 </li>
                                                             @endforeach
 
@@ -293,9 +326,9 @@ use App\Models\groups;
                                                     <li><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}" style="text-align: right">الثلث الأول</a>
                                                         <ul>
 
-                                                            @foreach ($First_trimester as $First_trimester_month)
+                                                            @foreach ($First_trimester_months_ids as $First_trimester_month)
                                                                 <li style="text-align: right"><a
-                                                                        href="{{ route('ShoWarticle', ['id' => $First_trimester_month->id]) }}">{{ $First_trimester_month->TITLE }}</a>
+                                                                        href="{{ route('showtag', ['tag' => $First_trimester_month]) }}">{{ poststags::where('id','=',$First_trimester_month)->first()->TITLE  }}</a>
                                                                 </li>
                                                             @endforeach
                                                         </ul>

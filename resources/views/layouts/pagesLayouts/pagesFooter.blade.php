@@ -5,11 +5,7 @@
         margin-top: 20px;
         font-size: 14px
     }
-    .row p:hover{
-        background-color: #d54368;
-        transition: .3s;
-        color: white !important;
-    }
+   
 </style>
 <footer>
             <div class="container-xl">
