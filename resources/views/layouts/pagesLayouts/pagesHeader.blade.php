@@ -286,7 +286,7 @@ foreach ($groupnew_First_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $First_trimester_months_ids =   array_slice($grouparrays, $index);
+        $First_trimester_months_ids =   array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
 
     }
 }
@@ -296,7 +296,7 @@ foreach ($groupnew_Second_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Second_trimester_months_ids =  array_slice($grouparrays, $index);
+        $Second_trimester_months_ids =  array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
 
     }
 }
