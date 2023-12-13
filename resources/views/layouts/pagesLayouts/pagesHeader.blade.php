@@ -538,6 +538,7 @@ foreach ($groubs_same_name as $item) {
                                                             {{ $poststag->TITLE }}
                                                         </a>
 
+                                                        @endif
 
                                                     </li>
                                                        @endforeach
