@@ -271,51 +271,34 @@ $slicedArray=[];
                                                     $groupnew_Third_trimester = groups::where('TAG', 'like', '%' . $Third_trimester->id . '%')->get();
                                                     $groupnew_Second_trimester= groups::where('TAG', 'like', '%' . $Second_trimester->id . '%')->get();
                                                     $ids = [];
+                                                    
+                                                    $Third_trimester_months_ids = processTrimesterGroups($groupnew_Third_trimester, $Third_trimester->id);
+                                                    $First_trimester_months_ids = processTrimesterGroups($groupnew_First_trimester, $First_trimester->id);
+                                                    $Second_trimester_months_ids = processTrimesterGroups($groupnew_Second_trimester, $Second_trimester->id);
 
+                                                    function processTrimesterGroups($groups, $trimesterId) {
+                                                        $trimesterMonthsIds = [];
+                                                        $ids = [];
 
-foreach ($groupnew_Third_trimester as $group) {
-    $grouparrays = explode(',', $group->TAG);
+                                                        foreach ($groups as $group) {
+                                                            $groupArray = explode(',', $group->TAG);
 
-    $tagIndices = array_keys($grouparrays, $First_trimester->id);
+                                                            $tagIndices = array_keys($groupArray, $trimesterId);
 
-    foreach ($tagIndices as $index) {
-        $slicedArray = array_slice($grouparrays, $index);
+                                                            foreach ($tagIndices as $index) {
+                                                                if ($index < count($groupArray)) {
+                                                                    $tagSlice = array_slice($groupArray, $index);
+                                                                    $trimesterMonthsIds = array_merge($trimesterMonthsIds, array_filter($tagSlice, function ($tagid) use ($ids) {
+                                                                        return $tagid !== "" && !in_array($tagid, $ids);
+                                                                    }));
+                                                                }
+                                                            }
+                                                        }
 
-        foreach ($slicedArray as $tagid) {
-            if ($tagid !== "" && !in_array($tagid, $ids)) {
-                $Third_trimester_months_ids[] = $tagid;
-            }
-        }
-    }
-}
+                                                        return $trimesterMonthsIds;
+                                                    }
+                                                    ?>
 
-foreach ($groupnew_First_trimester as $group) {
-    $groupArray = explode(',', $group->TAG);
-
-    $tagIndices = array_keys($groupArray, $First_trimester->id);
-
-    foreach ($tagIndices as $index) {
-        if ($index < count($groupArray)) {
-            $tagSlice = array_slice($groupArray, $index);
-            $First_trimester_months_ids[] = $tagSlice;
-        }
-    }
-}
-foreach ($groupnew_Second_trimester as $group) {
-    $grouparrays = explode(',', $group->TAG);
-
-    $tagIndices = array_keys($grouparrays, $First_trimester->id);
-
-    foreach ($tagIndices as $index) {
-        $slicedArray =  array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
-
-    }
-    foreach ($slicedArray as $tagid) {
-                        if (!in_array($tagid, $ids)) {
-                            $Second_trimester_months_ids[] = $tagid;}
-                        }
-}
-                                            ?>
                                                     <li style="text-align: right"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث </a>
                                                         <ul>
 
