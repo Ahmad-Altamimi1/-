@@ -488,10 +488,9 @@ use App\Models\poststags;
                             <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out">
                                 <div class="flex-auto p-4">
                                     <div class="overflow-hidden relative">
-                                        @if (count($first_tag->posts)>0)
+                                        @if (count($first_tag->posts) > 0)
 
                                         <img class="rounded-lg w-full" src="{{ asset($first_tag->posts[0]->IMG) }}" alt="" />
-                                        @endif
                                         <div class="p-4 absolute z-2 bottom-0 w-100">
                                             {{-- <span class="focus:outline-none text-[12px] bg-slate-600 text-slate-200 dark:text-slate-200 rounded font-medium py-1 px-2">27 Aug 2023</span> --}}
                                             <a href="#" class="my-3 block text-[36px] leading-12 font-normal tracking-tight text-dark-200
@@ -499,6 +498,7 @@ use App\Models\poststags;
                                             {{ $first_tag->posts[0]->TITLE }}
                                             @endif
 </a>
+
 
                                         </div>
                                         </div>
@@ -533,6 +533,7 @@ use App\Models\poststags;
                 </div><!--end container-->
             </div>
         </div>
+        @endif
 
 {{-- newone  --}}
 
