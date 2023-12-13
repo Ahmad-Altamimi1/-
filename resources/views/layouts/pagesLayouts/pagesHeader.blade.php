@@ -498,11 +498,11 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                                 foreach ($groubs_same_name as $item) {
                                                                     $string_array = explode(',', $item->TAG);
                                                                     if (count($string_array) > 1) {
-            $second_indexs[$string_array[1]] = array_slice($string_array, 2);
+            $second_indexs[$string_array[1]] = array_slice($string_array, 1);
         }
                                                                 }
                                                     ?>
-                                               @if (in_array($singletag->id, $str_arr))
+                                               @if (in_array($singletag->id, $string_array))
                                                @if( array_key_exists($singletag->id, $second_indexs))
                                                <li  style="display: block;
                                                padding: 8px 24px 8px 0;
