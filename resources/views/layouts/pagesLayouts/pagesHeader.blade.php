@@ -512,7 +512,7 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                    </a>
                                                @endif
                                                    <ul class="sub-menu">
-                                                    @isset($$second_indexs[$singletag->id] )
+                                                    @isset($second_indexs[$singletag->id] )
 
 
 
