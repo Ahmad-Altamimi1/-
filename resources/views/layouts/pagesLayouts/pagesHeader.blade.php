@@ -455,7 +455,7 @@ foreach ($allgroups as $group) {
                                                             {{ $group->TITLE }}
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
-                                                                    @if (in_array($singletag->id, $str_arr))
+                                                                    @if (in_array($singletag->id, $str_arr)&&$singletag->id==$str_arr[1])
 
                                                                         <li>
                                                                             <a href="{{ route('showtag', ['tag' => $singletag->id]) }}"
