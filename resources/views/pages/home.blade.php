@@ -491,14 +491,15 @@ use App\Models\poststags;
                                         @if (count($first_tag->posts) > 0)
 
                                         <img class="rounded-lg w-full" src="{{ asset($first_tag->posts[0]->IMG) }}" alt="" />
+                                        @endif
                                         <div class="p-4 absolute z-2 bottom-0 w-100">
                                             {{-- <span class="focus:outline-none text-[12px] bg-slate-600 text-slate-200 dark:text-slate-200 rounded font-medium py-1 px-2">27 Aug 2023</span> --}}
                                             <a href="#" class="my-3 block text-[36px] leading-12 font-normal tracking-tight text-dark-200
-                                            dark:text-dark after:absolute after:inset-0 z-3">@if ($first_tag->posts[0])
+                                            dark:text-dark after:absolute after:inset-0 z-3">  @if (count($first_tag->posts) > 0)
+
                                             {{ $first_tag->posts[0]->TITLE }}
                                             @endif
 </a>
-
 
                                         </div>
                                         </div>
@@ -508,6 +509,8 @@ use App\Models\poststags;
 
                         <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-4 self-center" style="    transform: translateY(22px);
 ">
+                                        @if (count($first_tag->posts) > 0)
+
                             @foreach ( $first_tag->posts->skip(1)->take(4) as $post )
                             <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-4 mb-4 hover-translate" style="    border: 2px solid #eee;">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
@@ -525,11 +528,11 @@ use App\Models\poststags;
                                 </div><!--end grid-->
                             </div> <!--end card-->
                         @endforeach
+                        @endif
 
                             {{-- <a href="{{ route('showtag',["tag"=> $first_tag->id]) }}"  class="px-2 py-2 lg:px-4 bg-transparent  text-base   transition hover:bg-primary-500 border border-primary font-medium w-full" style="display:Block; text-align:center">View all</a> --}}
                         </div><!--end col-->
 
-                        @endif
                     </div><!--end inner-grid-->
                 </div><!--end container-->
             </div>
