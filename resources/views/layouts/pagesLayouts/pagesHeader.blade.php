@@ -261,9 +261,9 @@ use App\Models\groups;
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشار إنْجابيّ')->first()->id]) }}">مستشار إنْجابيّ</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنْجاب')->first()->id]) }}">مدونة إنْجاب </a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنْجابيّ')->first()->id]) }}">منوعات إنْجابيّ </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنْجابيّ</a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}">مدونة إنْجاب </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
 
