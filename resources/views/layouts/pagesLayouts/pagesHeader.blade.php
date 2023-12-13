@@ -532,10 +532,13 @@ foreach ($groubs_same_name as $item) {
                                                        <li>
                                                         <?php
                                                         $poststag = poststags::where('id', '=', $subItem)->first();
-                                                        if ($poststag) {
-                                                            echo $poststag->TITLE;
-                                                        }
                                                         ?>
+                                                        @if ($poststag)
+                                                        <a href="{{ route('showtag', ['tag' => $poststag->id]) }}" style="text-align: right;">
+                                                            {{ $poststag->TITLE }}
+                                                        </a>
+
+
                                                     </li>
                                                        @endforeach
                                                        @endisset

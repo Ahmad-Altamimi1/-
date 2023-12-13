@@ -616,7 +616,8 @@ use App\Models\poststags;
       <div class="article-body">
         <h2>{{ $post->TITLE }}</h2>
         <p>
-          {{ $post->DESCRIPTION }}
+            {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 30) }}
+
         </p>
 
       </div>

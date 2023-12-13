@@ -191,7 +191,8 @@ transform: scale(1.1)
                             <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image"></div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->TITLE }}</h5>
-                                    <p class="card-text">{{ $post->DESCRIPTION }}</p>
+                                    <p class="card-text">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 100) }}
+                                    </p>
                                 </div>
                             </a>
 
