@@ -262,7 +262,7 @@ use App\Models\groups;
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنْجابيّ</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}">مدونة إنْجاب </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}"> مدونة إنجابي </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
@@ -448,14 +448,15 @@ foreach ($allgroups as $group) {
                                                         $str_arr = explode(',', $string);
 
                                                         ?>
-
                                                         <li style="display: block;
     padding: 8px 24px 8px 0;
     text-transform: uppercase;">
+
                                                             {{ $group->TITLE }}
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
-                                                                    @if (in_array($singletag->id, $str_arr)&&$singletag->id==$str_arr[1])
+                                                                @if (in_array($singletag->id, $str_arr) && $singletag->id == (int)$str_arr[1])
+
 
                                                                         <li>
                                                                             <a href="{{ route('showtag', ['tag' => $singletag->id]) }}"
@@ -484,3 +485,5 @@ foreach ($allgroups as $group) {
         </div>
 
         <body>
+
+
