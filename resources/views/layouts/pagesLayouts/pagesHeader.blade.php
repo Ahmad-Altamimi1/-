@@ -495,12 +495,20 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
                                                     <?php
-                                                                foreach ($groubs_same_name as $item) {
-                                                                    $string_array = explode(',', $item->TAG);
-                                                                    if (count($string_array) > 1) {
-            $second_indexs[$string_array[1]] = array_slice($string_array, 1);
+                                                    foreach ($groubs_same_name as $item) {
+    $string_array = explode(',', $item->TAG);
+
+    if (count($string_array) > 1) {
+        $key = $string_array[1];
+        if (!isset($second_indexs[$key])) {
+            $second_indexs[$key] = [];
         }
-                                                                }
+
+        $slices = array_slice($string_array, 2);
+        $second_indexs[$key] = array_merge($second_indexs[$key], $slices);
+    }
+}
+
                                                     ?>
                                                @if (in_array($singletag->id, $str_arr))
                                                @if( array_key_exists($singletag->id, $second_indexs))
