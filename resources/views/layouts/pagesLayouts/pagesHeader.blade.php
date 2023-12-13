@@ -446,7 +446,8 @@ foreach ($allgroups as $group) {
                                                         $string = $group->TAG;
                                                         $str_arr = '';
                                                         $str_arr = explode(',', $string);
-
+                                                        $second_indexs=[];
+$groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                         ?>
                                                         <li style="display: block;
     padding: 8px 24px 8px 0;
@@ -455,7 +456,17 @@ foreach ($allgroups as $group) {
                                                             {{ $group->TITLE }}
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
-                                                                @if (in_array($singletag->id, $str_arr) && $singletag->id == (int)$str_arr[1])
+                                                                <?php
+foreach ($groubs_same_name as $item) {
+    $string_arry = explode(',', $item->TAG);
+    if ($string_arry[1]) {
+
+        $second_indexs[]=$string_arry[1];
+    }
+}
+                                                                ?>
+
+                                                                @if (in_array($singletag->id, $str_arr) && in_array($singletag->id,$second_indexs))
 
 
                                                                         <li>
