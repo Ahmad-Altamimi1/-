@@ -502,7 +502,7 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
         }
                                                                 }
                                                     ?>
-                                               @if (in_array($singletag->id, $string_array))
+                                               @if (in_array($singletag->id, $str_arr))
                                                @if( array_key_exists($singletag->id, $second_indexs))
                                                <li  style="display: block;
                                                padding: 8px 24px 8px 0;
