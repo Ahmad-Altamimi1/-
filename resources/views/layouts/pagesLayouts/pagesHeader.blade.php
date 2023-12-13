@@ -458,24 +458,33 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                                 @foreach ($tags as $key => $singletag)
                                                     <?php
                                                                 foreach ($groubs_same_name as $item) {
-                                                                    $string_arry = explode(',', $item->TAG);
-                                                                    if (count($string_arry)>1) {
-
-                                                                        $second_indexs[]=$string_arry[1];
-                                                                    }
+                                                                    $string_array = explode(',', $item->TAG);
+                                                                    if (count($string_array) > 1) {
+            $second_indexs[$string_array[1]] = array_slice($string_array, 2);
+        }
                                                                 }
                                                     ?>
-                                                                @if (in_array($singletag->id, $str_arr) && in_array($singletag->id,$second_indexs))
-
-
-                                                                        <li>
-                                                                            <a href="{{ route('showtag', ['tag' => $singletag->id]) }}"
-                                                                                style="; text-align: right; ">
-                                                                                {{ $singletag->TITLE }}
-                                                                            </a>
-
-                                                                        </li>
-                                                                    @endif
+                                               @if (in_array($singletag->id, $str_arr) && array_key_exists($singletag->id, $second_indexs))
+                                               <li  style="display: block;
+                                               padding: 8px 24px 8px 0;
+                                               text-transform: uppercase;">
+                                                   <a href="{{ route('showtag', ['tag' => $singletag->id]) }}" style="text-align: right;">
+                                                       {{ $singletag->TITLE }}
+                                                   </a>
+                                                   <ul class="sub-menu">
+                                                       @foreach ($second_indexs[$singletag->id] as $subItem)
+                                                       <li>
+                                                        <?php
+                                                        $poststag = poststags::where('id', '=', $subItem)->first();
+                                                        if ($poststag) {
+                                                            echo $poststag->TITLE;
+                                                        }
+                                                        ?>
+                                                    </li>
+                                                       @endforeach
+                                                   </ul>
+                                               </li>
+                                           @endif
                                                                 @endforeach
                                                             </ul>
                                                         </li>
