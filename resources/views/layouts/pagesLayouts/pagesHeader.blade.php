@@ -495,19 +495,23 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
                                                     <?php
-                                                    foreach ($groubs_same_name as $item) {
+foreach ($groubs_same_name as $item) {
     $string_array = explode(',', $item->TAG);
 
     if (count($string_array) > 1) {
+        // Check if the key exists in the array
         $key = $string_array[1];
         if (!isset($second_indexs[$key])) {
             $second_indexs[$key] = [];
         }
 
+        // Use array_merge to add the slices to the existing array, then use array_unique to remove duplicates
         $slices = array_slice($string_array, 2);
-        $second_indexs[$key] = array_merge($second_indexs[$key], $slices);
+        $mergedArray = array_merge($second_indexs[$key], $slices);
+        $second_indexs[$key] = array_unique($mergedArray);
     }
 }
+
 
                                                     ?>
                                                @if (in_array($singletag->id, $str_arr))
