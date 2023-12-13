@@ -471,18 +471,10 @@ foreach ($allgroups as $group) {
     }
 }
 ?>
-
-<?php
-// print_r($groupstitles)
-
-?>
-
        @foreach ($allgroupnew as $group)
-
-
-                                                        <?php
-                                                        $string = $group->TAG;
-                                                        $str_arr = '';
+  <?php
+$string = $group->TAG;
+ $str_arr = '';
                                                         $str_arr = explode(',', $string);
                                                         $second_indexs=[];
 $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
@@ -492,6 +484,9 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
     text-transform: uppercase;">
 
                                                             {{ $group->TITLE }}
+                                                            <a href="{{ route('showgroup', ['id' => $singletag->id]) }}" style="text-align: right;">
+                                                                {{ $singletag->TITLE }}
+                                                            </a>
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
                                                     <?php
@@ -499,13 +494,11 @@ foreach ($groubs_same_name as $item) {
     $string_array = explode(',', $item->TAG);
 
     if (count($string_array) > 1) {
-        // Check if the key exists in the array
         $key = $string_array[1];
         if (!isset($second_indexs[$key])) {
             $second_indexs[$key] = [];
         }
 
-        // Use array_merge to add the slices to the existing array, then use array_unique to remove duplicates
         $slices = array_slice($string_array, 2);
         $mergedArray = array_merge($second_indexs[$key], $slices);
         $second_indexs[$key] = array_unique($mergedArray);
@@ -537,16 +530,14 @@ foreach ($groubs_same_name as $item) {
                                                         <a href="{{ route('showtag', ['tag' => $poststag->id]) }}" style="text-align: right;">
                                                             {{ $poststag->TITLE }}
                                                         </a>
-
                                                         @endif
-
                                                     </li>
                                                        @endforeach
                                                        @endisset
                                                    </ul>
                                                </li>
                                            @endif
-                                                                @endforeach
+@endforeach
                                                             </ul>
                                                         </li>
                                                     @endforeach
