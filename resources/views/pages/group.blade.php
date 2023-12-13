@@ -185,7 +185,7 @@ transform: scale(1.1)
 
 ">
                         @foreach (\App\Models\Post::where('TAG','=',$tag->id)-> take(4)->get() as $post)
-                        <div class="card" style="max-width:200px ;margin-left:10px:">
+                        <div class="card" style="max-width:300px ;margin-left:10px:">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">
                                 <div style="    overflow: hidden;">
                             <img src="{{ asset($post->IMG) }}" class="card-img-top" alt="Post Image"></div>
