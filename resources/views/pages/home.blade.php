@@ -529,11 +529,11 @@ use App\Models\poststags;
                             {{-- <a href="{{ route('showtag',["tag"=> $first_tag->id]) }}"  class="px-2 py-2 lg:px-4 bg-transparent  text-base   transition hover:bg-primary-500 border border-primary font-medium w-full" style="display:Block; text-align:center">View all</a> --}}
                         </div><!--end col-->
 
+                        @endif
                     </div><!--end inner-grid-->
                 </div><!--end container-->
             </div>
         </div>
-        @endif
 
 {{-- newone  --}}
 
