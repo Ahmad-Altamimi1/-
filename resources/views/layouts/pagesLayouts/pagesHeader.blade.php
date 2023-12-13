@@ -483,8 +483,7 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
     padding: 8px 24px 8px 0;
     text-transform: uppercase;">
 
-                                                            {{ $group->TITLE }}
-                                                            <a href="{{ route('showgroup', ['id' => $singletag->id]) }}" style="text-align: right;">
+                                                            <a href="{{ route('showgroup', ['tag' => $singletag->id]) }}" style="text-align: right;">
                                                                 {{ $singletag->TITLE }}
                                                             </a>
                                                             <ul class="sub-menu">
