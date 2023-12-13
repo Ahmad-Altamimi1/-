@@ -266,28 +266,39 @@ use App\Models\groups;
 $Third_trimester_months_ids=[];
 $Second_trimester_months_ids=[];
 $First_trimester_months_ids=[];
+$slicedArray=[];
                                                     $groupnew_First_trimester = groups::where('TAG', 'like', '%' . $First_trimester->id . '%')->get();
                                                     $groupnew_Third_trimester = groups::where('TAG', 'like', '%' . $Third_trimester->id . '%')->get();
                                                     $groupnew_Second_trimester= groups::where('TAG', 'like', '%' . $Second_trimester->id . '%')->get();
                                                     $ids = [];
 
-                                                    foreach ($groupnew_Second_trimester as $group) {
+
+foreach ($groupnew_Third_trimester as $group) {
     $grouparrays = explode(',', $group->TAG);
 
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Third_trimester_months_ids = array_merge($Third_trimester_months_ids, array_slice($grouparrays, $index));
+        $slicedArray = array_slice($grouparrays, $index);
+
+        foreach ($slicedArray as $tagid) {
+            if ($tagid !== "" && !in_array($tagid, $ids)) {
+                $Third_trimester_months_ids[] = $tagid;
+            }
+        }
     }
 }
-foreach ($groupnew_First_trimester as $group) {
-    $grouparrays = explode(',', $group->TAG);
 
-    $tagIndices = array_keys($grouparrays, $First_trimester->id);
+foreach ($groupnew_First_trimester as $group) {
+    $groupArray = explode(',', $group->TAG);
+
+    $tagIndices = array_keys($groupArray, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $First_trimester_months_ids =   array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
-
+        if ($index < count($groupArray)) {
+            $tagSlice = array_slice($groupArray, $index);
+            $First_trimester_months_ids[] = $tagSlice;
+        }
     }
 }
 foreach ($groupnew_Second_trimester as $group) {
@@ -296,9 +307,13 @@ foreach ($groupnew_Second_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Second_trimester_months_ids =  array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
+        $slicedArray =  array_merge($Third_trimester_months_ids,array_slice($grouparrays, $index));
 
     }
+    foreach ($slicedArray as $tagid) {
+                        if (!in_array($tagid, $ids)) {
+                            $Second_trimester_months_ids[] = $tagid;}
+                        }
 }
                                             ?>
                                                     <li style="text-align: right"><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث </a>
