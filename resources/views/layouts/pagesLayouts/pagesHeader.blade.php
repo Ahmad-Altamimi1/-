@@ -511,8 +511,11 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                        {{ $singletag->TITLE }}
                                                    </a>
                                                @endif
-
                                                    <ul class="sub-menu">
+                                                    @isset($record)
+
+
+
                                                        @foreach ($second_indexs[$singletag->id] as $subItem)
                                                        <li>
                                                         <?php
@@ -523,6 +526,7 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                         ?>
                                                     </li>
                                                        @endforeach
+                                                       @endisset
                                                    </ul>
                                                </li>
                                            @endif
