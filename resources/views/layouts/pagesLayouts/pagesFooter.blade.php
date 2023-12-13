@@ -1,5 +1,16 @@
 
 
+<style>
+    .row p {
+        margin-top: 20px;
+        font-size: 14px
+    }
+    .row p:hover{
+        background-color: #d54368;
+        transition: .3s;
+        color: white !important;
+    }
+</style>
 <footer>
             <div class="container-xl">
                 <div class="footer-inner">
@@ -40,7 +51,7 @@
 
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa fa-info-circle fa-2xl" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-circle-info fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>عن طبكم</p>
                                     </a>
@@ -59,11 +70,9 @@
                                 </div>
                                 <div class="col-2">
                                     <i class="fa fa-address-book-o fa-2xl" aria-hidden="true"></i>
+                                    <p>سياستنا</p>
 
-                                    <a href="#">
-                                        <i class="fa fa-book" aria-hidden="true"></i>
-                                        <p>سياستنا</p>
-                                    </a>
+
                                 </div>
                                 <div class="col-2">
                                     <i class="fa fa-user fa-2xl" aria-hidden="true"></i>
@@ -109,6 +118,7 @@
     <!-- preloader area end -->
 
     <!-- All JS Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
         <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
 

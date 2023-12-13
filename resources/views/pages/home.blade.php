@@ -262,7 +262,7 @@ padding: 0 22%;
                             <div class="col-lg-12 align-self-center">
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title white-color animated">مرحبا بك في أنجابي</h6>
+                                        <h6 class="slide-sub-title white-color animated">مرحبا بك في إنْجابيّ</h6>
                                         <h1 class="slide-title text-uppercase white-color animated ">{{ $slidercontent->description }}</h1>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@ gap: 2%;">
                                         <div class="slide-item-info-inner ltn__slide-animation">
                                             <div class="slide-item-info">
                                                 <div class="slide-item-info-inner ltn__slide-animation">
-                                                    <h1 class="slide-title animated ">اهلا بك في أنجابي </h1>
+                                                    <h1 class="slide-title animated ">اهلا بك في إنْجابيّ </h1>
                                                     <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->posts->TOPIC }}</h6>
                                                     <div class="slide-brief animated">
                                                         <p>{{ $slider->description }}</p>
@@ -442,8 +442,8 @@ height: 100%;">
 use App\Models\poststags;
 ?>
     <div  class="monthimg monthimg1">
-        <img src="../1111.jpg" alt="" >
         <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">
+            <img src="../1111.jpg" alt="" >
 
 
 <p class="month_content ">الثلث الأول</p>

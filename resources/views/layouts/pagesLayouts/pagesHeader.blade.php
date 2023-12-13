@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>أنجابي</title>
+    <title>إنْجابيّ</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="{{ url('css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ url('css/jquery.timepicker.css') }}">
-    <link rel="shortcut icon" href="../انجابي فكتور-01-01.jpg" />
+    <link rel="shortcut icon" href="../انجابي_فكتور-TITLE-removebg-preview.png" />
 
     <link rel="stylesheet" href="{{ url('assets/libs/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/tailwind.min.css') }}">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <!-- Place favicon.png in the root directory -->
-    <link rel="shortcut icon" href="../انجابي فكتور-01-01.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../انجابي_فكتور-TITLE-removebg-preview.png" type="image/x-icon" />
     <!-- Font Icons css -->
     <link rel="stylesheet" href="{{ url('pages/css/font-icons.css') }}">
     <!-- plugins css -->
@@ -145,7 +145,8 @@
                     <ul>
                         <li><a href="#" title="Facebook"><i class="icon-social-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="icon-social-twitter"></i></a></li>
-                        <li><a href="#" title="Pinterest"><i class="icon-social-pinterest"></i></a></li>
+                        <li><a href="#" title="Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" title="Youtube"><i class="icon-social-youtube"></i></a></li>
                         <li><a href="#" title="Instagram"><i class="icon-social-instagram"></i></a></li>
                     </ul>
                 </div>
@@ -260,9 +261,9 @@ use App\Models\groups;
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشار أنجابي')->first()->id]) }}">مستشار أنجابي</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة أنجاب')->first()->id]) }}">مدونة أنجاب </a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات أنجابي')->first()->id]) }}">منوعات أنجابي </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشار إنْجابيّ')->first()->id]) }}">مستشار إنْجابيّ</a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنْجاب')->first()->id]) }}">مدونة إنْجاب </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنْجابيّ')->first()->id]) }}">منوعات إنْجابيّ </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
 
@@ -343,7 +344,7 @@ use App\Models\groups;
                                                 <!-- </ul>
                                             </li> -->
 
-                                            <li><a href="{{ route('allTV') }}"> أنجابي TV</a></li>
+                                            <li><a href="{{ route('allTV') }}"> إنْجابيّ TV</a></li>
                                     </div>
                                 </nav>
                             </div>
@@ -411,7 +412,7 @@ use App\Models\groups;
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
-                        <li><a href="{{route('allTV')}}"> أنجابي TV</a></li>
+                        <li><a href="{{route('allTV')}}"> إنْجابيّ TV</a></li>
                         <?php
 $groupstitles = [];
 $allgroupnew = [];

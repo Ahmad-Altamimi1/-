@@ -40,7 +40,7 @@ class HomeController extends Controller
         $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
-        $first_tag = poststags::first();
+        $first_tag = poststags::where('TITLE','=','العناية الشخصية')->first();
         $defaultPosts = Post::take(4)->get();
 
         return view('pages.home',compact('slidercontent','recentposts', 'tags', 'Monthsofpregnancy', 'havevideo', 'defaultPosts', 'first_tag'));
