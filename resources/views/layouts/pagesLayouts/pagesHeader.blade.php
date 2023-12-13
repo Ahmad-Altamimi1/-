@@ -271,7 +271,7 @@ $slicedArray=[];
                                                     $groupnew_Third_trimester = groups::where('TAG', 'like', '%' . $Third_trimester->id . '%')->get();
                                                     $groupnew_Second_trimester= groups::where('TAG', 'like', '%' . $Second_trimester->id . '%')->get();
                                                     $ids = [];
-                                                    
+
                                                     $Third_trimester_months_ids = processTrimesterGroups($groupnew_Third_trimester, $Third_trimester->id);
                                                     $First_trimester_months_ids = processTrimesterGroups($groupnew_First_trimester, $First_trimester->id);
                                                     $Second_trimester_months_ids = processTrimesterGroups($groupnew_Second_trimester, $Second_trimester->id);
@@ -502,13 +502,16 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
         }
                                                                 }
                                                     ?>
-                                               @if (in_array($singletag->id, $str_arr) && array_key_exists($singletag->id, $second_indexs))
+                                               @if (in_array($singletag->id, $str_arr))
+                                               @if( array_key_exists($singletag->id, $second_indexs))
                                                <li  style="display: block;
                                                padding: 8px 24px 8px 0;
                                                text-transform: uppercase;">
                                                    <a href="{{ route('showtag', ['tag' => $singletag->id]) }}" style="text-align: right;">
                                                        {{ $singletag->TITLE }}
                                                    </a>
+                                               @endif
+
                                                    <ul class="sub-menu">
                                                        @foreach ($second_indexs[$singletag->id] as $subItem)
                                                        <li>
