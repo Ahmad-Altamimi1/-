@@ -271,14 +271,13 @@ $First_trimester_months_ids=[];
                                                     $groupnew_Second_trimester= groups::where('TAG', 'like', '%' . $Second_trimester->id . '%')->get();
                                                     $ids = [];
 
-foreach ($groupnew_Third_trimester as $group) {
+                                                    foreach ($groupnew_Second_trimester as $group) {
     $grouparrays = explode(',', $group->TAG);
 
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Third_trimester_months_ids = array_slice($grouparrays, $index);
-
+        $Third_trimester_months_ids = array_merge($Third_trimester_months_ids, array_slice($grouparrays, $index));
     }
 }
 foreach ($groupnew_First_trimester as $group) {
@@ -287,7 +286,7 @@ foreach ($groupnew_First_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $First_trimester_months_ids = array_slice($grouparrays, $index);
+        $First_trimester_months_ids =  array_merge($First_trimester_months_ids, array_slice($grouparrays, $index));
 
     }
 }
@@ -297,7 +296,7 @@ foreach ($groupnew_Second_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Second_trimester_months_ids = array_slice($grouparrays, $index);
+        $Second_trimester_months_ids = array_merge($Second_trimester_months_ids, array_slice($grouparrays, $index));
 
     }
 }
@@ -306,19 +305,25 @@ foreach ($groupnew_Second_trimester as $group) {
                                                         <ul>
 
                                                             @foreach ($Third_trimester_months_ids as $Third_trimester_month)
+                                                            @if($Third_trimester_month !="")
                                                                 <li style="text-align: right"><a
                                                                         href="{{ route('showtag', ['tag' => $Third_trimester_month]) }}">{{ poststags::where('id','=',$Third_trimester_month)->first()->TITLE  }}</a>
                                                                 </li>
+                                                            @endif
+
                                                             @endforeach
 
                                                         </ul>
                                                     </li>
                                                     <li><a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}" style="text-align: right">الثلث الثاني</a>
                                                         <ul>
+
                                                             @foreach ($Second_trimester_months_ids as $Second_trimester_month)
-                                                                <li style="text-align: right"><a
-                                                                        href="{{ route('showtag', ['tag' => $Second_trimester_month]) }}">{{ poststags::where('id','=',$Second_trimester_month)->first()->TITLE  }}</a>
-                                                                </li>
+                                                            @if ($Second_trimester_month!="")
+                                                            <li style="text-align: right"><a
+                                                                href="{{ route('showtag', ['tag' => $Second_trimester_month]) }}">{{ poststags::where('id','=',$Second_trimester_month)->first()->TITLE  }}</a>
+                                                            </li>
+                                                            @endif
                                                             @endforeach
 
                                                         </ul>
@@ -327,9 +332,11 @@ foreach ($groupnew_Second_trimester as $group) {
                                                         <ul>
 
                                                             @foreach ($First_trimester_months_ids as $First_trimester_month)
+                                                            @if ($First_trimester_month!="")
                                                                 <li style="text-align: right"><a
                                                                         href="{{ route('showtag', ['tag' => $First_trimester_month]) }}">{{ poststags::where('id','=',$First_trimester_month)->first()->TITLE  }}</a>
-                                                                </li>
+                                                                    </li>
+                                                            @endif
                                                             @endforeach
                                                         </ul>
                                                     </li>
