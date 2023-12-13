@@ -286,7 +286,7 @@ foreach ($groupnew_First_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $First_trimester_months_ids =  array_merge($First_trimester_months_ids, array_slice($grouparrays, $index));
+        $First_trimester_months_ids =   array_slice($grouparrays, $index);
 
     }
 }
@@ -296,7 +296,7 @@ foreach ($groupnew_Second_trimester as $group) {
     $tagIndices = array_keys($grouparrays, $First_trimester->id);
 
     foreach ($tagIndices as $index) {
-        $Second_trimester_months_ids = array_merge($Second_trimester_months_ids, array_slice($grouparrays, $index));
+        $Second_trimester_months_ids =  array_slice($grouparrays, $index);
 
     }
 }
@@ -305,7 +305,7 @@ foreach ($groupnew_Second_trimester as $group) {
                                                         <ul>
 
                                                             @foreach ($Third_trimester_months_ids as $Third_trimester_month)
-                                                            @if($Third_trimester_month !="")
+                                                            @if($Third_trimester_month !="" && poststags::where('id','=',$Third_trimester_month)->first()->TITLE != 'الثلث الثالث'  )
                                                                 <li style="text-align: right"><a
                                                                         href="{{ route('showtag', ['tag' => $Third_trimester_month]) }}">{{ poststags::where('id','=',$Third_trimester_month)->first()->TITLE  }}</a>
                                                                 </li>
@@ -319,7 +319,7 @@ foreach ($groupnew_Second_trimester as $group) {
                                                         <ul>
 
                                                             @foreach ($Second_trimester_months_ids as $Second_trimester_month)
-                                                            @if ($Second_trimester_month!="")
+                                                            @if ($Second_trimester_month!=""&& poststags::where('id','=',$Second_trimester_month)->first()->TITLE != 'الثلث الثاني')
                                                             <li style="text-align: right"><a
                                                                 href="{{ route('showtag', ['tag' => $Second_trimester_month]) }}">{{ poststags::where('id','=',$Second_trimester_month)->first()->TITLE  }}</a>
                                                             </li>
@@ -332,7 +332,7 @@ foreach ($groupnew_Second_trimester as $group) {
                                                         <ul>
 
                                                             @foreach ($First_trimester_months_ids as $First_trimester_month)
-                                                            @if ($First_trimester_month!="")
+                                                            @if ($First_trimester_month!=""&& poststags::where('id','=',$First_trimester_month)->first()->TITLE!='الثلث الأول' )
                                                                 <li style="text-align: right"><a
                                                                         href="{{ route('showtag', ['tag' => $First_trimester_month]) }}">{{ poststags::where('id','=',$First_trimester_month)->first()->TITLE  }}</a>
                                                                     </li>
