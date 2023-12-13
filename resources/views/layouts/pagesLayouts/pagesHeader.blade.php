@@ -456,16 +456,15 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
                                                             {{ $group->TITLE }}
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
-                                                                <?php
-foreach ($groubs_same_name as $item) {
-    $string_arry = explode(',', $item->TAG);
-    if ($string_arry[1]) {
+                                                    <?php
+                                                                foreach ($groubs_same_name as $item) {
+                                                                    $string_arry = explode(',', $item->TAG);
+                                                                    if (count($string_arry)>1) {
 
-        $second_indexs[]=$string_arry[1];
-    }
-}
-                                                                ?>
-
+                                                                        $second_indexs[]=$string_arry[1];
+                                                                    }
+                                                                }
+                                                    ?>
                                                                 @if (in_array($singletag->id, $str_arr) && in_array($singletag->id,$second_indexs))
 
 
