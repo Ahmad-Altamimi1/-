@@ -24,7 +24,7 @@
                         <tbody>
                             @foreach ($groups as $postsgroup)
                                 <tr>
-                                    <td>{{ $postsgroup->TITLE }}</td>
+                                    <td>{{ $postsgroup->TITLE }}({{ $postsgroup->DESCRIPTION }})</td>
                                     <td>{{ $postsgroup->id }}</td>
                                     <td>{{ $postsgroup->DATE }}</td>
                                     <td>{{ $postsgroup->REED }}</td>
