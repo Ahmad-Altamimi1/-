@@ -42,7 +42,7 @@ class webcontrol extends Controller
         $posts = DB::table('posts')->get();
         $REED = 0;
         foreach ($posts as $post) {
-            $REED = $REED +   $post->REED;
+            $REED = $REED +   $post->SHOW;
         }
         // dd($visitors);
 
@@ -106,7 +106,7 @@ class webcontrol extends Controller
             }
         }
         $datenow = strtotime('-3:00');
-     
+
         foreach ($posts as $singlepost) {
             if (strtotime($singlepost->DATE_SCHEDULER) <= $datenow) {
                 $postswithtime[] = $singlepost;
