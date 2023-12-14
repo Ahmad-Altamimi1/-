@@ -350,10 +350,10 @@ section::before{
     <div class="container" id="home_background" >
         <div class="row">
             <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="home_content">
-                 <div id="logo"><a href="#home"><img src="{{asset('انجابي_فكتور-TITLE-removebg-preview.png')}}"  width='300px' alt="logo"></a></div>
+                 <div id="logo"><a href="#home"><img src="{{asset('Asset.png')}}"  width='300px' alt="logo"></a></div>
                  <div id="logo_header" ><h5 style="color: white;font-size:52px">Coming soon</h5></div>
                  <div id="counter_box"><div class="countdown"></div></div>
-            
+
                  </div>
                  <div id="preview"></div>
                  <div id="arrow">
