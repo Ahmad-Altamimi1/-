@@ -12,4 +12,7 @@ class groups extends Model
     public function tags(){
 return $this->belongsToMany(poststags::class,"TAG");
     }
+    public function posts(){
+return $this->hasMany(posts::class,"TOPIC");
+    }
 }

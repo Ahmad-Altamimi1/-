@@ -37,7 +37,7 @@ class HomeController extends Controller
             };
         };
 
-        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
+        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
         $first_tag = poststags::where('TITLE','=','العناية الشخصية')->first();
@@ -82,7 +82,7 @@ $previousPost = Videos::where('id', '<', $video->id)
         $isPopular = $request->input('isPopular', false);
 
         if ($isPopular) {
-            $posts = Post::orderBy('popularity_column', 'desc')->take(4)->get();
+            $posts = Post::orderBy('popularity_column', 'desc')->take(6)->get();
         } else {
             $posts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         }
@@ -90,6 +90,9 @@ $previousPost = Videos::where('id', '<', $video->id)
         $view = view('partials.posts')->with('posts', $posts)->render();
 
         return response()->json(['html' => $view]);
+    }
+    public function soon (){
+        return view("pages.soon");
     }
 
 }

@@ -43,6 +43,12 @@ font-size: 16px;
 z-index: 5;
 right: 0;
 }
+.ltn__page-details-inner p{
+    margin-top: 20px;
+    font-size: 21px;
+    line-height: 2;
+    font-weight: 400;
+}
     </style>
     <div class="ltn__utilize-overlay"></div>
 
@@ -109,8 +115,7 @@ right: 0;
                             <span class="description_for_image"> {{$post->PIC_Name}} </span>
                         </div>
 <p style="word-break: break-all; text-align:right">  <?php echo $post->TEXT1 ?>  </p>
-<p>{{ $post->TEXT2 }}</p>
-<p>{{ $post->TEXT3 }}</p>
+
 
 {{-- لعرض الصوره في موديل  --}}
 
@@ -154,7 +159,7 @@ right: 0;
 
 
                                 <ul >
-                                                              @foreach ($tags as $tag)
+                                                              @foreach ($tags->take(3) as $tag)
 
                          @if (count($tag->posts)>0)
                                     <li>

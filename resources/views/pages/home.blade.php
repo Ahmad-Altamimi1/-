@@ -299,7 +299,7 @@ gap: 2%;">
                                             <div class="slide-item-info">
                                                 <div class="slide-item-info-inner ltn__slide-animation">
                                                     <h1 class="slide-title animated ">اهلا بك في إنْجابيّ </h1>
-                                                    <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->posts->TOPIC }}</h6>
+                                                    <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->posts->group->TITLE }}</h6>
                                                     <div class="slide-brief animated">
                                                         <p>{{ $slider->description }}</p>
                                                     </div>
@@ -366,14 +366,14 @@ gap: 2%;">
 height: 100%;">
                                             <div class="popular-post-widget-img" >
                                                 <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#" style=""></a>
-                                                <span class=" " style="width: 100%;
-                                                display: inline-block;
-                                                text-align: center;"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
+
                                             </div>
                                             <div class="popular-post-widget-brief">
                                                 <div class="ltn__blog-meta">
                                                     <ul>
-
+                                                        <span class=" " style="width: 100%;
+                                                        display: inline-block;
+                                                        text-align: center;"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
                                                         <li>
                                                             <span></span>
                                                             {{-- <span>{{ \Carbon\Carbon::parse($recentpost->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}</span> --}}

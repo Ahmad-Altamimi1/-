@@ -450,7 +450,7 @@ $slicedArray=[];
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
-                        <li><a href="{{route('allTV')}}"> إنْجابيّ TV</a></li>
+                        {{-- <li><a href="{{route('allTV')}}"> إنْجابيّ TV</a></li> --}}
                         <?php
 $groupstitles = [];
 $allgroupnew = [];

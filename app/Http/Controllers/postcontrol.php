@@ -902,33 +902,43 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
             foreach ($tagIndices as $index) {
                 $slicedArray = array_slice($grouparrays, $index);
 
-                foreach ($slicedArray as $tagid) {
-                    if (!in_array($tagid, $ids)) {
-                        $ids[] = $tagid;
+                // foreach ($slicedArray as $tagid) {
+                //     if (!in_array($tagid, $ids)) {
+                //         $ids[] = $tagid;
 
-                        $posts = Post::where("TAG", "=", $tagid)->get();
+                //         $posts = Post::where("TAG", "=", $tagid)->get();
 
-                        if ($posts->isNotEmpty()) {
-                            foreach ($posts as $post) {
-                                $postintag[] = $post;
-                            }
-                        }
-                    }
-                }
+                //         if ($posts->isNotEmpty()) {
+                //             foreach ($posts as $post) {
+                //                 $postintag[] = $post;
+                //             }
+                //         }
+                //     }
+                // }
             }
-
+            $postintag = Post::whereIn("TAG", $slicedArray)->orderBy('SHOW', 'asc')->paginate(6);
 
             $otherIds = array_diff($grouparrays, $slicedArray);
-
-
-
     if (in_array($tag, $grouparray)) {
 $groupnew[]= $value;
 }
-
-        }
-
+ }
         $sortingOption = request('sort');
+$pageid= $tag;
+
+        $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
+
+        if ($request->ajax()) {
+            return view('pages.tag', compact('postintag', 'pageid', 'popularpost', 'tags'));
+        }
+        return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags','tagbyid','otherIds'));
+    }
+
+
+
+
+
+
 
 //         switch ($sortingOption) {
 //             case 'popularity':
@@ -979,24 +989,6 @@ $groupnew[]= $value;
 
 //                 break;
 //             }
-
-$pageid= $tag;
-
-        $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
-
-        if ($request->ajax()) {
-            return view('pages.tag', compact('postintag', 'pageid', 'popularpost', 'tags'));
-        }
-        return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags','tagbyid','otherIds'));
-    }
-
-
-
-
-
-
-
-
 
 
 
@@ -1241,9 +1233,9 @@ $tagofpost= poststags::find($post->TAG);
         $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(5)->get();
     $mode = $request->input('mode');
         if ($mode === 'recent') {
-            $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(5)->get();
+            $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
         } else if ($mode === 'popular') {
-            $popularPosts = Post::orderBy('SHOW', 'asc')->take(5)->get();
+            $popularPosts = Post::orderBy('SHOW', 'asc')->take(6)->get();
         }
 
         return view('partials.posts', ['popularPosts' => $popularPosts]);

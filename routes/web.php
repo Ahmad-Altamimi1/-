@@ -19,6 +19,8 @@ use App\Models\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware('auth')->group(function () {
+
 Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");
 Route::get('TV/{id}', [HomeController::class, "tv_show"])->name("tv_show");
@@ -36,6 +38,8 @@ Route::get('/dashboard', function () {
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search'])->name('search');
 
+});
+Route::get('/coming_soon', [HomeController::class, 'soon'])->name('soon');
 
 /*
 |--------------------------------------------------------------------------

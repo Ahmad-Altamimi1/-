@@ -146,7 +146,9 @@
                                     </div>
                                     @endforeach
                                     @else
-                                    <p style="text-align: center; font-size:">لا يوجد مقالات لعرضها</p>
+                                    <p style="text-align: center;
+                                    font-size: 32px;
+                                    font-weight: 700;">لا يوجد مقالات لعرضها</p>
                                     @endif
 
                                     <!--  -->

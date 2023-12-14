@@ -21,5 +21,7 @@ class Post extends Model
     {
         return $this->belongsTo(poststags::class, 'TAG', "id");
     }
-
+    public function group(){
+        return $this->belongsTo(groups::class,"TOPIC");
+            }
 }
