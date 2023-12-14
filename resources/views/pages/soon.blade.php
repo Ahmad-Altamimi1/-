@@ -19,7 +19,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800" rel="stylesheet" type="text/css">
 
     <!-- Modernizer and IE specyfic files -->
-    <script src="{{url('js/modernizr.custom.js')}}"></script>
+    {{-- <script src="{{url('js/modernizr.custom.js')}}"></script> --}}
 
 
 <style>
@@ -382,6 +382,30 @@ section::before{
 
 
     <!-- JavaScript plugins comes here -->
+    <!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+    // Create a new countdown instance
+    $('.countdown').countdown({
+        date: "June 7, 2087 15:03:25",
+        refresh: 1000,
+        onEnd: function() {
+            console.log("Countdown ended");
+        },
+        render: function(date) {
+            // Customize the rendering of the countdown
+            $(this.el).html("" + date.days + "<strong>D</strong> " +
+                (this.leadingZeros(date.hours)) + "<strong>H</strong> " +
+                (this.leadingZeros(date.min)) + "<strong>M</strong> " +
+                (this.leadingZeros(date.sec)) + "<strong>S</strong>");
+        }
+    });
+
+    // Start the countdown
+    $('.countdown').data('countdown').start();
+});
+</script>
     <script src="{{url('js/jquery-2.0.3.min.js')}}"></script>
     <script src="{{url('js/jquery.easing.min.js')}}"></script>
     <script src="{{url('js/jquery.scrollTo.js')}}"></script>
@@ -411,7 +435,7 @@ section::before{
     </script>
 
     <!-- Demo Switcher JS -->
-	<script type="text/javascript" src="{{url('js/fswit.js')}}"></script>
+	{{-- <script type="text/javascript" src="{{url('js/fswit.js')}}"></script> --}}
 <script>
     (function($) {
 
@@ -451,7 +475,7 @@ section::before{
       * Home Screen Counter
       */
      counter: function() {
-     $('.countdown').countdown({ date: "February 7, 2014 15:03:26" });
+     $('.countdown').countdown({ date: "December  19, 2023 11:03:26" });
      },
 
 
@@ -588,5 +612,7 @@ $(function() {
 
 })(jQuery);
 </script>
+
+
   </body>
 </html>

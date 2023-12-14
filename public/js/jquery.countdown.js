@@ -15,6 +15,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
 (function() {
 
   (function($) {
+
     $.countdown = function(el, options) {
       var getDateData,
         _this = this;
