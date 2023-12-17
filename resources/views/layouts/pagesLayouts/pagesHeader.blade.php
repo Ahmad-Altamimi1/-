@@ -230,7 +230,7 @@
                                     <ul id="searchResults"></ul>
                                 </div> --}}
                                 <?php
-                                use App\Models\Post;
+                                use App\Models\Post;    
                                 use App\Models\poststags;
 
                                 $First_trimester = poststags::where('TITLE', '=', 'الثلث الأول')->first();
