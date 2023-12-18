@@ -17,7 +17,7 @@ class APIController extends Controller
 
         function postcheck (){
             $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
-            if (!$posts) {
+            if (count($posts)<1) {
                 postcheck();
 
             }
