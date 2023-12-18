@@ -15,8 +15,8 @@ class APIController extends Controller
         $totalGroups = count(groups::all());
 
             $randomTopics = [
-                rand(90, $totalGroups),
-                rand(90, $totalGroups),
+                rand(1, $totalGroups),
+                rand(1, $totalGroups),
             ];
             $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
             if (count($posts)<1) {
