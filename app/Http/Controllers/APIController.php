@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 class APIController extends Controller
 {
     public function index(){
-        $totalGroups = count(groups::all());
 
 
 
         function postcheck (){
+        $totalGroups = count(groups::all());
+
             $randomTopics = [
                 rand(90, $totalGroups),
                 rand(90, $totalGroups),
