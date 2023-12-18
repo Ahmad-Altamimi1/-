@@ -15,7 +15,14 @@ class APIController extends Controller
             rand(90, $totalGroups),
         ];
 
-        $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
+        function postcheck (){
+            $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
+            if (!$posts) {
+                postcheck();
+
+            }
+        };
+
          return response()->json($posts, 200);
     }
 }
