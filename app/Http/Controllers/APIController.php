@@ -1,15 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Post;
 use App\Models\groups;
 use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         $totalGroups = count(groups::all());
 
         $randomTopics = [
@@ -18,8 +16,6 @@ class APIController extends Controller
         ];
 
         $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
-
-        return response()->json($posts, 200);
+         return response()->json($posts, 200);
     }
 }
-
