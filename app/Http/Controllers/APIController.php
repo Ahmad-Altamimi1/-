@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class APIController extends Controller
 {
     public function index(){
-        $posts=Post::take(40);
+        $posts=Post::take(40)->get();
          return response()->json($posts, 200);
     }
 }
