@@ -7,24 +7,29 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
-    public function index(){
+    public function index()
+    {
+        $posts = $this->postcheck();
 
+        return response()->json($posts, 200);
+    }
 
-
-        function postcheck (){
+    private function postcheck()
+    {
         $totalGroups = count(groups::all());
 
-            $randomTopics = [
-                rand(1, $totalGroups),
-                rand(2, $totalGroups),
-            ];
-            $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
-            if (count($posts)<1) {
- postcheck();
-            }
-            return  $posts ;
-        };
-        postcheck();
-         return response()->json($posts, 200);
+        $randomTopics = [
+            rand(1, $totalGroups),
+            rand(2, $totalGroups),
+        ];
+
+        $posts = Post::whereIn('TOPIC', $randomTopics)->with(['tag', 'group'])->take(4)->get();
+
+        if (count($posts) < 1) {
+            // Recursive call to ensure at least one post is retrieved
+            return $this->postcheck();
+        }
+
+        return $posts;
     }
 }
