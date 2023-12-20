@@ -475,7 +475,7 @@ section::before{
       * Home Screen Counter
       */
      counter: function() {
-     $('.countdown').countdown({ date: "December  19, 2023 11:03:26" });
+     $('.countdown').countdown({ date: "December  27, 2023 11:03:26" });
      },
 
 
