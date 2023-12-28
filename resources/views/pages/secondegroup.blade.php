@@ -73,7 +73,7 @@
                 left: 50%;
                 bottom: 15%;
                 transform: translateX(-50%);
-                text-align: center;
+                text-align: right;
                 font: 900 1rem helvetica, sans-serif;
                 color: white;
             }
@@ -164,7 +164,7 @@ transform: scale(1.1)
                             class="cardes">
                             <div class='cardes-containers'>
                                 <h2 class="mm">{{ $tag->TITLE }}</h2>
-                                <p class="SS" style="color:white;    font-size: 20px;">{{ $tag->DESCRIPTION }}</p>
+                                <p class="SS" style="color:white;font-size: 20px;">{{ $tag->DESCRIPTION }}</p>
                             </div>
                         </div>
                     </a>
@@ -202,7 +202,7 @@ transform: scale(1.1)
                                                 <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                             </div>
                                             <div class="card-body">
-                                                <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
+                                                <h5 class="card-title"  style="text-align: right">{{ $post->TITLE }}</h5>
                                                 <p class="card-text">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 100) }}</p>
                                             </div>
                                         </a>
@@ -265,7 +265,7 @@ transform: scale(1.1)
                     <p
                         style="    font-size: 50px;
                         width: 100%;
-                        text-align: center;
+                        text-align: right;
                         border-bottom: 2px solid #eee;
                         margin-bottom: 20px;
                         padding-bottom: 10px;">
@@ -305,7 +305,7 @@ $havevideos=true;
                                                     alt="tag Image">
                                             </div>
                                             <div class="card-body">
-                                                <h5 class="card-title" style="text-align: center">{{ $post->TITLE }}</h5>
+                                                <h5 class="card-title" style="text-align: right">{{ $post->TITLE }}</h5>
                                                 <p class="card-text">
                                                     {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 100) }}</p>
                                             </div>
