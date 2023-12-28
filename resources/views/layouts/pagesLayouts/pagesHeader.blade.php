@@ -259,7 +259,7 @@ use App\Models\groups;
 
                                             </li>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}"> مدونة إنجابي </a>
-                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مدونة إنجابي')!!}
+                                                {{-- {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مدونة إنجابي')!!} --}}
                                             </li>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a>
                                                 {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('منوعات إنجابي')!!}
