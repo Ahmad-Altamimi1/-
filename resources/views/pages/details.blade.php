@@ -17,7 +17,7 @@ a:hover {
   color: var(--ltn__secondary-color) !important;
 text-decoration:none !important}
 .recnt_title{
-        font-size: 19px !important;
+        font-size: 15px !important;
     margin-top: 12px;
     display: inline-block;
 }
@@ -294,7 +294,9 @@ right: 0;
                                     @foreach ($recentposts as $recentpost)
 
                                     <li>
-                                        <div class="popular-post-widget-item clearfix">
+                                        <div class="popular-post-widget-item clearfix" style="    display: grid;
+                                        grid-template-columns: 43% 55%;
+                                    }">
                                             <div class="popular-post-widget-img">
                                                 <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#"></a>
                                             </div>
