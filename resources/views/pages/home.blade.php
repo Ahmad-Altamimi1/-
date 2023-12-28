@@ -293,8 +293,8 @@ gap: 2%;">
                     <div class="ltn__slide-item-inner" style="border-radius: 64px;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12 align-self-center">
-                                    <div class="slide-item-info">
+                                <div class="col-lg-12 align-self-center" style="slide-item-info">
+                                    <div class="slide-item-info" style="flex: 1">
                                         <div class="slide-item-info-inner ltn__slide-animation">
                                             <div class="slide-item-info">
                                                 <div class="slide-item-info-inner ltn__slide-animation">
