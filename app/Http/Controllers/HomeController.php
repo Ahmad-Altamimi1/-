@@ -94,5 +94,71 @@ $previousPost = Videos::where('id', '<', $video->id)
     public function soon (){
         return view("pages.soon");
     }
+    function generateDropdownMenu($groupTitle)
+    {
+        $TAGS_oF_group_new_have_Same_Inital_Tag = [];
+
+        $tags_in_Group = explode(',', groups::where('TITLE', '=', $groupTitle)->first()->TAG);
+
+        foreach (groups::all() as $key => $groupdropmenu) {
+            $tags_in_allgroup = explode(',', $groupdropmenu->TAG);
+            if ($tags_in_Group[0] == $tags_in_allgroup[0]) {
+                $index = $tags_in_allgroup[1];
+
+if (isset($TAGS_oF_group_new_have_Same_Inital_Tag[$index])) {
+    $TAGS_oF_group_new_have_Same_Inital_Tag[$index] = array_merge($TAGS_oF_group_new_have_Same_Inital_Tag[$index], array_slice($tags_in_allgroup, 2));
+} else {
+    $TAGS_oF_group_new_have_Same_Inital_Tag[$index] = array_slice($tags_in_allgroup, 2);
+}
+
+            }
+        }
+
+        $html = '';
+        if (count($TAGS_oF_group_new_have_Same_Inital_Tag) > 1) {
+            $html .= '<ul  style=" TEXT-ALIGN:RIGHT">';
+
+            foreach ($TAGS_oF_group_new_have_Same_Inital_Tag as $key => $item) {
+                $keytag = poststags::find($key);
+                $havevideos = false;
+                if ($keytag) {
+                    if (count($keytag->posts)==0 &&count($keytag->posts)>0) {
+$havevideos=true;
+                    }
+
+                    $html .= '<li style="TEXT-ALIGN:RIGHT"><a href="' . ($havevideos ? route('groupsecbyid', ['id' => $keytag->id]) : route('groupsecbyid', ['id' => $keytag->id])) . '">' . (count($item) > 1 ? "<span class='spanleft' style='float: left;'><<</span>" : "") . $keytag->TITLE . '</a>';
+
+                if (count($item)>1) {
+// DD(array_filter($item));
+$uniqueItems = [];
+                $html .='<ul>';
+                foreach ($item as $singleitem) {
+                    if (!(in_array($singleitem,$uniqueItems))) {
+                        $uniqueItems[]=$singleitem;
+
+                    $keytag = poststags::find($singleitem);
+                    $havevideos = false;
+                    if ($keytag) {
+                        if (count($keytag->posts)==0 &&count($keytag->posts)>0) {
+    $havevideos=true;
+                        }
+
+
+                    $html .= '<li style=" TEXT-ALIGN:RIGHT"><a href="' . ($havevideos ? route('videotags', ['id' => $keytag->id]) : route('tagbyid', ['id' => $keytag->id])) . '">' . $keytag->TITLE . '</a></li>';
+                }
+
+                }
+            }
+            $html .='</ul>';
+        }
+        $html .='</li>';
+                }
+            }
+
+            $html .= '</ul>';
+        }
+
+        return $html;
+    }
 
 }

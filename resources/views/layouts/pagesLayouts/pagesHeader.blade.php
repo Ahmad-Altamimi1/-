@@ -254,11 +254,22 @@ use App\Models\groups;
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنْجابيّ</a></li>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}"> مدونة إنجابي </a></li>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a></li>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a></li>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a></li>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنْجابيّ</a>
+                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مستشارة إنجابي')!!}
+
+                                            </li>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}"> مدونة إنجابي </a>
+                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مدونة إنجابي')!!}
+                                            </li>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a>
+                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('منوعات إنجابي')!!}
+                                            </li>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
+                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('صحة العائلة')!!}
+                                            </li>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'العناية الشخصية')->first()->id]) }}">العناية الشخصية</a>
+                                                {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('العناية الشخصية')!!}
+                                            </li>
 
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'أشهر الحمل')->first()->id]) }}">أشهر الحمل </a>
                                                 <ul class="mega-menu">
