@@ -150,7 +150,7 @@ transform: scale(1.1)
                     ?>
                     @if ($group->TITLE != $tag->TITLE)
                         <a href="{{ route('groupsecbyid', ['id' => $tag->id]) }}">
-                            <div style="background-image: url({{ asset('storage/' . $tag->IMG . '') }}); background-size: cover;"
+                            <div style="background-image: url({{ asset( $tag->IMG . '') }}); background-size: cover;"
                                 class="cardes">
                                 <div class='cardes-containers'>
                                     <h2 class="mm">{{$tag->TITLE }}</h2>
@@ -177,7 +177,7 @@ $maintag_posts= $Main_Tag->posts;
                         <div class="card" style="width: 100%;">
                             <a href="{{route('ShoWarticle', ['id' => $post->id])  }}">
                                 <div style="overflow: hidden;">
-                                    <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top" alt="tag Image">
+                                    <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
@@ -256,7 +256,7 @@ $havevideos=true;
                                             <a href="{{ $havevideos ? route('videobyid', ['id' => $post->id]) : route('ShoWarticle', ['id' => $post->id]) }}">
 
                                                 <div style="overflow: hidden;">
-                                                    <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top" alt="tag Image">
+                                                    <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
