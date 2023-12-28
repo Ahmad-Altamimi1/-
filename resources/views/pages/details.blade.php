@@ -49,6 +49,11 @@ right: 0;
     line-height: 2;
     font-weight: 400;
 }
+.row p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
     </style>
     <div class="ltn__utilize-overlay"></div>
 
@@ -91,7 +96,7 @@ right: 0;
         <div class="container">
             <div class="row" style="flex-direction: row-reverse">
 
-                <div class="col-lg-8">
+                <div class="col-lg-8" dir="rtl">
                     <div class="ltn__blog-details-wrap">
                         <div class="ltn__page-details-inner ltn__blog-details-inner">
                             <div class="ltn__blog-meta" style="text-align: right;">
@@ -300,11 +305,11 @@ right: 0;
                                                         <li class="ltn__blog-author d-none">
                                                             <a href="#">by: {{ $recentpost->WRITER }}</a>
                                                         </li>
-                                                                        <li class="ltn__blog-comment">
+                                                                        {{-- <li class="ltn__blog-comment">
 
                                         <span style="font-size: 12px" >  <i class="fa fa-eye" aria-hidden="true"></i> {{ $recentpost->SHOW }}</span>
 
-                                    </li>
+                                    </li> --}}
                                                         <li>
                                                             {{-- <span>{{ \Carbon\Carbon::parse($recentpost->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}</span> --}}
                                                         </li>
