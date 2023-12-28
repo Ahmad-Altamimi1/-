@@ -175,7 +175,7 @@ $maintag_posts= $Main_Tag->posts;
 
                     <div class="col-lg-4 col-md-4 mb-4" dir="rtl">
                         <div class="card" style="width: 100%;">
-                            <a href="{{route('postbyid', ['id' => $post->id])  }}">
+                            <a href="{{route('ShoWarticle', ['id' => $post->id])  }}">
                                 <div style="overflow: hidden;">
                                     <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top" alt="tag Image">
                                 </div>
@@ -253,7 +253,7 @@ $havevideos=true;
                                 {{-- @foreach (\App\Models\Post::where('TOPIC', '=', $groupId_have_same_tag_in_last)->take(4)->get() as $post) --}}
                                     <div class="col-lg-4 col-md-4 mb-4" dir="rtl">
                                         <div class="card" style="width: 100%;">
-                                            <a href="{{ $havevideos ? route('videobyid', ['id' => $post->id]) : route('postbyid', ['id' => $post->id]) }}">
+                                            <a href="{{ $havevideos ? route('videobyid', ['id' => $post->id]) : route('ShoWarticle', ['id' => $post->id]) }}">
 
                                                 <div style="overflow: hidden;">
                                                     <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top" alt="tag Image">
