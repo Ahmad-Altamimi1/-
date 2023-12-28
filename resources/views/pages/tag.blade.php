@@ -81,35 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ltn__shop-options">
-                        <ul>
-                            <li>
-                               <div class="showing-product-number text-right">
-    <span>
-        {{-- عرض {{ $postintag->firstItem() }} - {{ $postintag->lastItem() }} من {{ $postintag->total() }} النتائج --}}
-    </span>
-</div>
-
-                            </li>
-                            <li>
-                               <div class="short-by ">
-                                    {{-- <select class="nice-select" id="sorting-options">
-
-    <option value="default">ترتيب عشوائي</option>
-    <option value="popularity" data-sort="popularity"> الترتيب حسب الأكثر قراءه</option>
-    <option value="new" data-sort="created_at">الترتيب حسب الأجدد</option>
-
-                                    </select> --}}
-                                </div>
-                                <div class="ltn__grid-list-tab-menu ">
-                                    <div class="nav">
-                                        <a class="active show" data-bs-toggle="tab" href="#liton_product_grid"><i class="icon-grid"></i></a>
-                                        <a data-bs-toggle="tab" href="#liton_product_list"><i class="icon-menu"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+ 
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
@@ -163,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-         
+
                     </div>
                    <div class="ltn__pagination-area ">
     <div class="ltn__pagination ltn__pagination-2">
