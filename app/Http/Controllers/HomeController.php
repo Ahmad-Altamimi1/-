@@ -150,7 +150,7 @@ $uniqueItems = [];
                         }
 
 
-                    $html .= '<li style=" TEXT-ALIGN:RIGHT"><a href="' . ($havevideos ? route('videotags', ['id' => $keytag->id]) : route('tagbyid', ['id' => $keytag->id])) . '">' . $keytag->TITLE . '</a></li>';
+                    $html .= '<li style=" TEXT-ALIGN:RIGHT"><a href="' . ($havevideos ? route('videotags', ['id' => $keytag->id]) : route('ShoWarticle', ['id' => $keytag->id])) . '">' . $keytag->TITLE . '</a></li>';
                 }
 
                 }
