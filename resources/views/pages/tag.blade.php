@@ -3,7 +3,9 @@
     @section('content')
  <div class="ltn__utilize-overlay"></div>
 <style>
-
+.product-price{
+    color: #9faabb;
+}
 /* Blur-zoom Container */
 .img-hover-zoom--blur a img:hover {
   transition: transform 1s, filter 2s ease-in-out;
@@ -141,7 +143,7 @@
 
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title" style="  text-align: right;  padding: 0 10px;"><a style="font-weight: 700;    line-height: 1.8;
+                                                <h2 class="product-title" style="  text-align: right;  padding: 0 10px;    margin-bottom: 20px;"><a style="font-weight: 700;    line-height: 1.8;
                                                     font-size: 16px;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
                                                 <div class="product-price" style="padding: 0 15px">
                                                            {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =80, $end = '...') }}
