@@ -156,7 +156,7 @@
 
                     ?>
                 @if ($group->TITLE != $tag->TITLE)
-                    <a href="{{ route('showtag', ['id' => $tag->id]) }}">
+                    <a href="{{ route('showtag', ['tag' => $tag->id]) }}">
                         <div style="background-image: url({{ asset( $tag->IMG . '') }}); background-size: cover;"
                             class="cardes">
                             <div class='cardes-containers'>
@@ -320,7 +320,7 @@ $havevideos=true;
 @if ($tag)
 
                         <div class="more">
-                            <a href="{{$havevideos ? route('videotags', ['id' => $tag->id]): route('showtag', ['id' => $tag->id]) }}">
+                            <a href="{{$havevideos ? route('videotags', ['id' => $tag->id]): route('showtag', ['tag' => $tag->id]) }}">
                                 اظهار المزيد
                             </a>
                         </div>
