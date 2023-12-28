@@ -24,6 +24,10 @@ text-decoration:none !important}
 .text-center .section-title-border::before{
     width: 0;
 }
+img{
+    object-fit: cover;
+    width: 100%;
+}
 h3{
     font-size: 27px !important;
 }
