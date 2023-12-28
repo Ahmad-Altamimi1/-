@@ -46,6 +46,7 @@ $Main_Tag=poststags::find($title);
 
         foreach (groups::all() as $value) {
             $arry2 = explode(',', $value->TAG);
+if (count(array_filter($arry2))>0) {
 
             if ($arry2[1] == $title) {
                 $group=poststags::findOrfail($arry2[1]);
@@ -76,6 +77,7 @@ $Main_Tag=poststags::find($title);
                 $tagsinallgroups .= $value->TAG;
                             }
                                }
+                            }
         }
 
         if (!($group && $maingroup)) {
