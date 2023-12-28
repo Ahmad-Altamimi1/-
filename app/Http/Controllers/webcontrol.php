@@ -397,7 +397,7 @@ class webcontrol extends Controller
         $nm = 1;
         $wordCount = count($postintag);
 
-        return view('public.videosByTag', compact('postintag', 'pageid', 'popularpost', 'tags', 'tagbyid', 'otherIds', 'page', 'nm', 'wordCount'));
+        return view('pages.videosByTag', compact('postintag', 'pageid', 'popularpost', 'tags', 'tagbyid', 'otherIds', 'page', 'nm', 'wordCount'));
     }
 
     public function tagbyidvid($id)
