@@ -209,7 +209,7 @@ right: 0;
                     <div class="col-12">
                         <div class="ltn__product-item text-center">
                             <div class="product-img">
-                                <a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}"><img src="{{ asset('../'. $Otherpost->IMG) }}" alt="#"></a>
+                                <a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}"><img style="    object-fit: cover; aspect-ratio: 1;" src="{{ asset('../'. $Otherpost->IMG) }}" alt="#"></a>
                                 <div class="product-badge">
 
                                 </div>
