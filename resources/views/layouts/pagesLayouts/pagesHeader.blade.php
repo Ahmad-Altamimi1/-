@@ -74,7 +74,7 @@
                 align-items: center;
 
         }
-      
+
     </style>
 </head>
 
@@ -82,7 +82,7 @@
     <div class="body-wrapper">
         <!-- HEADER AREA START (header-3) -->
         <!-- HEADER AREA START (header-4) -->
-        <header class="ltn__header-area ltn__header-8 section-bg-6">
+        <header class="ltn__header-area ltn__header-8 section-bg-6" dir="rtl !important">
             <!-- ltn__header-top-area start -->
          <div class="ltn__header-middle-area">
             <div class="container">

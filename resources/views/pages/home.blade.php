@@ -229,6 +229,9 @@ padding: 0 22%;
 .click_active{
 
 }
+body{
+    direction: rtl;
+}
         </style>
         </div>
     {{-- <div class="ltn__utilize-overlay"></div> --}}
