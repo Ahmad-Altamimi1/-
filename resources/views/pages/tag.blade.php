@@ -119,7 +119,7 @@
                                             </div>
                                             <div class="product-info">
                                                 <h2 class="product-title" style="  text-align: right;  padding: 0 10px;    margin-bottom: 20px;"><a style="font-weight: 700;    line-height: 1.8;
-                                                    font-size: 16px;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
+                                                    font-size: 16px;" href="{{ ROUTE('ShoWarticle',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
                                                 <div class="product-price" style="padding: 0 15px">
                                                            {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =80, $end = '...') }}
 
