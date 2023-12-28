@@ -125,6 +125,16 @@ margin:20px ;
 border-radius: 0 !important
 
 }
+.card-title{
+text-align: right;
+font-weight: 700;
+ line-height: 1.8;
+font-size: 16px;
+}
+.product-price{
+    color: #9faabb;
+    padding: 0 15px;
+}
 .card img:hover{
     transition: 0.4s;
 transform: scale(1.1)
@@ -173,14 +183,14 @@ $maintag_posts= $Main_Tag->posts;
                 @if (count($maintag_posts)>0)
                  @foreach ($maintag_posts->take(12) as $post)
 
-                    <div class="col-lg-4 col-md-4 mb-4" dir="rtl">
+                    <div class="col-lg-4 col-md-4 mb-4" dir="rtl" >
                         <div class="card" style="width: 100%;">
                             <a href="{{route('ShoWarticle', ['id' => $post->id])  }}">
                                 <div style="overflow: hidden;">
                                     <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
+                                    <h5 class="card-title"  >{{ $post->TITLE }}</h5>
                                     <p class="card-text">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 100) }}</p>
                                 </div>
                             </a>
@@ -259,7 +269,7 @@ $havevideos=true;
                                                     <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
+                                                    <h5 class="card-title"  >{{ $post->TITLE }}</h5>
                                                     <p class="card-text">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 100) }}</p>
                                                 </div>
                                             </a>

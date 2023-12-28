@@ -74,9 +74,7 @@
                 align-items: center;
 
         }
-        body{
-            font-family: Cairo,sans-serif !important;
-        }
+      
     </style>
 </head>
 
