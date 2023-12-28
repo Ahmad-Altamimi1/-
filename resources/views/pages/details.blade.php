@@ -89,7 +89,8 @@ right: 0;
     <!-- PAGE DETAILS AREA START (blog-details) -->
     <div class="ltn__page-details-area ltn__blog-details-area mb-100">
         <div class="container">
-            <div class="row">
+            <div class="row" style="flex-direction: row-reverse">
+
                 <div class="col-lg-8">
                     <div class="ltn__blog-details-wrap">
                         <div class="ltn__page-details-inner ltn__blog-details-inner">

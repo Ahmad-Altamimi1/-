@@ -902,19 +902,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
             foreach ($tagIndices as $index) {
                 $slicedArray = array_slice($grouparrays, $index);
 
-                // foreach ($slicedArray as $tagid) {
-                //     if (!in_array($tagid, $ids)) {
-                //         $ids[] = $tagid;
 
-                //         $posts = Post::where("TAG", "=", $tagid)->get();
-
-                //         if ($posts->isNotEmpty()) {
-                //             foreach ($posts as $post) {
-                //                 $postintag[] = $post;
-                //             }
-                //         }
-                //     }
-                // }
             }
             $postintag = Post::whereIn("TAG", $slicedArray)->orderBy('SHOW', 'asc')->paginate(6);
 
@@ -928,9 +916,7 @@ $pageid= $tag;
 
         $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
 
-        if ($request->ajax()) {
-            return view('pages.tag', compact('postintag', 'pageid', 'popularpost', 'tags'));
-        }
+     
         return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags','tagbyid','otherIds'));
     }
 
