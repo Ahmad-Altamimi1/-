@@ -110,7 +110,7 @@ margin:20px ;
             }
             .more a {
                 padding: 8px 70px;
-                background:#70b646;
+                background:#d54368;
                 color:white;
                 border-radius:6px;
 
