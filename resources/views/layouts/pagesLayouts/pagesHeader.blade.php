@@ -494,7 +494,7 @@ $groubs_same_name=groups::where("TITLE",'=',$group->TITLE)->get();
     padding: 8px 24px 8px 0;
     text-transform: uppercase;">
 
-                                                            {{ $group->TITLE }}
+                                                         <a href="{{ route('showgroup') }}">   {{ $group->TITLE }}</a>
                                                             <ul class="sub-menu">
                                                                 @foreach ($tags as $key => $singletag)
                                                     <?php
@@ -520,7 +520,7 @@ foreach ($groubs_same_name as $item) {
                                                <li  style="display: block;
                                                padding: 8px 24px 8px 0;
                                                text-transform: uppercase;">
-                                                   <a href="{{ route('showtag', ['tag' => $singletag->id]) }}" style="text-align: right;">
+                                                   <a href="{{ route('groupsecbyid', ['id' => $singletag->id]) }}" style="text-align: right;">
                                                        {{ $singletag->TITLE }}
                                                    </a>
                                                @endif
