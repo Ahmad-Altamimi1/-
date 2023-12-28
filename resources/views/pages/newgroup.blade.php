@@ -131,7 +131,7 @@ font-weight: 700;
  line-height: 1.8;
 font-size: 16px;
 }
-.product-price{
+.card-text{
     color: #9faabb;
     padding: 0 15px;
 }
