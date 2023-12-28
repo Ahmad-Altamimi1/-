@@ -41,11 +41,10 @@
     {{-- /* gogle fonts  */ --}}
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@800&family=Cairo:wght@700&display=swap"
+    rel="stylesheet">
     {{-- /* gogle fonts  */ --}}
     <style>
         /* Define the styles for the scrollbar */
@@ -74,6 +73,9 @@
         .header-contact-search{
                 align-items: center;
 
+        }
+        body{
+            font-family: Cairo,sans-serif !important;
         }
     </style>
 </head>

@@ -33,7 +33,9 @@
         justify-content: center;
         z-index: 9999;
     }
-
+    .ltn__breadcrumb-area{
+        margin-bottom: 20px !important;
+    }
     .preloader img {
         width: 50px; /* Adjust the size of the preloader image */
     }
@@ -41,7 +43,7 @@
 
     <!-- BREADCRUMB AREA START -->
     <div class="ltn__breadcrumb-area ltn__breadcrumb-area-4 ltn__breadcrumb-color-white---"
-    style="background-image:url(../uploads/{{ $tagbyid->IMG}})">
+    style="background-image:url(../uploads/{{ $tagbyid->IMG}});    text-align: center;">
         <div class="container">
             <div class="row">
 
@@ -51,7 +53,8 @@
                     <div class="ltn__breadcrumb-inner ">
                         <h1 class="ltn__page-title">{{ $tagbyid->TITLE }}</h1>
                         <div class="ltn__breadcrumb-list">
-                            <ul>
+                            <ul style="    color: white;
+                            margin-top: 30px;">
                                 <span><a href="{{ route('home') }}">الصفحة الرئيسية</a>
 
                                     @foreach ($otherIds as $stag)
@@ -81,7 +84,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
- 
+
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
