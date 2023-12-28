@@ -129,7 +129,7 @@ border-radius: 0 !important
 text-align: right;
 font-weight: 700;
  line-height: 1.8;
-font-size: 16px;
+font-size: 20px;
 }
 .card-text{
     color: #9faabb;
