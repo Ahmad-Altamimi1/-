@@ -111,13 +111,18 @@
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
-                                <div class="row" style="flex-direction: row-reverse; justify-content: center;">
+                                <div class="row" style="flex-direction: row-reverse; justify-content: center;row-gap: 52px;">
                                     <!-- ltn__product-item -->
                                     <div class="ltn__utilize-overlay"></div>
                                     @if(count($postintag)>0)
 
                                     @foreach ($postintag as $postintags)
-                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12" style="border: 1px solid #eee;
+                                    border-radius: 12px;
+                                    padding: 0px;
+                                    border-top-color: transparent;
+                                    height: 450px;
+                                    direction: rtl;">
                                         <div class="ltn__product-item text-center">
 
                                             <div class="product-img img-hover-zoom img-hover-zoom--blur img-hover-zoom--xyz">
@@ -136,8 +141,8 @@
 
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
-                                                <div class="product-price">
+                                                <h2 class="product-title"><a style="font-weight: 700;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
+                                                <div class="product-price" style="padding: 0 15px">
                                                            {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =20, $end = '...') }}
 
                                                 </div>
