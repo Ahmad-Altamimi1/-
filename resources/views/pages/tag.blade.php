@@ -111,7 +111,7 @@
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
-                                <div class="row" style="flex-direction: row-reverse; justify-content: center;row-gap: 52px;">
+                                <div class="row" style="flex-direction: row-reverse; justify-content: center;row-gap: 52px; column-gap:40px">
                                     <!-- ltn__product-item -->
                                     <div class="ltn__utilize-overlay"></div>
                                     @if(count($postintag)>0)
@@ -143,7 +143,7 @@
                                             <div class="product-info">
                                                 <h2 class="product-title"><a style="font-weight: 700;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
                                                 <div class="product-price" style="padding: 0 15px">
-                                                           {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =20, $end = '...') }}
+                                                           {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =80, $end = '...') }}
 
                                                 </div>
                                             </div>
