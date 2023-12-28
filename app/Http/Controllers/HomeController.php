@@ -104,7 +104,12 @@ $previousPost = Videos::where('id', '<', $video->id)
         foreach (groups::all() as $key => $groupdropmenu) {
             $tags_in_allgroup = explode(',', $groupdropmenu->TAG);
             if ($tags_in_Group[0] == $tags_in_allgroup[0]) {
-                $index = $tags_in_allgroup[1];
+                 if (count(array_filter($tags_in_allgroup))>1) {
+
+                    $index = $tags_in_allgroup[1];
+                 }else{
+                    $index=null;
+                 }
 
 if (isset($TAGS_oF_group_new_have_Same_Inital_Tag[$index])) {
     $TAGS_oF_group_new_have_Same_Inital_Tag[$index] = array_merge($TAGS_oF_group_new_have_Same_Inital_Tag[$index], array_slice($tags_in_allgroup, 2));
