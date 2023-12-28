@@ -156,8 +156,8 @@
 
                     ?>
                 @if ($group->TITLE != $tag->TITLE)
-                    <a href="{{ route('tagbyid', ['id' => $tag->id]) }}">
-                        <div style="background-image: url({{ asset('storage/' . $tag->IMG . '') }}); background-size: cover;"
+                    <a href="{{ route('showtag', ['id' => $tag->id]) }}">
+                        <div style="background-image: url({{ asset( $tag->IMG . '') }}); background-size: cover;"
                             class="cardes">
                             <div class='cardes-containers'>
                                 <h2 class="mm">{{ $tag->TITLE }}</h2>
@@ -194,9 +194,9 @@
 
                                 <div class="col-lg-4 col-md-4 mb-4" dir="rtl">
                                     <div class="card" style="width: 100%;">
-                                        <a href="{{route('postbyid', ['id' => $post->id])  }}">
+                                        <a href="{{route('ShoWarticle', ['id' => $post->id])  }}">
                                             <div style="overflow: hidden;">
-                                                <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top" alt="tag Image">
+                                                <img src="{{ asset( $post->IMG) }}" class="card-img-top" alt="tag Image">
                                             </div>
                                             <div class="card-body">
                                                 <h5 class="card-title"  style="text-align: center">{{ $post->TITLE }}</h5>
@@ -296,9 +296,9 @@ $havevideos=true;
                             @foreach ($postsInTagGroup as $post)
                                 <div class="col-lg-4 col-md-6 mb-4" dir="rtl">
                                     <div class="card" style="width: 100%;">
-                                        <a href="{{$havevideos ?  route('videobyid', ['id' => $post->id]):route('postbyid', ['id' => $post->id])  }}">
+                                        <a href="{{$havevideos ?  route('videobyid', ['id' => $post->id]):route('ShoWarticle', ['id' => $post->id])  }}">
                                             <div style="overflow: hidden;">
-                                                <img src="{{ asset('storage/' . $post->IMG) }}" class="card-img-top"
+                                                <img src="{{ asset( $post->IMG) }}" class="card-img-top"
                                                     alt="tag Image">
                                             </div>
                                             <div class="card-body">
@@ -320,7 +320,7 @@ $havevideos=true;
 @if ($tag)
 
                         <div class="more">
-                            <a href="{{$havevideos ? route('videotags', ['id' => $tag->id]): route('tagbyid', ['id' => $tag->id]) }}">
+                            <a href="{{$havevideos ? route('videotags', ['id' => $tag->id]): route('showtag', ['id' => $tag->id]) }}">
                                 اظهار المزيد
                             </a>
                         </div>
