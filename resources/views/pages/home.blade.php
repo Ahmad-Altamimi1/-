@@ -240,7 +240,7 @@ body{
 
         <!-- SLIDER AREA START (slider-6) -->
 
-                      @if ($havevideo || 1)
+                      @if ($havevideo )
     <div id="halfslider" style="width: 70%">
          <div class="ltn__slider-area ltn__slider-4 position-relative">
         <div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
@@ -287,7 +287,7 @@ padding:0 15%">
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 ">
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
                 <!-- ltn__slide-item  -->
-                      @if (false)
+                      @if (!$havevideo)
 
                 @foreach ($slidercontent as $slider)
 
