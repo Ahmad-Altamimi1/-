@@ -553,7 +553,7 @@ use App\Models\poststags;
             <div class="row " style="display: flex">
                 <!-- Blog Item -->
                 @foreach($tags as $tag)
-                @if($tag->TITLE == "فتاوى تخص المرأة")
+                @if($tag->TITLE == "أثناء الحمل")
                 @foreach($tag->posts->take(6) as $post)
 
                 <div class="col-lg-4">
@@ -603,7 +603,7 @@ use App\Models\poststags;
 <section class="articles">
                 @foreach($tags as $tag)
 
-    @if($tag->TITLE == 'خرافات شعبية')
+    @if($tag->TITLE == 'الشهر السابع')
 
 
        @foreach ( $tag->posts->take(3) as $post )
