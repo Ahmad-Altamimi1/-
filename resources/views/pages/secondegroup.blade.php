@@ -73,7 +73,7 @@
                 left: 50%;
                 bottom: 15%;
                 transform: translateX(-50%);
-                text-align: right;
+                text-align: center;
                 font: 900 1rem helvetica, sans-serif;
                 color: white;
             }
