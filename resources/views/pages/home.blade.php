@@ -230,7 +230,7 @@ padding: 0 22%;
 
 }
 body{
-    direction: rtl;
+    /* direction: rtl; */
 }
         </style>
         </div>
