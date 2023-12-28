@@ -20,13 +20,13 @@
 
                         @foreach ($tags as $singletag)
                         @if ($stag == $singletag->id  )
-                         <a href="{{ route('showtag', ['id' => $singletag->id])  }}"
+                         <a href="{{ route('showtag', ['tag' => $singletag->id])  }}"
 >  {{  '/'. $singletag->TITLE  }}</a>
 
                         @endif
                         @endforeach
                         @endforeach
-                        <a href="{{ route('showtag', ['id' => $tagbyid->id])  }}"
+                        <a href="{{ route('showtag', ['tag' => $tagbyid->id])  }}"
                          >  {{  '/'. $tagbyid->TITLE  }}</a>
                         </li>
 
