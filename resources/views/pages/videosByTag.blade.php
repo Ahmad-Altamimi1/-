@@ -17,7 +17,7 @@
 
                         {{-- <li class="breadcrumb-item"></li> --}}
                         {{-- <li class="breadcrumb-item active" aria-current="page"> <a href=""></a>{{ $tagbyid->TITLE }} --}}
-                            <a href="{{route('home')}}">طبكم</a>
+                            <a href="{{route('home')}}">إنجابي</a>
                         @foreach ($otherIds as $stag)
 
                         @foreach ($tags as $singletag)
