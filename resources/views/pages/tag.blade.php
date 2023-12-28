@@ -110,103 +110,13 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-content">
-                        <div class="tab-pane fade active show" id="liton_product_grid">
-                            <div class="ltn__product-tab-content-inner ltn__product-grid-view">
-                                <div class="row" style="flex-direction: row-reverse; justify-content: center;row-gap: 52px; column-gap:40px">
-                                    <!-- ltn__product-item -->
-                                    <div class="ltn__utilize-overlay"></div>
-                                    @if(count($postintag)>0)
-
-                                    @foreach ($postintag as $postintags)
-                                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12" style="border: 1px solid #eee;
-                                    border-radius: 12px;
-                                    padding: 0px;
-                                    border-top-color: transparent;
-                                    height: 450px;
-                                    direction: rtl;">
-                                        <div class="ltn__product-item ">
-
-                                            <div class="product-img img-hover-zoom img-hover-zoom--blur img-hover-zoom--xyz">
-                                                <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" style="aspect-ratio: 6/4;" alt="#" ></a>
-                                                <div class="product-badge">
-                                                    @if($popularpost !=null)
-
-                                                    @if ($popularpost->id==$postintags->id)
-
-                                                    <ul>
-                                                        <li class="badge-2">ألأكثر قراءه</li>
-                                                    </ul>
-                                                    @endif
-                                                    @endif
-                                                </div>
-
-                                            </div>
-                                            <div class="product-info">
-                                                <h2 class="product-title" style="  text-align: right;  padding: 0 10px;    margin-bottom: 20px;"><a style="font-weight: 700;    line-height: 1.8;
-                                                    font-size: 16px;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
-                                                <div class="product-price" style="padding: 0 15px">
-                                                           {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =80, $end = '...') }}
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                    @else
-                                    <p style="text-align: center;
-                                    font-size: 32px;
-                                    font-weight: 700;">لا يوجد مقالات لعرضها</p>
-                                    @endif
-
-                                    <!--  -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="liton_product_list">
-                            <div class="ltn__product-tab-content-inner ltn__product-list-view">
-                                <div class="row">
-                                    <!-- ltn__product-item -->
-                                    <div class="col-lg-12">
-                                    @foreach ($postintag as $postintags)
-
-                                        <div class="ltn__product-item">
-                                            <div class="product-img">
-                                              <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" alt="#" style="aspect-ratio: 6/4;"></a>
-
-                                              <div class="product-badge">
-                                                @if($popularpost !=null)
-
-                                                    @if ($popularpost->id==$postintags->id)
-
-                                                    <ul>
-                                                        <li class="badge-2">ألأكثر قراءه</li>
-                                                    </ul>
-                                                    @endif
-                                                    @endif
-                                                </div>
-                                            </div>
 
 
-                                           <div class="product-info">
-                                                <h2 class="product-title"><a href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
-                                                <div class="product-price">
-{{ \Carbon\Carbon::parse($postintags->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}
-                                            </div>
 
-                                                <div class="product-brief">
-                                                           {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =20, $end = '...') }}
-</p>
-                                                </div>
+{{-- tab atb tab tab taba tabat btab  --}}
 
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
                    <div class="ltn__pagination-area ">
     <div class="ltn__pagination ltn__pagination-2">
         <ul>
