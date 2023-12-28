@@ -9,12 +9,12 @@
     <section class="page-header">
         <div class="container-xl">
             <div class="text-center">
-                <h1 class="mt-0 mb-2">{{ $showtag->TITLE }}</h1>
+                <h1 class="mt-0 mb-2">{{ $tagbyid->TITLE }}</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center mb-0">
 
                         {{-- <li class="breadcrumb-item"></li> --}}
-                        {{-- <li class="breadcrumb-item active" aria-current="page"> <a href=""></a>{{ $showtag->TITLE }} --}}
+                        {{-- <li class="breadcrumb-item active" aria-current="page"> <a href=""></a>{{ $tagbyid->TITLE }} --}}
                             <a href="{{route('home')}}">طبكم</a>
                         @foreach ($otherIds as $stag)
 
@@ -26,8 +26,8 @@
                         @endif
                         @endforeach
                         @endforeach
-                        <a href="{{ route('showtag', ['id' => $showtag->id])  }}"
-                         >  {{  '/'. $showtag->TITLE  }}</a>
+                        <a href="{{ route('showtag', ['id' => $tagbyid->id])  }}"
+                         >  {{  '/'. $tagbyid->TITLE  }}</a>
                         </li>
 
                     </ol>
@@ -103,7 +103,7 @@
                             <ul class="pagination justify-content-center">
                                 @if ($nm != 1)
                                     <li class="page-item"><a class="page-link"
-                                            href="/tags/{{ $showtag->id }}/show/<?php echo $nm - 1; ?>"><?php echo $nm - 1; ?></a>
+                                            href="/tags/{{ $tagbyid->id }}/show/<?php echo $nm - 1; ?>"><?php echo $nm - 1; ?></a>
                                     </li>
                                 @endif
 
@@ -116,7 +116,7 @@
                                 ?>
                                 @if ($wordCount > 0)
                                     <li class="page-item"><a class="page-link"
-                                            href="/tags/{{ $showtag->id }}/show/<?php echo $nm + 1; ?>"><?php echo $nm + 1; ?></a>
+                                            href="/tags/{{ $tagbyid->id }}/show/<?php echo $nm + 1; ?>"><?php echo $nm + 1; ?></a>
                                     </li>
                                 @endif
                                 <?php
@@ -124,7 +124,7 @@
                                 ?>
                                 @if ($wordCount > 0)
                                     <li class="page-item"><a class="page-link"
-                                            href="/tags/{{ $showtag->id }}/show/<?php echo $nm + 2; ?>"><?php echo $nm + 2; ?></a>
+                                            href="/tags/{{ $tagbyid->id }}/show/<?php echo $nm + 2; ?>"><?php echo $nm + 2; ?></a>
                                     </li>
                                 @endif
                                 <?php
@@ -132,7 +132,7 @@
                                 ?>
                                 @if ($wordCount > 0)
                                     <li class="page-item"><a class="page-link"
-                                            href="/tags/{{ $showtag->id }}/show/<?php echo $nm + 3; ?>"><?php echo $nm + 3; ?></a>
+                                            href="/tags/{{ $tagbyid->id }}/show/<?php echo $nm + 3; ?>"><?php echo $nm + 3; ?></a>
                                     </li>
                                 @endif
                             </ul>
