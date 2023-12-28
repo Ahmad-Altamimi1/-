@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>إنْجابيّ</title>
+    <title>إنجابي</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -254,14 +254,14 @@ use App\Models\groups;
                                         <ul>
                                             <!-- <li class="menu-icon"><a href="#"> </a> -->
                                             <li class="menu-icon"><a href="https://tebkum.com/">طبكم</a>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنْجابيّ</a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مستشارة إنجابي')->first()->id]) }}">مستشار إنجابي</a>
                                                 {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مستشارة إنجابي')!!}
 
                                             </li>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'مدونة إنجابي')->first()->id]) }}"> مدونة إنجابي </a>
                                                 {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('مدونة إنجابي')!!}
                                             </li>
-                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنْجابيّ </a>
+                                            <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'منوعات إنجابي')->first()->id]) }}">منوعات إنجابي </a>
                                                 {!! app(\App\Http\Controllers\HomeController::class)->generateDropdownMenu('منوعات إنجابي')!!}
                                             </li>
                                             <li class="menu-icon"><a href="{{ route('showgroup', ['id' => groups::where('TITLE', '=', 'صحة العائلة')->first()->id]) }}">صحة العائلة </a>
@@ -393,7 +393,7 @@ $slicedArray=[];
                                                 <!-- </ul>
                                             </li> -->
 
-                                            <li><a href="{{ route('videotags') }}"> إنْجابيّ TV</a></li>
+                                            <li><a href="{{ route('videotags',['id'=>1]) }}"> إنجابي TV</a></li>
                                     </div>
                                 </nav>
                             </div>
@@ -461,7 +461,7 @@ $slicedArray=[];
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
-                        {{-- <li><a href="{{route('allTV')}}"> إنْجابيّ TV</a></li> --}}
+                        {{-- <li><a href="{{route('allTV')}}"> إنجابي TV</a></li> --}}
                         <?php
 $groupstitles = [];
 $allgroupnew = [];
