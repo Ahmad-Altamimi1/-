@@ -341,6 +341,61 @@ class webcontrol extends Controller
 
         return view('public.policy', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
     }
+    public function videotags($id)
+    {
+        $tagbyid = poststags::find($id);
+        $tags = poststags::all();
+        $allgroups = groups::all();
+        $groupnew = [];
+        $slicedArray = [];
+        $otherIds = [];
+
+        foreach ($allgroups as $value) {
+            $grouptag = $value->TAG;
+            $grouparray = explode(',', $grouptag);
+
+            if (in_array($id, $grouparray)) {
+                $groupnew[] = $value;
+            }
+        }
+
+        foreach ($groupnew as $group) {
+            $grouptags = $group->TAG;
+            $grouparrays = explode(',', $grouptags);
+
+            $tagIndices = array_keys($grouparrays, $id);
+
+            foreach ($tagIndices as $index) {
+                $slicedArray = array_merge($slicedArray, array_slice($grouparrays, $index));
+            }
+
+            $otherIds = array_diff($grouparrays, $slicedArray);
+        }
+
+        // Extract post IDs from the TAG column in groups
+        $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
+
+        // Get posts associated with the tag
+        $postintag = Videos::whereIn("id", $postIdsInTag)->orderBy('SHOW', 'asc')->get();
+
+        $sortingOption = request('sort');
+        $pageid = $id;
+
+        $popularpost = Videos::where("TAG", "=", $id)->orderBy('SHOW', 'asc')->first();
+
+        $page = [
+            "name" => $tagbyid->TITLE,
+            "tital" => $tagbyid->TITLE,
+            "description" => $tagbyid->DESCRIPTION,
+            "url" => url('/tags/' . $tagbyid->id . '/show'),
+            "imgurl" => asset('storage/' . $tagbyid->IMG)
+        ];
+
+        $nm = 1;
+        $wordCount = count($postintag);
+
+        return view('public.videosByTag', compact('postintag', 'pageid', 'popularpost', 'tags', 'tagbyid', 'otherIds', 'page', 'nm', 'wordCount'));
+    }
 
     public function tagbyidvid($id)
     {

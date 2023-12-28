@@ -1,6 +1,8 @@
-@extends('layouts.welcome')
+@extends('../layouts.pagesLayouts.Master')
+<link rel="shortcut icon" href="..././انجابي فكتور-01-01.jpg" />
 
-@section('content')
+
+    @section('content')
     <main id="main">
 
 

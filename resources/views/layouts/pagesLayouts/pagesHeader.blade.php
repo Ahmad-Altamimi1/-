@@ -393,7 +393,7 @@ $slicedArray=[];
                                                 <!-- </ul>
                                             </li> -->
 
-                                            <li><a href="{{ route('allTV') }}"> إنْجابيّ TV</a></li>
+                                            <li><a href="{{ route('videotags') }}"> إنْجابيّ TV</a></li>
                                     </div>
                                 </nav>
                             </div>
