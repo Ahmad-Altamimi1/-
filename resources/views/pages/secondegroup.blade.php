@@ -5,137 +5,141 @@
     @section('content')
     <style>
         :root {
-            --width: 350px;
-        }
+                --width: 350px;
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        .sam {
-            /* height: 100vh; */
-            display: grid;
-            place-items: center;
-        }
-
-
-        .sam .cardss {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .sam .cardes {
-            position: relative;
-            width: 100px;
-            height: 280px;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-            transition: width 0.5s ease-out;
-        }
-
-        .sam .cardes:hover {
-            width: var(--width);
-        }
-
-        .sam .cardes:hover .cardes-containers .mm {
-            transform: rotate(0);
-        }
-
-        .sam .cardes:hover .cardes-containers .SS {
-            opacity: 1;
-            transform: translateY(0);
-            transition: transform 1s, opacity 0.3s linear 0.3s;
-        }
-
-        .sam .cardes:hover::before {
-            transform: scale(1.3);
-        }
-
-        .sam .cardes::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: 250px;
-            height: 350px;
-            background-size: cover;
-            background-position: center;
-            transform: scale(1);
-            transition: transform 0.5s ease-in;
-        }
+            .sam {
+                /* height: 100vh; */
+                display: grid;
+                place-items: center;
+            }
 
 
+            .sam .cardss {
+                display: flex;
+                gap: 1.5rem;
+            }
 
-        .sam .cardss .cardes-containers {
-            position: absolute;
-            left: 50%;
-            bottom: 15%;
-            transform: translateX(-50%);
-            text-align: center;
-            font: 900 1rem helvetica, sans-serif;
-            color: white;
-        }
+            .sam .cardes {
+                position: relative;
+                width: 100px;
+                height: 280px;
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+                transition: width 0.5s ease-out;
+            }
 
-        .sam .cardss .cardes-containers .mm {
-            font-size: 1.1rem;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-            transform: rotate(90deg);
-            transition: transform 0.5s;
-        }
+            .sam .cardes:hover {
+                width: var(--width);
+            }
 
-        .sam .cardss .cardes-containers .SS {
-            position: relative;
-            width: var(--width);
-            font-size: 0.99rem;
-            font-weight: 100;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.75);
-            margin-top: 0.5rem;
-            padding: 0 1.2rem;
-            transform: translateY(2rem);
-            opacity: 0;
-        }
+            .sam .cardes:hover .cardes-containers .mm {
+                transform: rotate(0);
+            }
 
-        .card-img-top {
-            aspect-ratio: 6/4
-        }
+            .sam .cardes:hover .cardes-containers .SS {
+                opacity: 1;
+                transform: translateY(0);
+                transition: transform 1s, opacity 0.3s linear 0.3s;
+            }
 
-        .more {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            border-radius: 6px;
-            margin: 20px;
-        }
+            .sam .cardes:hover::before {
+                transform: scale(1.3);
+            }
 
-        .more a {
-            padding: 8px 70px;
-            background: #d54368;
-            color: white;
-            border-radius: 6px;
+            .sam .cardes::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 250px;
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                transform: scale(1);
+                transition: transform 0.5s ease-in;
+            }
 
-        }
 
-        .card {
-            border-radius: 12px;
-            margin-left: 10px;
-            overflow: hidden;
-            height: 441px;
-        }
-.body{
-    direction: rtl;
+
+            .sam .cardss .cardes-containers {
+                position: absolute;
+                left: 50%;
+                bottom: 15%;
+                transform: translateX(-50%);
+                text-align: center;
+                font: 900 1rem helvetica, sans-serif;
+                color: white;
+            }
+
+            .sam .cardss .cardes-containers .mm {
+                font-size: 1.1rem;
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                transform: rotate(90deg);
+                transition: transform 0.5s;
+            }
+
+            .sam .cardss .cardes-containers .SS {
+                position: relative;
+                width: var(--width);
+                font-size: 0.99rem;
+                font-weight: 100;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.75);
+                margin-top: 0.5rem;
+                padding: 0 1.2rem;
+                transform: translateY(2rem);
+                opacity: 0;
+            }
+            .card-img-top{
+                aspect-ratio:6/4
+            }
+            .more{
+                width: 100%;
+                display: flex;
+                justify-content:center;
+                border-radius:6px;
+margin:20px ;
+            }
+            .more a {
+                padding: 8px 70px;
+                background:#d54368;
+                color:white;
+                border-radius:6px;
+
+            }
+.card{
+    border-radius: 12px;
+    margin-left: 10px;
+    overflow: hidden;
+    height: 441px;
 }
-        .card img {
-            border-radius: 0 !important
-        }
+.card img{
+border-radius: 0 !important
 
-        .card img:hover {
-            transition: 0.4s;
-            transform: scale(1.1)
-        }
+}
+.card-title{
+text-align: right;
+font-weight: 700;
+ line-height: 1.8;
+font-size: 20px;
+}
+.card-text{
+    color: #9faabb;
+    padding: 0 15px;
+}
+.card img:hover{
+    transition: 0.4s;
+transform: scale(1.1)
+
+}
     </style>
     <div class="col-lg-12 " dir="rtl">
         <div class="section-title-area text-center">
