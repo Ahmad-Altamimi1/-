@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\poststags;
 use App\Models\User;
+use App\Models\groups;
+use App\Models\Videos;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
