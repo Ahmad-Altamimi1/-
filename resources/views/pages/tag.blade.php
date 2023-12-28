@@ -46,7 +46,7 @@
 
 
                 <div class="col-lg-12">
-                    <div class="ltn__breadcrumb-inner text-center">
+                    <div class="ltn__breadcrumb-inner ">
                         <h1 class="ltn__page-title">{{ $tagbyid->TITLE }}</h1>
                         <div class="ltn__breadcrumb-list">
                             <ul>
@@ -90,7 +90,7 @@
 
                             </li>
                             <li>
-                               <div class="short-by text-center">
+                               <div class="short-by ">
                                     {{-- <select class="nice-select" id="sorting-options">
 
     <option value="default">ترتيب عشوائي</option>
@@ -123,7 +123,7 @@
                                     border-top-color: transparent;
                                     height: 450px;
                                     direction: rtl;">
-                                        <div class="ltn__product-item text-center">
+                                        <div class="ltn__product-item ">
 
                                             <div class="product-img img-hover-zoom img-hover-zoom--blur img-hover-zoom--xyz">
                                                 <a href="{{ route('ShoWarticle',['id'=>$postintags->id]) }}"><img src="../{{ $postintags->IMG }}" style="aspect-ratio: 6/4;" alt="#" ></a>
@@ -141,7 +141,8 @@
 
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title" style="    padding: 0 10px;"><a style="font-weight: 700;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
+                                                <h2 class="product-title" style="  text-align: right;  padding: 0 10px;"><a style="font-weight: 700;    line-height: 1.8;
+                                                    font-size: 16px;" href="{{ ROUTE('home',['id'=>$postintags->id]) }}">{{ $postintags->TITLE }}</a></h2>
                                                 <div class="product-price" style="padding: 0 15px">
                                                            {{ \Illuminate\Support\Str::limit($postintags->DESCRIPTION, $limit =80, $end = '...') }}
 
@@ -204,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                   <div class="ltn__pagination-area text-center">
+                   <div class="ltn__pagination-area ">
     <div class="ltn__pagination ltn__pagination-2">
         <ul>
 
