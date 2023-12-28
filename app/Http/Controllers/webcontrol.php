@@ -365,7 +365,7 @@ class webcontrol extends Controller
             "imgurl" => asset('storage/' . $tag->IMG . '')
         );
         $tags = DB::table('poststags')->get();
-        return view('public.tagsvid', ['page' => $page, 'tagvideos' => $tagvideos, 'videos' => $videos, 'tag' => $tag, 'tags' => $tags]);
+        return view('pages.tagsvid', ['page' => $page, 'tagvideos' => $tagvideos, 'videos' => $videos, 'tag' => $tag, 'tags' => $tags]);
     }
 
 

@@ -20,16 +20,30 @@ use App\Models\Post;
 |
 */
 Route::middleware('auth')->group(function () {
-
+//home
 Route::get('/', [HomeController::class, "index"])->name("home");
+
+// Posts management
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");
-Route::get('TV/{id}', [HomeController::class, "tv_show"])->name("tv_show");
-Route::get('allTV', [HomeController::class, "allTV"])->name("allTV");
+Route::get('popular_posts', [postcontrol::class,"popular_posts"])->name('popular_posts');
+Route::get('/postss/{id}', [postcontrol::class,"show"])->name('ShoWarticle');
+//end Posts management
+
+// tags management
 Route::get('/showtag/{tag}', [postcontrol::class, "showtag"])->name("showtag");
+//end tags management
+
+// Group management
 Route::get('/posts/groups/{id}', [GroupController::class, "groupbyid"])->name("showgroup");
 Route::get('/grouptags/{id}/show', [GroupController::class, 'groupsecbyid'])->name('groupsecbyid');
-Route::get('/postss/{id}', [postcontrol::class,"show"])->name('ShoWarticle');
-Route::get('popular_posts', [postcontrol::class,"popular_posts"])->name('popular_posts');
+//end Group management
+
+// Video management
+Route::get('allTV', [HomeController::class, "allTV"])->name("allTV");
+Route::get('TV/{id}', [HomeController::class, "tv_show"])->name("tv_show");
+Route::get('/tagsvid/{id}/show', [webcontrol::class, 'tagbyidvid'])->name('tagbyidvid');
+//end Video management
+Route::get('/videotags/{id}/show', [App\Http\Controllers\webcontrol::class, 'videotags'])->name('videotags');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
