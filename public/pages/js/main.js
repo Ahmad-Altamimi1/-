@@ -333,10 +333,11 @@
         /* --------------------------------------------------------
             15. Slider One Active
         --------------------------------------------------------- */
+        var desiredHeight = "calc(100vh - 218px)";
         /* ltn__slide-one-active */
         $(".ltn__slide-one-active")
             .slick({
-              adaptiveHeight: true,
+              adaptiveHeight: false,
                 autoplay: true, // Set to true for autoplay
                 autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
                 arrows: true,
@@ -361,6 +362,10 @@
                     },
                 ],
             })
+            .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    // Set the height for the current slide
+    $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
+})
             .on("afterChange", function () {
                 new WOW().init();
             });
@@ -368,7 +373,7 @@
         /* ltn__slide-two-active */
         $(".ltn__slide-two-active")
             .slick({
-              adaptiveHeight: true,
+              adaptiveHeight: false,
                 autoplay: true,
                 autoplaySpeed: 6000,
                 arrows: false,
@@ -393,6 +398,10 @@
                     },
                 ],
             })
+            .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    // Set the height for the current slide
+    $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
+})
             .on("afterChange", function () {
                 new WOW().init();
             });
