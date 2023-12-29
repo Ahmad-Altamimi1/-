@@ -166,5 +166,9 @@ $uniqueItems = [];
 
         return $html;
     }
+    function hometest()  {
+        view('pages.hometest');
+
+    }
 
 }
