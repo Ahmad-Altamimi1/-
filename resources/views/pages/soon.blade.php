@@ -70,6 +70,44 @@
     .slick-prev {
         left: 0;
     }
+    #my-slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 100px; /* Add padding 100px from right and left */
+    height: 50vh; /* Set the height to 50vh */
+}
+
+/* ... (previous styles remain unchanged) ... */
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #fff;
+    background-color: #333;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0.7; /* Add opacity for better visibility */
+}
+
+.slick-prev:hover, .slick-next:hover {
+    opacity: 1; /* Increase opacity on hover */
+}
+
+.slick-prev {
+    left: 10px; /* Adjust the left position */
+}
+
+.slick-next {
+    right: 10px; /* Adjust the right position */
+}
 
     .slick-next {
         right: 0;
