@@ -75,7 +75,7 @@
                 height: 54px;
 
         }
-        .ltn__header-middle-area > .container{
+        .header-container{
             background-color: #d54368;
         }
 
@@ -89,7 +89,7 @@
         <header class="ltn__header-area ltn__header-8 section-bg-6" dir="rtl !important">
             <!-- ltn__header-top-area start -->
          <div class="ltn__header-middle-area">
-            <div class="container">
+            <div class="container header-container">
                 <div class="">
 
                     <div class="col header-contact-serarch-column d-none d-xl-block">
