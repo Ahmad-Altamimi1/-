@@ -39,7 +39,7 @@
         <div class="item">
             <div class="testimonial-section">
                 <div class="testimonial-box">
-                    <img src="{{ asset('path/to/testimonial-image.jpg') }}" alt="Testimonial Image">
+                    <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Testimonial Image">
                     <blockquote>
                         <p>Testimonial text goes here.</p>
                         <cite>Testimonial Author</cite>
