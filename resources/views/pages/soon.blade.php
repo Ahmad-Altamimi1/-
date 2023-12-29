@@ -106,8 +106,8 @@
             </div>
         </div>
     </div>
-    <div class="slick-prev">&#9664;</div>
-    <div class="slick-next">&#9654;</div>
+    <div class="slick-prev">&#9664; ddd</div>
+    <div class="slick-next">&#9654; dddggg</div>
 </div>
 
 @endsection
