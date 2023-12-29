@@ -122,7 +122,7 @@
         <div class="item">
             <div class="slide-section">
                 <div class="image-section">
-                    <img src="{{ asset('path/to/slide1-image.jpg') }}" alt="Slide 1 Image">
+                    <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 1 Image">
                 </div>
                 <div class="description-section">
                     <h2>Image 1 Title</h2>
@@ -135,7 +135,7 @@
         <div class="item">
             <div class="slide-section">
                 <div class="image-section">
-                    <img src="{{ asset('path/to/slide2-image.jpg') }}" alt="Slide 2 Image">
+                    <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 2 Image">
                 </div>
                 <div class="description-section">
                     <h2>Image 2 Title</h2>
