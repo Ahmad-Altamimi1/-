@@ -224,7 +224,7 @@ padding: 0 22%;
     background: linear-gradient(to left, #d54368, white);
 }
 .slick-initialized .slick-slide{
-        border-radius: 0 64px 0;
+        border-radius: 0  64px 64px 0 ;
 }
 .click_active{
 
