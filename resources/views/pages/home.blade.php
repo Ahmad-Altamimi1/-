@@ -14,9 +14,11 @@
         margin: 0 auto;
         position: relative;
         padding: 0 100px;
-        background-color: #d54368;
     }
+.slider-inner{
+    background-color: #d54368;
 
+}
     .slick-slide img {
         width: 100%;
         height: auto;
