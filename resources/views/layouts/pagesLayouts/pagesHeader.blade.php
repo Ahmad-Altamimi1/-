@@ -75,6 +75,9 @@
                 height: 54px;
 
         }
+        .ltn__header-middle-area{
+            background-color: #d54368;
+        }
 
     </style>
 </head>
