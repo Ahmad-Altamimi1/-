@@ -102,11 +102,11 @@
 }
 
 .slick-prev {
-    left: 10px; /* Adjust the left position */
+    left: 500px; /* Adjust the left position */
 }
 
 .slick-next {
-    right: 10px; /* Adjust the right position */
+    left: 500px;/* Adjust the right position */
 }
 
     .slick-next {
@@ -141,6 +141,8 @@
                     <h2>Image 2 Title</h2>
                     <p>Description of Image 2.</p>
                 </div>
+                <div class="slick-prev">&#9664; ddd</div>
+                <div class="slick-next">&#9654; dddggg</div>
             </div>
         </div>
     </div>
