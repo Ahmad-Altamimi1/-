@@ -12,7 +12,8 @@
 
     .slick-slide img {
         width: 100%;
-        height: auto;
+    aspect-ratio: 2/3;
+    height: 100%;
     }
 
     .slide-section {
