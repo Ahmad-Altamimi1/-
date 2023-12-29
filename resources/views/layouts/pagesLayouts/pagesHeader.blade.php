@@ -72,6 +72,7 @@
         }
         .header-contact-search{
                 align-items: center;
+                height: 54px;
 
         }
 
@@ -152,7 +153,7 @@
                 </div>
                         </div>
                     </div>
-                    <div class="col">
+                    {{-- <div class="col">
                         <!-- header-options -->
                         <div class="ltn__header-options">
                             <ul>
@@ -206,7 +207,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

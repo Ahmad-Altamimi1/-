@@ -278,6 +278,7 @@ body{
     </div>
     </div>
 @endif
+
 <div class="allheader" style=" display: grid;
 grid-template-columns: 65% 30%;
 gap: 2%;
