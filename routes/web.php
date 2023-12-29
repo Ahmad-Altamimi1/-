@@ -22,6 +22,9 @@ use App\Models\Post;
 Route::middleware('auth')->group(function () {
 //home
 Route::get('/', [HomeController::class, "index"])->name("home");
+Route::get('/hometest',function(){
+view('pages.hometest');
+});
 
 // Posts management
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");
