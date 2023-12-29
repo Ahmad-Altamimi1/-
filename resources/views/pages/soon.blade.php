@@ -7,6 +7,7 @@
         width: 100%;
         margin: 0 auto;
         position: relative;
+        padding: 0 100px; /* Add padding 100px from right and left */
     }
 
     .slick-slide img {
@@ -19,7 +20,7 @@
     }
 
     .image-section, .description-section {
-        width: 70%; /* Adjust the width as needed */
+        width: 60%; /* Adjust the width as needed */
         height: 100%;
         float: left;
     }
@@ -37,8 +38,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 70%;
-        width: 30%; /* Adjust the width as needed */
+        left: 60%; /* Adjust the left position */
+        width: 40%; /* Adjust the width as needed */
         text-align: center;
     }
 
@@ -83,7 +84,7 @@
         <div class="item">
             <div class="slide-section">
                 <div class="image-section">
-                    <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 1 Image">
+                    <img src="{{ asset('path/to/slide1-image.jpg') }}" alt="Slide 1 Image">
                 </div>
                 <div class="description-section">
                     <h2>Image 1 Title</h2>
@@ -96,7 +97,7 @@
         <div class="item">
             <div class="slide-section">
                 <div class="image-section">
-                    <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 2 Image">
+                    <img src="{{ asset('path/to/slide2-image.jpg') }}" alt="Slide 2 Image">
                 </div>
                 <div class="description-section">
                     <h2>Image 2 Title</h2>
