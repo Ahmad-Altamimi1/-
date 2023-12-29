@@ -88,8 +88,8 @@
         <!-- HEADER AREA START (header-4) -->
         <header class="ltn__header-area ltn__header-8 section-bg-6" dir="rtl !important">
             <!-- ltn__header-top-area start -->
-         <div class="ltn__header-middle-area">
-            <div class="container header-container">
+         <div class="ltn__header-middle-area header-container">
+            <div class="container ">
                 <div class="">
 
                     <div class="col header-contact-serarch-column d-none d-xl-block">
