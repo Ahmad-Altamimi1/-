@@ -95,7 +95,8 @@
     justify-content:FLEX-START;
     display:flex;
     flex-direction:column;
-    ALIGN-ITEMS:end
+    ALIGN-ITEMS:end;
+    padding: 0   100px;
 }
 .aligncenter,.gallery-caption,.sticky,.wp-block-image img{
     display:block
