@@ -22,7 +22,7 @@ use App\Models\Post;
 Route::middleware('auth')->group(function () {
 //home
 Route::get('/', [HomeController::class, "index"])->name("home");
-Route::get('/hometest',function(){
+Route::get('/fff',function(){
 view('pages.hometest');
 });
 
