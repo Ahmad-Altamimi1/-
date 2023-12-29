@@ -282,7 +282,7 @@ body{
 <div class="allheader" style=" display: grid;
 grid-template-columns: 65% 30%;
 gap: 2%;
-padding:0 15%">
+">
     <div id="halfslider" style="width: 100%;padding-left:30px">
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 ">

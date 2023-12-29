@@ -4170,7 +4170,7 @@ ul.wp-block-latest-posts.alignfull,ul.wp-block-latest-posts.alignwide,ul.wp-bloc
     -o-transition:stroke-dashoffset .5s cubic-bezier(.25, -.25, .75, 1.25),stroke-dasharray .5s cubic-bezier(.25, -.25, .75, 1.25);
     transition:stroke-dashoffset .5s cubic-bezier(.25, -.25, .75, 1.25),stroke-dasharray .5s cubic-bezier(.25, -.25, .75, 1.25);
     fill:none;
-    stroke:#333;
+    stroke:#ffffff;
     stroke-dashoffset:0;
     stroke-linecap:round;
     stroke-width:30px
@@ -5034,6 +5034,9 @@ ul.wp-block-latest-posts.alignfull,ul.wp-block-latest-posts.alignwide,ul.wp-bloc
 }
 .ltn__product-item-2 .product-img img,.ltn__social-media-2 ul li a{
     color:white
+}
+.ltn__social-media-2 ul li a:hover{
+    color: #010101;
 }
 .d-meta-title,.modal-btn a{
     color:var(--ltn__heading-color)
