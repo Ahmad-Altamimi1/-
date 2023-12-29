@@ -13,13 +13,13 @@
         width: 100%;
         margin: 0 auto;
         position: relative;
-        padding: 0 100px; /* Add padding 100px from right and left */
+        padding: 0 100px;
+        background-color: #d54368;
     }
 
     .slick-slide img {
         width: 100%;
-    aspect-ratio: 2/3;
-    height: 100%;
+        height: auto;
     }
 
     .slide-section {
@@ -34,7 +34,9 @@
 
     .image-section img {
         width: 100%;
-        height: auto;
+    aspect-ratio: 2/3;
+    height: 100%;
+
     }
 
     .description-section {
