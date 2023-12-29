@@ -13,30 +13,27 @@
         height: auto;
     }
 
-    .testimonial-section {
+    .slide-section {
         position: relative;
     }
 
-    .testimonial-box {
+    .image-section, .description-section {
         background-color: #fff;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
         max-width: 600px;
         text-align: center;
     }
 
-    .testimonial-box blockquote {
-        font-size: 18px;
-        margin-bottom: 20px;
+    .description-section h2 {
+        margin-bottom: 10px;
     }
 
-    .testimonial-box cite {
-        font-style: italic;
+    .description-section p {
         font-size: 16px;
     }
 </style>
@@ -45,26 +42,26 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <div id="my-slider">
     <div class="slider-inner">
-        <!-- Slide 1: Informational Part -->
+        <!-- Slide 1 -->
         <div class="item">
-            <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 1 Image">
-            <div class="info-section">
-                <h2>Informational Title</h2>
-                <p>Some informative text here.</p>
-                <a href="#" class="cta-button">Call to Action</a>
-                <!-- Add navigation if needed -->
+            <div class="slide-section">
+                <img src="{{ asset('path/to/slide1-image.jpg') }}" alt="Slide 1 Image">
+                <div class="image-section"></div>
+                <div class="description-section">
+                    <h2>Image 1 Title</h2>
+                    <p>Description of Image 1.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 2: Image with Testimonial -->
+        <!-- Slide 2 -->
         <div class="item">
-            <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 2 Image">
-            <div class="testimonial-section">
-                <div class="testimonial-box">
-                    <blockquote>
-                        <p>Testimonial text goes here.</p>
-                        <cite>Testimonial Author</cite>
-                    </blockquote>
+            <div class="slide-section">
+                <img src="{{ asset('path/to/slide2-image.jpg') }}" alt="Slide 2 Image">
+                <div class="image-section"></div>
+                <div class="description-section">
+                    <h2>Image 2 Title</h2>
+                    <p>Description of Image 2.</p>
                 </div>
             </div>
         </div>
