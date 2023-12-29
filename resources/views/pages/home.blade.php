@@ -301,7 +301,7 @@ gap: 2%;
 
                 <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%; height: 40vh">
                     <div class="ltn__slide-item-inner" style="border-radius: 0  64px 0;">
-                        {{-- <div class="container">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 align-self-center" style="    text-align: right;
                                 display: flex;
@@ -326,7 +326,7 @@ gap: 2%;
 
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
                 @endforeach
