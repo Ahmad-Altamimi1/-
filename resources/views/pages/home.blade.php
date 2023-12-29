@@ -228,7 +228,7 @@ padding: 0 22%;
 
 }
 .ltn__slider-area {
-    height: calc(100vh - 218px)!important; 
+    height: calc(100vh - 218px)!important;
     }
 
 .click_active{
@@ -299,7 +299,7 @@ gap: 2%;
 
 
 
-                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%;">
+                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%; height: 40vh">
                     <div class="ltn__slide-item-inner" style="border-radius: 0  64px 0;">
                         <div class="container">
                             <div class="row">
