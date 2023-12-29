@@ -39,7 +39,7 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/latest/slick.css"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
