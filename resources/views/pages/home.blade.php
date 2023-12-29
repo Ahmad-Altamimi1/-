@@ -225,8 +225,12 @@ padding: 0 22%;
 }
 .slick-initialized .slick-slide{
         border-radius: 0  64px 64px 0 ;
-        height: calc(100vh - 218px);
+
 }
+.ltn__slider-area {
+    height: calc(100vh - 218px)!important; 
+    }
+
 .click_active{
 
 }
