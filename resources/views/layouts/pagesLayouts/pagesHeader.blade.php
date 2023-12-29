@@ -75,7 +75,7 @@
                 height: 54px;
 
         }
-        .ltn__header-middle-area{
+        .ltn__header-middle-area > .container{
             background-color: #d54368;
         }
 
