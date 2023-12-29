@@ -6,6 +6,7 @@
     #my-slider {
         width: 100%;
         margin: 0 auto;
+        position: relative;
     }
 
     .slick-slide img {
@@ -18,6 +19,17 @@
     }
 
     .image-section, .description-section {
+        width: 70%; /* Adjust the width as needed */
+        height: 100%;
+        float: left;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .description-section {
         background-color: #fff;
         padding: 30px;
         border-radius: 10px;
@@ -25,7 +37,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        max-width: 600px;
+        left: 70%;
+        width: 30%; /* Adjust the width as needed */
         text-align: center;
     }
 
@@ -36,6 +49,30 @@
     .description-section p {
         font-size: 16px;
     }
+
+    .slick-prev, .slick-next {
+        font-size: 24px;
+        color: #fff;
+        background-color: #333;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+
+    .slick-next {
+        right: 0;
+    }
 </style>
 
 <!-- Add Slick Slider Theme CSS if needed -->
@@ -45,8 +82,9 @@
         <!-- Slide 1 -->
         <div class="item">
             <div class="slide-section">
-                <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 1 Image">
-                <div class="image-section"></div>
+                <div class="image-section">
+                    <img src="{{ asset('path/to/slide1-image.jpg') }}" alt="Slide 1 Image">
+                </div>
                 <div class="description-section">
                     <h2>Image 1 Title</h2>
                     <p>Description of Image 1.</p>
@@ -57,8 +95,9 @@
         <!-- Slide 2 -->
         <div class="item">
             <div class="slide-section">
-                <img src="{{ asset('https://todaysparent.mblycdn.com/uploads/tp/2014/12/blanket-baby-article.jpg') }}" alt="Slide 2 Image">
-                <div class="image-section"></div>
+                <div class="image-section">
+                    <img src="{{ asset('path/to/slide2-image.jpg') }}" alt="Slide 2 Image">
+                </div>
                 <div class="description-section">
                     <h2>Image 2 Title</h2>
                     <p>Description of Image 2.</p>
@@ -66,6 +105,8 @@
             </div>
         </div>
     </div>
+    <div class="slick-prev">&#9664;</div>
+    <div class="slick-next">&#9654;</div>
 </div>
 
 @endsection
@@ -75,21 +116,30 @@
     document.addEventListener('DOMContentLoaded', function () {
         // Initialize Slick Slider
         $('#my-slider .slider-inner').slick({
-            dots: true,
-            arrows: false, // Remove arrows
+            dots: false,
+            arrows: false,
             autoplay: true,
             autoplaySpeed: 5000,
-            fade: true, // Enable fade effect
-            speed: 1000, // Set transition speed
+            fade: true,
+            speed: 1000,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
-                        dots: false, // Hide dots on smaller screens
+                        dots: false,
                     }
                 }
             ]
             // Add more configuration options as needed
+        });
+
+        // Custom navigation arrows
+        $('#my-slider .slick-prev').click(function(){
+            $('#my-slider .slider-inner').slick('slickPrev');
+        });
+
+        $('#my-slider .slick-next').click(function(){
+            $('#my-slider .slider-inner').slick('slickNext');
         });
     });
 </script>
