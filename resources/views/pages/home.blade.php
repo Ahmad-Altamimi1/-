@@ -225,6 +225,7 @@ padding: 0 22%;
 }
 .slick-initialized .slick-slide{
         border-radius: 0  64px 64px 0 ;
+        height: calc(100vh - 218px);
 }
 .click_active{
 
