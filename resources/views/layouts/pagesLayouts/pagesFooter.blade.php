@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var searchInput = document.getElementById('searchInput');
     var searchResults = document.getElementById('searchResults');
  var searchContent = document.querySelector('#searchcontent');
-    var closeIcon = document.querySelector('.for-search-close');
+    // var closeIcon = document.querySelector('.for-search-close');
     searchInput.addEventListener('input', function() {
         var query = searchInput.value;
 
@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         xhr.send('query=' + encodeURIComponent(query));
     });
-  closeIcon.addEventListener('click', function() {
-        searchContent.style.height = '0px';
-    });
+//   closeIcon.addEventListener('click', function() {
+//         searchContent.style.height = '0px';
+//     });
 function displayResults(results) {
 searchResults.innerHTML = '';
 console.log(document.querySelector('#searchcontent'));
