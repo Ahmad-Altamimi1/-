@@ -362,10 +362,10 @@
                 ],
             })
             .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-                setTimeout(function () {
-                    $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
-                }, 100);
-    // $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
+                // setTimeout(function () {
+                //     $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
+                // }, 100);
+    $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
 })
             .on("afterChange", function () {
                 new WOW().init();
