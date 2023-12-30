@@ -740,6 +740,7 @@ use App\Models\poststags;
                         document.addEventListener('DOMContentLoaded', function() {
                           // Find the button by its class name
                           var prevButton = document.querySelector('.slick-prev');
+                          console.log('tt');
 
                           // Check if the button is found
                           if (prevButton) {
