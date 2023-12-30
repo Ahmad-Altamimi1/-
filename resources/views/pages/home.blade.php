@@ -737,7 +737,19 @@ use App\Models\poststags;
 
 
     @endsection
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          // Find the button by its class name
+          var prevButton = document.querySelector('.slick-prev');
 
+          // Check if the button is found
+          if (prevButton) {
+            // Trigger a click on the button
+            prevButton.click();
+          }
+        });
+      </script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script> window.onload = function ()
     {
