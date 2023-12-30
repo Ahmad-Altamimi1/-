@@ -291,7 +291,7 @@ gap: 2%;
     <div id="halfslider" style="width: 100%;">
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " style="height: 40vh">
-            <div class="ltn__slide-one-active  slick-slide-dots-1 arrow-white---">
+            <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
                 <!-- ltn__slide-item  -->
                       @if (!$havevideo)
 
@@ -733,6 +733,7 @@ use App\Models\poststags;
     @endforeach
 
                     </div>
+
 
 
     @endsection
