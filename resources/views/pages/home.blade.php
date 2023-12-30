@@ -237,8 +237,9 @@ padding: 0 22%;
 .ltn__slide-one-active .ltn__slide-item  {
     height: calc(100vh - 218px) !important; /* Your desired height calculation */
 }
-body{
-    /* direction: rtl; */
+.containslidbar{
+    display: flex;
+    gap: 50px
 }
         </style>
         </div>
@@ -503,7 +504,7 @@ use App\Models\poststags;
             </div>
         </div>
         <div class="sidebar">
-            
+            <div style="height: 500px:background:red"></div>
         </div>
     </div>
 {{-- newone  --}}
