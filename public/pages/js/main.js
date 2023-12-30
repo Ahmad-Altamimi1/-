@@ -367,7 +367,7 @@
             .on("afterChange", function () {
                 new WOW().init();
             });
-
+            $(".slick-slide01").slick("slickNext");
         /* ltn__slide-two-active */
         $(".ltn__slide-two-active")
             .slick({
