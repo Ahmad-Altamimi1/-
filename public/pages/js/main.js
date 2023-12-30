@@ -339,7 +339,6 @@
             .slick({
                 autoplay: true, // Set to true for autoplay
                 autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
-                arrows: true,
                 dots: true,
                 fade: true,
                 cssEase: "linear",
@@ -373,7 +372,6 @@
             .slick({
                 autoplay: true,
                 autoplaySpeed: 6000,
-                arrows: true,
                 dots: true,
                 fade: true,
                 cssEase: "linear",
