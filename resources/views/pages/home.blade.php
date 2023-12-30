@@ -241,7 +241,7 @@ padding: 0 22%;
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 50px;
-    direction: ltr;
+    direction: rtl;
 
 }
         </style>
@@ -507,7 +507,10 @@ use App\Models\poststags;
             </div>
         </div>
         <div class="sidebar">
-            <div style="height: 500px;background:red"></div>
+            <div style="    height: 500px;
+            background: #dc3545;
+            position: sticky;
+            top: 2px;"></div>
         </div>
     </div>
 {{-- newone  --}}
