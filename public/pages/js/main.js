@@ -334,6 +334,7 @@
             15. Slider One Active
         --------------------------------------------------------- */
         var desiredHeight = "calc(100vh - 218px)";
+        var desiredHeight = "600px";
         /* ltn__slide-one-active */
         $(".ltn__slide-one-active")
             .slick({
