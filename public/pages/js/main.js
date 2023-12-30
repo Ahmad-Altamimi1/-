@@ -339,7 +339,7 @@
             .slick({
                 autoplay: true, // Set to true for autoplay
                 autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
-                // arrows: flase,
+                arrows: flase,
                 dots: true,
                 fade: true,
                 cssEase: "linear",
@@ -347,10 +347,10 @@
                 speed: 300,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                prevArrow:
-                    '<a class="slick-prev"><i class="icon-arrow-left" alt="Arrow Icon"></i></a>',
-                nextArrow:
-                    '<a class="slick-next"><i class="icon-arrow-right" alt="Arrow Icon"></i></a>',
+                // prevArrow:
+                //     '<a class="slick-prev"><i class="icon-arrow-left" alt="Arrow Icon"></i></a>',
+                // nextArrow:
+                //     '<a class="slick-next"><i class="icon-arrow-right" alt="Arrow Icon"></i></a>',
                 responsive: [
                     {
                         breakpoint: 1200,
