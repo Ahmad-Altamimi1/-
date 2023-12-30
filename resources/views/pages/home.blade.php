@@ -234,7 +234,7 @@ padding: 0 22%;
 .click_active{
 
 }
-.ltn__slide-one-active .slick-slide {
+.ltn__slide-one-active {
     height: calc(100vh - 218px); /* Your desired height calculation */
 }
 body{
