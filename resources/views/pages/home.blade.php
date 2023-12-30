@@ -239,8 +239,9 @@ padding: 0 22%;
 }
 .containslidbar{
     display: grid;
-    grid-template-columns: 70% 30%
-    gap: 50px
+    grid-template-columns: 70% 30%;
+    gap: 50px;
+
 }
         </style>
         </div>
@@ -505,7 +506,7 @@ use App\Models\poststags;
             </div>
         </div>
         <div class="sidebar">
-            <div style="height: 500px:background:red"></div>
+            <div style="height: 500px;background:red"></div>
         </div>
     </div>
 {{-- newone  --}}
