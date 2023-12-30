@@ -234,7 +234,7 @@ padding: 0 22%;
 .click_active{
 
 }
-.ltn__slide-one-active {
+.ltn__slide-one-active .ltn__slide-item  {
     height: calc(100vh - 218px); /* Your desired height calculation */
 }
 body{
