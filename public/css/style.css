@@ -8956,7 +8956,8 @@ font-family: 'Oswald', sans-serif;
   /* margin-top: -550px; */
   border-radius: 64px;
     WIDTH: 540PX;
-    height: 702px;
+    height: calc(100vh - 218px) !important; /* Your desired height calculation */
+
 }
   @media (max-width: 767.98px) {
     .login-wrap {
