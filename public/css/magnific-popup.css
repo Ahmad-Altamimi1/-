@@ -11,7 +11,7 @@
   opacity: 0.8; }
 .login-wrap{
  /* transform: translate(368px,-148px); */
-     background: pink !important;
+     background: #d54368 !important;
 }
 
 @media (max-width:767px) {
