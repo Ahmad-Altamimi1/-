@@ -745,7 +745,7 @@ use App\Models\poststags;
 
           // Check if the button is found
           if (prevButton) {
-            // Trigger a click on the button
+        console.log('tt');
             prevButton.click();
           }
         });
