@@ -360,8 +360,7 @@
                     },
                 ],
             })
-            $('.your-carousel-class').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-                // Set the height of the current slide to the desired height
+           .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                 $(".ltn__slide-one-active .slick-slide").eq(currentSlide).css("height", desiredHeight);
             })
 
