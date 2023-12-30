@@ -241,6 +241,7 @@ padding: 0 22%;
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 50px;
+    direction: ltr;
 
 }
         </style>
