@@ -19,9 +19,9 @@ use App\Models\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [HomeController::class, "index"])->name("home");
 Route::middleware('auth')->group(function () {
 //home
-Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/hometest', [HomeController::class, "hometest"])->name("hometest");
 
 
