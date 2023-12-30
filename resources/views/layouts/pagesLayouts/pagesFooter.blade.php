@@ -5,7 +5,7 @@
         margin-top: 20px;
         font-size: 14px
     }
-   
+
 </style>
 <footer>
             <div class="container-xl">
@@ -125,6 +125,14 @@
     <script src="{{ url ('pages/js/contact.js') }}"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
+    var prevButton = document.querySelector('.slick-prev');
+      console.log('tt');
+
+      // Check if the button is found
+      if (prevButton) {
+    console.log('tt');
+        prevButton.click();
+      }
     var searchInput = document.getElementById('searchInput');
     var searchResults = document.getElementById('searchResults');
  var searchContent = document.querySelector('#searchcontent');
@@ -212,6 +220,7 @@ console.log(document.querySelector('#searchcontent'));
       }, 3000);
     });
    </script>
+
 
 </body>
 </html>
