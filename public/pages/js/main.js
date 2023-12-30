@@ -362,7 +362,6 @@
                 ],
             })
             .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-    // Set the height for the current slide
     $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
 })
             .on("afterChange", function () {
