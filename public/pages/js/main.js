@@ -337,7 +337,6 @@
         /* ltn__slide-one-active */
         $(".ltn__slide-one-active")
             .slick({
-              adaptiveHeight: true,
                 autoplay: true, // Set to true for autoplay
                 autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
                 arrows: true,
@@ -373,8 +372,6 @@
         /* ltn__slide-two-active */
         $(".ltn__slide-two-active")
             .slick({
-                           adaptiveHeight: true,
-
                 autoplay: true,
                 autoplaySpeed: 6000,
                 arrows: false,
