@@ -354,7 +354,7 @@
                     {
                         breakpoint: 1200,
                         settings: {
-                            arrows: true,
+                            arrows: false,
                             dots: true,
                         },
                     },
