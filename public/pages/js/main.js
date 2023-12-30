@@ -360,10 +360,13 @@
                     },
                 ],
             })
-           .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                // Set the height of the current slide to the desired height
                 $(".ltn__slide-one-active .slick-slide").eq(currentSlide).css("height", desiredHeight);
-            })
 
+                // Set the height of the next slide to the desired height
+                $(".ltn__slide-one-active .slick-slide").eq(nextSlide).css("height", desiredHeight);
+            })
             .on("afterChange", function () {
                 new WOW().init();
             });
