@@ -334,19 +334,19 @@
             15. Slider One Active
         --------------------------------------------------------- */
         var desiredHeight = "calc(100vh - 218px)";
-        var desiredHeight = "600px";
-        /* ltn__slide-one-active */
-        $(".ltn__slide-one-active")
-            .slick({
-                autoplay: true, // Set to true for autoplay
-                autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
-                dots: true,
-                fade: true,
-                cssEase: "linear",
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
+            /* ltn__slide-one-active */
+            $(".ltn__slide-one-active")
+                .slick({
+                    autoplay: true, // Set to true for autoplay
+                    autoplaySpeed: 6000, // Set the autoplay speed in milliseconds (6 seconds)
+                    dots: true,
+                    fade: true,
+                    cssEase: "linear",
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    height:desiredHeight,
+                    slidesToScroll: 1,
                prevArrow:
                     '<a class="slick-prev"><i class="icon-arrow-left" alt="Arrow Icon"></i></a>',
                 nextArrow:

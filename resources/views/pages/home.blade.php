@@ -234,6 +234,9 @@ padding: 0 22%;
 .click_active{
 
 }
+.ltn__slide-one-active .slick-slide {
+    height: calc(100vh - 218px); /* Your desired height calculation */
+}
 body{
     /* direction: rtl; */
 }
