@@ -462,28 +462,45 @@ gap: 2%;
 </div> --}}
 <style>
 
-    .circle-container {
+.circle-container {
       display: flex;
     }
 
-    .circle {
+    .trimester-circle {
+      position: relative;
       width: 100px;
       height: 100px;
       background-color: #d54368; /* You can customize the color */
       border-radius: 50%;
       margin: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stylish shadow effect */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #fff;
+      cursor: pointer;
       transition: transform 0.3s ease-in-out; /* Smooth transition */
     }
 
-    .circle:hover {
+    .trimester-circle:hover {
       transform: scale(1.1); /* Scale up on hover */
+      animation: bounce 0.5s ease; /* Add a bounce animation */
+    }
+
+    @keyframes bounce {
+      25%, 75% {
+        transform: translateY(-20px); /* Bounce up and down */
+      }
+      50% {
+        transform: translateY(0); /* Back to the original position */
+      }
     }
 </style>
 <div class="circle-container">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="trimester-circle" onclick="alert('First Trimester')">1st</div>
+    <div class="trimester-circle" onclick="alert('Second Trimester')">2nd</div>
+    <div class="trimester-circle" onclick="alert('Third Trimester')">3rd</div>
   </div>
     <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
