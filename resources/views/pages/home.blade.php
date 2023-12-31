@@ -515,7 +515,8 @@ gap: 2%;
       width: 15%;
     height: 0;
     padding-bottom: 14%;
-      background-color: #d54368;
+      /* background-color: #d54368; */
+      background-image:  url('pages/img/photo-1532706302136-347336b002ec.avif');
       border-radius: 50%;
       margin: 5% 1%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
