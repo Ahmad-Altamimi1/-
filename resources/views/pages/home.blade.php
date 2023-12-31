@@ -497,12 +497,16 @@ gap: 2%;
       }
     }
 </style>
+
+<?php
+use App\Models\poststags;
+?>
 <div class="circle-container">
-    <div class="trimester-circle" onclick="alert('First Trimester')">1st</div>
-    <div class="trimester-circle" onclick="alert('Second Trimester')">2nd</div>
-    <div class="trimester-circle" onclick="alert('Third Trimester')">3rd</div>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">الثلث الأول</a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">الثلث الثاني</a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث</a>
   </div>
-    <div class="row pt-60 pb-40" style="width: 100%;">
+    {{-- <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
                             <h1 class="section-title section-title-border" >أشهر الحمل  </h1>
@@ -514,9 +518,7 @@ gap: 2%;
                     <img src="../pages/img/دوائر.png" alt="" style="    width: 79%;
 
     margin-top: -136px;">
-<?php
-use App\Models\poststags;
-?>
+
     <div  class="monthimg monthimg1">
         <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">
             <img src="../1111.jpg" alt="" >
@@ -542,7 +544,7 @@ use App\Models\poststags;
 <p class="month_content">الثلث الثالث</p>
         </a>
     </div>
-                </div>
+                </div> --}}
 
 
 
