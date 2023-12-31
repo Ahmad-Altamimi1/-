@@ -2,7 +2,7 @@
 
 
 {{-- <ul class="flex" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;"> --}}
-@foreach ($popularPosts as $post)
+@foreach ($popularPosts as $recentpost)
 <li>
     <div class="popular-post-widget-item content_left_slider " >
         <div class="popular-post-widget-img" >
