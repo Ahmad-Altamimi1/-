@@ -1221,7 +1221,7 @@ $tagofpost= poststags::find($post->TAG);
         if ($mode === 'recent') {
             $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
         } else if ($mode === 'popular') {
-            $popularPosts = Post::orderBy('SHOW', 'asc')->take(4)->get();
+            $popularPosts = Post::orderBy('SHOW', 'asc')->take(6)->get();
         }
 
         return view('partials.posts', ['popularPosts' => $popularPosts]);
