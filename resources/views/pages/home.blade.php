@@ -488,19 +488,19 @@ gap: 2%;
 
     .heart.green {
       color: rgba(94, 224, 163, 0.8);
-      animation: parent-anim 5s linear infinite;
+      animation: parent-anim 3s linear infinite;
       /* transform-origin: 50% 120px; */
     }
 
     .heart.pink {
       color: rgba(232, 143, 201, 0.8);
-      animation: parent-anim-2 5s linear infinite;
+      animation: parent-anim-2 3s linear infinite;
       /* transform-origin: 50% 125px; */
     }
 
     .heart.blue {
       color: rgba(134, 193, 232, 0.8);
-      animation: parent-anim 5s linear infinite;
+      animation: parent-anim 3s linear infinite;
       /* transform-origin: 20% 120px; */
     }
 
