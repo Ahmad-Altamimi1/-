@@ -562,11 +562,11 @@ gap: 2%;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     .circle-title {
-    background-color: #ff6b6b;
+        background-color: B21F66;
     color: #fff !important;
-    padding: 5px 10px;
-    border-radius: 20px; /* Adjust the border-radius based on your preference */
-}
+    padding: 5px 181px;
+    border-radius: 6px;
+    font-size: 26px;}
 .widget{
     border: none !important;
 }
