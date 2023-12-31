@@ -942,9 +942,9 @@ use App\Models\poststags;
             });
 
             $(this).css({
-                background: 'white',
+                // background: 'white',
 
-    // color: 'white',
+    color: 'white',
     'border-radius': '8px',
     'text-align': 'center'
 });
