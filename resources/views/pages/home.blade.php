@@ -461,115 +461,52 @@ gap: 2%;
 
 </div> --}}
 <style>
-
-.hearts-wrapper {
-    width: 100%;
-    height: 350px;
-    /* margin: 0 auto; */
-    margin: 1% 0;
-    display: flex;
-    justify-content: center;
-
-    }
-
-    .heart {
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      font-size: 80px;
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .heart.green {
-      color: rgba(94, 224, 163, 0.8);
-      animation: parent-anim 5s linear infinite;
-      /* transform-origin: 50% 120px; */
-    }
-
-    .heart.pink {
-      color: rgba(232, 143, 201, 0.8);
-      animation: parent-anim-2 5s linear infinite;
-      /* transform-origin: 50% 125px; */
-    }
-
-    .heart.blue {
-      color: rgba(134, 193, 232, 0.8);
-      animation: parent-anim 5s linear infinite;
-      /* transform-origin: 20% 120px; */
-    }
-
-    .heart.purple {
-      color: rgba(189, 138, 234, 0.8);
-      animation: parent-anim 5s linear infinite;
-      transform-origin: 40% 150px;
-    }
-
+    /* ... your existing styles ... */
     .trimester-circle {
-      text-decoration: none;
-      width: 15%;
-    height: 0;
-    padding-bottom: 14%;
-      background-color: #d54368;
-      border-radius: 50%;
-      margin: 5% 1%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #000000;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
+        text-decoration: none;
+        width: 15%;
+        height: 0;
+        padding-bottom: 14%;
+        border-radius: 50%;
+        margin: 5% 1%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #000000;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
     }
 
     .trimester-circle:hover .heart {
-      opacity: 1;
+        opacity: 1;
     }
 
-    @keyframes parent-anim {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes parent-anim-2 {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(-360deg);
-      }
-    }
-    .heart_text{
+    .heart_text {
         position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-      font-weight: bold;
-      color: white; /* Baby theme color */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
+
     .circle-title {
-        background-color: B21F66;
-    color: #fff !important;
-    padding: 5px 181px;
-    border-radius: 6px;
-    font-size: 26px;}
-.widget{
-    border: none !important;
-}
+        background-color: #B21F66;
+        color: #fff !important;
+        padding: 5px 181px;
+        border-radius: 6px;
+        font-size: 26px;
+    }
+
+    .widget {
+        border: none !important;
+    }
 </style>
 
 <?php
@@ -584,11 +521,20 @@ use App\Models\poststags;
         </div>
     </div>
 </div>
-  <div class="hearts-wrapper">
-    <a class="trimester-circle" style="background-image: url('pages/img/photo-1532706302136-347336b002ec.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥</div></a>
-    <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
-    <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
-  </div>
+<div class="hearts-wrapper">
+    <a class="trimester-circle" style="background-image: url('pages/img/photo-1532706302136-347336b002ec.avif');" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">
+        <span class="heart_text">الثلث الأول</span>
+        <div class="heart green">♥</div>
+    </a>
+    <a class="trimester-circle" style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif');" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">
+        <span class="heart_text">الثلث الثاني</span>
+        <div class="heart pink">♥</div>
+    </a>
+    <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif');" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">
+        <span class="heart_text">الثلث الثالث</span>
+        <div class="heart blue">♥</div>
+    </a>
+</div>
   {{-- <div class="hearts-wrapper">
     <a href="#" class="heart green"><div>♥</div></a>
     <a href="#" class="heart pink"><div>♥</div></a>
