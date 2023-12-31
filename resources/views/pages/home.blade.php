@@ -370,7 +370,8 @@ gap: 2%;
 
                     </div>
                     <div class="ajaxul">
-                    <ul class="flex" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;">
+                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;    grid-template-rows: 170px 170px;
+                    ">
                         @foreach ($recentposts as $recentpost)
 
                         <li>
@@ -379,7 +380,6 @@ gap: 2%;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            padding: 10px 0 0 0;
                             border-radius: 16px;
                             width: 100%;
                 height: 100%;">
