@@ -516,6 +516,7 @@ gap: 2%;
       width: 15%;
     height: 0;
     padding-bottom: 14%;
+
       /* background-color: #d54368; */
       background-image:  url('https://images.unsplash.com/photo-1532636785204-753cb2c25594?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       border-radius: 50%;
@@ -533,7 +534,8 @@ gap: 2%;
       z-index: 1;
     }
     .trimester-circle:hover{
-        scale: 1.2;
+        transition: .4S;
+        scale: 1.1;
         margin-left: 20px;
     margin-right: 20px;
 
