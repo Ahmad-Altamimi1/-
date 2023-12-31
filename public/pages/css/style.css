@@ -5746,6 +5746,9 @@ opacity: 0.4;
     overflow:hidden;
     opacity:0
 }
+.ltn__blog-meta {
+    color:  white;
+}
 .ltn__blog-item-1 .ltn__blog-meta ul li:last-child::before,.ltn__blog-tags a:last-child::before,.ltn__border-between-column [class*=col]:first-child::before,.ltn__gallery-info-hide .ltn__gallery-item-info{
     display:none
 }
