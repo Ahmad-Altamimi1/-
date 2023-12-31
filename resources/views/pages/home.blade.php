@@ -567,6 +567,9 @@ gap: 2%;
     padding: 5px 10px;
     border-radius: 20px; /* Adjust the border-radius based on your preference */
 }
+.widget{
+    border: none !important;
+}
 </style>
 
 <?php
