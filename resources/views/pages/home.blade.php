@@ -557,9 +557,9 @@ gap: 2%;
 use App\Models\poststags;
 ?>
   <div class="hearts-wrapper">
-    <a href="#" class="trimester-circle">1st<div class="heart green">♥</div></a>
-    <a href="#" class="trimester-circle">2nd<div class="heart pink">♥</div></a>
-    <a href="#" class="trimester-circle">3rd<div class="heart blue">♥</div></a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span>الثلث الأول</span><div class="heart green">♥</div></a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span>الثلث الثاني</span><div class="heart pink">♥</div></a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span>الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
   {{-- <div class="hearts-wrapper">
     <a href="#" class="heart green"><div>♥</div></a>
