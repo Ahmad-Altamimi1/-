@@ -484,21 +484,15 @@ gap: 2%;
       transition: transform 0.3s ease-in-out; /* Smooth transition */
     }
 
-    .trimester-circle:hover {
-  transform: scale(1.1); /* Scale up on hover */
-  animation: customBounce 0.5s ease; /* Add a custom bounce animation */
+ .trimester-circle {
+  /* ... (previous styles) */
+  opacity: 0.8; /* Initial opacity */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
-@keyframes customBounce {
-  20%, 50%, 80% {
-    transform: translateY(-10px); /* Bounce up and down */
-  }
-  40%, 60% {
-    transform: translateY(10px); /* Bounce up and down */
-  }
-  100% {
-    transform: translateY(0); /* Back to the original position */
-  }
+.trimester-circle:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  opacity: 1; /* Fade in on hover */
 
     }
 </style>
