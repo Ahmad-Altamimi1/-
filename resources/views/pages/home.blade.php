@@ -384,10 +384,11 @@ gap: 2%;
                 <div class="widget ltn__popular-post-widget" >
                     <div class="flex" style="justify-content: justify-content:space-around;">
                         <h2 class="ltn__widget-title w-50" data-mode="popular" id="popularPostsTitle" style="cursor: pointer">المقالات المشهوره</h2>
-                        <h2 class="ltn__widget-title  w-50 " data-mode="recent" style="background: white;
-                        color: black;
+                        <h2 class="ltn__widget-title  w-50 " data-mode="recent" style="cursor: pointer;
+                        background: initial;
+                        color: white;
                         border-radius: 8px;
-                        text-align: center;cursor: pointer" >المقالات الحديثه</h2>
+                        text-align: center;" >المقالات الحديثه</h2>
 
 
                     </div>
@@ -944,7 +945,7 @@ use App\Models\poststags;
             $(this).css({
                 // background: 'white',
 
-    color: 'white',
+    color: '#ECEBFF',
     'border-radius': '8px',
     'text-align': 'center'
 });
