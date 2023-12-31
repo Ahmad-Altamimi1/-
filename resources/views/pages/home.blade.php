@@ -267,7 +267,7 @@ gap: 2%;
 .float-text{
     position: absolute;
     top: 50%;
-    left: 0;
+    right: 0;
     transform: translateY(-50%);
 }
         </style>
@@ -400,8 +400,8 @@ gap: 2%;
                                     <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#" style=""></a>
 
                                 </div>
-                                <div class="popular-post-widget-brief">
-                                    <div class="ltn__blog-meta float-text">
+                                <div class="popular-post-widget-brief float-text">
+                                    <div class="ltn__blog-meta ">
                                         <ul>
                                             <span class=" " style="width: 100%;
                                             display: inline-block;
