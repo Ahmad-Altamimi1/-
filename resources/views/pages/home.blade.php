@@ -672,9 +672,11 @@ use App\Models\poststags;
             <div class="relative w-full ">
                 <div class="container z-1">
 
-                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 justify-center">
+                    {{-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 justify-center"> --}}
+                    {{-- <div > --}}
 
-                        <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-8 self-center">
+                        {{-- <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-8 self-center"> --}}
+                        <div >
                             <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out">
                                 <div class="flex-auto p-4">
                                     <div class="overflow-hidden relative">
@@ -702,7 +704,7 @@ use App\Models\poststags;
                                         @if (count($first_tag->posts) > 0)
 
                             @foreach ( $first_tag->posts->skip(1)->take(4) as $post )
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-4 mb-4 hover-translate" style="    border: 2px solid #eee;">
+                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-1 mb-4 hover-translate" style="    border: 2px solid #eee;">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
                                         <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full h-auto rounded-xl">
