@@ -277,7 +277,7 @@ gap: 2%;
         padding: 5px 25px;
         gap: 0;
     }
-    .allheaderP{
+    .allheader{
         grid-template-columns: 100%;
     }
     .articles{
