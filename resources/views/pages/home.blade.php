@@ -250,6 +250,18 @@ grid-template-columns: 50% 50%;
 gap: 2%;
 
 }
+.content_left_slider{
+    background: white;
+ display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            border-radius: 16px;
+                            width: 100%;
+                height: 100%;
+}
+.popular-post-widget-img{
+    margin: 0
+}
         </style>
         </div>
     {{-- <div class="ltn__utilize-overlay"></div> --}}
@@ -375,14 +387,7 @@ gap: 2%;
                         @foreach ($recentposts as $recentpost)
 
                         <li>
-                            <div class="popular-post-widget-item " style="background: white;
-
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            border-radius: 16px;
-                            width: 100%;
-                height: 100%;">
+                            <div class="popular-post-widget-item content_left_slider " >
                                 <div class="popular-post-widget-img" >
                                     <a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"><img src="{{ asset($recentpost->IMG) }}" alt="#" style=""></a>
 
