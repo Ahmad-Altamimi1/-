@@ -1,5 +1,8 @@
-@foreach ($recentposts as $recentpost)
+<!-- partials/posts.blade.php -->
 
+
+{{-- <ul class="flex" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;"> --}}
+@foreach ($popularPosts as $post)
 <li>
     <div class="popular-post-widget-item content_left_slider " >
         <div class="popular-post-widget-img" >
@@ -23,5 +26,6 @@
         </div>
     </div>
 </li>
+
 @endforeach
 {{-- </ul> --}}
