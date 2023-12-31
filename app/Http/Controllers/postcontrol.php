@@ -916,7 +916,7 @@ $pageid= $tag;
 
         $popularpost = Post::where("TAG", "=", $tag)->orderBy('SHOW', 'asc')->first();
 
-     
+
         return view("pages.tag",compact('postintag', 'pageid', 'popularpost', 'tags','tagbyid','otherIds'));
     }
 
@@ -1216,12 +1216,12 @@ $tagofpost= poststags::find($post->TAG);
         return view('webcontrol.posts.search-results', ['poststags' => $poststags, 'searchQuery' => $searchQuery, 'posts' => $posts, 'users' => $users, 'filteredPosts' => $filteredPosts]);
     }
     public function popular_posts(Request $request){
-        $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(5)->get();
+        $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
     $mode = $request->input('mode');
         if ($mode === 'recent') {
-            $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
+            $popularPosts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         } else if ($mode === 'popular') {
-            $popularPosts = Post::orderBy('SHOW', 'asc')->take(6)->get();
+            $popularPosts = Post::orderBy('SHOW', 'asc')->take(4)->get();
         }
 
         return view('partials.posts', ['popularPosts' => $popularPosts]);
