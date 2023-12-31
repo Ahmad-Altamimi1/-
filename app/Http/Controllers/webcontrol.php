@@ -326,7 +326,7 @@ class webcontrol extends Controller
             "imgurl" => asset('img/logo_sport.png')
         );
 
-        return view('public.privacy',  ['page' => $page, 'tags' => $tags]);
+        return view('pages.privacy',  ['page' => $page, 'tags' => $tags]);
     }
     public function Intellectual_property_rights()
     {
@@ -342,7 +342,7 @@ class webcontrol extends Controller
             "imgurl" => asset('img/logo_sport.png')
         );
 
-        return view('public.Intellectual_property_rights',  [ 'page' => $page, 'tags' => $tags]);
+        return view('pages.Intellectual_property_rights',  [ 'page' => $page, 'tags' => $tags]);
     }
 
     public function contactus()
