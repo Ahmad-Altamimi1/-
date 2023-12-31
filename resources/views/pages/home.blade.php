@@ -506,7 +506,7 @@ gap: 2%;
 
     .heart.purple {
       color: rgba(189, 138, 234, 0.8);
-      animation: parent-anim 5s linear infinite;
+      animation: parent-anim 3s linear infinite;
       transform-origin: 40% 150px;
     }
 
@@ -550,11 +550,15 @@ gap: 2%;
     }
 
     @keyframes parent-anim-2 {
-      0% {
+        0% {
         transform: rotate(0);
       }
+      50%{
+        transform: rotate(60deg);
+
+      }
       100% {
-        transform: rotate(-360deg);
+        transform: rotate(-60deg);
       }
     }
     .heart_text{
