@@ -666,6 +666,7 @@ use App\Models\poststags;
                         </div>
                     </div>
                 </div>
+                <div class="container">
                 <div class="containslidbar">
                       <div class="flex flex-col">
 
@@ -677,7 +678,7 @@ use App\Models\poststags;
 
                         {{-- <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-8 self-center"> --}}
                         <div >
-                            <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out">
+                            <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out" style="width: 600px">
                                 <div class="flex-auto p-4">
                                     <div class="overflow-hidden relative">
                                         @if (count($first_tag->posts) > 0)
@@ -707,7 +708,9 @@ use App\Models\poststags;
                             <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-1 mb-4 hover-translate" style=" width:600px;   border: 2px solid #eee;">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
-                                        <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full h-auto rounded-xl">
+                                        <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full  rounded-xl" style="    height: 101px !important;
+                                        width: 183px;
+                                        object-fit: cover;">
                                     </div><!--end col-->
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
                                         <div class=" h-full flex flex-col p-3">
@@ -735,6 +738,8 @@ use App\Models\poststags;
             position: sticky;
             top: 2px;"></div>
         </div>
+    </div>
+    </div>
     </div>
 {{-- newone  --}}
 
