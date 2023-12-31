@@ -556,6 +556,10 @@ gap: 2%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 18px;
+      font-weight: bold;
+      color: #ff6b6b; /* Baby theme color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 </style>
 
