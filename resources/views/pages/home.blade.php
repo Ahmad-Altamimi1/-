@@ -732,12 +732,12 @@ use App\Models\poststags;
                 </div><!--end container-->
             </div>
         </div>
-        <div class="sidebar">
+        {{-- <div class="sidebar">
             <div style="    height: 500px;
             background: #dc3545;
             position: sticky;
             top: 2px;"></div>
-        </div>
+        </div> --}}
     </div>
     </div>
     </div>
