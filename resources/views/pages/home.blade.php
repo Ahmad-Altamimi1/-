@@ -463,12 +463,13 @@ gap: 2%;
 <style>
 
 .hearts-wrapper {
-      width: 400px;
-      height: 350px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+    width: 100%;
+    height: 350px;
+    /* margin: 0 auto; */
+    margin: 1% 0;
+    display: flex;
+    justify-content: center;
+
     }
 
     .heart {
@@ -479,7 +480,7 @@ gap: 2%;
       align-items: center;
       justify-content: center;
       position: relative;
-      font-size: 40px;
+      font-size: 80px;
       border-radius: 50%;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
@@ -488,19 +489,19 @@ gap: 2%;
     .heart.green {
       color: rgba(94, 224, 163, 0.8);
       animation: parent-anim 5s linear infinite;
-      transform-origin: 50% 120px;
+      /* transform-origin: 50% 120px; */
     }
 
     .heart.pink {
       color: rgba(232, 143, 201, 0.8);
       animation: parent-anim-2 5s linear infinite;
-      transform-origin: 50% 125px;
+      /* transform-origin: 50% 125px; */
     }
 
     .heart.blue {
       color: rgba(134, 193, 232, 0.8);
       animation: parent-anim 5s linear infinite;
-      transform-origin: 20% 120px;
+      /* transform-origin: 20% 120px; */
     }
 
     .heart.purple {
@@ -511,18 +512,18 @@ gap: 2%;
 
     .trimester-circle {
       text-decoration: none;
-      width: 90%;
-      height: 0;
-      padding-bottom: 17%;
+      width: 15%;
+    height: 0;
+    padding-bottom: 14%;
       background-color: #d54368;
       border-radius: 50%;
-      margin: 5%;
+      margin: 5% 1%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      color: #fff;
+      color: #000000;
       text-align: center;
       cursor: pointer;
       position: relative;
