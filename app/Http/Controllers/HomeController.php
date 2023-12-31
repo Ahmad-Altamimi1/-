@@ -38,7 +38,7 @@ class HomeController extends Controller
             };
         };
 
-        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
+        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
