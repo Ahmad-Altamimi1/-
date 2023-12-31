@@ -466,43 +466,107 @@ gap: 2%;
     display: flex;
     JUSTIFY-CONTENT: CENTER;
     }
+    .hearts-wrapper {
+      width: 400px;
+      height: 350px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .heart {
+      text-decoration: none;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-size: 40px;
+      border-radius: 50%;
+    }
+
+    .heart.green {
+      color: rgba(94, 224, 163, 0.8);
+      animation: parent-anim 5s linear infinite;
+      transform-origin: 50% 120px;
+    }
+
+    .heart.pink {
+      color: rgba(232, 143, 201, 0.8);
+      animation: parent-anim-2 5s linear infinite;
+      transform-origin: 50% 125px;
+    }
+
+    .heart.blue {
+      color: rgba(134, 193, 232, 0.8);
+      animation: parent-anim 5s linear infinite;
+      transform-origin: 20% 120px;
+    }
+
+    .heart.purple {
+      color: rgba(189, 138, 234, 0.8);
+      animation: parent-anim 5s linear infinite;
+      transform-origin: 40% 150px;
+    }
 
     .trimester-circle {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      background-color: #d54368; /* You can customize the color */
+      text-decoration: none;
+      width: 90%;
+      height: 0;
+      padding-bottom: 90%;
+      background-color: #d54368;
       border-radius: 50%;
-      margin: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stylish shadow effect */
+      margin: 5%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
       color: #fff;
+      text-align: center;
       cursor: pointer;
-      transition: transform 0.3s ease-in-out; /* Smooth transition */
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
-    .trimester-circle {
-  /* ... (previous styles) */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
-}
+    .trimester-circle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
 
-.trimester-circle:hover {
-  transform: scale(1.1); /* Scale up on hover */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
-}
+    @keyframes parent-anim {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes parent-anim-2 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
 </style>
 
 <?php
 use App\Models\poststags;
 ?>
-<div class="circle-container">
+  <div class="hearts-wrapper">
+    <a href="#" class="heart green"><div>♥</div></a>
+    <a href="#" class="heart pink"><div>♥</div></a>
+    <a href="#" class="heart blue"><div>♥</div></a>
+    <a href="#" class="heart purple"><div>♥</div></a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">الثلث الأول</a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">الثلث الثاني</a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث</a>
   </div>
+
     {{-- <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
