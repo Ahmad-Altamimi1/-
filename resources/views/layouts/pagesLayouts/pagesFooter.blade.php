@@ -173,7 +173,10 @@ console.log(document.querySelector('#searchcontent'));
     li.style.position = "absolute";
     li.style.top = (index * 30) + "px";
 
-    li.innerHTML = `<a href="/المقال/${result.id}">
+    li.innerHTML = `<a href="/postss/${result.id}" style='    width: 100%;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;'>
                       ${result.TITLE}</a>`;
     searchResults.appendChild(li);
 });
