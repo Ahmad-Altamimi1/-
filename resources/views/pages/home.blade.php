@@ -392,7 +392,7 @@ gap: 2%;
 
                     </div>
                     <div class="ajaxul">
-                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;    grid-template-rows: 170px 170px;
+                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;    grid-template-rows: 150px 150px;
                     ">
                         @foreach ($recentposts as $recentpost)
 
@@ -585,9 +585,9 @@ use App\Models\poststags;
     </div>
 </div>
   <div class="hearts-wrapper">
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥</div></a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
+    <a class="trimester-circle" style="background-image: url(img/photo-1532706302136-347336b002ec.avif)" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥</div></a>
+    <a class="trimester-circle"style="background-image: url(img/photo-1568043625493-2b0633c7c491 (1).avif)" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
+    <a class="trimester-circle" style="background-image: url(img/photo-1585010873004-923f9a54e54e.avif)" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
   {{-- <div class="hearts-wrapper">
     <a href="#" class="heart green"><div>♥</div></a>
