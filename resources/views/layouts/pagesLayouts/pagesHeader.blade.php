@@ -130,15 +130,18 @@
                                     <input type="text" id="searchInput" placeholder="بحث"
                                         style="margin: 0;    text-align: right;">
                                         {{-- <span><i class="icon-magnifier"></i></span> --}}
-                                    <ul id="searchResults" style="position: absolute;
-                                    right: 0;
-                                    display: none;
-                                    width: 135px;
-                                    background: #d54368;
-    height: 227%;
-    border-radius: 12px;
-    color: white;
-    z-index: 1000;" ></ul>
+                                    <ul id="searchResults" style="    position: absolute;
+                                    right: 0px;
+                                    display: flex;
+                                    width: 100%;
+                                    background: rgb(247 245 245);
+                                    height: 227%;
+                                    border-radius: 12px;
+                                    color: #d54368;
+                                    border: 1px solid #eee;
+                                    z-index: 1000;
+                                    direction: rtl;
+                                    padding-right: 18px;" ></ul>
                                     </button>
                                 {{-- </form> --}}
                             </div>
