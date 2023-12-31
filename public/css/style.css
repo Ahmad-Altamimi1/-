@@ -14445,26 +14445,5 @@ button:focus {
   display: none;
   transition: 0.6s;
 }
-@media only screen and (max-width:767px){
-    .circle-title{
-        padding: 5px 25px;
-        gap: 0;
-    }
-    .allheaderP{
-        grid-template-columns: 100%;
-    }
-    .articles{
-        padding-inline:0;
-    }
-    .ltn__header-sticky{
-        background-color: #d54368;
-    }
-    .slick-initialized .slick-slide{
-        border-radius: 0;
-    }
-    .header-container{
-        display: none;
-    }
 
-}
 

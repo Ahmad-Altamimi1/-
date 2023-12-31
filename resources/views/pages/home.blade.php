@@ -272,6 +272,28 @@ gap: 2%;
     transform: translateY(-50%);
     width: 100%;
 }
+@media only screen and (max-width:767px){
+    .circle-title{
+        padding: 5px 25px;
+        gap: 0;
+    }
+    .allheaderP{
+        grid-template-columns: 100%;
+    }
+    .articles{
+        padding-inline:0;
+    }
+    .ltn__header-sticky{
+        background-color: #d54368;
+    }
+    .slick-initialized .slick-slide{
+        border-radius: 0;
+    }
+    .header-container{
+        display: none;
+    }
+
+}
         </style>
         </div>
     {{-- <div class="ltn__utilize-overlay"></div> --}}
