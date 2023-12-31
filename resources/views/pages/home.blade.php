@@ -670,7 +670,7 @@ use App\Models\poststags;
                       <div class="flex flex-col">
 
             <div class="relative w-full ">
-                <div class="container z-1">
+                <div class="container z-1" style="display: flex">
 
                     {{-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 justify-center"> --}}
                     {{-- <div > --}}
@@ -704,7 +704,7 @@ use App\Models\poststags;
                                         @if (count($first_tag->posts) > 0)
 
                             @foreach ( $first_tag->posts->skip(1)->take(4) as $post )
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-1 mb-4 hover-translate" style="    border: 2px solid #eee;">
+                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-1 mb-4 hover-translate" style=" width:600px;   border: 2px solid #eee;">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
                                         <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full h-auto rounded-xl">
