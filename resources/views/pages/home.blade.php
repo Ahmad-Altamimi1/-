@@ -252,15 +252,22 @@ gap: 2%;
 }
 .content_left_slider{
     background: white;
- display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            border-radius: 16px;
-                            width: 100%;
-                height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
 }
 .popular-post-widget-img{
     margin: 0
+}
+.float-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
         </style>
         </div>
@@ -393,7 +400,7 @@ gap: 2%;
 
                                 </div>
                                 <div class="popular-post-widget-brief">
-                                    <div class="ltn__blog-meta">
+                                    <div class="ltn__blog-meta float-text">
                                         <ul>
                                             <span class=" " style="width: 100%;
                                             display: inline-block;
