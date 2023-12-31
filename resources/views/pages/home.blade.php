@@ -267,8 +267,10 @@ gap: 2%;
 .float-text{
     position: absolute;
     top: 50%;
-    right: 0;
+    text-align: center;
+ color: white
     transform: translateY(-50%);
+    width: 100%;
 }
         </style>
         </div>
