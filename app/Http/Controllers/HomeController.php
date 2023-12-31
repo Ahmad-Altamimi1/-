@@ -38,7 +38,7 @@ class HomeController extends Controller
             };
         };
 
-        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
+        $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
@@ -55,11 +55,11 @@ class HomeController extends Controller
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-        $Othervideos= Videos::where("TAG", "=", $video->TAG)->orderBy('SHOW', 'asc')->take(4)->get();
+        $Othervideos= Videos::where("TAG", "=", $video->TAG)->orderBy('SHOW', 'asc')->take(6)->get();
         $similar_and_popular_post = Videos::where("TAG", "=", $video->TAG)->orderBy('SHOW', 'asc')->first();
         $tags = poststags::all();
 
-        $recentposts = Videos::where('id',"!=",$id)->orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
+        $recentposts = Videos::where('id',"!=",$id)->orderBy('DATE_SCHEDULER', 'asc')->take(6)->get();
         $secondPost = Videos::where('id', '>', $video->id)
             ->orderBy('id', 'asc')
             ->first();
