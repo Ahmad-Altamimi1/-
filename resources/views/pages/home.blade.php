@@ -551,7 +551,7 @@ gap: 2%;
         transform: rotate(-360deg);
       }
     }
-    |.heart_text{
+    .heart_text{
         position: absolute;
     top: 50%;
     left: 50%;
