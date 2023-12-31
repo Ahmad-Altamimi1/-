@@ -407,7 +407,8 @@ gap: 2%;
                                         <ul>
                                             <span class=" " style="width: 100%;
                                             display: inline-block;
-                                            text-align: center;"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
+                                            text-align: center;
+                                            color:white"><a href="{{ route('ShoWarticle', ['id' => $recentpost->id]) }}"> {{ $recentpost->TITLE }}</a></span>
                                             <li>
                                                 <span></span>
                                                 {{-- <span>{{ \Carbon\Carbon::parse($recentpost->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}</span> --}}

@@ -14,7 +14,8 @@
                 <ul>
                     <span class=" " style="width: 100%;
                     display: inline-block;
-                    text-align: center;"><a href="{{ route('ShoWarticle', ['id' => $post->id]) }}"> {{ $post->TITLE }}</a></span>
+                    text-align: center;
+                    color:white"><a href="{{ route('ShoWarticle', ['id' => $post->id]) }}"> {{ $post->TITLE }}</a></span>
                     <li>
                         <span></span>
                         {{-- <span>{{ \Carbon\Carbon::parse($post->DATE_SCHEDULER)->locale('ar')->isoFormat('MMM DD, YYYY') }}</span> --}}
