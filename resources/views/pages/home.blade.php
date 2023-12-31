@@ -244,6 +244,12 @@ padding: 0 22%;
     direction: rtl;
 
 }
+.allheader{
+    display: grid;
+grid-template-columns: 50% 50%;
+gap: 2%;
+
+}
         </style>
         </div>
     {{-- <div class="ltn__utilize-overlay"></div> --}}
@@ -291,10 +297,7 @@ padding: 0 22%;
     </div>
 @endif
 
-<div class="allheader" style=" display: grid;
-grid-template-columns: 65% 30%;
-gap: 2%;
-">
+<div class="allheader" >
     <div id="halfslider" style="width: 100%;">
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " style="height: 40vh">
