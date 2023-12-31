@@ -532,7 +532,12 @@ gap: 2%;
       position: relative;
       z-index: 1;
     }
+    .trimester-circle:hover{
+        scale: 1.2;
+        margin-left: 20px;
+    margin-right: 20px;
 
+    }
     .trimester-circle:hover .heart {
       opacity: 1;
     }
