@@ -462,11 +462,7 @@ gap: 2%;
 </div> --}}
 <style>
 
-.circle-container {
-    display: flex;
-    JUSTIFY-CONTENT: CENTER;
-    }
-    .hearts-wrapper {
+.hearts-wrapper {
       width: 400px;
       height: 350px;
       margin: 0 auto;
@@ -485,6 +481,8 @@ gap: 2%;
       position: relative;
       font-size: 40px;
       border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
 
     .heart.green {
@@ -527,12 +525,12 @@ gap: 2%;
       color: #fff;
       text-align: center;
       cursor: pointer;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      position: relative;
+      z-index: 1;
     }
 
-    .trimester-circle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    .trimester-circle:hover .heart {
+      opacity: 1;
     }
 
     @keyframes parent-anim {
@@ -558,6 +556,11 @@ gap: 2%;
 use App\Models\poststags;
 ?>
   <div class="hearts-wrapper">
+    <a href="#" class="trimester-circle">1st<div class="heart green">♥</div></a>
+    <a href="#" class="trimester-circle">2nd<div class="heart pink">♥</div></a>
+    <a href="#" class="trimester-circle">3rd<div class="heart blue">♥</div></a>
+  </div>
+  {{-- <div class="hearts-wrapper">
     <a href="#" class="heart green"><div>♥</div></a>
     <a href="#" class="heart pink"><div>♥</div></a>
     <a href="#" class="heart blue"><div>♥</div></a>
@@ -565,7 +568,7 @@ use App\Models\poststags;
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">الثلث الأول</a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">الثلث الثاني</a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث</a>
-  </div>
+  </div> --}}
 
     {{-- <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
