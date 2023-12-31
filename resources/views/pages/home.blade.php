@@ -379,7 +379,7 @@ gap: 2%;
         <div class="row">
 
             <div class="col-md-5 order-md-last" style="width:100%" >
-            <div class="login-wrap p-4 p-md-5"  >
+            <div class="login-wrap "  >
 
                 <div class="widget ltn__popular-post-widget" >
                     <div class="flex" style="justify-content: justify-content:space-around;">
