@@ -484,17 +484,15 @@ gap: 2%;
       transition: transform 0.3s ease-in-out; /* Smooth transition */
     }
 
- .trimester-circle {
+    .trimester-circle {
   /* ... (previous styles) */
-  opacity: 0.8; /* Initial opacity */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
 }
 
 .trimester-circle:hover {
   transform: scale(1.1); /* Scale up on hover */
-  opacity: 1; /* Fade in on hover */
-
-    }
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
 </style>
 
 <?php
