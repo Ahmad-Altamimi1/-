@@ -268,7 +268,7 @@ gap: 2%;
     position: absolute;
     top: 50%;
     text-align: center;
- color: white
+ color: white;
     transform: translateY(-50%);
     width: 100%;
 }
@@ -393,7 +393,7 @@ gap: 2%;
 
                     </div>
                     <div class="ajaxul">
-                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;    grid-template-rows: 150px 150px 150PX;
+                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;       grid-template-rows: 19% 19% 19%;;
                     ">
                         @foreach ($recentposts as $recentpost)
 
