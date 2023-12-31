@@ -513,7 +513,7 @@ gap: 2%;
       text-decoration: none;
       width: 90%;
       height: 0;
-      padding-bottom: 90%;
+      padding-bottom: 17%;
       background-color: #d54368;
       border-radius: 50%;
       margin: 5%;
