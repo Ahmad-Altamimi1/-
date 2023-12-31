@@ -467,7 +467,9 @@ gap: 2%;
     width: 100%;
     height: 350px;
     /* margin: 0 auto; */
-    margin: 1% 0;
+    /* margin: 1% 0; */
+    margin-top: -50px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
 
@@ -658,7 +660,7 @@ use App\Models\poststags;
                 </div> --}}
 
 
-          
+
  <div class="row pt-30 mt-30 " style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
