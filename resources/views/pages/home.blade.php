@@ -558,7 +558,7 @@ gap: 2%;
     transform: translate(-50%, -50%);
     font-size: 18px;
       font-weight: bold;
-      color: #ff6b6b; /* Baby theme color */
+      color: white; /* Baby theme color */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 </style>
@@ -567,7 +567,7 @@ gap: 2%;
 use App\Models\poststags;
 ?>
   <div class="hearts-wrapper">
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥♥♥♥♥♥♥</div></a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥♥</div></a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
