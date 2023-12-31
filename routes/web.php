@@ -20,7 +20,6 @@ use App\Models\Post;
 |
 */
 Route::get('/', [HomeController::class, "index"])->name("home");
-Route::middleware('auth')->group(function () {
 //home
 Route::get('/hometest', [HomeController::class, "hometest"])->name("hometest");
 
@@ -54,9 +53,14 @@ Route::get('/dashboard', function () {
 
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search'])->name('search');
-
-});
 Route::get('/coming_soon', [HomeController::class, 'soon'])->name('soon');
+
+
+Route::get('/aboutus', [App\Http\Controllers\webcontrol::class, 'aboutus'])->name('aboutus');
+Route::get('/contactus', [App\Http\Controllers\webcontrol::class, 'contactus'])->name('contactus');
+Route::get('/policy', [App\Http\Controllers\webcontrol::class, 'policy'])->name('policy');
+Route::get('/Intellectual_property_rights', [App\Http\Controllers\webcontrol::class, 'Intellectual_property_rights'])->name('Intellectual_property_rights');
+Route::get('/privacy', [App\Http\Controllers\webcontrol::class, 'privacy'])->name('privacy');
 
 /*
 |--------------------------------------------------------------------------

@@ -313,7 +313,36 @@ class webcontrol extends Controller
             "imgurl" => asset('img/logo_sport.png')
         );
 
-        return view('public.aboutus', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
+        return view('pages.aboutus', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
+    }
+    public function privacy()
+    {
+        $tags=poststags::all();
+        $page = array(
+            "name" => "سياسة الخصوصية",
+            "tital" => "سياسة الخصوصية",
+            "description" => "سياسة الخصوصية",
+            "url" => url('/"privacy"'),
+            "imgurl" => asset('img/logo_sport.png')
+        );
+
+        return view('public.privacy',  ['page' => $page, 'tags' => $tags]);
+    }
+    public function Intellectual_property_rights()
+    {
+        $tags=poststags::all();
+        $page = array(
+            "name" => "سياسة حقوق الملكية الفكرية
+            ",
+            "tital" => " سياسة حقوق الملكية الفكرية
+            ",
+            "description" => " سياسة حقوق الملكية الفكرية
+            ",
+            "url" => url('/"Intellectual_property_rights"'),
+            "imgurl" => asset('img/logo_sport.png')
+        );
+
+        return view('public.Intellectual_property_rights',  [ 'page' => $page, 'tags' => $tags]);
     }
 
     public function contactus()
@@ -328,7 +357,7 @@ class webcontrol extends Controller
             "imgurl" => asset('img/logo_sport.png')
         );
 
-        return view('public.contactus', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
+        return view('pages.contactus', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
     }
     public function policy()
     {
@@ -342,7 +371,7 @@ class webcontrol extends Controller
             "imgurl" => asset('img/logo_sport.png')
         );
 
-        return view('public.policy', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
+        return view('pages.policy', ['mostposts' => $mostposts, 'mostvideos' => $mostvideos, 'page' => $page]);
     }
     public function videotags($id)
     {
