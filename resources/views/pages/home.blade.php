@@ -658,11 +658,11 @@ use App\Models\poststags;
                 </div> --}}
 
 
-
+          
  <div class="row pt-30 mt-30 " style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
-                            <h1 class="section-title section-title-border circle-title" >{{ $first_tag->TITLE }}</h1>
+                            <h1 class="section-title section-title-border " ><span class="circle-title">{{ $first_tag->TITLE }}</span></h1>
                         </div>
                     </div>
                 </div>
