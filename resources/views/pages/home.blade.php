@@ -353,7 +353,7 @@ gap: 2%;
         <!-- Popular Post Widget -->
         <div class="row">
 
-            <div class="col-md-5 order-md-last" style="width:40%" >
+            <div class="col-md-5 order-md-last" style="width:100%" >
             <div class="login-wrap p-4 p-md-5"  >
 
 
