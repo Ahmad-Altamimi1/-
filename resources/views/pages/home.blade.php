@@ -944,7 +944,7 @@ use App\Models\poststags;
             $(this).css({
                 background: 'white',
 
-    color: 'black',
+    // color: 'white',
     'border-radius': '8px',
     'text-align': 'center'
 });
