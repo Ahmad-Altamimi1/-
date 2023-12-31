@@ -460,8 +460,31 @@ gap: 2%;
     </div>
 
 </div> --}}
+<style>
 
+    .circle-container {
+      display: flex;
+    }
 
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #d54368; /* You can customize the color */
+      border-radius: 50%;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stylish shadow effect */
+      transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .circle:hover {
+      transform: scale(1.1); /* Scale up on hover */
+    }
+</style>
+<div class="circle-container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
     <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
