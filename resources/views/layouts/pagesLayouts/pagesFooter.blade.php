@@ -184,7 +184,7 @@ console.log(document.querySelector('#searchcontent'));
     } else {
         var li = document.createElement('li');
         // li.style.position = "absolute";
-        li.textContent = 'No results found';
+        li.textContent = 'لا يوجد نتائج';
         searchContent.style.height = '100px';
         searchResults.appendChild(li);
     }
