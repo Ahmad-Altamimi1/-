@@ -563,7 +563,7 @@ gap: 2%;
     }
     .circle-title {
     background-color: #ff6b6b;
-    color: #fff;
+    color: #fff !important;
     padding: 5px 10px;
     border-radius: 20px; /* Adjust the border-radius based on your preference */
 }
