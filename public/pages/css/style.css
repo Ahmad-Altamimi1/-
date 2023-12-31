@@ -2836,6 +2836,17 @@ ul.wp-block-latest-posts.alignfull,ul.wp-block-latest-posts.alignwide,ul.wp-bloc
      object-fit: cover;
      width: 100%;
      height: 100%;
+     position: relative;
+}
+.popular-post-widget-img img::after{
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: black;
+opacity: 0.4;
 }
 .popular-post-widget-brief .ltn__blog-title{
     margin-bottom:5px;
