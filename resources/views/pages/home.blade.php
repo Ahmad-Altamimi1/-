@@ -518,7 +518,7 @@ gap: 2%;
       /* background-color: #d54368; */
       background-image:  url('https://images.unsplash.com/photo-1532636785204-753cb2c25594?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       border-radius: 50%;
-      background-size: contain;
+      background-size: cover;
       margin: 5% 1%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       display: flex;
@@ -540,8 +540,12 @@ gap: 2%;
       0% {
         transform: rotate(0);
       }
+      50%{
+        transform: rotate(60deg);
+
+      }
       100% {
-        transform: rotate(360deg);
+        transform: rotate(-60deg);
       }
     }
 
