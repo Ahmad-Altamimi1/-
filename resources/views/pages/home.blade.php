@@ -393,7 +393,7 @@ gap: 2%;
 
                     </div>
                     <div class="ajaxul">
-                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;       grid-template-rows: 19% 19% 19%;;
+                    <ul class="flex sliders" style="display:grid; grid-template-columns: 50% 50%;gap: 16px;       grid-template-rows:  26% 26%;
                     ">
                         @foreach ($recentposts as $recentpost)
 
