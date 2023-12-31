@@ -78,7 +78,10 @@
         .header-container{
             background-color: #d54368;
         }
-
+        ::selection{
+            background-color: #d54368; /* Choose the background color you prefer */
+    color: #fff;
+        }
     </style>
 </head>
 
