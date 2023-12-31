@@ -1,7 +1,6 @@
-
-@extends('layouts.welcome')
-
+@extends('../layouts.pagesLayouts.Master')
 @section('content')
+
 
 <div class="uk-container uk-container-center" dir="rtl">
     <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match="" data-uk-grid-margin="">

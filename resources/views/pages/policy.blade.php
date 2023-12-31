@@ -1,6 +1,6 @@
-@extends('layouts.welcome')
-
+@extends('../layouts.pagesLayouts.Master')
 @section('content')
+
     <div class="tm-top-a-box tm-full-width tm-box-bg-1 ">
         <div class="uk-container uk-container-center">
             <section id="tm-top-a" class="tm-top-a uk-grid uk-grid-collapse" data-uk-grid-match="{target:'> div > .uk-panel'}"

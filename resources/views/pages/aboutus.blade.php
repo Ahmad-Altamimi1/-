@@ -1,6 +1,6 @@
-@extends('layouts.welcome')
-
+@extends('../layouts.pagesLayouts.Master')
 @section('content')
+
 
     <div class="tm-top-a-box tm-full-width tm-box-bg-1 " dir="rtl">
         <div class="uk-container uk-container-center" style=" ">
