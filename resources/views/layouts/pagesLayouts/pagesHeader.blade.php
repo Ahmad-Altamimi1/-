@@ -132,7 +132,7 @@
                                         {{-- <span><i class="icon-magnifier"></i></span> --}}
                                     <ul id="searchResults" style="    position: absolute;
                                     right: 0px;
-                                    display: flex;
+                                    display: none;
                                     width: 100%;
                                     background: rgb(247 245 245);
                                     height: 227%;
