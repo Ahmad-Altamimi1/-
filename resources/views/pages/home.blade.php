@@ -462,23 +462,23 @@ gap: 2%;
 </div> --}}
 <style>
 
-.circle-container {
-      display: flex;
-    }
 
-    .trimester-circle {
+.trimester-circle {
       position: relative;
-      width: 100px;
-      height: 100px;
+      width: 90%;
+      height: 0;
+      padding-bottom: 90%; /* Set the aspect ratio to create a circle */
       background-color: #d54368; /* You can customize the color */
       border-radius: 50%;
-      margin: 20px;
+      margin: 5%; /* 10% distance between circles */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stylish shadow effect */
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
       color: #fff;
+      text-align: center;
+      text-decoration: none; /* Remove default hyperlink styling */
       cursor: pointer;
       transition: transform 0.3s ease-in-out; /* Smooth transition */
     }
