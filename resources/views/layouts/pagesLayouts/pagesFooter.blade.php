@@ -16,8 +16,7 @@
                                 class="mb-4" />
                         </div>
                         <div class="col-2">
-                            <p>طبكم هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية
-                                الموثوقة لإثراء الثقافة الصحية ونشرها في أوساط المجتمع العربي</p>
+                            <p>إنجابي هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية الموثوقة لصحة الأم والطفل خلال فترات الحمل والأمومة.</p>
                         </div>
                         <div class="col-1">
                             <ul style="text-align: end;display: flex;
@@ -32,7 +31,7 @@
                                             class="fab fa-youtube"></i></a></li>
                                 <li class="list-inline-item"><a href="https://www.instagram.com/tebkum"><i
                                             class="fab fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.tiktok.com/tebkum"><i
+                                <li class="list-inline-item" style="    margin-right: 1rem;"><a href="https://www.tiktok.com/tebkum"><i
                                             class='fab fa-tiktok'></i>
                                     </a></li>
                             </ul>
@@ -49,7 +48,7 @@
                                 <div class="col-2">
                                     <i class="fa-solid fa-circle-info fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
-                                        <p>عن طبكم</p>
+                                        <p>عن أنجابي</p>
                                     </a>
                                 </div>
                                 <div class="col-2">
