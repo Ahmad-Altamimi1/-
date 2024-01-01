@@ -498,6 +498,7 @@ gap: 2%;
 
     }
 
+
     .heart {
       text-decoration: none;
       width: 80px;
@@ -595,6 +596,7 @@ gap: 2%;
       }
     }
     .heart_text{
+        width: 100%;
         position: absolute;
     top: 50%;
     left: 50%;
@@ -613,6 +615,19 @@ gap: 2%;
 .widget{
     border: none !important;
 }
+@media (max-width:767px){
+    .hearts-wrapper{
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: center;
+    }
+    .trimester-circle{
+width: 40%;
+padding-bottom: 40%;
+
+    }
+
+    }
 </style>
 
 <?php
