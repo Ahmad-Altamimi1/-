@@ -373,6 +373,8 @@ gap: 2%;
                                                     <a href="{{ route('ShoWarticle', ['id' => $slider->posts->id]) }}" class="theme-btn-1 btn btn-round">أقرأ المقال</a>
 
                                                     </div>
+                            <p class="animated">للل</p>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -381,9 +383,7 @@ gap: 2%;
                                 </div>
                             </div>
                         </div>
-                        <div class="animated">
-                            <p class="animated">للل</p>
-                        </div>
+                       >
                     </div>
                 </div>
                 @endforeach
