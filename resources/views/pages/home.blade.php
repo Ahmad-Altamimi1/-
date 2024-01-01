@@ -341,8 +341,8 @@ gap: 2%;
     </div>
 @endif
 
-<div class="allheader" >
-    <div id="halfslider" style="width: 100%;">
+{{-- <div class="allheader" > --}}
+    {{-- <div id="halfslider" style="width: 100%;"> --}}
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " style="height: 40vh">
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
@@ -394,7 +394,7 @@ gap: 2%;
             <section class="ftco-section ftco-no-pb ftco-no-pt" style="">
 
         </div>
-    </div>
+    {{-- </div> --}}
     @if (!$havevideo)
     <div class="container">
         <!-- Popular Post Widget -->
@@ -459,7 +459,7 @@ gap: 2%;
 
         </div>
         </div>
-        </div>
+        {{-- </div> --}}
            {{-- <div class="row pt-60 pb-40" style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
