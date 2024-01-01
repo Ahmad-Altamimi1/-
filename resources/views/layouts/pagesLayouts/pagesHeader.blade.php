@@ -227,6 +227,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col logo-column" style="margin-right: 50px">
+
                             <div class="header-search-wrap">
                                 <div class="header-search-1">
                                     <div class="search-icon">
@@ -418,12 +419,12 @@ $slicedArray=[];
                                     <li>
                                         <!-- header-search-1 -->
                                         <div class="col logo-column">
-                                            {{-- <div class="site-logo">
+                                            <div class="site-logo">
                                                 <a href="{{ route('home') }}"><img src="../انجابي فكتور-01-01.jpg"
                                                         alt="Logo" style="
     width: 140px;
 "></a>
-                                            </div> --}}
+                                            </div>
                                         </div>
                                     </li>
                                     </li>
