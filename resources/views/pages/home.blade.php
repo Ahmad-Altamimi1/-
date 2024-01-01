@@ -381,6 +381,9 @@ gap: 2%;
                                 </div>
                             </div>
                         </div>
+                        <div class="animated">
+                            <p class="animated">للل</p>
+                        </div>
                     </div>
                 </div>
                 @endforeach
