@@ -414,9 +414,9 @@ $slicedArray=[];
                                 <ul>
 
 
-                                    <li>
+                                    {{-- <li>
                                         <!-- mini-cart 2 -->
-                                    <li>
+                                    <li> --}}
                                         <!-- header-search-1 -->
                                         <div class="col logo-column">
                                             <div class="site-logo">
