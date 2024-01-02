@@ -349,6 +349,7 @@ gap: 2%;
             <section class="ftco-section ftco-no-pb ftco-no-pt" style="">
 
         </div>
+        </div>
     {{-- </div> --}}
     @if (!$havevideo)
     <div class="container">
