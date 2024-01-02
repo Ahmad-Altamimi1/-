@@ -587,12 +587,20 @@ gap: 2%;
         0% {
         transform: rotate(0);
       }
+      25%{
+        transform: rotate(30deg);
+
+      }
       50%{
         transform: rotate(60deg);
 
       }
+      -75%{
+        transform: rotate(30deg);
+
+      }
       100% {
-        transform: rotate(-60deg);
+        transform: rotate(0deg);
       }
     }
     .heart_text{
