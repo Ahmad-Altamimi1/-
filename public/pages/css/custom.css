@@ -592,7 +592,7 @@ article {
        border-radius: 0.9375rem;
        font-size: 0.875rem;
        color: #f2f2f2;
-       background-color: rgba(0, 0, 0, 0.9);
+       /* background-color: rgba(0, 0, 0, 0.9); */
   }
    main section .carousel-container .item .image {
        width: 100%;
@@ -601,7 +601,7 @@ article {
   }
    main section .carousel-container .item .image img {
        width: 100%;
-       height: 100%;
+       height: 70%;
        object-fit: cover;
   }
    main section .carousel-container .item .text {
@@ -610,7 +610,7 @@ article {
        position: absolute;
        bottom: 0;
        font-size: 0.9rem;
-       color: #f2f2f2;
+       color: #f2f2f2 !important;
        background-color: rgba(0, 0, 0, 0.9);
   }
    main section .carousel-container .item .text .title {
@@ -626,7 +626,7 @@ article {
        top: calc(50% - 1rem);
        user-select: none;
        font-size: 1rem;
-       color: #f2f2f2;
+       color: #f2f2f2 !important;
        border-radius: 50%;
        transition: 0.6s ease;
   }
