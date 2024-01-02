@@ -301,7 +301,7 @@ gap: 2%;
         </div>
 
 
-
+<div class="bodddy">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
               <div class="blog-slider__item swiper-slide">
@@ -344,7 +344,7 @@ gap: 2%;
             <div class="blog-slider__pagination"></div>
           </div>
           </div>
-          </div>
+          </div></div>
 
         {{-- </div> --}}
            {{-- <div class="row pt-60 pb-40" style="width: 100%;">
