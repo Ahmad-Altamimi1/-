@@ -607,7 +607,6 @@ gap: 2%;
 
             </div>
             <div class="blog-slider__pagination"></div>
-            
           </div>
           </div>
           </div></div>
