@@ -730,7 +730,7 @@ gap: 2%;
         </div>
 
 
-<div class="bodddy" style="flex-direction: row-reverse" dir="rtl">
+<div class="bodddy" style="flex-direction: row-reverse" >
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
                 @foreach ($recentposts as $recentpost)
@@ -742,8 +742,8 @@ gap: 2%;
                 </div>
                 <div class="blog-slider__content">
                   <span class="blog-slider__code"></span>
-                  <div class="blog-slider__title">{{ $recentpost->TITLE }}</div>
-                  <div class="blog-slider__text">            {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
+                  <div class="blog-slider__title" dir="rtl">{{ $recentpost->TITLE }}</div>
+                  <div class="blog-slider__text" dir="rtl">            {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
                 </div>
                   <a href="{{ route('ShoWarticle',['id'=>$recentpost->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
                 </div>
