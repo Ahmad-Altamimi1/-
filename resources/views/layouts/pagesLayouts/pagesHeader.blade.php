@@ -87,6 +87,14 @@
 </head>
 
 <body style="text-align: right">
+    <div class="preloader d-none" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
     <div class="body-wrapper">
         <!-- HEADER AREA START (header-3) -->
         <!-- HEADER AREA START (header-4) -->

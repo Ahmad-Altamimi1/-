@@ -102,14 +102,7 @@
 <!-- Body main wrapper end -->
 
     <!-- preloader area start -->
-    <div class="preloader d-none" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
-        </div>
-    </div>
+ 
     <!-- preloader area end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit.min.js" integrity="sha512-y2L19LN3n8wSmzg6I5FzQRey2/6Pwi5mTEZpEM8lJW2EEUgSPE/t/E0+rBWwUuY7HLfQ7P4Gvus9L7/1vM9SZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit-icons.min.js" integrity="sha512-kIXiHI1wSHtBxWjT9fcZOC2WzfuLiACZ6sC9Kg0/kJu5T4e4vsTRB5PzUcf1by/hJ9ZdKaFfS+PiXlV6bl5dGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
