@@ -418,7 +418,7 @@ $slicedArray=[];
                                         <!-- mini-cart 2 -->
                                     <li>
                                         <!-- header-search-1 -->
-                                        <div class="col logo-column">
+                                        <div class="col logo-column d-xl-none">
                                             <div class="site-logo">
                                                 <a href="{{ route('home') }}"><img src="../انجابي فكتور-01-01.jpg"
                                                         alt="Logo" style="
