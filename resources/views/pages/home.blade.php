@@ -565,164 +565,107 @@ gap: 2%;
 /* video section  */
 
 
-
-.line, .carousel, .carousel li, .carousel li img {
+main section {
 	 width: 100%;
+	 min-height: 100vh;
+	 padding: 4rem 0;
 }
- .flex, .center, .carousel ul, .carousel-wrapper {
+ main section .carousel-container {
+	 width: 100%;
+	 height: 40rem;
+	 padding: 0;
+	 position: relative;
+	 overflow: hidden;
+	 border-radius: 0.375rem;
+}
+ main section .carousel-container .item {
+	 width: 100%;
+	 height: 100%;
+	 position: relative;
+	 display: none;
+	 animation: fade 0.3s ease-in-out;
+}
+ main section .carousel-container .item .numbertext {
+	 padding: 0.5rem 0.75rem;
+	 position: absolute;
+	 top: 1rem;
+	 right: 1rem;
+	 border-radius: 0.9375rem;
+	 font-size: 0.875rem;
+	 color: #f2f2f2;
+	 background-color: rgba(0, 0, 0, 0.9);
+}
+ main section .carousel-container .item .image {
+	 width: 100%;
+	 height: 100%;
 	 display: flex;
 }
- .center, .carousel ul {
+ main section .carousel-container .item .image img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+}
+ main section .carousel-container .item .text {
+	 width: 100%;
+	 padding: 0.625rem 0.9375rem;
+	 position: absolute;
+	 bottom: 0;
+	 font-size: 0.9rem;
+	 color: #f2f2f2;
+	 background-color: rgba(0, 0, 0, 0.9);
+}
+ main section .carousel-container .item .text .title {
+	 margin: 0.5rem 0 0 0;
+	 font-size: 1.2rem;
+	 font-weight: normal;
+}
+ main section .carousel-container .prev, main section .carousel-container .next {
+	 width: 2rem;
+	 height: 2rem;
+	 padding: 0.3125rem;
+	 position: absolute;
+	 top: calc(50% - 1rem);
+	 user-select: none;
+	 font-size: 1rem;
+	 color: #f2f2f2;
+	 border-radius: 50%;
+	 transition: 0.6s ease;
+}
+ main section .carousel-container .prev:focus, main section .carousel-container .next:focus, main section .carousel-container .prev:hover, main section .carousel-container .next:hover {
+	 background-color: rgba(0, 0, 0, 0.9);
+}
+ main section .carousel-container .prev {
+	 left: 0.8rem;
+}
+ main section .carousel-container .next {
+	 right: 0.8rem;
+}
+ main section .carousel-container .dots {
+	 padding: 0.9375rem;
+	 display: flex;
 	 align-items: center;
 	 justify-content: center;
 }
- .carousel-wrapper {
-	 position: relative;
-	 max-width: 600px;
-	 margin: 50px;
-}
- .carousel-wrapper input {
-	 display: none;
-}
- .carousel {
-	 overflow: hidden;
-	 border-radius: 15px;
-}
- .carousel ul {
-	 position: relative;
-	 list-style: none;
-	 overflow: hidden;
-	 margin: 0;
-	 padding: 0;
-	 height: 100%;
-	 width: 500%;
-	 transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
- .carousel li img {
-	 border-radius: 15px;
-}
- .nav-dot {
-	 position: absolute;
+ main section .carousel-container .dots .dot {
+	 width: 0.625rem;
+	 height: 0.625rem;
+	 margin: 0 0.125rem;
+	 display: inline-block;
 	 cursor: pointer;
-	 margin-left: -7.5px;
-	 bottom: -22.5px;
-	 width: 15px;
-	 height: 15px;
-	 opacity: 0.5;
-	 background-color: white;
 	 border-radius: 50%;
-	 transition: 0.4s;
+	 background-color: #bbb;
+	 transition: background-color 0.6s ease;
 }
- .nav-dot:hover {
-	 opacity: 0.8;
-	 transform: scale(1.2);
+ main section .carousel-container .dots .dot:focus, main section .carousel-container .dots .dot:hover {
+	 background-color: #717171;
 }
- .nav-dot:active {
-	 transform: scale(0.9);
-}
- .nav-dot[for=slide1] {
-	 left: 40%;
-}
- #slide1:checked ~ .carousel ul {
-	 left: 0%;
-}
- #slide1:checked ~ .nav-dot[for=slide1] {
-	 opacity: 1;
-}
- .nav-dot[for=slide2] {
-	 left: 45%;
-}
- #slide2:checked ~ .carousel ul {
-	 left: -100%;
-}
- #slide2:checked ~ .nav-dot[for=slide2] {
-	 opacity: 1;
-}
- .nav-dot[for=slide3] {
-	 left: 50%;
-}
- #slide3:checked ~ .carousel ul {
-	 left: -200%;
-}
- #slide3:checked ~ .nav-dot[for=slide3] {
-	 opacity: 1;
-}
- .nav-dot[for=slide4] {
-	 left: 55%;
-}
- #slide4:checked ~ .carousel ul {
-	 left: -300%;
-}
- #slide4:checked ~ .nav-dot[for=slide4] {
-	 opacity: 1;
-}
- .nav-dot[for=slide5] {
-	 left: 60%;
-}
- #slide5:checked ~ .carousel ul {
-	 left: -400%;
-}
- #slide5:checked ~ .nav-dot[for=slide5] {
-	 opacity: 1;
-}
- .left-arrow, .right-arrow {
-	 display: none;
-	 position: absolute;
-	 cursor: pointer;
-	 font-weight: bolder;
-	 text-shadow: 0 0 7.5px rgba(0, 0, 0, .7);
-	 top: 50%;
-	 z-index: 1;
-	 opacity: 0.7;
-	 margin-top: -25px;
-	 height: 50px;
-	 font-size: 50px;
-	 transition: 0.2s;
-}
- .left-arrow:hover, .right-arrow:hover {
-	 opacity: 1;
-	 transform: scale(1.2);
-}
- .left-arrow:active, .right-arrow:active {
-	 transform: scale(0.9);
-}
- .left-arrow {
-	 left: 15px;
-}
- .right-arrow {
-	 right: 15px;
-}
- #slide1:checked ~ .left-arrow[for=slide5], #slide1:checked ~ .right-arrow[for=slide2] {
-	 display: block;
-}
- #slide2:checked ~ .left-arrow[for=slide1], #slide2:checked ~ .right-arrow[for=slide3] {
-	 display: block;
-}
- #slide3:checked ~ .left-arrow[for=slide2], #slide3:checked ~ .right-arrow[for=slide4] {
-	 display: block;
-}
- #slide4:checked ~ .left-arrow[for=slide3], #slide4:checked ~ .right-arrow[for=slide5] {
-	 display: block;
-}
- #slide5:checked ~ .left-arrow[for=slide4], #slide5:checked ~ .right-arrow[for=slide1] {
-	 display: block;
-}
- .signature {
-	 margin-top: 100px;
-	 bottom: 0;
-	 font-family: "Quicksand";
-	 color: rgba(150, 150, 170, );
-	 text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
-}
- .signature .name {
-	 color: white;
-}
- .signature .dot {
-	 margin: 0 5px;
-}
- .signature a {
-	 color: white;
-	 text-decoration: underline;
+ @keyframes fade {
+	 from {
+		 opacity: 0.8;
+	}
+	 to {
+		 opacity: 1;
+	}
 }
 
 
@@ -760,48 +703,31 @@ gap: 2%;
               {{-- video section  --}}
 
 
-<div class="center">
-  <div class="carousel-wrapper">
-    <!-- abstract radio buttons for slides -->
-    <input id="slide1" type="radio" name="controls" checked="checked" />
-    <input id="slide2" type="radio" name="controls" />
-    <input id="slide3" type="radio" name="controls" />
-    <input id="slide4" type="radio" name="controls" />
-    <input id="slide5" type="radio" name="controls" />
-
-    <!-- navigation dots -->
-    <label for="slide1" class="nav-dot"></label>
-    <label for="slide2" class="nav-dot"></label>
-    <label for="slide3" class="nav-dot"></label>
-    <label for="slide4" class="nav-dot"></label>
-    <label for="slide5" class="nav-dot"></label>
-
-    <!-- arrows -->
-    <label for="slide1" class="left-arrow"> < </label>
-    <label for="slide2" class="left-arrow"> < </label>
-    <label for="slide3" class="left-arrow"> < </label>
-    <label for="slide4" class="left-arrow"> < </label>
-    <label for="slide5" class="left-arrow"> < </label>
-
-    <label for="slide1" class="right-arrow"> > </label>
-    <label for="slide2" class="right-arrow"> > </label>
-    <label for="slide3" class="right-arrow"> > </label>
-    <label for="slide4" class="right-arrow"> > </label>
-    <label for="slide5" class="right-arrow"> > </label>
-
-    <div class="carousel">
-      <ul>
-        @foreach ($defaultPosts as $video)
-        <li>
-            <img src="{{ asset($video->IMG) }}" />
-          </li>
-        @endforeach
-
-
-      </ul>
-    </div>
-  </div>
-</div>
+              <main>
+                <section class="has-dflex-center">
+                    <div class="lx-container-80">
+                        <div class="lx-row">
+                            <div class="lx-card carousel-container">
+                                <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/34xczKy" /></div>
+                                </div>
+                                <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/3lkp5DW" /></div>
+                                    <div class="text is-text-left">
+                                        <h1 class="title"> <i class="far fa-hand-point-right"></i>&nbsp;This item has a title.</h1>
+                                        <p>This item has a caption, aligned to the left.</p>
+                                    </div>
+                                </div>
+                                <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/3iMHuI1" /></div>
+                                    <div class="text is-text-centered">
+                                        <p> <i class="fas fa-info-circle"></i>&nbsp;This item has a caption, aligned to the center.</p>
+                                    </div>
+                                </div><a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
 
 
@@ -1415,4 +1341,93 @@ use App\Models\poststags;
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".carousel-container").forEach((carousel) => {
+    insertNumbers(carousel);
+
+    carousel.querySelector(".prev").addEventListener("click", (e) => {
+      minusItem(carousel);
+    });
+
+    carousel.querySelector(".next").addEventListener("click", () => {
+      plusItem(carousel);
+    });
+
+    insertDots(carousel);
+
+    carousel.querySelectorAll(".dot").forEach((dot) => {
+      dot.addEventListener("click", (e) => {
+        let item = Array.prototype.indexOf.call(
+          e.target.parentNode.children,
+          e.target
+        );
+
+        showItems(carousel, item);
+      });
+    });
+
+    showItems(carousel, 0);
+  });
+});
+
+function insertNumbers(carousel) {
+  const length = carousel.querySelectorAll(".item").length;
+  for (let i = 0; i < length; i++) {
+    const nmbr = document.createElement("div");
+    nmbr.classList.add("numbertext");
+    nmbr.innerText = i + 1 + " / " + length;
+
+    carousel.querySelectorAll(".item")[i].append(nmbr);
+  }
+}
+
+function insertDots(carousel) {
+  const dots = document.createElement("div");
+  dots.classList.add("dots");
+
+  carousel.append(dots);
+
+  carousel.querySelectorAll(".item").forEach((elem) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    carousel.querySelector(".dots").append(dot);
+  });
+}
+
+function plusItem(carousel) {
+  let item = currentItem(carousel);
+
+  carousel
+    .querySelectorAll(".item")
+    [item].nextElementSibling.classList.contains("item")
+    ? showItems(carousel, item + 1)
+    : showItems(carousel, 0);
+}
+
+function minusItem(carousel) {
+  let item = currentItem(carousel);
+
+  carousel.querySelectorAll(".item")[item].previousElementSibling != null
+    ? showItems(carousel, item - 1)
+    : showItems(carousel, carousel.querySelectorAll(".item").length - 1);
+}
+
+function currentItem(carousel) {
+  return [...carousel.querySelectorAll(".item")].findIndex(
+    (item) => item.style.display == "block"
+  );
+}
+
+function showItems(carousel, item) {
+  if (carousel.querySelectorAll(".item")[currentItem(carousel)] != undefined)
+    carousel.querySelectorAll(".item")[currentItem(carousel)].style.display =
+      "none";
+  carousel.querySelectorAll(".item")[item].style.display = "block";
+
+  if (carousel.querySelector(".dot.active") != null)
+    carousel.querySelector(".dot.active").classList.remove("active");
+  carousel.querySelectorAll(".dot")[item].classList.add("active");
+}
+
 </script>
