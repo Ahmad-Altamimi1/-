@@ -724,13 +724,13 @@ gap: 2%;
 	 color: white;
 	 text-decoration: underline;
 }
- 
+
 
         </style>
         </div>
 
 
-<div class="bodddy">
+<div class="bodddy" style="flex-direction: row-reverse">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
               <div class="blog-slider__item swiper-slide">
