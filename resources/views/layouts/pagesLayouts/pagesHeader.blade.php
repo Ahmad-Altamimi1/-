@@ -409,8 +409,8 @@ $slicedArray=[];
                                 </nav>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="ltn__header-options">
+                        <div class="col d-xl-none">
+                            <div class="ltn__header-options d-xl-none">
                                 <ul>
 
 

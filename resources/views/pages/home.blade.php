@@ -234,9 +234,9 @@ padding: 0 22%;
 .click_active{
 
 }
-/* .ltn__slide-one-active .ltn__slide-item  {
-    height: calc(100vh - 235px) !important; /* Your desired height calculation */
-} */
+.ltn__slide-one-active .ltn__slide-item  {
+    height: calc(100vh - 235px) !important; 
+}
 .containslidbar{
     display: grid;
     grid-template-columns: 70% 30%;
