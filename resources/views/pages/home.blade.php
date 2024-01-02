@@ -562,6 +562,197 @@ gap: 2%;
 }
 
 
+/* video section  */
+
+
+
+.line {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  @extend .flex;
+  align-items: center; // horizontal
+  justify-content: center; // vertical
+}
+
+
+.carousel-wrapper {
+  @extend .flex;
+  position: relative;
+  max-width: 600px;
+  margin: 50px;
+
+  input {
+    display: none;
+  }
+}
+
+
+// CAROUSEL / SLIDER
+.carousel {
+  @extend .line;
+  overflow: hidden;
+  border-radius: 15px;
+
+  ul {
+    @extend .center;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100% * $nb-slides;
+
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  li {
+    @extend .line;
+
+    img {
+      @extend .line;
+      border-radius: 15px;
+    }
+  }
+}
+
+
+// NAVIGATION DOTS
+.nav-dot {
+  $dot-size: 15px;
+  position: absolute;
+  cursor: pointer;
+
+  margin-left: -$dot-size / 2;
+  bottom: -$dot-size * 1.5;
+  width: $dot-size;
+  height: $dot-size;
+
+  opacity: .5;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+
+  &:hover {
+    opacity: .8;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+// goes from 1 to 5.
+@for $n from 1 through $nb-slides {
+  // arranges the navigation dots horizontally
+  .nav-dot[for=slide#{$n}] {
+    left: 50% + ((($n - 1) - (($nb-slides - 1)/ 2)) * 5%);
+  }
+
+  #slide#{$n}:checked {
+    // moves the carousel to the right slide
+    & ~ .carousel ul { left: -100% * ($n - 1) }
+
+    // highlights the selected navigation dot
+    & ~ .nav-dot[for=slide#{$n}] {
+      opacity: 1;
+    }
+  }
+}
+
+
+// ARROWS
+%arrow {
+  $arrow-size: 50px;
+  display: none;  // hidden by default
+  position: absolute;
+
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 0 0 7.5px rgba($color: black, $alpha: .7);
+
+  top: 50%;
+  z-index: 1;
+  opacity: .7;
+  margin-top: -$arrow-size / 2;
+  height: $arrow-size;
+  font-size: $arrow-size;
+  transition: .2s;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.left-arrow {
+  @extend %arrow;
+  left: 15px;
+}
+
+.right-arrow {
+  @extend %arrow;
+  right: 15px;
+}
+
+@function custom-modulo($n) {
+  // this function returns '$n % $nb-slides', except that if the result is 0,
+  // '$nb-slides' is returned.
+  // for exemple, for $nb-slides = 4, possible values are {1, 2, 3, 4}
+  // (and not {0, 1, 2, 3}).
+  @return 1 + ($nb-slides + (($n - 1) % $nb-slides)) % $nb-slides;
+}
+
+@for $n from 1 through $nb-slides {
+  // when the nth slide is selected,
+  // displays the left-arrow that goes to the (n-1)th slide
+  // and the right arrow that goes to the (n+1)th slide.
+  // don't worry, it loops thanks to the 'custom-modulo' function !
+
+  #slide#{$n}:checked {
+    & ~ .left-arrow[for=slide#{custom-modulo($n - 1)}],
+    & ~ .right-arrow[for=slide#{custom-modulo($n + 1)}] {
+      display: block;
+    }
+  }
+}
+
+
+
+.signature {
+  margin-top: 100px;
+  bottom: 0;
+  font-family: "Quicksand";
+  color: rgba(150, 150, 170);
+  text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
+
+  .name {
+    color: white;
+  }
+
+  .dot {
+    margin: 0 5px;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
         </style>
         </div>
 
@@ -608,7 +799,65 @@ gap: 2%;
             </div>
             <div class="blog-slider__pagination"></div>
           </div>
-          </div>
+
+              {{-- video section  --}}
+
+
+<div class="center">
+  <div class="carousel-wrapper">
+    <!-- abstract radio buttons for slides -->
+    <input id="slide1" type="radio" name="controls" checked="checked" />
+    <input id="slide2" type="radio" name="controls" />
+    <input id="slide3" type="radio" name="controls" />
+    <input id="slide4" type="radio" name="controls" />
+    <input id="slide5" type="radio" name="controls" />
+
+    <!-- navigation dots -->
+    <label for="slide1" class="nav-dot"></label>
+    <label for="slide2" class="nav-dot"></label>
+    <label for="slide3" class="nav-dot"></label>
+    <label for="slide4" class="nav-dot"></label>
+    <label for="slide5" class="nav-dot"></label>
+
+    <!-- arrows -->
+    <label for="slide1" class="left-arrow"> < </label>
+    <label for="slide2" class="left-arrow"> < </label>
+    <label for="slide3" class="left-arrow"> < </label>
+    <label for="slide4" class="left-arrow"> < </label>
+    <label for="slide5" class="left-arrow"> < </label>
+
+    <label for="slide1" class="right-arrow"> > </label>
+    <label for="slide2" class="right-arrow"> > </label>
+    <label for="slide3" class="right-arrow"> > </label>
+    <label for="slide4" class="right-arrow"> > </label>
+    <label for="slide5" class="right-arrow"> > </label>
+
+    <div class="carousel">
+      <ul>
+        <li>
+          <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" />
+        </li>
+        <li>
+          <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+        </li>
+        <li>
+          <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+        </li>
+        <li>
+          <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
           </div></div>
           </div></div>
 
