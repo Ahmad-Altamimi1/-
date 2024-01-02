@@ -303,8 +303,10 @@ gap: 2%;
 	 box-sizing: border-box;
 }
 .bodddy {
-	background: rgb(213,67,96);
-background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%);
+	 /* background-color: #ffe53b; */
+     background: rgb(213,67,96);
+	 background-image: linear-gradient(147deg, rgba(213,67,96,1) 0%, rgba(246,172,191,1) 74%);
+/* background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%); */
 	 min-height: 100vh;
 	 font-family: 'Fira Sans', sans-serif;
 	 display: flex;
