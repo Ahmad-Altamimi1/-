@@ -299,6 +299,9 @@ article {
        min-height: calc(100vh - 189px);
        font-family: 'Fira Sans', sans-serif;
        display: flex;
+       gap: 100px;
+       flex-direction: row-reverse;
+       padding: 0 40px;
   }
    .blog-slider {
        width: 95%;
@@ -349,6 +352,7 @@ article {
   }
   .blog-slider__content{
       flex: 1 !important;
+      margin-top: -260px;
   }
    .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
        transition-delay: 0.3s;
@@ -559,7 +563,7 @@ article {
 
   main section {
        width: 100%;
-       min-height: 100vh;
+       min-height: 60vh;
        padding: 4rem 0;
   }
    main section .carousel-container {

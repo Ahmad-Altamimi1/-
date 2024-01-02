@@ -9,9 +9,9 @@
         </div>
 
 
-<div class="bodddy" style="flex-direction: row-reverse" >
+<div class="bodddy"  >
         <div class="blog-slider">
-            <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__wrp swiper-wrapper" style="height: 165px;">
                 @foreach ($recentposts as $recentpost)
 
               <div class="blog-slider__item swiper-slide">
