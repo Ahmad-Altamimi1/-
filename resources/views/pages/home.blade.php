@@ -6,11 +6,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 
-
-    <style>
-        /* {{-- /// START artical css//// --}} */
-
-        </style>
         </div>
 
 
@@ -27,7 +22,7 @@
                 <div class="blog-slider__content">
                   <span class="blog-slider__code"></span>
                   <div class="blog-slider__title" dir="rtl">{{ $recentpost->TITLE }}</div>
-                  <div class="blog-slider__text" dir="rtl">            {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
+                  <div class="blog-slider__text" dir="rtl"> {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
                 </div>
                   <a href="{{ route('ShoWarticle',['id'=>$recentpost->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
                 </div>
@@ -77,192 +72,7 @@
           </div></div>
           </div></div>
 
-        {{-- </div> --}}
-           {{-- <div class="row pt-60 pb-40" style="width: 100%;">
-                    <div class="col-lg-12">
-                        <div class="section-title-area text-center">
-                            <h1 class="section-title section-title-border" >أشهر الحمل  </h1>
-                        </div>
-                    </div>
-                </div>
 
-
-    <div class="slide-container">
-        @foreach ($Monthsofpregnancy as $month)
-
-        <a href="{{ route('ShoWarticle', ['id' => $month->id]) }}" style="width: 100%;height:100%"><div class="slide" data-slide-no=<?php echo "$month->id"?> style="background-image: url('{{("../" .$month->IMG) }}');"></div></a>
-
-        @endforeach
-
-    </div>
-    <div class="button-wrap">
-    <button type="button" class="btn btn-prev" style="display: none">prev</button>
-    <button type="button" class="btn btn-next" style="display: none">next</button>
-    </div>
-
-</div> --}}
-<style>
-
-.hearts-wrapper {
-    width: 100%;
-    height: 350px;
-    /* margin: 0 auto; */
-    /* margin: 1% 0; */
-    margin-top: -50px;
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-
-    }
-
-
-    .heart {
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      font-size: 80px;
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .heart.green {
-      color: rgba(94, 224, 163, 0.8);
-      animation: parent-anim 3s linear infinite;
-      /* transform-origin: 50% 120px; */
-    }
-
-    .heart.pink {
-      color: rgba(232, 143, 201, 0.8);
-      animation: parent-anim-2 3s linear infinite;
-      /* transform-origin: 50% 125px; */
-    }
-
-    .heart.blue {
-      color: rgba(134, 193, 232, 0.8);
-      animation: parent-anim 3s linear infinite;
-      /* transform-origin: 20% 120px; */
-    }
-
-    .heart.purple {
-      color: rgba(189, 138, 234, 0.8);
-      animation: parent-anim 3s linear infinite;
-      transform-origin: 40% 150px;
-    }
-
-    .trimester-circle {
-      text-decoration: none;
-      width: 14%;
-    height: 0;
-    padding-bottom: 14%;
-
-      /* background-color: #d54368; */
-      background-image:  url('https://images.unsplash.com/photo-1532636785204-753cb2c25594?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      border-radius: 50%;
-      background-size: cover;
-      margin: 5% 1%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #000000;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-    }
-    .trimester-circle:hover{
-        transition: .4S;
-        scale: 1.1;
-        margin-left: 20px;
-    margin-right: 20px;
-
-    }
-    .trimester-circle:hover .heart {
-      opacity: 1;
-    }
-
-    @keyframes parent-anim {
-
-        0% {
-        transform: rotate(0);
-      }
-      25%{
-        transform: rotate(60deg);
-
-      }
-      50%{
-        transform: rotate(0deg);
-
-      }
-      75%{
-        transform: rotate(-60deg);
-
-      }
-      100% {
-        transform: rotate(0deg);
-    }
-    }
-
-    @keyframes parent-anim-2 {
-        0% {
-        transform: rotate(0);
-      }
-      25%{
-        transform: rotate(60deg);
-
-      }
-      50%{
-        transform: rotate(0deg);
-
-      }
-      75%{
-        transform: rotate(-60deg);
-
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-    .heart_text{
-        width: 100%;
-        position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-      font-weight: bold;
-      color: white; /* Baby theme color */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    .circle-title {
-        background-color: B21F66;
-    color: #fff !important;
-    padding: 5px 181px;
-    border-radius: 6px;
-    font-size: 26px;}
-.widget{
-    border: none !important;
-}
-@media (max-width:767px){
-    .hearts-wrapper{
-    margin-top: 22px;
-    flex-direction: column;
-    align-items: center;
-    }
-    .trimester-circle{
-width: 40%;
-padding-bottom: 40%;
-
-    }
-
-    }
-</style>
 
 <?php
 use App\Models\poststags;
@@ -281,55 +91,7 @@ use App\Models\poststags;
     <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
     <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
-  {{-- <div class="hearts-wrapper">
-    <a href="#" class="heart green"><div>♥</div></a>
-    <a href="#" class="heart pink"><div>♥</div></a>
-    <a href="#" class="heart blue"><div>♥</div></a>
-    <a href="#" class="heart purple"><div>♥</div></a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">الثلث الأول</a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">الثلث الثاني</a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">الثلث الثالث</a>
-  </div> --}}
 
-    {{-- <div class="row pt-60 pb-40" style="width: 100%;">
-                    <div class="col-lg-12">
-                        <div class="section-title-area text-center">
-                            <h1 class="section-title section-title-border" >أشهر الحمل  </h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="month_continer">
-                    <img src="../pages/img/دوائر.png" alt="" style="    width: 79%;
-
-    margin-top: -136px;">
-
-    <div  class="monthimg monthimg1">
-        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}">
-            <img src="../1111.jpg" alt="" >
-
-
-<p class="month_content ">الثلث الأول</p>
-        </a>
-    </div>
-
-    <div  class="monthimg monthimg2">
-        <img src="../1111.jpg" alt="" >
-        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}">
-
-
-<p class="month_content ">الثلث الثاني</p>
-    </div>
-</a>
-
-    <div  class="monthimg monthimg3">
-        <img src="../1111.jpg" alt="" >
-        <a href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}">
-
-<p class="month_content">الثلث الثالث</p>
-        </a>
-    </div>
-                </div> --}}
 
 
 
@@ -347,10 +109,7 @@ use App\Models\poststags;
             <div class="relative w-full ">
                 <div class="container z-1" style="display: flex">
 
-                    {{-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 justify-center"> --}}
-                    {{-- <div > --}}
 
-                        {{-- <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-8 self-center"> --}}
                         <div >
                             <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out" style="width: 600px">
                                 <div class="flex-auto p-4">
@@ -406,12 +165,7 @@ use App\Models\poststags;
                 </div><!--end container-->
             </div>
         </div>
-        {{-- <div class="sidebar">
-            <div style="    height: 500px;
-            background: #dc3545;
-            position: sticky;
-            top: 2px;"></div>
-        </div> --}}
+
     </div>
     </div>
     </div>
@@ -441,15 +195,7 @@ use App\Models\poststags;
                         <div class="ltn__blog-brief">
                             <div class="ltn__blog-meta">
                                 <ul>
-                                    {{-- <li class="ltn__blog-author d-none">
-                                        <a href="#">by: Admin</a>
-                                    </li> --}}
-                                    {{-- <li>
-                                        <span> Nov 18, 2020</span>
-                                    </li> --}}
-                                    {{-- <li class="ltn__blog-comment">
-                                        <a href="#"><i class="icon-speech"></i> 2</a>
-                                    </li> --}}
+
                                 </ul>
                             </div>
                             <h3 class="ltn__blog"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
@@ -506,50 +252,7 @@ use App\Models\poststags;
 
 </section>
 </div>
-        <!-- BLOG AREA END -->
 
-        <!-- BRAND LOGO AREA START -->
-        {{-- <div class="ltn__brand-logo-area  ltn__brand-logo-1 section-bg-1 pt-35 pb-35 plr--5">
-            <div class="container-fluid">
-                <div class="row ltn__brand-logo-active">
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/1.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/2.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/3.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/4.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/5.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/1.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="ltn__brand-logo-item">
-                            <img src="pages/img/brand-logo/2.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
      <div class="row pt-30" style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center" >
@@ -574,8 +277,6 @@ use App\Models\poststags;
                                         <div class=" h-full flex flex-col p-3">
                                             <div class="w-full block">
 
-                                                {{-- <a href="{{ route('showtag',["tag"=> $defaultPost->tag['id']]) }}"><span class="text-[12px] bg-pink-500/10 text-pink-500 dark:text-pink-600 rounded font-medium py-1 px-2 inline-block mb-3">{{ $defaultPost->tag->TITLE }}</span> </a>                                                   --}}
-                                                {{-- <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span> --}}
                                             </div>
 
                                         <a href="{{ route('ShoWarticle',["id"=>$defaultPost['id']]) }}"><img src="{{asset ($defaultPost->IMG )}}" alt="" class="max-w-full h-auto rounded-xl"></a>
