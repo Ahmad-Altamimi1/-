@@ -47,13 +47,14 @@
 
                          @foreach ($recentposts as $video)
 
-                         @endforeach
+
                                 <div class="item fade">
                                     <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                     <div class="text is-text-centered">
-                                        <p> <i class="fas fa-info-circle"></i>{{ $video->TITLE }}</p>
+                                        <p style="color: white"> <i class="fas fa-info-circle"></i>{{ $video->TITLE }}</p>
                                     </div>
                                 </div><a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
+                                @endforeach
                         </div>
                     </div>
                 </section>
