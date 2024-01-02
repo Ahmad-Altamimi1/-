@@ -376,7 +376,7 @@ article {
   }
   .blog-slider__content{
       flex: 1 !important;
-      margin-top: -260px;
+      /* margin-top: -260px; */
   }
    .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
        transition-delay: 0.3s;
@@ -636,7 +636,7 @@ article {
        font-size: 0.9rem;
        /* '' */
        color: #f2f2f2 !important;
-       /* background-color: rgba(0, 0, 0, 0.9); */
+       background-color: rgba(0, 0, 0, 0.9);
   }
    main section .carousel-container .item .text .title {
        margin: 0.5rem 0 0 0;
