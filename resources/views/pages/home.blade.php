@@ -161,11 +161,11 @@ Generic layout (demo looks)
         /* {{-- ///END artical css//// --}} */
 
 
-
+/*
         .slick-slide{
                height: 379px;
 
-        }
+        } */
 
 
 
@@ -223,10 +223,10 @@ padding: 0 22%;
  top: 0;
     background: linear-gradient(to left, #d54368, white);
 }
-.slick-initialized .slick-slide{
+/* .slick-initialized .slick-slide{
         border-radius: 0  64px 64px 0 ;
 
-}
+} */
 .ltn__slider-area {
     height: calc(100vh - 218px)!important;
     }
