@@ -463,7 +463,7 @@ gap: 2%;
 	}
 }
  .blog-slider__content > * {
-	 opacity: 0;
+	 /* opacity: 0; */
 	 transform: translateY(25px);
 	 transition: all 0.4s;
 }
