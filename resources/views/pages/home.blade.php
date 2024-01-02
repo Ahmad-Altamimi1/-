@@ -571,16 +571,25 @@ gap: 2%;
     }
 
     @keyframes parent-anim {
-      0% {
+
+        0% {
         transform: rotate(0);
       }
-      50%{
+      25%{
         transform: rotate(60deg);
 
       }
-      100% {
-        transform: rotate(-60deg);
+      50%{
+        transform: rotate(0deg);
+
       }
+      75%{
+        transform: rotate(-60deg);
+
+      }
+      100% {
+        transform: rotate(0deg);
+    }
     }
 
     @keyframes parent-anim-2 {
