@@ -45,7 +45,7 @@ class HomeController extends Controller
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
         $defaultPosts = Post::take(4)->get();
 
-        return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy', 'havevideo', 'defaultPosts', 'first_tag'));
+        return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy',  'defaultPosts', 'first_tag'));
     }
 
 
