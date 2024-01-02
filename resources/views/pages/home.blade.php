@@ -588,15 +588,15 @@ gap: 2%;
         transform: rotate(0);
       }
       25%{
-        transform: rotate(30deg);
-
-      }
-      50%{
         transform: rotate(60deg);
 
       }
-      -75%{
-        transform: rotate(30deg);
+      50%{
+        transform: rotate(0deg);
+
+      }
+      75%{
+        transform: rotate(-60deg);
 
       }
       100% {
