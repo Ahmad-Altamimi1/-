@@ -299,102 +299,10 @@ gap: 2%;
 }
         </style>
         </div>
-    {{-- <div class="ltn__utilize-overlay"></div> --}}
 
-
-
-        <!-- SLIDER AREA START (slider-6) -->
-
-                      @if ($havevideo )
-    <div id="halfslider" style="width: 70%">
-         <div class="ltn__slider-area ltn__slider-4 position-relative">
-        <div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
-
-            <!-- HTML5 VIDEO -->
-            <video autoplay muted loop id="myVideo">
-                <source src="../{{ asset('uploads/Untitled video - Made with Clipchamp (1).mp4') }}" type="video/mp4">
-            </video>
-
-            <!-- YouTube VIDEO -->
-            <!-- <div class="ltn__youtube-video-background">
-                <iframe frameborder="0" height="100%" width="100%"
-                  src="https://www.youtube.com/embed/9DYl-nKrQ0k?playlist=9DYl-nKrQ0k&loop=1&controls=0&showinfo=0&autoplay=1&mute=1">
-                </iframe>
-            </div> -->
-
-            <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-7 bg-image--- bg-overlay-theme-black-30" data-bs-bg="img/slider/41.jpg">
-                <div class="ltn__slide-item-inner text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 align-self-center">
-                                <div class="slide-item-info">
-                                    <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title white-color animated">مرحبا بك في إنْجابيّ</h6>
-                                        {{-- <h1 class="slide-title text-uppercase white-color animated ">{{ $slidercontent->description }}</h1> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-@endif
-
-{{-- <div class="allheader" > --}}
-    {{-- <div id="halfslider" style="width: 100%;"> --}}
 
         <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " >
-            <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
-                <!-- ltn__slide-item  -->
-                      @if (!$havevideo)
-
-                @foreach ($recentposts as $slider)
-
-
-
-                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->IMG }}" >
-                    <div class="ltn__slide-item-inner" >
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12 align-self-center" style="    text-align: right;
-                                display: flex;
-                                justify-content: right;">
-                                    <div class="slide-item-info" style="flex: 1">
-                                        <div class="slide-item-info-inner ltn__slide-animation">
-                                            <div class="slide-item-info">
-                                                <div class="slide-item-info-inner ltn__slide-animation">
-                                                    <h1 class="slide-title animated ">اهلا بك في إنْجابيّ </h1>
-                                                    <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->group->TITLE }}</h6>
-                                                    <div class="slide-brief animated">
-                                                        {{-- <p>{{ $slider->DESCRIPTION }}</p> --}}
-                                                    </div>
-                                                    <div class="btn-wrapper animated">
-                                                    <a href="{{ route('ShoWarticle', ['id' => $slider->id]) }}" class="theme-btn-1 btn btn-round">أقرأ المقال</a>
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            @endif
-
-
-
-
-
-            </div>
+      
             <section class="ftco-section ftco-no-pb ftco-no-pt" style="">
 
         </div>
