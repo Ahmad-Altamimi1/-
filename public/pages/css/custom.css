@@ -623,6 +623,7 @@ article {
        position: absolute;
        bottom: 0;
        font-size: 0.9rem;
+       /* '' */
        color: #f2f2f2 !important;
        /* background-color: rgba(0, 0, 0, 0.9); */
   }
