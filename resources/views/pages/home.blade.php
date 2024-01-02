@@ -733,41 +733,25 @@ gap: 2%;
 <div class="bodddy" style="flex-direction: row-reverse">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img">
-
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
-                </div>
-                <div class="blog-slider__content">
-                  <span class="blog-slider__code">26 December 2019</span>
-                  <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-                  <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-                  <a href="#" class="blog-slider__button">READ MORE</a>
-                </div>
-              </div>
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
-                </div>
-                <div class="blog-slider__content">
-                  <span class="blog-slider__code">26 December 2019</span>
-                  <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-                  <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-                  <a href="#" class="blog-slider__button">READ MORE</a>
-                </div>
-              </div>
+                @foreach ($recentposts as $recentpost)
 
               <div class="blog-slider__item swiper-slide">
                 <div class="blog-slider__img">
-                  <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+
+                  <img src="{{ asset('/storge'.$recentpost->IMG.'') }}" alt="">
                 </div>
                 <div class="blog-slider__content">
-                  <span class="blog-slider__code">26 December 2019</span>
-                  <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-                  <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-                  <a href="#" class="blog-slider__button">READ MORE</a>
+                  <span class="blog-slider__code"></span>
+                  <div class="blog-slider__title">{{ $recentposts->TITLE }}</div>
+                  <div class="blog-slider__text">            {{ \Illuminate\Support\Str::limit($recentposts->DESCRIPTION, 30) }}
+                </div>
+                  <a href="{{ route('postbyid',['id'=>$recentposts->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
                 </div>
               </div>
+
+              @endforeach
+
+
 
             </div>
             <div class="blog-slider__pagination"></div>
