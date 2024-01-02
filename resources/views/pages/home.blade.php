@@ -742,10 +742,10 @@ gap: 2%;
                 </div>
                 <div class="blog-slider__content">
                   <span class="blog-slider__code"></span>
-                  <div class="blog-slider__title">{{ $recentposts->TITLE }}</div>
-                  <div class="blog-slider__text">            {{ \Illuminate\Support\Str::limit($recentposts->DESCRIPTION, 30) }}
+                  <div class="blog-slider__title">{{ $recentpost->TITLE }}</div>
+                  <div class="blog-slider__text">            {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
                 </div>
-                  <a href="{{ route('postbyid',['id'=>$recentposts->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
+                  <a href="{{ route('postbyid',['id'=>$recentpost->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
                 </div>
               </div>
 
