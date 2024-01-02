@@ -344,6 +344,7 @@ gap: 2%;
             <div class="blog-slider__pagination"></div>
           </div>
           </div>
+          </div>
 
         {{-- </div> --}}
            {{-- <div class="row pt-60 pb-40" style="width: 100%;">
