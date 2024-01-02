@@ -353,7 +353,7 @@ gap: 2%;
 
 
 
-                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%; height: 40vh">
+                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" >
                     <div class="ltn__slide-item-inner" >
                         <div class="container">
                             <div class="row">
