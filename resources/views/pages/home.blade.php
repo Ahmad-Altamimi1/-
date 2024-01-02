@@ -45,7 +45,8 @@
                         <div class="lx-row">
                             <div class="lx-card carousel-container">
 
-                         @foreach ($recentposts as $video)
+
+                                @foreach ($recentposts as $video)
 
 
                                 <div class="item fade">
