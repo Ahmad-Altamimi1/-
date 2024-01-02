@@ -191,39 +191,8 @@ console.log(document.querySelector('#searchcontent'));
 
 }
 });
-  function showPreloader() {
-      var preloader = document.getElementById('preloader');
-      preloader.classList.remove('d-none');
-    }
-    document.addEventListener('click', function(event) {
-    var searchResults = document.querySelectorAll('#searchResults li');
-    var searchResultsul = document.querySelector('#searchResults');
-    searchResultsul.style.display = 'none';
-    // Iterate through each <li> element within #searchResults
-    searchResults.forEach(function(result) {
-        // Set display to 'none' for each <li> element
-        result.style.display = 'none';
-    });
 
-    // Set display to 'none' for #searchcontent
-    document.querySelector('#searchcontent').style.display = 'none';
-});
-
-    // Function to hide the preloader
-    function hidePreloader() {
-      var preloader = document.getElementById('preloader');
-      preloader.classList.add('d-none');
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      showPreloader();
-
-      setTimeout(function() {
-        hidePreloader();
-      }, 3000);
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".carousel-container").forEach((carousel) => {
     insertNumbers(carousel);
 
@@ -300,6 +269,40 @@ function showItem(carousel, index) {
 
   carousel.querySelectorAll(".dot")[index].classList.add("active");
 }
+
+
+  function showPreloader() {
+      var preloader = document.getElementById('preloader');
+      preloader.classList.remove('d-none');
+    }
+    document.addEventListener('click', function(event) {
+    var searchResults = document.querySelectorAll('#searchResults li');
+    var searchResultsul = document.querySelector('#searchResults');
+    searchResultsul.style.display = 'none';
+    // Iterate through each <li> element within #searchResults
+    searchResults.forEach(function(result) {
+        // Set display to 'none' for each <li> element
+        result.style.display = 'none';
+    });
+
+    // Set display to 'none' for #searchcontent
+    document.querySelector('#searchcontent').style.display = 'none';
+});
+
+    // Function to hide the preloader
+    function hidePreloader() {
+      var preloader = document.getElementById('preloader');
+      preloader.classList.add('d-none');
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      showPreloader();
+
+      setTimeout(function() {
+        hidePreloader();
+      }, 3000);
+    });
+
 
    </script>
 
