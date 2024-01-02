@@ -273,6 +273,9 @@ gap: 2%;
     width: 100%;
 }
 @media only screen and (max-width:767px){
+    .containslidbar{
+
+    }
     .circle-title{
         padding: 5px 25px;
         gap: 0;
@@ -367,7 +370,7 @@ gap: 2%;
                                                     <h1 class="slide-title animated ">اهلا بك في إنْجابيّ </h1>
                                                     <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->group->TITLE }}</h6>
                                                     <div class="slide-brief animated">
-                                                        <p>{{ $slider->DESCRIPTION }}</p>
+                                                        {{-- <p>{{ $slider->DESCRIPTION }}</p> --}}
                                                     </div>
                                                     <div class="btn-wrapper animated">
                                                     <a href="{{ route('ShoWarticle', ['id' => $slider->id]) }}" class="theme-btn-1 btn btn-round">أقرأ المقال</a>
@@ -943,7 +946,7 @@ use App\Models\poststags;
 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 container">
     @foreach ($defaultPosts as $defaultPost )
                         <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-6 xl:col-span-6 ">
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl w-full relative p-4" style="border: 2px solid #eee">
+                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl w-full relative p-4" style="border: 2px solid #eee;height:200px">
                                 <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                     <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 " style="    padding-top: 26px;
 ">
