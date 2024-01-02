@@ -56,6 +56,7 @@
                                     </div>
 
                                 </div> @endforeach
+
                                 <a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
                         </div>
                     </div>
