@@ -358,6 +358,9 @@ gap: 2%;
 	 opacity: 1;
 	 transform: none;
 }
+.blog-slider__content{
+    flex: 1 !important;
+}
  .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
 	 transition-delay: 0.3s;
 }
@@ -1327,19 +1330,6 @@ use App\Models\poststags;
         console.log($('.ajaxul').length); // Log the length of the selected element
         // Other code
     });
-    document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.blog-slider', {
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        mousewheel: {
-            invert: false,
-        },
-        pagination: {
-            el: '.blog-slider__pagination',
-            clickable: true,
-        }
-    });
-});
+
 
 </script>
