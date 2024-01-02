@@ -992,10 +992,10 @@ use App\Models\poststags;
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script> window.onload = function ()
     {
-        var desiredHeight = "calc(100vh - 218px)";
+        // var desiredHeight = "calc(100vh - 218px)";
         var sliderArea = document.querySelector('.ltn__slider-area');
         if (sliderArea) {
-            sliderArea.style.height = desiredHeight; // Adjust the height as needed
+            // sliderArea.style.height = desiredHeight; // Adjust the height as needed
         }
     };</script>
     <script>
