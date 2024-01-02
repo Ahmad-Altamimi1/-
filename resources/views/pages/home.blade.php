@@ -349,11 +349,11 @@ gap: 2%;
                 <!-- ltn__slide-item  -->
                       @if (!$havevideo)
 
-                @foreach ($slidercontent as $slider)
+                @foreach ($recentposts as $slider)
 
 
 
-                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" >
+                <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->IMG }}" >
                     <div class="ltn__slide-item-inner" >
                         <div class="container">
                             <div class="row">
@@ -365,12 +365,12 @@ gap: 2%;
                                             <div class="slide-item-info">
                                                 <div class="slide-item-info-inner ltn__slide-animation">
                                                     <h1 class="slide-title animated ">اهلا بك في إنْجابيّ </h1>
-                                                    <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->posts->group->TITLE }}</h6>
+                                                    <h6 class="slide-sub-title ltn__body-color slide-title-line animated">{{ $slider->group->TITLE }}</h6>
                                                     <div class="slide-brief animated">
-                                                        <p>{{ $slider->description }}</p>
+                                                        <p>{{ $slider->DESCRIPTION }}</p>
                                                     </div>
                                                     <div class="btn-wrapper animated">
-                                                    <a href="{{ route('ShoWarticle', ['id' => $slider->posts->id]) }}" class="theme-btn-1 btn btn-round">أقرأ المقال</a>
+                                                    <a href="{{ route('ShoWarticle', ['id' => $slider->id]) }}" class="theme-btn-1 btn btn-round">أقرأ المقال</a>
 
                                                     </div>
 
