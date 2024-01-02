@@ -1345,89 +1345,78 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".carousel-container").forEach((carousel) => {
     insertNumbers(carousel);
 
-    carousel.querySelector(".prev").addEventListener("click", (e) => {
-      minusItem(carousel);
+    carousel.querySelector(".prev").addEventListener("click", () => {
+      navigate(carousel, -1);
     });
 
     carousel.querySelector(".next").addEventListener("click", () => {
-      plusItem(carousel);
+      navigate(carousel, 1);
     });
 
     insertDots(carousel);
 
-    carousel.querySelectorAll(".dot").forEach((dot) => {
-      dot.addEventListener("click", (e) => {
-        let item = Array.prototype.indexOf.call(
-          e.target.parentNode.children,
-          e.target
-        );
-
-        showItems(carousel, item);
+    carousel.querySelectorAll(".dot").forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showItem(carousel, index);
       });
     });
 
-    showItems(carousel, 0);
+    showItem(carousel, 0);
   });
 });
 
 function insertNumbers(carousel) {
-  const length = carousel.querySelectorAll(".item").length;
-  for (let i = 0; i < length; i++) {
+  const items = carousel.querySelectorAll(".item");
+  const length = items.length;
+
+  items.forEach((item, index) => {
     const nmbr = document.createElement("div");
     nmbr.classList.add("numbertext");
-    nmbr.innerText = i + 1 + " / " + length;
+    nmbr.innerText = index + 1 + " / " + length;
 
-    carousel.querySelectorAll(".item")[i].append(nmbr);
-  }
-}
-
-function insertDots(carousel) {
-  const dots = document.createElement("div");
-  dots.classList.add("dots");
-
-  carousel.append(dots);
-
-  carousel.querySelectorAll(".item").forEach((elem) => {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-
-    carousel.querySelector(".dots").append(dot);
+    item.appendChild(nmbr);
   });
 }
 
-function plusItem(carousel) {
-  let item = currentItem(carousel);
+function insertDots(carousel) {
+  const dotsContainer = document.createElement("div");
+  dotsContainer.classList.add("dots");
 
-  carousel
-    .querySelectorAll(".item")
-    [item].nextElementSibling.classList.contains("item")
-    ? showItems(carousel, item + 1)
-    : showItems(carousel, 0);
+  carousel.appendChild(dotsContainer);
+
+  carousel.querySelectorAll(".item").forEach(() => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    dotsContainer.appendChild(dot);
+  });
 }
 
-function minusItem(carousel) {
-  let item = currentItem(carousel);
+function navigate(carousel, direction) {
+  const current = currentItem(carousel);
+  const totalItems = carousel.querySelectorAll(".item").length;
+  const nextItem = (current + direction + totalItems) % totalItems;
 
-  carousel.querySelectorAll(".item")[item].previousElementSibling != null
-    ? showItems(carousel, item - 1)
-    : showItems(carousel, carousel.querySelectorAll(".item").length - 1);
+  showItem(carousel, nextItem);
 }
 
 function currentItem(carousel) {
   return [...carousel.querySelectorAll(".item")].findIndex(
-    (item) => item.style.display == "block"
+    (item) => item.style.display === "block"
   );
 }
 
-function showItems(carousel, item) {
-  if (carousel.querySelectorAll(".item")[currentItem(carousel)] != undefined)
-    carousel.querySelectorAll(".item")[currentItem(carousel)].style.display =
-      "none";
-  carousel.querySelectorAll(".item")[item].style.display = "block";
+function showItem(carousel, index) {
+  carousel.querySelectorAll(".item").forEach((item, i) => {
+    item.style.display = i === index ? "block" : "none";
+  });
 
-  if (carousel.querySelector(".dot.active") != null)
-    carousel.querySelector(".dot.active").classList.remove("active");
-  carousel.querySelectorAll(".dot")[item].classList.add("active");
+  const activeDot = carousel.querySelector(".dot.active");
+  if (activeDot) {
+    activeDot.classList.remove("active");
+  }
+
+  carousel.querySelectorAll(".dot")[index].classList.add("active");
 }
 
 </script>
