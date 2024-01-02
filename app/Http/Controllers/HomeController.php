@@ -29,23 +29,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $slidercontent= Homeslider::all();
-        $havevideo=false;
-        foreach($slidercontent as $slider){
-            if ($slider->video) {
-                $havevideo=true;
-                $slidercontent= $slider;
-            };
-        };
+        // $slidercontent= Homeslider::all();
+        // $havevideo=false;
+        // foreach($slidercontent as $slider){
+        //     if ($slider->video) {
+        //         $havevideo=true;
+        //         $slidercontent= $slider;
+        //     };
+        // };
 
         $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
+        // $videos=;
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
         $defaultPosts = Post::take(4)->get();
 
-        return view('pages.home',compact('slidercontent','recentposts', 'tags', 'Monthsofpregnancy', 'havevideo', 'defaultPosts', 'first_tag'));
+        return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy', 'havevideo', 'defaultPosts', 'first_tag'));
     }
+
+
     public function tv_show($id){
         $video=Videos::find($id);
         $string = $video->TAG;
