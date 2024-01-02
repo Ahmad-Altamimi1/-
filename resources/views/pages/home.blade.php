@@ -307,7 +307,7 @@ gap: 2%;
      background: rgb(213,67,96);
 	 background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%,  rgba(213,67,96,1) 74%);
 /* background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%); */
-	 min-height: 100vh;
+	 min-height: calc(100vh - 189px);
 	 font-family: 'Fira Sans', sans-serif;
 	 display: flex;
 }
