@@ -303,6 +303,12 @@ article {
        flex-direction: row-reverse;
        padding: 0 40px;
   }
+  @media screen and (max-width: 962px) {
+    .bodddy{
+        flex-direction: column-reverse;
+        gap: 0 ;
+    }
+  }
    .blog-slider {
        width: 95%;
        position: relative;
@@ -325,7 +331,7 @@ article {
        .blog-slider {
            min-height: 500px;
            height: auto;
-           margin: 180px auto;
+           margin-top: 200px;
       }
   }
    @media screen and (max-height: 500px) and (min-width: 992px) {
