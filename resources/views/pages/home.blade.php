@@ -54,8 +54,9 @@
                                     <div class="text is-text-centered">
                                         <p style="color: white"> <i class="fas fa-info-circle"></i>{{ $video->TITLE }}</p>
                                     </div>
-                                </div><a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
-                                @endforeach
+
+                                </div> @endforeach
+                                <a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
                         </div>
                     </div>
                 </section>
