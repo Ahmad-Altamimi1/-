@@ -312,6 +312,9 @@ article {
         min-height: unset;
         height: 70vh;
     }
+    main section .carousel-container{
+        height: 17rem;
+    }
   }
    .blog-slider {
        width: 95%;
