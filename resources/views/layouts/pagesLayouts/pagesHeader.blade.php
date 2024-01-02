@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{{ url('pages/css/plugins.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
