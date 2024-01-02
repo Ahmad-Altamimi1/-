@@ -235,7 +235,7 @@ padding: 0 22%;
 
 }
 .ltn__slide-one-active .ltn__slide-item  {
-    height: calc(100vh - 235px) !important; 
+    height: calc(100vh - 188px) !important;
 }
 .containslidbar{
     display: grid;
