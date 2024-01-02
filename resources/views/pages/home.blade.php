@@ -616,7 +616,7 @@ article {
        border-radius: 0.9375rem;
        font-size: 0.875rem;
        color: #f2f2f2;
-       /* background-color: rgba(0, 0, 0, 0.9); */
+       background-color: rgba(0, 0, 0, 0.9);
   }
    main section .carousel-container .item .image {
        width: 100%;
@@ -897,12 +897,12 @@ padding-bottom: 40%;
                                 <div class="item fade">
                                     <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                     <div class="text is-text-centered">
-                                        <p style="color: white"> <i class="fas fa-info-circle"></i>{{ $video->TITLE }}</p>
+                                        <p style="color: white"> {{ $video->TITLE }}</p>
                                     </div>
 
                                 </div> @endforeach
 
-                                <a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a></div>
+                                <a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" style="color: #d54368"></i></a></div>
                         </div>
                     </div>
                 </section>
