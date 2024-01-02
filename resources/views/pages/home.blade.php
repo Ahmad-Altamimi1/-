@@ -344,7 +344,7 @@ gap: 2%;
 {{-- <div class="allheader" > --}}
     {{-- <div id="halfslider" style="width: 100%;"> --}}
 
-        <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " style="height: 40vh">
+        <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 " >
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white---">
                 <!-- ltn__slide-item  -->
                       @if (!$havevideo)
@@ -354,7 +354,7 @@ gap: 2%;
 
 
                 <div class="ltn__slide-item ltn__slide-item-8 text-color-white---- bg-image bg-overlay-theme-black-80---" data-bs-bg="{{ $slider->posts->IMG }}" style="width: 50%; height: 40vh">
-                    <div class="ltn__slide-item-inner" style="border-radius: 0  64px 0;">
+                    <div class="ltn__slide-item-inner" >
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 align-self-center" style="    text-align: right;
