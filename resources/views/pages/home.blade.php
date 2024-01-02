@@ -560,24 +560,7 @@ gap: 2%;
 		 width: 30px;
 	}
 }
-.bodddy {
-    position: relative;
-}
 
-.wave-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
         </style>
         </div>
@@ -624,12 +607,7 @@ gap: 2%;
 
             </div>
             <div class="blog-slider__pagination"></div>
-            <div class="wave-container">
-                <!-- SVG for the wave pattern -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-svg">
-                    <path fill="#fff" fill-opacity="1" d="M0,288L48,261.3C96,235,192,181,288,160C384,139,480,149,576,154.7C672,160,768,160,864,170.7C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-                </svg>
-            </div>
+            
           </div>
           </div>
           </div></div>
