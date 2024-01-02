@@ -539,7 +539,7 @@ gap: 2%;
 
     .trimester-circle {
       text-decoration: none;
-      width: 15%;
+      width: 14%;
     height: 0;
     padding-bottom: 14%;
 
