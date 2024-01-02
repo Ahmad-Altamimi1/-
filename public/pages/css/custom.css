@@ -631,7 +631,7 @@ article {
        transition: 0.6s ease;
   }
    main section .carousel-container .prev:focus, main section .carousel-container .next:focus, main section .carousel-container .prev:hover, main section .carousel-container .next:hover {
-       /* background-color: rgba(0, 0, 0, 0.9); */
+       background-color: rgba(0, 0, 0, 0.9);
   }
    main section .carousel-container .prev {
        left: 0.8rem;
