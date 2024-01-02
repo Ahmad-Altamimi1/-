@@ -228,7 +228,7 @@ padding: 0 22%;
 
 } */
 .ltn__slider-area {
-    height: calc(100vh - 218px)!important;
+    /* height: calc(100vh - 218px)!important; */
     }
 
 .click_active{
