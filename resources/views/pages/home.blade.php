@@ -303,8 +303,8 @@ gap: 2%;
 	 box-sizing: border-box;
 }
 .bodddy {
-	 background-color: #ffe53b;
-	 background-image: linear-gradient(147deg, #ffe53b 0%, #fd3838 74%);
+	background: rgb(213,67,96);
+background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%);
 	 min-height: 100vh;
 	 font-family: 'Fira Sans', sans-serif;
 	 display: flex;
