@@ -582,7 +582,7 @@ main section {
 	 width: 100%;
 	 height: 100%;
 	 position: relative;
-	 display: none;
+	 /* display: none; */
 	 animation: fade 0.3s ease-in-out;
 }
  main section .carousel-container .item .numbertext {
