@@ -730,7 +730,7 @@ gap: 2%;
         </div>
 
 
-<div class="bodddy" style="flex-direction: row-reverse">
+<div class="bodddy" style="flex-direction: row-reverse" dir="rtl">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
                 @foreach ($recentposts as $recentpost)
@@ -738,7 +738,7 @@ gap: 2%;
               <div class="blog-slider__item swiper-slide">
                 <div class="blog-slider__img">
 
-                  <img src="{{ asset('/storge'.$recentpost->IMG.'') }}" alt="">
+                  <img src="{{ asset($recentpost->IMG) }}" alt="">
                 </div>
                 <div class="blog-slider__content">
                   <span class="blog-slider__code"></span>
