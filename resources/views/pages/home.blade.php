@@ -739,7 +739,10 @@ article {
         .has-dflex-center:hover{
 background-color: white !important;
         }
-        .has-dflex-center:hover i{
+        .next:hover i{
+ color: #d54368 !important;
+        }
+        .prev:hover i{
  color: #d54368 !important;
         }
 
