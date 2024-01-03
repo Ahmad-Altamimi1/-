@@ -922,6 +922,7 @@ padding-bottom: 40%;
 <?php
 use App\Models\poststags;
 ?>
+<div class="container">
 <div class="row pt-60 pb-40" style="width: 100%;">
     <div class="col-lg-12">
         <div class="section-title-area text-center">
@@ -937,7 +938,7 @@ use App\Models\poststags;
     <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
 
-
+</div>
 
 
  <div class="row pt-30 mt-30 " style="width: 100%;">
