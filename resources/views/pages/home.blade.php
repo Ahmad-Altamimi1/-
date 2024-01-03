@@ -641,7 +641,7 @@ article {
     font-size: 0.9rem;
     color: #f2f2f2 !important;
     background-color: rgba(0, 0, 0, 0.9);
-    background:linear-gradient(to top, #ffa500b0 0%, rgb(222 163 54 / 37%) 50%, #ffa500b0 50%, #ffa500b0 100%);
+    background:linear-gradient(to top, orange 0%,  #ffffff24 100%);
     transform: translate(0px,-50%);
     height: 100%;
     display: flex;
