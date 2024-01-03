@@ -930,6 +930,21 @@ padding-bottom: 40%;
                 position: absolute;
                 bottom: -52px;
             }
+            .hero-waves {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: moveWaves 10s linear infinite; /* Adjust the animation duration as needed */
+        }
+
+        @keyframes moveWaves {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style
           </style>
     <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
         <defs>
