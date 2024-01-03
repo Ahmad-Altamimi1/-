@@ -930,7 +930,51 @@ padding-bottom: 40%;
                 position: absolute;
                 bottom: -52px;
             }
-            .hero-waves {
+            .wave2 use {
+    -webkit-animation: move-forever2 8s linear infinite;
+    animation: move-forever2 8s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+@keyframes move-forever2{
+
+    0% {
+    transform: translate(-90px, 0%);
+}
+
+100% {
+    transform: translate(85px, 0%);
+}}
+.wave1 use {
+    -webkit-animation: move-forever1 10s linear infinite;
+    animation: move-forever1 10s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+@keyframes move-forever1{
+    0% {
+    transform: translate(85px, 0%);
+}
+100% {
+    transform: translate(-90px, 0%);
+}
+}
+.wave3 use {
+    -webkit-animation: move-forever3 6s linear infinite;
+    animation: move-forever3 6s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+@keyframes move-forever3{
+
+0% {
+    transform: translate(-90px, 0%);
+}
+100% {
+    transform: translate(85px, 0%);
+}}
+.hero-waves {
             width: 100%;
             height: auto;
             position: absolute;
@@ -938,10 +982,7 @@ padding-bottom: 40%;
             left: 0;
             transform: translate3d(0, 0, 0);
         }
-        .wave1,.wave2,.wave3{
-            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 
-        }
 
         @keyframes wave {
             0% {
