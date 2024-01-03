@@ -612,14 +612,15 @@ article {
       opacity: 1 !important;
   }
    main section .carousel-container .item .numbertext {
-       padding: 0.5rem 0.75rem;
+       /* padding: 0.5rem 0.75rem;
        position: absolute;
        top: 1rem;
        right: 1rem;
        border-radius: 0.9375rem;
        font-size: 0.875rem;
        color: #f2f2f2;
-       background-color: rgba(0, 0, 0, 0.9);
+       background-color: rgba(0, 0, 0, 0.9); */
+       display: none
   }
    main section .carousel-container .item .image {
        width: 100%;
@@ -632,14 +633,18 @@ article {
        object-fit: cover;
   }
    main section .carousel-container .item .text {
-       width: 100%;
-       padding: 0.625rem 0.9375rem;
-       position: absolute;
-       bottom: 0;
-       font-size: 0.9rem;
-       /* '' */
-       color: #f2f2f2 !important;
-       background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    top: 50%;
+    padding: 0.625rem 0.9375rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9rem;
+    color: #f2f2f2 !important;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translate(0px,-50%);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
   }
    main section .carousel-container .item .text .title {
        margin: 0.5rem 0 0 0;
@@ -923,12 +928,23 @@ padding-bottom: 40%;
           <style>
             svg{
                 position: absolute;
-                bottom: 0;
+                bottom: -52px;
             }
           </style>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffff" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,181.3C672,181,768,107,864,90.7C960,75,1056,117,1152,149.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+        </path></defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+        </use></g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+        </use></g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+        </use></g>
+      </svg>
         </div>
 
           </div></div>
