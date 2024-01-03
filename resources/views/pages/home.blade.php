@@ -917,21 +917,36 @@ padding-bottom: 40%;
           </div></div>
           </div></div>
 
+<style>
 
-<style> .month-wrapper {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
+    .ruler {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
 
-  .month-circle {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-    font-size: 16px;
-  }</style>
+        .trimester {
+            width: 33.33%;
+            text-align: center;
+            position: relative;
+        }
+
+        .trimester-label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .month {
+            width: 33.33%;
+            text-align: center;
+        }
+</style>
+
 <?php
 use App\Models\poststags;
 ?>
@@ -950,21 +965,27 @@ use App\Models\poststags;
     <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
     <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
-  <div class="month-wrapper">
-    <a class="month-circle" href="#">
-      <span class="heart_text">Month 1</span>
-    </a>
 
-    <a class="month-circle" href="#">
-      <span class="heart_text">Month 2</span>
-    </a>
-
-    <a class="month-circle" href="#">
-      <span class="heart_text">Month 3</span>
-    </a>
-
-    <!-- Add more months as needed -->
-  </div>
+  <div class="ruler">
+    <div class="trimester">
+        <div class="trimester-label">الثلث الأول</div>
+        <div class="month">الشهر 1</div>
+        <div class="month">الشهر 2</div>
+        <div class="month">الشهر 3</div>
+    </div>
+    <div class="trimester">
+        <div class="trimester-label">الثلث الثاني</div>
+        <div class="month">الشهر 4</div>
+        <div class="month">الشهر 5</div>
+        <div class="month">الشهر 6</div>
+    </div>
+    <div class="trimester">
+        <div class="trimester-label">الثلث الثالث</div>
+        <div class="month">الشهر 7</div>
+        <div class="month">الشهر 8</div>
+        <div class="month">الشهر 9</div>
+    </div>
+</div>
 </div>
 
 
