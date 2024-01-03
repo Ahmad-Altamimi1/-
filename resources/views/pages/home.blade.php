@@ -918,7 +918,20 @@ padding-bottom: 40%;
           </div></div>
 
 
+<style> .month-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
 
+  .month-circle {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+  }</style>
 <?php
 use App\Models\poststags;
 ?>
@@ -937,7 +950,21 @@ use App\Models\poststags;
     <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
     <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
+  <div class="month-wrapper">
+    <a class="month-circle" href="#">
+      <span class="heart_text">Month 1</span>
+    </a>
 
+    <a class="month-circle" href="#">
+      <span class="heart_text">Month 2</span>
+    </a>
+
+    <a class="month-circle" href="#">
+      <span class="heart_text">Month 3</span>
+    </a>
+
+    <!-- Add more months as needed -->
+  </div>
 </div>
 
 
