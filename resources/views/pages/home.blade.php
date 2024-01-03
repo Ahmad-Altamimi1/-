@@ -732,11 +732,11 @@ article {
             width: 100%;
             height: auto;
         }
-        .fa-angle-right,.fa-angle-right{
+        .has-dflex-center{
             background: #ac9999;
             transition: 0.4s;
         }
-        .fa-angle-right,.fa-angle-right:hover{
+        .has-dflex-center:hover{
 background-color: white;
         }
 </style>
