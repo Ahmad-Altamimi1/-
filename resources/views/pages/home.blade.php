@@ -427,7 +427,7 @@ article {
        width: 300px;
        flex-shrink: 0;
        height: 300px;
-       background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
        box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
        border-radius: 20px;
        transform: translateX(-80px);
@@ -440,7 +440,8 @@ article {
        left: 0;
        width: 100%;
        height: 100%;
-       background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
+
        border-radius: 20px;
        opacity: 0.8;
   }
@@ -902,7 +903,7 @@ padding-bottom: 40%;
 
                                 </div> @endforeach
 
-                                <a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" style="color: #d54368"></i></a></div>
+                                <a class="prev has-dflex-center"><i class="fas fa-angle-left" style="color: #d54368"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" style="color: #d54368"></i></a></div>
                         </div>
                     </div>
                 </section>
