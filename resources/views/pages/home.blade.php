@@ -307,12 +307,12 @@ article {
        background: rgb(213,67,96);
        background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%,  rgba(213,67,96,1) 74%);
   /* background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%); */
-       min-height: calc(100vh - 189px);
+       min-height: calc(100vh - 226px);
        font-family: 'Fira Sans', sans-serif;
        display: flex;
-       gap: 100px;
-       flex-direction: row-reverse;
-       padding: 0 40px;
+       gap: 20px;
+       /* flex-direction: row-reverse; */
+       padding: 100px 100px;
        align-items: center;
   }
   @media screen and (max-width: 962px) {
@@ -337,7 +337,7 @@ article {
        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
        padding: 25px;
        border-radius: 25px;
-       height: 400px;
+       height: 100%;
        transition: all 0.3s;
   }
    @media screen and (max-width: 992px) {
@@ -425,14 +425,14 @@ article {
        transition-delay: 1.7s;
   }
    .blog-slider__img {
-       width: 300px;
-       flex-shrink: 0;
-       height: 300px;
-       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
-       /* box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2); */
-       border-radius: 20px;
-       transform: translateX(-80px);
-       overflow: hidden;
+    width: 275px;
+    flex-shrink: 0;
+    height: 203px;
+    background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
+    /* box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2); */
+    border-radius: 20px;
+    transform: translate(-80px ,16px);
+    overflow: hidden;
   }
    .blog-slider__img:after {
        content: '';
@@ -920,9 +920,10 @@ padding-bottom: 40%;
 
 
           </div>
-          <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-            <path fill="#ffffff" d="M0,96L60,80C120,64,240,32,360,32C480,32,600,64,720,101.3C840,139,960,181,1080,165.3C1200,149,1320,75,1380,37.3L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-        </svg>
+          <svg style="    position: absolute;
+          bottom: 38px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
         </div>
 
           </div></div>
