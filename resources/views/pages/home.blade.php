@@ -1001,6 +1001,11 @@ padding-bottom: 40%;
       left:87.5%;
       margin-left:-0.75em;
     }
+    .numbers ul li:nth-child(8){
+
+      left:87.5%;
+      margin-left:-0.75em;
+    }
 
     .numbers ul li:last-child{
 
@@ -1294,10 +1299,6 @@ use App\Models\poststags;
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
         <li>٢
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>١
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
