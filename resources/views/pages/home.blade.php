@@ -1003,7 +1003,7 @@ padding-bottom: 40%;
     }
     .numbers ul li:nth-child(8){
 
-      left:87.5%;
+      left:100%;
       margin-left:-0.75em;
     }
 
