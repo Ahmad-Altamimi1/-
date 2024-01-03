@@ -979,7 +979,7 @@ padding-bottom: 40%;
     width: 100%;
     height: 100px;
     position: absolute;
-    bottom: 78px;
+    bottom: 10px;
     left: 0;
     transform: translate3d(0, 0, 0);
     z-index: 1000;
