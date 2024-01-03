@@ -441,7 +441,7 @@ article {
        left: 0;
        width: 100%;
        height: 100%;
-       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
+       background-image: linear-gradient(147deg, rgb(255 255 255) 0%, rgb(255 145 0) 74%);
 
        border-radius: 20px;
        opacity: 0.8;
@@ -735,6 +735,7 @@ article {
         .has-dflex-center{
             background: #ac9999;
             transition: 0.4s;
+            cursor: pointer;
         }
         .has-dflex-center:hover{
 background-color: white !important;
@@ -763,7 +764,7 @@ background-color: white !important;
                 <div class="blog-slider__content">
                   <span class="blog-slider__code"></span>
                   <div class="blog-slider__title" dir="rtl">{{ $recentpost->TITLE }}</div>
-                  <div class="blog-slider__text" dir="rtl"> {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 30) }}
+                  <div class="blog-slider__text" dir="rtl"> {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 200) }}
                 </div>
                   <a href="{{ route('ShoWarticle',['id'=>$recentpost->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
                 </div>
