@@ -937,7 +937,7 @@ padding-bottom: 40%;
       height: 17%;
       top: 16.5%;
       left: -10%;
-      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+      /* box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75); */
       border-radius: 10% 0% 0% 10%;
       border-width: 10px;
       border-color: rgba(245, 170, 246, 1) transparent;
@@ -956,7 +956,7 @@ padding-bottom: 40%;
       text-align:center;
       line-height:1.5em;
       font-size:12pt;
-      color:#F399FF;
+      color:#d54368;
       top: 15%;
       font-family: 'Coming Soon', cursive;
     }
@@ -1008,7 +1008,7 @@ padding-bottom: 40%;
       margin-left:-0.75em;
     }
     .sm-line1 {
-      background: #F399FF;
+      background: #d54368;
       height: 50%;
       width: 8%;
       top: -40%;
@@ -1017,7 +1017,7 @@ padding-bottom: 40%;
     }
 
     .sm-line2 {
-      background: #F399FF;
+      background: #d54368;
       height: 50%;
       width: 8%;
       top: -40%;
@@ -1026,7 +1026,7 @@ padding-bottom: 40%;
     }
 
     .lg-line {
-      background: #F399FF;
+      background: #d54368;
       height: 120%;
       width: 8%;
       top: -40%;
@@ -1042,7 +1042,7 @@ padding-bottom: 40%;
       width: 12%;
       height: 19%;
       position: absolute;
-      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+      /* box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75); */
       border: 1px solid #E8E8E8;
     }
 
@@ -1058,13 +1058,13 @@ padding-bottom: 40%;
 
     .miffy-body {
       position: absolute;
-      background: #F399FF;
+      background: #d54368;
       width: 12%;
       height: 19.5%;
       left: 76%;
       top: 16.5%;
       border-radius: 0% 100% 100% 0%;
-      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+      /* box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75); */
     }
 
     .left-ear {
@@ -1077,7 +1077,7 @@ padding-bottom: 40%;
       top: 15%;
       position: absolute;
       border-radius: 10% 80% 80% 10%;
-      box-shadow: -11px -1px 25px -4px rgba(0,0,0,0.75);
+      /* box-shadow: -11px -1px 25px -4px rgba(0,0,0,0.75); */
     }
 
     .right-ear {
@@ -1090,7 +1090,7 @@ padding-bottom: 40%;
       top: 50%;
       position: absolute;
       border-radius: 10% 80% 80% 10%;
-      box-shadow: 0px 1px 25px -4px rgba(0,0,0,0.75);
+      /* box-shadow: 0px 1px 25px -4px rgba(0,0,0,0.75); */
     }
 
     .left-eye {
@@ -1138,7 +1138,7 @@ padding-bottom: 40%;
     }
 
     .left-arm {
-      background: #F399FF;
+      background: #d54368;
       border: 1px solid #E8E8E8;
       width: 5%;
       height: 4%;
@@ -1150,7 +1150,7 @@ padding-bottom: 40%;
     }
 
     .right-arm {
-      background: #F399FF;
+      background: #d54368;
       border: 1px solid #E8E8E8;
       width: 6%;
       height: 4%;
@@ -1163,7 +1163,7 @@ padding-bottom: 40%;
 
     .miffy-text {
       font-family: 'Coming Soon', cursive;
-      color: #F399FF;
+      color: #d54368;
       left: 45%;
       position: absolute;
       top: 55%;
