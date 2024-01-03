@@ -1297,10 +1297,6 @@ use App\Models\poststags;
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>١
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
       </ul>
     </div>
 
