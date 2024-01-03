@@ -378,6 +378,7 @@ article {
   .blog-slider__content{
       flex: 1 !important;
       /* margin-top: -260px; */
+      padding-top: 60px;
   }
    .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
        transition-delay: 0.3s;
@@ -510,7 +511,7 @@ article {
   }
    .blog-slider__button {
        display: inline-flex;
-       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
+     background-color: #d54368;
 
        padding: 15px 35px;
        border-radius: 50px;
@@ -766,7 +767,7 @@ background-color: white !important;
                   <div class="blog-slider__title" dir="rtl">{{ $recentpost->TITLE }}</div>
                   <div class="blog-slider__text" dir="rtl"> {{ \Illuminate\Support\Str::limit($recentpost->DESCRIPTION, 200) }}
                 </div>
-                  <a href="{{ route('ShoWarticle',['id'=>$recentpost->id]) }}" class="blog-slider__button">أقرأ المزيد</a>
+                  <a href="{{ route('ShoWarticle',['id'=>$recentpost->id]) }}" class="blog-slider__button">أكملي المقال </a>
                 </div>
               </div>
 
