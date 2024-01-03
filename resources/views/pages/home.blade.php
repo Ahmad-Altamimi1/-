@@ -572,7 +572,7 @@ article {
   }
    .blog-slider__pagination .swiper-pagination-bullet-active {
        opacity: 1;
-       background: #fd3838;
+       background:  rgba(213,67,96,1);
        height: 30px;
        box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
   }
