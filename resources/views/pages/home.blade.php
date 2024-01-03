@@ -307,7 +307,7 @@ article {
        background: rgb(213,67,96);
        background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%,  rgba(213,67,96,1) 74%);
   /* background: linear-gradient(90deg, rgba(213,67,96,1) 5%, rgba(235,102,136,1) 50%, rgba(246,172,191,1) 100%); */
-       height: calc(100vh - 226px);
+       height: calc(100vh - 200px);
        font-family: 'Fira Sans', sans-serif;
        display: flex;
        gap: 20px;
@@ -336,7 +336,7 @@ article {
        background: #fff;
        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
        padding: 25px;
-       border-radius: 25px;
+       border-radius: 5px;
        height: 100%;
        transition: all 0.3s;
   }
@@ -427,11 +427,11 @@ article {
    .blog-slider__img {
     width: 275px;
     flex-shrink: 0;
-    height: 203px;
+    height: 257px;
     background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
     /* box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2); */
     border-radius: 20px;
-    transform: translate(-80px ,16px);
+    transform: translate(-81px ,55px);
     overflow: hidden;
   }
    .blog-slider__img:after {
@@ -641,8 +641,9 @@ article {
     font-size: 0.9rem;
     color: #f2f2f2 !important;
     background-color: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(to top, orange 0%, orange 50%, transparent 50%, transparent 100%);
     transform: translate(0px,-50%);
-    height: fit-content;
+    height: 100%;
     display: flex;
     justify-content: center;
   }
@@ -928,7 +929,7 @@ padding-bottom: 40%;
           <style>
             svg{
                 position: absolute;
-                bottom: -52px;
+                bottom: 10px;
             }
             .wave2 use {
     -webkit-animation: move-forever2 8s linear infinite;
@@ -975,12 +976,13 @@ padding-bottom: 40%;
     transform: translate(85px, 0%);
 }}
 .hero-waves {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transform: translate3d(0, 0, 0);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 78px;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    z-index: 1000;
         }
 
 
