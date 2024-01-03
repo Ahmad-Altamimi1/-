@@ -725,144 +725,19 @@ article {
       font-size: 80px;
       border-radius: 50%;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
 
-    .heart.green {
-      color: rgba(94, 224, 163, 0.8);
-      animation: parent-anim 3s linear infinite;
-      /* transform-origin: 50% 120px; */
-    }
-
-    .heart.pink {
-      color: rgba(232, 143, 201, 0.8);
-      animation: parent-anim-2 3s linear infinite;
-      /* transform-origin: 50% 125px; */
-    }
-
-    .heart.blue {
-      color: rgba(134, 193, 232, 0.8);
-      animation: parent-anim 3s linear infinite;
-      /* transform-origin: 20% 120px; */
-    }
-
-    .heart.purple {
-      color: rgba(189, 138, 234, 0.8);
-      animation: parent-anim 3s linear infinite;
-      transform-origin: 40% 150px;
-    }
-
-    .trimester-circle {
-      text-decoration: none;
-      width: 14%;
-    height: 0;
-    padding-bottom: 14%;
-
-      /* background-color: #d54368; */
-      background-image:  url('https://images.unsplash.com/photo-1532636785204-753cb2c25594?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      border-radius: 50%;
-      background-size: cover;
-      margin: 5% 1%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #000000;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-    }
-    .trimester-circle:hover{
-        transition: .4S;
-        scale: 1.1;
-        margin-left: 20px;
-    margin-right: 20px;
-
-    }
-    .trimester-circle:hover .heart {
-      opacity: 1;
-    }
-
-    @keyframes parent-anim {
-
-        0% {
-        transform: rotate(0);
-      }
-      25%{
-        transform: rotate(60deg);
-
-      }
-      50%{
-        transform: rotate(0deg);
-
-      }
-      75%{
-        transform: rotate(-60deg);
-
-      }
-      100% {
-        transform: rotate(0deg);
-    }
-    }
-
-    @keyframes parent-anim-2 {
-        0% {
-        transform: rotate(0);
-      }
-      25%{
-        transform: rotate(60deg);
-
-      }
-      50%{
-        transform: rotate(0deg);
-
-      }
-      75%{
-        transform: rotate(-60deg);
-
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-    .heart_text{
-        width: 100%;
-        position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-      font-weight: bold;
-      color: white; /* Baby theme color */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    .circle-title {
-        background-color: B21F66;
-    color: #fff !important;
-    padding: 5px 181px;
-    border-radius: 6px;
-    font-size: 26px;}
-.widget{
-    border: none !important;
-}
-@media (max-width:767px){
-    .hearts-wrapper{
-    margin-top: 22px;
-    flex-direction: column;
-    align-items: center;
-    }
-    .trimester-circle{
-width: 40%;
-padding-bottom: 40%;
-
-    }
 
     }
     .wave-svg {
             width: 100%;
             height: auto;
+        }
+        .fa-angle-right,.fa-angle-right{
+            background: #ac9999;
+            transition: 0.4s;
+        }
+        .fa-angle-right,.fa-angle-right:hover{
+background-color: white;
         }
 </style>
 
@@ -910,12 +785,16 @@ padding-bottom: 40%;
                                 <div class="item fade">
                                     <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                     <div class="text is-text-centered">
-                                        <p style="color: white"> {{ $video->TITLE }}</p>
+                                        <p style=" color: white;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;"> {{ $video->TITLE }}</p>
                                     </div>
 
                                 </div> @endforeach
 
-                                <a class="prev has-dflex-center"><i class="fas fa-angle-left" style="color: #d54368"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" style="color: #d54368"></i></a></div>
+                                <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a></div>
                         </div>
                     </div>
                 </section>
