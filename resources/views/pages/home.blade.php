@@ -312,7 +312,7 @@ article {
        display: flex;
        gap: 20px;
        /* flex-direction: row-reverse; */
-       padding: 100px 100px;
+       padding: 100px 158px;
        align-items: center;
   }
   @media screen and (max-width: 962px) {
@@ -590,12 +590,12 @@ article {
 
   main section {
        width: 100%;
-       min-height: 60vh;
-       padding: 4rem 0;
+       height: 100%;
+       /* padding: 4rem 0; */
   }
    main section .carousel-container {
        width: 100%;
-       height: 25rem;
+       height: 100%;
        padding: 0;
        position: relative;
        overflow: hidden;
