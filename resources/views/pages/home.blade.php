@@ -936,8 +936,11 @@ padding-bottom: 40%;
             position: absolute;
             bottom: 0;
             left: 0;
-            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
             transform: translate3d(0, 0, 0);
+        }
+        .wave1,.wave2,.wave3{
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+
         }
 
         @keyframes wave {
