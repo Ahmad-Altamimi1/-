@@ -737,7 +737,7 @@ article {
             transition: 0.4s;
         }
         .has-dflex-center:hover{
-background-color: white;
+background-color: white !important;
         }
 </style>
 
