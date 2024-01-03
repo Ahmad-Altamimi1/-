@@ -313,6 +313,7 @@ article {
        gap: 100px;
        flex-direction: row-reverse;
        padding: 0 40px;
+       align-items: center;
   }
   @media screen and (max-width: 962px) {
     .bodddy{
@@ -853,7 +854,10 @@ padding-bottom: 40%;
     }
 
     }
-
+    .wave-svg {
+            width: 100%;
+            height: auto;
+        }
 </style>
 
 <div class="bodddy"  >
@@ -886,7 +890,7 @@ padding-bottom: 40%;
               {{-- video section  --}}
 
 
-              <main>
+              <main style="    width: 48%;">
                 <section class="has-dflex-center">
                     <div class="lx-container-80">
                         <div class="lx-row">
@@ -911,10 +915,13 @@ padding-bottom: 40%;
             </main>
 
 
+            <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#ffffff" d="M0,96L60,80C120,64,240,32,360,32C480,32,600,64,720,101.3C840,139,960,181,1080,165.3C1200,149,1320,75,1380,37.3L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
 
 
-
-          </div></div>
+          </div>
+        </div>
           </div></div>
 
 <style>
@@ -930,18 +937,19 @@ padding-bottom: 40%;
     }
 
     .ruler {
-      background-color: #ffd7f8;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ff84eb' fill-opacity='0.10'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
-      position: absolute;
-      width: 90%;
-      height: 17%;
-      top: 16.5%;
-      left: -10%;
-      /* box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75); */
-      border-radius: 10% 0% 0% 10%;
-      border-width: 10px;
-      border-color: rgba(245, 170, 246, 1) transparent;
-      border-style: none solid solid none;
+
+    background-color: #ffd7f8;
+    background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ff84eb' fill-opacity='0.10'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E);
+    position: absolute;
+    width: 100%;
+    height: 17%;
+    top: 16.5%;
+    left: -16%;
+    /* box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75); */
+    border-radius: 10% 0% 0% 10%;
+    border-width: 10px;
+    border-color: rgba(245, 170, 246, 1) transparent;
+    border-style: none solid solid none;
 
     }
 
