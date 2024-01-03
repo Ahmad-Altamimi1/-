@@ -1265,35 +1265,39 @@ use App\Models\poststags;
 
     <div class="numbers">
       <ul>
-        <li>1
+        <li>٩
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>2
+        <li>٨
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>3
+        <li>٧
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>4
+        <li>٦
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>5
+        <li>٥
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>6
+        <li>٤
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>7
+        <li> ٣
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
-        <li>8
+        <li>٢
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>١
           <div class="sm-line1"></div>
           <div class="sm-line2"></div>
           <div class="lg-line"></div></li>
