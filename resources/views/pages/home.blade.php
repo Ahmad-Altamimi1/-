@@ -919,33 +919,289 @@ padding-bottom: 40%;
 
 <style>
 
+    .box {
+      position: relative;
+      margin: auto;
+      display: block;
+      margin-top: 14%;
+      width: 600px;
+      height: 420px;
+      background: none;
+    }
+
     .ruler {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            margin: auto;
-            margin-top: 20px;
-        }
+      background-color: #ffd7f8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ff84eb' fill-opacity='0.10'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+      position: absolute;
+      width: 90%;
+      height: 17%;
+      top: 16.5%;
+      left: -10%;
+      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+      border-radius: 10% 0% 0% 10%;
+      border-width: 10px;
+      border-color: rgba(245, 170, 246, 1) transparent;
+      border-style: none solid solid none;
 
-        .trimester {
-            width: 33.33%;
-            text-align: center;
-            position: relative;
-        }
+    }
 
-        .trimester-label {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    .numbers ul {
+      list-style:none;
+    }
 
-        .month {
-            width: 33.33%;
-            text-align: center;
-        }
-</style>
+    .numbers ul li {
+      position:absolute;
+      width:1.5em;
+      height:1.5em;
+      text-align:center;
+      line-height:1.5em;
+      font-size:12pt;
+      color:#F399FF;
+      top: 15%;
+      font-family: 'Coming Soon', cursive;
+    }
+
+    .numbers ul li:first-child {
+      left:12.5%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(2){
+
+      left:25%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(3){
+
+      left:37.5%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(4){
+
+      left:50%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(5){
+
+      left:62.5%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(6){
+
+      left:75%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:nth-child(7){
+
+      left:87.5%;
+      margin-left:-0.75em;
+    }
+
+    .numbers ul li:last-child{
+
+      left:99%;
+      margin-left:-0.75em;
+    }
+    .sm-line1 {
+      background: #F399FF;
+      height: 50%;
+      width: 8%;
+      top: -40%;
+      left: -15%;
+      position: absolute;
+    }
+
+    .sm-line2 {
+      background: #F399FF;
+      height: 50%;
+      width: 8%;
+      top: -40%;
+      left: -115%;
+      position: absolute;
+    }
+
+    .lg-line {
+      background: #F399FF;
+      height: 120%;
+      width: 8%;
+      top: -40%;
+      left: 76%;
+      position: absolute;
+    }
+
+    .miffy-head {
+      background: #FFF;
+      border-radius: 50%;
+      top: 15%;
+      left: 86%;
+      width: 12%;
+      height: 19%;
+      position: absolute;
+      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+      border: 1px solid #E8E8E8;
+    }
+
+    .miffy-head-copy{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: #FFF;
+      border-radius: 50%;
+      z-index: 2;
+
+    }
+
+    .miffy-body {
+      position: absolute;
+      background: #F399FF;
+      width: 12%;
+      height: 19.5%;
+      left: 76%;
+      top: 16.5%;
+      border-radius: 0% 100% 100% 0%;
+      box-shadow: -11px -10px 25px -4px rgba(0,0,0,0.75);
+    }
+
+    .left-ear {
+      background: #FFF;
+      border: 1px solid #E8E8E8;
+      width: 65%;
+      height: 25%;
+      transform: rotate(-5deg);
+      left: 90%;
+      top: 15%;
+      position: absolute;
+      border-radius: 10% 80% 80% 10%;
+      box-shadow: -11px -1px 25px -4px rgba(0,0,0,0.75);
+    }
+
+    .right-ear {
+      background: #FFF;
+      border: 1px solid #E8E8E8;
+      width: 65%;
+      height: 25%;
+      transform: rotate(5deg);
+      left: 90%;
+      top: 50%;
+      position: absolute;
+      border-radius: 10% 80% 80% 10%;
+      box-shadow: 0px 1px 25px -4px rgba(0,0,0,0.75);
+    }
+
+    .left-eye {
+      background: #000;
+      position: absolute;
+      width: 9%;
+      height: 5%;
+      border-radius: 50%;
+      left: 34%;
+      top: 25%;
+      z-index: 2;
+    }
+
+    .right-eye {
+      background: #000;
+      position: absolute;
+      width: 9%;
+      height: 6%;
+      border-radius: 50%;
+      left: 34%;
+      top: 71%;
+      z-index: 2;
+    }
+
+    .mouth1 {
+      background: #000;
+      position: absolute;
+      width: 4%;
+      height: 15%;
+      transform: rotate(30deg);
+      left: 14%;
+      top: 45%;
+      z-index: 2;
+    }
+
+    .mouth2 {
+      background: #000;
+      position: absolute;
+      width: 4%;
+      height: 15%;
+      transform: rotate(-30deg);
+      left: 14%;
+      top: 45%;
+      z-index: 2;
+    }
+
+    .left-arm {
+      background: #F399FF;
+      border: 1px solid #E8E8E8;
+      width: 5%;
+      height: 4%;
+      transform: rotate(25deg);
+      left: 82%;
+      top: 16%;
+      position: absolute;
+      border-radius: 80% 10% 10% 80%;
+    }
+
+    .right-arm {
+      background: #F399FF;
+      border: 1px solid #E8E8E8;
+      width: 6%;
+      height: 4%;
+      transform: rotate(-25deg);
+      left: 83%;
+      top: 30%;
+      position: absolute;
+      border-radius: 100% 10% 10% 100%;
+    }
+
+    .miffy-text {
+      font-family: 'Coming Soon', cursive;
+      color: #F399FF;
+      left: 45%;
+      position: absolute;
+      top: 55%;
+    }
+
+    .mini-miffy {
+      background: #FFFFFF;
+      width: 5%;
+      height: 35%;
+      border-radius: 50%;
+      position: absolute;
+      top: 55%;
+      left: 54%;
+    }
+
+    .mini-left-ear {
+      background: #FFFFFF;
+      width: 35%;
+      height: 85%;
+      border-radius: 50%;
+      position: absolute;
+      top: -50%;
+      left: 5%;
+      transform: rotate(-10deg);
+    }
+
+    .mini-right-ear {
+      background: #FFFFFF;
+      width: 35%;
+      height: 85%;
+      border-radius: 50%;
+      position: absolute;
+      top: -50%;
+      left: 60%;
+      transform: rotate(10deg);
+    }
+
+    </style>
 
 <?php
 use App\Models\poststags;
@@ -965,27 +1221,90 @@ use App\Models\poststags;
     <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
     <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
   </div>
+<!--Invisible Box -->
+<div class=box>
 
+    <!--begin miffy head-->
+    <div class="miffy-head">
+
+      <!-- Head Copy -->
+      <div class="miffy-head-copy"></div><!-- End head copy -->
+
+
+      <!-- eyes -->
+      <div class="left-eye"></div>
+      <div class="right-eye"></div>
+      <!-- end eyes-->
+
+      <!-- ears -->
+      <div class="left-ear"></div>
+      <div class="right-ear"></div>
+      <!-- end ears-->
+
+      <!-- mouth-->
+      <div class="mouth1"></div>
+      <div class="mouth2"></div>
+      <!-- end mouth-->
+
+    </div><!--end miffy head-->
+
+    <!-- begin miffy body -->
+    <div class="miffy-body"></div>
+    <div class="left-arm"></div>
+    <div class="right-arm"></div>
+    <!--end miffy body-->
+
+    <!--begin ruler-->
   <div class="ruler">
-    <div class="trimester">
-        <div class="trimester-label">الثلث الأول</div>
-        <div class="month">الشهر 1</div>
-        <div class="month">الشهر 2</div>
-        <div class="month">الشهر 3</div>
+
+    <div class="miffy-text">miffy</div>
+    <div class="mini-miffy">
+      <div class="mini-left-ear"></div>
+      <div class="mini-right-ear"></div>
     </div>
-    <div class="trimester">
-        <div class="trimester-label">الثلث الثاني</div>
-        <div class="month">الشهر 4</div>
-        <div class="month">الشهر 5</div>
-        <div class="month">الشهر 6</div>
+
+    <div class="numbers">
+      <ul>
+        <li>1
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>2
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>3
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>4
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>5
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>6
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>7
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+        <li>8
+          <div class="sm-line1"></div>
+          <div class="sm-line2"></div>
+          <div class="lg-line"></div></li>
+      </ul>
     </div>
-    <div class="trimester">
-        <div class="trimester-label">الثلث الثالث</div>
-        <div class="month">الشهر 7</div>
-        <div class="month">الشهر 8</div>
-        <div class="month">الشهر 9</div>
-    </div>
-</div>
+
+
+  </div><!--end ruler-->
+
+
+  </div> <!-- End box -->
 </div>
 
 
