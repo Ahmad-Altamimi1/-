@@ -948,11 +948,11 @@ use App\Models\poststags;
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                <div class="containslidbar">
-                      <div class="flex flex-col">
+                {{-- <div class="container"> --}}
+                {{-- <div class="containslidbar"> --}}
+                      {{-- <div class="flex flex-col"> --}}
 
-            <div class="relative w-full ">
+            {{-- <div class="relative w-full "> --}}
                 <div class="container z-1" style="display: flex">
 
 
@@ -1010,11 +1010,11 @@ use App\Models\poststags;
                     </div><!--end inner-grid-->
                 </div><!--end container-->
             </div>
-        </div>
+        {{-- </div>
 
     </div>
     </div>
-    </div>
+    </div> --}}
 {{-- newone  --}}
 
 
