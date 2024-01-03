@@ -509,7 +509,8 @@ article {
   }
    .blog-slider__button {
        display: inline-flex;
-       background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+       background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
+
        padding: 15px 35px;
        border-radius: 50px;
        color: #fff;
