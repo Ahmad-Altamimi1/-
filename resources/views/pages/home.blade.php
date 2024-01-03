@@ -428,7 +428,7 @@ article {
        flex-shrink: 0;
        height: 300px;
        background-image: linear-gradient(147deg, rgba(246,172,191,1) 0%, rgba(213,67,96,1) 74%);
-       box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+       /* box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2); */
        border-radius: 20px;
        transform: translateX(-80px);
        overflow: hidden;
