@@ -5,7 +5,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         </div>
 <style>
 
@@ -1867,7 +1868,10 @@ button {
 
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<!-- Add the Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 // to fetxh data in bootom content
 document.addEventListener('DOMContentLoaded', function() {
@@ -1925,6 +1929,7 @@ tag1Button.style.backgroundColor = '#70b646';
 tag1Button.style.color = '#111111';
 fetchContent('صحة الطفل');
 });
+
     var slickNextButton = document.querySelector('.slick-next');
 
     setTimeout(function() {
