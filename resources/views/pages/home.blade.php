@@ -986,20 +986,7 @@ use App\Models\poststags;
                 <div class="col-12">
 <p>sdfjkhdsh</p>
                 </div>
-                <div class="col-12">
-<p>sdfjkhdsh</p>
-                </div>
-                <div class="col-12">
-<p>sdfjkhdsh</p>
-                </div>
-                <div class="col-12">
-<p>sdfjkhdsh</p>
-                </div>
-                <div class="col-12">
-<p>sdfjkhdsh</p>
-                </div>
-                <div class="col-12">
-<p>sdfjkhdsh</p>
+
                 </div>
 
 
