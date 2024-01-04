@@ -1094,7 +1094,7 @@ use App\Models\poststags;
             <?php
             $xx = 0;
             ?>
-            @foreach ($posts as $singlepost)
+            @foreach ($recentposts as $singlepost)
                 @if (1)
                     @if ($xx <= 5)
                         <!-- post -->
