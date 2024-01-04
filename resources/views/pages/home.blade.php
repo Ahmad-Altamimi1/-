@@ -992,11 +992,12 @@ use App\Models\poststags;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #8b8d8c;
 }
 .circle_image img{
     width: 80%;
 }
-.circle_image{}
+
 </style>
 <div class="center_content container pt-60" dir="rtl">
     <div class="center_content_Right">
@@ -1088,7 +1089,9 @@ use App\Models\poststags;
 
 <div class="injaby_category">
     <div class="row " style="justify-content: center">
-        <p style="text-align: center;padding:0 0 30px 0 ">أقسام إنجابي </p>
+        <p style="    text-align: center;
+        font-size: 25px;
+        padding: 0 0 30px 0;">أقسام إنجابي </p>
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
