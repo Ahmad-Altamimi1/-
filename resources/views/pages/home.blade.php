@@ -994,7 +994,7 @@ use App\Models\poststags;
                 <div class="col-lg-12">
 
                     <!-- post tabs -->
-                    <div class="post-tabs rounded bordered">
+                    <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
                         <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
                             style="flex-direction: row-reverse;">
@@ -1040,7 +1040,7 @@ use App\Models\poststags;
                             <!-- loader -->
                             <div class="lds-dual-ring"></div>
                             <!-- popular posts -->
-                            <div class="tab-pane fade show ahmadaltameme active">
+                            <div class="tab-pane fade show ahmadaltameme active" dir="rtl">
                                 <div class="row">
 
 

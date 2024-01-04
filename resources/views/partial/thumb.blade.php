@@ -11,7 +11,7 @@
                 <a href="/{{$havevideo?'videos':'posts'}}/{{ $posts_thumb->id }}/show">
                     <div style="text-align: center;" class="inner">
                         <img style="height: 250px ;aspect-ratio: 2;"
-                            src="{{ asset('storage/' . $posts_thumb->IMG . '') }}"
+                            src="{{ asset( $posts_thumb->IMG ) }}"
                             alt="{{ $posts_thumb->TITLE }}" />
                     </div>
                 </a>
