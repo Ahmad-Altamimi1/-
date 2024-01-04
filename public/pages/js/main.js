@@ -1448,8 +1448,10 @@
         var scroll = $(window).scrollTop();
         if (scroll < 445) {
             $(".ltn__header-sticky").removeClass("sticky-active");
+            $(".hero-waves").css("bottom", "10px");
         } else {
             $(".ltn__header-sticky").addClass("sticky-active");
+            $(".hero-waves").css("bottom", "91px");
         }
     });
 

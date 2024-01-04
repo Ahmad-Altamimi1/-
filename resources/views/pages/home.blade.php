@@ -542,7 +542,7 @@ article {
        left: auto !important;
        top: 50%;
        bottom: auto !important;
-       transform: translateY(-50%);
+       transform: translateY(-114%);
   }
    @media screen and (max-width: 768px) {
        .blog-slider__pagination {
