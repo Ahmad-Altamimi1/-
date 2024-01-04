@@ -972,6 +972,28 @@ use App\Models\poststags;
     border: solid 1px #EBEBEB;
     padding: 35px 30px;
 }
+.injaby_category{
+    width: 100%;
+    background-color: #f2c6d1;
+    height: 600px;
+    display: flex;
+}
+.card_circle_image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.circle_image {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border:2px solid #969394;
+    background-color: white;
+}
+.circle_image img{
+    width: 80%;
+}
+.circle_image{}
 </style>
 <div class="center_content container pt-60" dir="rtl">
     <div class="center_content_Right">
@@ -1061,7 +1083,52 @@ use App\Models\poststags;
     </section>
     </div>
 
+<div class="injaby_category">
 
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
+</div>
+    <p>أشهر الحمل</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/video_2306737.png') }}" alt="">
+</div>
+    <p>إنجابي TV</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/fetus_8041564.png') }}" alt="">
+</div>
+    <p>صحة الطفل</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/maternity_7901883.png') }}" alt="">
+</div>
+    <p>صحتك ماما</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/pregnant_6205006.png') }}" alt="">
+</div>
+    <p>منوعات إنجابي</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/maternity_4577177.png') }}" alt="">
+</div>
+    <p>اعتني بنفسك</p>
+</div>
+<div class="card_circle_image">
+<div class="circle_image">
+    <img class="" src="{{ asset('pages/img/category/love_7409875.png') }}" alt="">
+</div>
+    <p>اعتني بطفلك</p>
+</div>
+
+</div>
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
     <div class="widget rounded" >
@@ -1100,7 +1167,7 @@ use App\Models\poststags;
             <?php
             $xx = 0;
             ?>
-            @foreach ($recentposts as $singlepost)
+            @foreach ($left_side_bar_content as $singlepost)
                 @if (1)
                     @if ($xx <= 5)
                         <!-- post -->
