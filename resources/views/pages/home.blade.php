@@ -1358,6 +1358,7 @@ use App\Models\poststags;
     <!-- Initialize the slider in your custom script -->
     <script>
       $(document).ready(function(){
+        console.log('rerererer');
         $('.slider-container').slick({
           slidesToShow: 6,
           slidesToScroll: 1,
