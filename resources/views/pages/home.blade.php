@@ -929,6 +929,14 @@ use App\Models\poststags;
         z-index: 1;
 
     }
+    .trimester-tow{
+        transition: 0.4s;
+
+        scale: 1.1;
+    z-index: 10;
+
+
+    }
     .trimester-three{
         position: absolute;
     right: 115px;
@@ -938,7 +946,7 @@ use App\Models\poststags;
 
     }
     .trimester-three:hover{
-        transition: 0.3s;
+        transition: 0.4s;
         transform: rotate(0deg);
     }
     .hearts-wrapper a {
