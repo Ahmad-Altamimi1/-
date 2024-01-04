@@ -1491,7 +1491,7 @@ button {
 </section>
 {{-- End bottom content  --}}
 
- 
+
 
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
@@ -1508,7 +1508,7 @@ button {
                 @if($tag->TITLE == "أثناء الحمل")
                 @foreach($tag->posts->take(6) as $post)
 
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="ltn__blog-item">
                         <div class="ltn__blog-img">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}"><img src="{{ asset($post->IMG) }}" alt="#"></a>
