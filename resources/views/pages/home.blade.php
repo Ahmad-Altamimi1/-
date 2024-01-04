@@ -1244,32 +1244,7 @@ use App\Models\poststags;
         </ul>
     </div>
 <style>
-    @charset "utf-8";
 
-/******* Fonts Import Start **********/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/********* Fonts Face CSS End **********/
-
-/******* Common Element CSS Start ******/
-* {
-  margin: 0px;
-  padding: 0px;
-}
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-.clear {
-  clear: both;
-}
-img {
-  max-width: 100%;
-  border: 0px;
-}
-ul,
-ol {
-  list-style: none;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -1503,10 +1478,11 @@ button {
 }
 
 </style>
-    <section class="game-section">
 
-    </section>
 </div>
+<section class="game-section">
+
+</section>
 {{-- End bottom content  --}}
 
  <div class="row pt-30 mt-30 " style="width: 100%;">
@@ -1521,6 +1497,7 @@ button {
                       {{-- <div class="flex flex-col"> --}}
 
             {{-- <div class="relative w-full "> --}}
+
                 <div class="container z-1" style="display: flex">
 
 
@@ -1723,7 +1700,6 @@ button {
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Add the Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
