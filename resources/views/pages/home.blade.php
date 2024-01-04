@@ -1058,7 +1058,7 @@ use App\Models\poststags;
 
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
-    <div class="widget rounded">
+    <div class="widget rounded" style="    border: 1px solid #dcd4d4;">
         <div class="widget-about data-bg-image text-center">
             <img src="{{ asset('انجابي فكتور-01-01.jpg') }}" alt="logo" class="mb-4" />
             <p class="mb-4">إنجابي هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية الموثوقة لصحة الأم والطفل خلال فترات الحمل والأمومة.</p>
@@ -1084,7 +1084,47 @@ use App\Models\poststags;
         </div>
     </div>
 
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">آخر المقالات</h3>
+        </div>
+        <div class="widget-content" style="display: flex;
+        flex-direction: column;
+        gap: 35px;">
+            <?php
+            $xx = 0;
+            ?>
+            @foreach ($posts as $singlepost)
+                @if (1)
+                    @if ($xx <= 5)
+                        <!-- post -->
+                        <div class="post post-list-sm circle" style="    display: flex;
 
+                        flex-direction: row-reverse;
+                    }">
+                            <div style="max-width: 85px;" class="thumb">
+                                <a href="/posts/{{ $singlepost->id }}/show">
+                                    <div class="inner">
+                                        <img style="border-radius: 2px;"
+                                            src="{{ asset('storage/' . $singlepost->IMG . '') }}"
+                                            alt="{{ $post->PIC_Name }}" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="details clearfix" style="    margin-left: 20px;    flex: 1;">
+                                <h6 class="post-title my-0"><a
+                                        href="/posts/{{ $singlepost->id }}/show">{{ $singlepost->TITLE }}</a>
+                                </h6>
+                            </div>
+                        </div>
+                    @endif
+                    <?php
+                    $xx++;
+                    ?>
+                @endif
+            @endforeach
+        </div>
+    </div>
 </div><!-- end center content Left -->
  </div> {{--end center content  --}}
  <div class="row pt-30 mt-30 " style="width: 100%;">
