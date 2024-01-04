@@ -1235,10 +1235,10 @@ use App\Models\poststags;
             style="flex-direction: row-reverse;">
 
             <li class="nav-item" role="presentation"><button aria-selected="true"
-                    class="nav-link active" data-tag-title="صحتك ماما" id="baby1"
+                    class="nav-link active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
                     type="button"> صحتك ماما </button>
             </li>
-            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
                     data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
             </li>
         </ul>
@@ -1491,83 +1491,7 @@ button {
 </section>
 {{-- End bottom content  --}}
 
- <div class="row pt-30 mt-30 " style="width: 100%;">
-                    <div class="col-lg-12">
-                        <div class="section-title-area text-center">
-                            <h1 class="section-title section-title-border " ><span class="circle-title">{{ $first_tag->TITLE }}</span></h1>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="container"> --}}
-                {{-- <div class="containslidbar"> --}}
-                      {{-- <div class="flex flex-col"> --}}
-
-            {{-- <div class="relative w-full "> --}}
-
-                <div class="container z-1" style="display: flex">
-
-
-                        <div >
-                            <div class="bg-white  dark:bg-gray-800/40  rounded-md w-full relative  duration-500 ease-in-out" style="width: 600px">
-                                <div class="flex-auto p-4">
-                                    <div class="overflow-hidden relative">
-                                        @if (count($first_tag->posts) > 0)
-
-                                        <img class="rounded-lg w-full" src="{{ asset($first_tag->posts[0]->IMG) }}" alt="" />
-                                        @endif
-                                        <div class="p-4 absolute z-2 bottom-0 w-100">
-                                            {{-- <span class="focus:outline-none text-[12px] bg-slate-600 text-slate-200 dark:text-slate-200 rounded font-medium py-1 px-2">27 Aug 2023</span> --}}
-                                            <a href="#" class="my-3 block text-[36px] leading-12 font-normal tracking-tight text-dark-200
-                                            dark:text-dark after:absolute after:inset-0 z-3">  @if (count($first_tag->posts) > 0)
-
-                                            {{ $first_tag->posts[0]->TITLE }}
-                                            @endif
-</a>
-
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>
-
-                        <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-4 self-center" style="    transform: translateY(22px);
-">
-                                        @if (count($first_tag->posts) > 0)
-
-                            @foreach ( $first_tag->posts->skip(1)->take(4) as $post )
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl  w-full relative p-1 mb-4 hover-translate" style=" width:600px;   border: 2px solid #eee;">
-                                <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
-                                    <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
-                                        <img src="{{ asset($post->IMG) }}" alt="" class="max-w-full  rounded-xl" style="    height: 101px !important;
-                                        width: 183px;
-                                        object-fit: cover;">
-                                    </div><!--end col-->
-                                    <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
-                                        <div class=" h-full flex flex-col p-3">
-
-                                            <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}" class="text-lg sm:text-xl font-medium  text-gray-600 dark:text-slate-300 block">
-                                              {{ $post->TITLE }}
-                                            </a>
-                                        </div><!--end card-body-->
-                                    </div><!--end col-->
-                                </div><!--end grid-->
-                            </div> <!--end card-->
-                        @endforeach
-                        @endif
-
-                            {{-- <a href="{{ route('showtag',["tag"=> $first_tag->id]) }}"  class="px-2 py-2 lg:px-4 bg-transparent  text-base   transition hover:bg-primary-500 border border-primary font-medium w-full" style="display:Block; text-align:center">View all</a> --}}
-                        </div><!--end col-->
-
-                    </div><!--end inner-grid-->
-                </div><!--end container-->
-            </div>
-        {{-- </div>
-
-    </div>
-    </div>
-    </div> --}}
-{{-- newone  --}}
-
+ 
 
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
