@@ -210,7 +210,7 @@ $havevideo=true;
 
 
 
-        $content = View::make('partial.thumb', compact('posts_thumbs','havevideo'))->render();
+        $content = View::make('partial.content_slider', compact('posts_content','havevideo'))->render();
 
         return response()->json(['content' => $content]);
     }

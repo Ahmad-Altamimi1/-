@@ -1243,7 +1243,9 @@ use App\Models\poststags;
         </ul>
     </div>
 
+    <section class="game-section">
 
+    </section>
 </div>
 {{-- End bottom content  --}}
 
@@ -1601,12 +1603,19 @@ use App\Models\poststags;
     });
 
 
+
+
+
+
+
+
+
 // to fetxh data in bootom content
 document.addEventListener('DOMContentLoaded', function() {
 
 
 // Store initial content
-var initialContent = document.querySelector('.ahmadaltameme').innerHTML;
+var initialContent = document.querySelector('.game-section').innerHTML;
 
 // Function to fetch content based on tag title
 function fetchContent(tagTitle) {
@@ -1622,11 +1631,11 @@ function fetchContent(tagTitle) {
         })
         .then(function(data) {
             console.log(data);
-            document.querySelector('.ahmadaltameme').innerHTML = data.content;
+            document.querySelector('.game-section').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.ahmadaltameme').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
