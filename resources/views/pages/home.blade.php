@@ -997,7 +997,12 @@ use App\Models\poststags;
 .circle_image img{
     width: 80%;
 }
-
+.col-sm-3.card_circle_image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 <div class="center_content container pt-60" dir="rtl">
     <div class="center_content_Right">
