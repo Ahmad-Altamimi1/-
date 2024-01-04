@@ -965,6 +965,29 @@ use App\Models\poststags;
     <a class="trimester-three"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
   </div>
 
+  <div class="pergant-month-slider"><!-- PRODUCT SLIDER AREA START -->
+    <div class="ltn__product-slider-area ltn__product-gutter  pt-60 pb-40">
+        <div class="container">
+
+            <div class="row ltn__product-slider-item-four-active slick-arrow-1">
+                <!-- ltn__product-item -->
+                <div class="col-12">
+<p>sdfjkhdsh</p>
+                </div>
+                <div class="col-12">
+<p>sdfjkhdsh</p>
+                </div>
+                <div class="col-12">
+<p>sdfjkhdsh</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCT SLIDER AREA END --></div>
+
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
 
