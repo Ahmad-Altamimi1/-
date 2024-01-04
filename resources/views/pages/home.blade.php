@@ -965,64 +965,16 @@ use App\Models\poststags;
     <a class="trimester-three"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
   </div>
 
-  <div class="pergant-month-slider"><!-- PRODUCT SLIDER AREA START -->
-    <div class="ltn__product-slider-area ltn__product-gutter  pt-60 pb-40">
-        <div class="container">
-
-            <div class="row ltn__product-slider-item-four-active slick-arrow-1">
-
-
-                <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>  <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>  <div class="col-12">
-                    <div class="ltn__product-item text-center">
-                        <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
-
-                        </div>
-                    </div>
-                </div>
-
-        </div>
+  <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
+    <div class="category-slider">
+        <div class="category-slide">Category 1</div>
+        <div class="category-slide">Category 2</div>
+        <div class="category-slide">Category 3</div>
+        <!-- Add more category slides as needed -->
     </div>
-    <!-- PRODUCT SLIDER AREA END --></div>
+    </div>
+</div>
+    <!-- PRODUCT SLIDER AREA END -->
 
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
