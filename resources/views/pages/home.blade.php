@@ -1358,15 +1358,14 @@ use App\Models\poststags;
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    
+
 
         // Store initial content
         var initialContent = document.querySelector('.ahmadaltameme').innerHTML;
 
         // Function to fetch content based on tag title
         function fetchContent(tagTitle) {
-            var loader = document.querySelector('.preloadd');
-            loader.style.display = 'block';
+         
 
             // Fetch content using the fetch API
             fetch('/fetch-content?tagTitle=' + tagTitle)
