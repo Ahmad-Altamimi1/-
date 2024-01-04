@@ -985,157 +985,71 @@ use App\Models\poststags;
   </div>
 
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
-    <div class="row">
-        <!-- post -->
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title">
-                    <?php
+    <section id="hero">
 
-                    //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
-                    //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
-                    ?>
-                    <a href="{{ route('videotags', ['id' => 1]) }}">
-                        طبكم TV
-                    </a>
-                </h4>
-            </div>
+        <div class="container-xl">
 
-            <a href="{{ route('groupsecbyid', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        {{-- <img style="border-radius: 7px;" src="{{ asset('storage/' . $TV->IMG . '') }}" --}}
-                            alt="طبكم" />
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+
+                    <!-- post tabs -->
+                    <div class="post-tabs rounded bordered">
+                        <!-- tab navs -->
+                        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
+                            style="flex-direction: row-reverse;">
+
+                            <li class="nav-item" role="presentation"><button aria-selected="true"
+                                    class="nav-link active" data-tag-title="الأعشاب" id="tag1"
+                                    type="button">الأعشاب</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="سرطان الثدي" id="tag2" type="button">سرطان الثدي</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="التغذية" id="tag3" type="button">التغذية</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="الصحة النفسية" id="tag4" type="button">الصحة النفسية</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="البشرة" id="tag5" type="button">البشرة</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="الحساسية" id="tag6" type="button">الحساسية</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="أمراض الدم" id="tag6" type="button">أمراض الدم</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="طبكم TV" id="tag7" type="button"> طبكم TV</button>
+                            </li>
+
+
+
+
+
+
+
+                        </ul>
+                        <!-- tab contents -->
+                        <div class="tab-content" id="postsTabContent">
+                            <!-- loader -->
+                            <div class="lds-dual-ring"></div>
+                            <!-- popular posts -->
+                            <div class="tab-pane fade show ahmadaltameme active">
+                                <div class="row">
+
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
-            </a>
-        </div>
 
-        <!-- post -->
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title"><a href="{{ route('groupsecbyid', ['id' => 1]) }}">أمراض الدم
-                        </a></h4>
-            </div>
-            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;aspect-ratio:1  "
-                            src="{{ asset('img/Haematology-Clinic.jpg') }}" alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- post -->
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title"><a href="{{ route('ShoWarticle', ['id' => 1]) }}"> الصحة
-                        النفسية</a></h4>
-            </div>
-            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;"
-                            src="{{ asset('img/1683617820858 copy.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-        <!-- post -->
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title"><a href="{{ route('showgroup', ['id' => 1]) }}">الأمراض</a></h4>
-            </div>
-            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;" src="{{ asset('img/coronavirus-2.tmb-479v.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-        <!-- post -->   @php
-// $r=App\Models\groups::where('TITLE', '=', 'موضوعات طبية')->first()->id;
-                        @endphp
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title"><a href="{{ route('showgroup', ['id' =>1]) }}"> موضوعات طبية</a></h4>
-
-
-                {{-- <h4 class="post-title"><a href="{{ route('showgroup', ['id' => App/Models/groups::where('TAG','LIKE','%'.$mudu3attbeh->id.'%')])->first() }}">موضوعات
-                        طبية</a></h4> --}}
-            </div>
-            <a href="{{ route('showgroup', ['id' => 1]) }}}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;"
-                            src="{{ asset('img/stethoscope-doctor-md-medical-health-hospital.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-
-                <h4 class="post-title"><a href="{{ route('ShoWarticle', ['id' => 1]) }}"> الأعشاب
-                    </a></h4>
-            </div>
-            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;" src="{{ asset('img/Herbs-1-e1598167694617.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                <h4 class="post-title"><a href="https://injaby.com/">إنجابي</a></h4>
-            </div>
-            <a href="https://injaby.com/">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;" src="{{ asset('img/العطور-مختلفة-أثناء-الحمل-كنوز-الطيب-2-1.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
-            <div class="details clearfix">
-                @php
-                // 1=  App\Models\groups::where('TITLE', '=', 'جسم الانسان')->first()->id;
-              @endphp
-                <h4 class="post-title"><a href="{{ route('showgroup', ['id' =>1 ]) }}"> جسم الانسان</a></h4>
-            </div>
-            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
-                <div class="thumb2 rounded">
-                    <div class="inner">
-                        <img style="border-radius: 7px;" src="{{ asset('img/Anatomy_share.jpg') }}"
-                            alt="طبكم" />
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
-
-    </div>
+    </section>
     </div>
 </div>
     <!-- PRODUCT SLIDER AREA END -->
