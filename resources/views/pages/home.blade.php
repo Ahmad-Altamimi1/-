@@ -937,6 +937,10 @@ use App\Models\poststags;
     z-index: 2;
 
     }
+    .trimester-three:hover{
+        transition: 0.3s;
+        transform: rotate(0deg);
+    }
     .hearts-wrapper a {
         width: 300px;
     }
