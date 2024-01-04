@@ -995,16 +995,16 @@ use App\Models\poststags;
                     //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
                     //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
                     ?>
-                    <a href="{{ route('videotags', ['id' => $TV->id]) }}">
+                    <a href="{{ route('videotags', ['id' => 1]) }}">
                         طبكم TV
                     </a>
                 </h4>
             </div>
 
-            <a href="{{ route('groupsecbyid', ['id' => $TV->id]) }}">
+            <a href="{{ route('groupsecbyid', ['id' => 1]) }}">
                 <div class="thumb2 rounded">
                     <div class="inner">
-                        <img style="border-radius: 7px;" src="{{ asset('storage/' . $TV->IMG . '') }}"
+                        {{-- <img style="border-radius: 7px;" src="{{ asset('storage/' . $TV->IMG . '') }}" --}}
                             alt="طبكم" />
                     </div>
                 </div>
