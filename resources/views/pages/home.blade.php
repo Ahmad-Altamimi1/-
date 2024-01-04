@@ -926,99 +926,12 @@ use App\Models\poststags;
     </div>
 </div>
   <div class="hearts-wrapper">
-    <a class="trimester-circle" style="" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><span class="heart_text">الثلث الأول</span><div class="heart green">♥</div></a>
-    <a class="trimester-circle"style="background-image: url('pages/img/photo-1568043625493-2b0633c7c491 (1).avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><span class="heart_text">الثلث الثاني</span><div class="heart pink">♥</div></a>
-    <a class="trimester-circle" style="background-image: url('pages/img/photo-1585010873004-923f9a54e54e.avif')" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><span class="heart_text">الثلث الثالث</span><div class="heart blue">♥</div></a>
+    <a class="trimester-circle" style="" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><img src="{{ asset('pages/img/months/اول 1.webp') }}" alt=""><div class="heart green">♥</div></a>
+    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><img src="{{asset('pages/img/months/ثاني 2.webp')  }}" alt=""><div class="heart pink">♥</div></a>
+    <a class="trimester-circle"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
   </div>
 <!--Invisible Box -->
-<div class=box>
 
-    <!--begin miffy head-->
-    <div class="miffy-head">
-
-      <!-- Head Copy -->
-      <div class="miffy-head-copy"></div><!-- End head copy -->
-
-
-      <!-- eyes -->
-      <div class="left-eye"></div>
-      <div class="right-eye"></div>
-      <!-- end eyes-->
-
-      <!-- ears -->
-      <div class="left-ear"></div>
-      <div class="right-ear"></div>
-      <!-- end ears-->
-
-      <!-- mouth-->
-      <div class="mouth1"></div>
-      <div class="mouth2"></div>
-      <!-- end mouth-->
-
-    </div><!--end miffy head-->
-
-    <!-- begin miffy body -->
-    <div class="miffy-body"></div>
-    <div class="left-arm"></div>
-    <div class="right-arm"></div>
-    <!--end miffy body-->
-
-    <!--begin ruler-->
-  <div class="ruler">
-
-    <div class="miffy-text">miffy</div>
-    <div class="mini-miffy">
-      <div class="mini-left-ear"></div>
-      <div class="mini-right-ear"></div>
-    </div>
-
-    <div class="numbers">
-      <ul>
-        <li>٩
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٨
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٧
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٦
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٥
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٤
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li> ٣
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-        <li>٢
-          <div class="sm-line1"></div>
-          <div class="sm-line2"></div>
-          <div class="lg-line"></div></li>
-          <li>١
-            <div class="sm-line1"></div>
-            <div class="sm-line2"></div>
-            <div class="lg-line"></div></li>
-          <li>
-      </ul>
-    </div>
-
-
-  </div><!--end ruler-->
-
-
-  </div> <!-- End box -->
 </div>
 
 
