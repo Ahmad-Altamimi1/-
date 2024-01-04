@@ -19,7 +19,7 @@
             </div>
             <div class="details">
                 <h5 class="post-title mb-3 mt-3"><a
-                        href="/{{$havevideo?'videos':'posts'}} /{{ $posts_thumb->id }}/show">{{ Str::limit($posts_thumb->TITLE, 20) }}</a>
+                        href="/{{$havevideo?'videos':'posts'}} /{{ $posts_thumb->id }}/show">{{ Str::limit($posts_thumb->TITLE, 1000) }}</a>
                 </h5>
                 <p class="excerpt mb-0">
                     {{ Str::limit($posts_thumb->DESCRIPTION, 20) }}</p>
