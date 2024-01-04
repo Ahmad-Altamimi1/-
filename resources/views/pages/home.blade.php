@@ -5,8 +5,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
         </div>
 <style>
 
@@ -986,17 +985,156 @@ use App\Models\poststags;
   </div>
 
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
-    <div class="category-slider">
-        <div class="category-slide">Category 1</div>
-        <div class="category-slide">Category 2</div>
-        <div class="category-slide">Category 3</div>
-        <div class="category-slide">Category 1</div>
-        <div class="category-slide">Category 2</div>
-        <div class="category-slide">Category 3</div>
-        <div class="category-slide">Category 1</div>
-        <div class="category-slide">Category 2</div>
-        <div class="category-slide">Category 3</div>
-        <!-- Add more category slides as needed -->
+    <div class="row">
+        <!-- post -->
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title">
+                    <?php
+
+                    //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
+                    //   $alnfseh=App\Models\poststags::where("TITLE", '=', 'الصحة النفسية')->first()
+                    ?>
+                    <a href="{{ route('videotags', ['id' => $TV->id]) }}">
+                        طبكم TV
+                    </a>
+                </h4>
+            </div>
+
+            <a href="{{ route('groupsecbyid', ['id' => $TV->id]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;" src="{{ asset('storage/' . $TV->IMG . '') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- post -->
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title"><a href="{{ route('groupsecbyid', ['id' => 1]) }}">أمراض الدم
+                        </a></h4>
+            </div>
+            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;aspect-ratio:1  "
+                            src="{{ asset('img/Haematology-Clinic.jpg') }}" alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- post -->
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title"><a href="{{ route('ShoWarticle', ['id' => 1]) }}"> الصحة
+                        النفسية</a></h4>
+            </div>
+            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;"
+                            src="{{ asset('img/1683617820858 copy.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <!-- post -->
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title"><a href="{{ route('showgroup', ['id' => 1]) }}">الأمراض</a></h4>
+            </div>
+            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;" src="{{ asset('img/coronavirus-2.tmb-479v.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <!-- post -->   @php
+// $r=App\Models\groups::where('TITLE', '=', 'موضوعات طبية')->first()->id;
+                        @endphp
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title"><a href="{{ route('showgroup', ['id' =>1]) }}"> موضوعات طبية</a></h4>
+
+
+                {{-- <h4 class="post-title"><a href="{{ route('showgroup', ['id' => App/Models/groups::where('TAG','LIKE','%'.$mudu3attbeh->id.'%')])->first() }}">موضوعات
+                        طبية</a></h4> --}}
+            </div>
+            <a href="{{ route('showgroup', ['id' => 1]) }}}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;"
+                            src="{{ asset('img/stethoscope-doctor-md-medical-health-hospital.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+
+                <h4 class="post-title"><a href="{{ route('ShoWarticle', ['id' => 1]) }}"> الأعشاب
+                    </a></h4>
+            </div>
+            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;" src="{{ asset('img/Herbs-1-e1598167694617.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                <h4 class="post-title"><a href="https://injaby.com/">إنجابي</a></h4>
+            </div>
+            <a href="https://injaby.com/">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;" src="{{ asset('img/العطور-مختلفة-أثناء-الحمل-كنوز-الطيب-2-1.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="post post-over-content col-md-3 pt-3" style="text-align: center;">
+            <div class="details clearfix">
+                @php
+                // 1=  App\Models\groups::where('TITLE', '=', 'جسم الانسان')->first()->id;
+              @endphp
+                <h4 class="post-title"><a href="{{ route('showgroup', ['id' =>1 ]) }}"> جسم الانسان</a></h4>
+            </div>
+            <a href="{{ route('ShoWarticle', ['id' => 1]) }}">
+                <div class="thumb2 rounded">
+                    <div class="inner">
+                        <img style="border-radius: 7px;" src="{{ asset('img/Anatomy_share.jpg') }}"
+                            alt="طبكم" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
     </div>
     </div>
 </div>
@@ -1219,8 +1357,8 @@ use App\Models\poststags;
 
 
     @endsection
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script> window.onload = function ()
@@ -1299,24 +1437,6 @@ use App\Models\poststags;
         var categoryName = $(this).text();
 
         // Perform any action related to the selected category name
-        console.log('Selected category:', categoryName);
-    });
-});
-
-</script>
-
-<script>
-    $(document).ready(function() {
-    // Category slider
-    $('.category-slider').slick({
-        infinite: true,
-        slidesToShow: 3, // Adjust the number of visible slides
-        slidesToScroll: 1
-    });
-
-    // Handle click events on category slides
-    $('.category-slider').on('click', '.category-slide', function() {
-        var categoryName = $(this).text();
         console.log('Selected category:', categoryName);
     });
 });
