@@ -40,3 +40,28 @@
 </div>
 </div>
 
+<!-- Include Slick Slider scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: false,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+                // Add more breakpoints as needed
+            ]
+        });
+    });
+</script>

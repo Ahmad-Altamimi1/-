@@ -5,12 +5,12 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <head>
-        <!-- Add the Slick Slider CSS -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <!-- Add the Slick Slider theme CSS -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-      </head>
+<head>
+  <!-- Add the Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the Slick Slider theme CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
 
         </div>
 <style>
@@ -1358,7 +1358,6 @@ use App\Models\poststags;
     <!-- Initialize the slider in your custom script -->
     <script>
       $(document).ready(function(){
-        console.log('rerererer');
         $('.slider-container').slick({
           slidesToShow: 6,
           slidesToScroll: 1,
