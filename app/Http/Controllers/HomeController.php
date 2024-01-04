@@ -209,7 +209,6 @@ $havevideo=true;
 
         }}
 
-        $sortingOption = request('sort');
         $pageid = $id;
 
 
