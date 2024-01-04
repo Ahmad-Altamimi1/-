@@ -918,10 +918,9 @@ use App\Models\poststags;
     }
     .trimester-one{
         position: absolute;
-    left: 47px;
+    left: 118px;
     bottom: 17px;
     transform: rotate(-14deg);
-    z-index: 2;
 
 
     }
@@ -932,9 +931,11 @@ use App\Models\poststags;
     }
     .trimester-three{
         position: absolute;
-    right: 34px;
+    right: 115px;
     bottom: 25px;
     transform: rotate(15deg);
+    z-index: 2;
+
     }
     .hearts-wrapper a {
         width: 300px;
@@ -942,7 +943,7 @@ use App\Models\poststags;
     .months-Title{
         background: #dacded;
     padding: 7px;
-    color: black;
+    color: black !important;
     border-radius: 6px;
     border: 2px solid #c8b8e0;
     }
