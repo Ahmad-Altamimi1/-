@@ -947,6 +947,25 @@ use App\Models\poststags;
     border-radius: 6px;
     border: 2px solid #c8b8e0;
     }
+
+
+.category-slider {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.category-slide {
+    float: left;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 </style>
 <div class="center_content container" dir="rtl">
     <div class="center_content_Right">
@@ -1257,5 +1276,24 @@ use App\Models\poststags;
         // Other code
     });
 
+
+</script>
+<script>
+    $(document).ready(function() {
+    // Category slider
+    $('.category-slider').on('click', '.category-slide', function() {
+        // Remove active class from all category slides
+        $('.category-slide').removeClass('active');
+
+        // Add active class to the clicked category slide
+        $(this).addClass('active');
+
+        // Get the selected category name
+        var categoryName = $(this).text();
+
+        // Perform any action related to the selected category name
+        console.log('Selected category:', categoryName);
+    });
+});
 
 </script>
