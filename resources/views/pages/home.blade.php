@@ -966,6 +966,16 @@ use App\Models\poststags;
     cursor: pointer;
 }
 
+
+#postsTab {
+            overflow: hidden;
+        }
+
+        .nav-tabs {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
 </style>
 <div class="center_content container" dir="rtl">
     <div class="center_content_Right">
@@ -1276,8 +1286,26 @@ use App\Models\poststags;
     @endsection
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // JavaScript code to handle the slider functionality
+        $(document).ready(function () {
+            var slider = $('#postsTab .nav-tabs');
+            var activeTab = $('#postsTab .nav-link.active');
+            var tabWidth = activeTab.outerWidth();
 
+            // Set the initial position of the slider
+            slider.css('transform', 'translateX(' + activeTab.position().left + 'px)');
+
+            // Change the position of the slider when a tab is clicked
+            $('#postsTab .nav-link').on('click', function () {
+                var position = $(this).position().left;
+                slider.css('transform', 'translateX(' + position + 'px)');
+            });
+        });
+    </script>
     <script> window.onload = function ()
     {
         // var desiredHeight = "calc(100vh - 218px)";
