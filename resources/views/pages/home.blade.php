@@ -997,7 +997,28 @@ use App\Models\poststags;
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="ltn__product-item text-center">
+                        <div class="product-info">
+                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
 
+                        </div>
+                    </div>
+                </div>  <div class="col-12">
+                    <div class="ltn__product-item text-center">
+                        <div class="product-info">
+                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-12">
+                    <div class="ltn__product-item text-center">
+                        <div class="product-info">
+                            <h2 class="product-title"><a href="product-details.html">Pink Flower Tree</a></h2>
+
+                        </div>
+                    </div>
+                </div>
 
         </div>
     </div>
