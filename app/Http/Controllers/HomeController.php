@@ -193,7 +193,7 @@ $slicedTags=[];
         $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
 
         // Get posts associated with the tag
-        $posts_thumbs = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+        $posts_content = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
         $havevideo=false;
         if (count($posts_thumbs)==0 ) {
 
@@ -201,7 +201,7 @@ $slicedTags=[];
             $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
         if ( count(Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get())>0) {
 $havevideo=true;
-            $posts_thumbs = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+            $posts_content = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
 
         }}
 
