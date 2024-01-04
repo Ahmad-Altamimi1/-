@@ -1054,8 +1054,7 @@ use App\Models\poststags;
 
     </section>
     </div>
-</div>
-    <!-- PRODUCT SLIDER AREA END -->
+
 
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
