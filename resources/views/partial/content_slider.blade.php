@@ -7,7 +7,7 @@
             <div class="item" style="background-image: url({{ $post->IMG }});">
                 <div class="item-desc">
                     <h3>{{ $post->TITLE }}</h3>
-                    <p>{{ $post->DESCRIPTION}}</p>
+                    {{-- <p>{{ $post->DESCRIPTION}}</p> --}}
                 </div>
             </div>
         @endforeach
