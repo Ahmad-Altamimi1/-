@@ -929,7 +929,7 @@ use App\Models\poststags;
         z-index: 1;
 
     }
-    .trimester-tow{
+    .trimester-tow:hover{
         transition: 0.4s;
 
         scale: 1.1;
