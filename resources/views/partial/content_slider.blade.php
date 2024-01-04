@@ -18,14 +18,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-     $(".custom-carousel").owlCarousel({
-  autoWidth: true,
-  loop: true
-});
-$(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
-    $(".custom-carousel .item").not($(this)).removeClass("active");
-    $(this).toggleClass("active");
-  });
-});
+    $(document).ready(function () {
+        $(".custom-carousel").owlCarousel({
+            autoWidth: true,
+            loop: true
+        });
+
+        $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+        });
+    });
 </script>
