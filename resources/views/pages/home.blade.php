@@ -5,7 +5,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         </div>
 <style>
 
@@ -1218,7 +1219,7 @@ use App\Models\poststags;
 
 
     @endsection
-
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -1298,6 +1299,24 @@ use App\Models\poststags;
         var categoryName = $(this).text();
 
         // Perform any action related to the selected category name
+        console.log('Selected category:', categoryName);
+    });
+});
+
+</script>
+
+<script>
+    $(document).ready(function() {
+    // Category slider
+    $('.category-slider').slick({
+        infinite: true,
+        slidesToShow: 3, // Adjust the number of visible slides
+        slidesToScroll: 1
+    });
+
+    // Handle click events on category slides
+    $('.category-slider').on('click', '.category-slide', function() {
+        var categoryName = $(this).text();
         console.log('Selected category:', categoryName);
     });
 });
