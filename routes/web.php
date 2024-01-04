@@ -25,6 +25,7 @@ Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/hometest', [HomeController::class, "hometest"])->name("hometest");
 
 Route::get('/fetch-content', [HomeController::class, 'fetchContent']);
+Route::get('/fetch-content-bootom', [HomeController::class, 'fetchContentbottom']);
 
 // Posts management
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");

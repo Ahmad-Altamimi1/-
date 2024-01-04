@@ -1225,6 +1225,28 @@ use App\Models\poststags;
     </div>
 </div><!-- end center content Left -->
  </div> {{--end center content  --}}
+
+{{-- Start bottom content  --}}
+<div class="bottom_content">
+    <div class="post-tabs rounded bordered" dir="ltr">
+        <!-- tab navs -->
+        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
+            style="flex-direction: row-reverse;">
+
+            <li class="nav-item" role="presentation"><button aria-selected="true"
+                    class="nav-link active" data-tag-title="صحتك ماما" id="baby1"
+                    type="button"> صحتك ماما </button>
+            </li>
+            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                    data-tag-title="صحةالطفل" id="baby" type="button"> صحةالطفل" </button>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+{{-- End bottom content  --}}
+
  <div class="row pt-30 mt-30 " style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
@@ -1578,6 +1600,63 @@ use App\Models\poststags;
         fetchContent('الشهر الثامن');
     });
 
+
+// to fetxh data in bootom content
+document.addEventListener('DOMContentLoaded', function() {
+
+
+// Store initial content
+var initialContent = document.querySelector('.ahmadaltameme').innerHTML;
+
+// Function to fetch content based on tag title
+function fetchContent(tagTitle) {
+
+
+    // Fetch content using the fetch API
+    fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Return the parsed JSON
+        })
+        .then(function(data) {
+            console.log(data);
+            document.querySelector('.ahmadaltameme').innerHTML = data.content;
+        })
+        .catch(function(error) {
+            console.error(error);
+            document.querySelector('.ahmadaltameme').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+        });
+}
+
+// Attach click event to buttons
+document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('button[id^="baby"]').forEach(function(otherButton) {
+            otherButton.classList.remove('active');
+            otherButton.style.backgroundColor = '';
+            otherButton.style.color = '';
+        });
+
+        // Add active class to the clicked button
+        button.classList.add('active');
+        button.style.backgroundColor = '#70b646';
+        button.style.color = '#111111';
+
+        var tagTitle = button.getAttribute('data-tag-title');
+        fetchContent(tagTitle);
+    });
+});
+
+// Fetch content for tag1 on page load and set it as active
+var tag1Button = document.getElementById('baby1');
+tag1Button.classList.add('active');
+tag1Button.style.backgroundColor = '#70b646';
+tag1Button.style.color = '#111111';
+fetchContent('صحتك ماما');
+});
     var slickNextButton = document.querySelector('.slick-next');
 
     setTimeout(function() {
