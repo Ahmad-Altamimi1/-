@@ -965,7 +965,13 @@ use App\Models\poststags;
     border-radius: 5px;
     cursor: pointer;
 }
-
+.post.post-list-sm:after{
+    display: none !important;
+}
+.widget{
+    border: solid 1px #EBEBEB;
+    padding: 35px 30px;
+}
 </style>
 <div class="center_content container pt-60" dir="rtl">
     <div class="center_content_Right">
@@ -1058,7 +1064,7 @@ use App\Models\poststags;
 
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
-    <div class="widget rounded" style="    border: 1px solid #dcd4d4;">
+    <div class="widget rounded" >
         <div class="widget-about data-bg-image text-center">
             <img src="{{ asset('انجابي فكتور-01-01.jpg') }}" alt="logo" class="mb-4" />
             <p class="mb-4">إنجابي هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية الموثوقة لصحة الأم والطفل خلال فترات الحمل والأمومة.</p>
@@ -1078,7 +1084,7 @@ use App\Models\poststags;
         </div>
     </div>
 
-    <div class="widget rounded" style="    border: 1px solid #dcd4d4;">
+    <div class="widget rounded" >
         <div class="widget-about data-bg-image text-center">
             <img src="{{ asset('pages/img/tebkumlogo.png') }}" alt="logo" class="mb-4" />
         </div>
@@ -1086,7 +1092,7 @@ use App\Models\poststags;
 
     <div class="widget rounded">
         <div class="widget-header text-center">
-            <h3 class="widget-title">آخر المقالات</h3>
+            <h3 class="widget-title"> أعتني بطفلك</h3>
         </div>
         <div class="widget-content" style="display: flex;
         flex-direction: column;
