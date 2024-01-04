@@ -1476,7 +1476,12 @@ button {
     -webkit-transform: translateY(calc(100% - 42px));
   }
 }
-
+.game-section .item-desc {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    transition: all 0.4s ease-in-out; 
+}
 </style>
 
 </div>
@@ -1702,7 +1707,6 @@ button {
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Add the Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script> window.onload = function ()
     {
         // var desiredHeight = "calc(100vh - 218px)";
@@ -1914,5 +1918,5 @@ fetchContent('صحة الطفل');
         }
     }, 3000);
 
-   
+
 </script>
