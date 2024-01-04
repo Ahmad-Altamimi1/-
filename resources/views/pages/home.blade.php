@@ -1107,7 +1107,7 @@ use App\Models\poststags;
                                     <div class="inner">
                                         <img style="border-radius: 2px;"
                                             src="{{ asset('storage/' . $singlepost->IMG . '') }}"
-                                            alt="{{ $post->PIC_Name }}" />
+                                            alt="{{ $recentposts->PIC_Name }}" />
                                     </div>
                                 </a>
                             </div>
