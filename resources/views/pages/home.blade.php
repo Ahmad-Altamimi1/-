@@ -966,16 +966,6 @@ use App\Models\poststags;
     cursor: pointer;
 }
 
-
-#postsTab {
-            overflow: hidden;
-        }
-
-        .nav-tabs {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
 </style>
 <div class="center_content container" dir="rtl">
     <div class="center_content_Right">
@@ -995,8 +985,6 @@ use App\Models\poststags;
   </div>
 
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
-
-
     <section id="hero">
 
         <div class="container-xl">
@@ -1004,7 +992,7 @@ use App\Models\poststags;
             <div class="row gy-4">
 
                 <div class="col-lg-12">
-                    <div id="postsTab" class="nav nav-tabs nav-pills nav-fill" role="tablist">
+
                     <!-- post tabs -->
                     <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
@@ -1061,7 +1049,6 @@ use App\Models\poststags;
                         </div>
 
                     </div>
-                    </div>
 
                 </div>
 
@@ -1072,6 +1059,26 @@ use App\Models\poststags;
 
 </div> <!-- end center content Right -->
 <div class="center_content_Left">
+    <div class="widget rounded">
+        <div class="widget-about data-bg-image text-center">
+            <img src="{{ asset('pages/img/tebkumlogo.png') }}" alt="logo" class="mb-4" />
+            <p class="mb-4">طبكم هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية
+                الموثوقة لإثراء الثقافة الصحية ونشرها في أوساط المجتمع العربي</p>
+            <ul class="social-icons list-unstyled list-inline mb-0">
+                <li class="list-inline-item"><a href="https://www.facebook.com/tebkum"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/tebkum"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/@Tebkum"><i
+                            class="fab fa-youtube"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/tebkum"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.tiktok.com/tebkum"><i
+                            class='fab fa-tiktok'></i>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
 
 
 </div><!-- end center content Left -->
@@ -1289,26 +1296,8 @@ use App\Models\poststags;
     @endsection
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        // JavaScript code to handle the slider functionality
-        $(document).ready(function () {
-            var slider = $('#postsTab .nav-tabs');
-            var activeTab = $('#postsTab .nav-link.active');
-            var tabWidth = activeTab.outerWidth();
 
-            // Set the initial position of the slider
-            slider.css('transform', 'translateX(' + activeTab.position().left + 'px)');
-
-            // Change the position of the slider when a tab is clicked
-            $('#postsTab .nav-link').on('click', function () {
-                var position = $(this).position().left;
-                slider.css('transform', 'translateX(' + position + 'px)');
-            });
-        });
-    </script>
     <script> window.onload = function ()
     {
         // var desiredHeight = "calc(100vh - 218px)";
