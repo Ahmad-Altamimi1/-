@@ -972,21 +972,29 @@ use App\Models\poststags;
             <div class="row ltn__product-slider-item-four-active slick-arrow-1">
                 <!-- ltn__product-item -->
                 <div class="col-12">
-<p>sdfjkhdsh</p>
+                    <div class="ltn__product-item text-center">
+               dsahjfdasj
+                    </div>
                 </div>
                 <div class="col-12">
-<p>sdfjkhdsh</p>
+                    <div class="ltn__product-item text-center">
+               dsahjfdasj
+                    </div>
                 </div>
                 <div class="col-12">
-<p>sdfjkhdsh</p>
+                    <div class="ltn__product-item text-center">
+               dsahjfdasj
+                    </div>
                 </div>
                 <div class="col-12">
-<p>sdfjkhdsh</p>
+                    <div class="ltn__product-item text-center">
+               dsahjfdasj
+                    </div>
                 </div>
                 <div class="col-12">
-<p>sdfjkhdsh</p>
-                </div>
-
+                    <div class="ltn__product-item text-center">
+               dsahjfdasj
+                    </div>
                 </div>
 
 
