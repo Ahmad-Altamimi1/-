@@ -1238,7 +1238,7 @@ use App\Models\poststags;
                     type="button"> صحتك ماما </button>
             </li>
             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                    data-tag-title="صحةالطفل" id="baby" type="button"> صحةالطفل" </button>
+                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
             </li>
         </ul>
     </div>
@@ -1664,7 +1664,7 @@ var tag1Button = document.getElementById('baby1');
 tag1Button.classList.add('active');
 tag1Button.style.backgroundColor = '#70b646';
 tag1Button.style.color = '#111111';
-fetchContent('صحتك ماما');
+fetchContent('صحة الطفل');
 });
     var slickNextButton = document.querySelector('.slick-next');
 
