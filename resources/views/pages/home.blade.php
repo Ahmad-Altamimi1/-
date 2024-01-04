@@ -967,9 +967,9 @@ use App\Models\poststags;
 }
 
 </style>
-<div class="center_content container" dir="rtl">
+<div class="center_content container pt-60" dir="rtl">
     <div class="center_content_Right">
-<div class="row pt-60 pb-40" style="width: 100%;">
+<div class="row  pb-40" style="width: 100%;">
     <div class="col-lg-12">
         <div class="section-title-area text-center">
             <h1 class="section-title section-title-border" style=" font-size: 24px;">
@@ -1060,9 +1060,8 @@ use App\Models\poststags;
 <div class="center_content_Left">
     <div class="widget rounded">
         <div class="widget-about data-bg-image text-center">
-            <img src="{{ asset('pages/img/tebkumlogo.png') }}" alt="logo" class="mb-4" />
-            <p class="mb-4">طبكم هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية
-                الموثوقة لإثراء الثقافة الصحية ونشرها في أوساط المجتمع العربي</p>
+            <img src="{{ asset('انجابي فكتور-01-01.jpg') }}" alt="logo" class="mb-4" />
+            <p class="mb-4">إنجابي هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية الموثوقة لصحة الأم والطفل خلال فترات الحمل والأمومة.</p>
             <ul class="social-icons list-unstyled list-inline mb-0">
                 <li class="list-inline-item"><a href="https://www.facebook.com/tebkum"><i
                             class="fab fa-facebook-f"></i></a></li>
@@ -1076,6 +1075,12 @@ use App\Models\poststags;
                             class='fab fa-tiktok'></i>
                     </a></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="widget rounded" style="    border: 1px solid #dcd4d4;">
+        <div class="widget-about data-bg-image text-center">
+            <img src="{{ asset('pages/img/tebkumlogo.png') }}" alt="logo" class="mb-4" />
         </div>
     </div>
 

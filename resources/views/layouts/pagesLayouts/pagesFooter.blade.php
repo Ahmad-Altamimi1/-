@@ -187,7 +187,7 @@ console.log(document.querySelector('#searchcontent'));
 
 
 document.addEventListener("DOMContentLoaded", () => {
- 
+
 
 setTimeout(function() {
   hidePreloader();
