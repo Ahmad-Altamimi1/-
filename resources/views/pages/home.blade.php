@@ -917,7 +917,8 @@ use App\Models\poststags;
 ?>
 <style>
     .center_content{
-        display: flex;
+        display: grid;
+        grid-template-columns: 70% 30%;
         gap: 10px;
     }
 </style>
