@@ -989,6 +989,12 @@ use App\Models\poststags;
         <div class="category-slide">Category 1</div>
         <div class="category-slide">Category 2</div>
         <div class="category-slide">Category 3</div>
+        <div class="category-slide">Category 1</div>
+        <div class="category-slide">Category 2</div>
+        <div class="category-slide">Category 3</div>
+        <div class="category-slide">Category 1</div>
+        <div class="category-slide">Category 2</div>
+        <div class="category-slide">Category 3</div>
         <!-- Add more category slides as needed -->
     </div>
     </div>
