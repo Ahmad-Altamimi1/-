@@ -1358,8 +1358,7 @@ use App\Models\poststags;
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // document.querySelector(".preloader").style.display = "none";
-        document.querySelector(".preloader").style.display = "none";
+    
 
         // Store initial content
         var initialContent = document.querySelector('.ahmadaltameme').innerHTML;
