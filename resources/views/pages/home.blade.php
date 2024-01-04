@@ -977,6 +977,7 @@ use App\Models\poststags;
     background-color: #f2c6d1;
     height: 477px;
     display: flex;
+    padding: 10px 20px 40px ;
     border-radius: 12px;
 }
 /* .col-sm-3 card_circle_image{
@@ -985,9 +986,12 @@ use App\Models\poststags;
 } */
 .circle_image {
     border-radius: 50%;
-    width: 100%;
-    border:2px solid #969394;
+    width: 100px;
+    height: 100px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .circle_image img{
     width: 80%;
@@ -1083,7 +1087,8 @@ use App\Models\poststags;
     </div>
 
 <div class="injaby_category">
-    <div class="row">
+    <div class="row " style="justify-content: center">
+        <p style="text-align: center;padding:0 0 30px 0 ">أقسام إنجابي </p>
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
