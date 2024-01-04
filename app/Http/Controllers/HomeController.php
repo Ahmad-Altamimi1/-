@@ -48,7 +48,67 @@ class HomeController extends Controller
         return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy',  'defaultPosts', 'first_tag'));
     }
 
+    public function fetchContent(Request $request)
+    {
 
+        $tagTitle = $request->input('tagTitle');
+$slicedTags=[];
+        $tag = poststags::where('TITLE', $tagTitle)->first();
+        $id = $tag->id;
+        $tagbyid = poststags::find($id);
+        $tags = poststags::all();
+        $allgroups = groups::all();
+        $groupnew = [];
+        $slicedArray = [];
+        $otherIds = [];
+
+        foreach ($allgroups as $value) {
+            $grouptag = $value->TAG;
+            $grouparray = explode(',', $grouptag);
+
+            if (in_array($id, $grouparray)) {
+                $groupnew[] = $value;
+            }
+        }
+
+        foreach ($groupnew as $group) {
+            $grouptags = $group->TAG;
+            $grouparrays = explode(',', $grouptags);
+
+            $tagIndices = array_keys($grouparrays, $id);
+
+            foreach ($tagIndices as $index) {
+                $slicedArray = array_merge($slicedArray, array_slice($grouparrays, $index));
+            }
+
+            $otherIds = array_diff($grouparrays, $slicedArray);
+        }
+
+        // Extract post IDs from the TAG column in groups
+        $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
+
+        // Get posts associated with the tag
+        $posts_thumbs = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+        $havevideo=false;
+        if (count($posts_thumbs)==0 ) {
+
+
+            $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
+        if ( count(Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get())>0) {
+$havevideo=true;
+            $posts_thumbs = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+
+        }}
+
+        $sortingOption = request('sort');
+        $pageid = $id;
+
+
+
+        $content = View::make('partial.thumb', compact('posts_thumbs','havevideo'))->render();
+
+        return response()->json(['content' => $content]);
+    }
     public function tv_show($id){
         $video=Videos::find($id);
         $string = $video->TAG;

@@ -1356,3 +1356,71 @@ use App\Models\poststags;
 });
 
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // document.querySelector(".preloader").style.display = "none";
+        document.querySelector(".preloader").style.display = "none";
+
+        // Store initial content
+        var initialContent = document.querySelector('.ahmadaltameme').innerHTML;
+
+        // Function to fetch content based on tag title
+        function fetchContent(tagTitle) {
+            var loader = document.querySelector('.preloadd');
+            loader.style.display = 'block';
+
+            // Fetch content using the fetch API
+            fetch('/fetch-content?tagTitle=' + tagTitle)
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Return the parsed JSON
+                })
+                .then(function(data) {
+                    loader.style.display = 'none';
+                    console.log(data);
+                    document.querySelector('.ahmadaltameme').innerHTML = data.content;
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    document.querySelector('.ahmadaltameme').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+                });
+        }
+
+        // Attach click event to buttons
+        document.querySelectorAll('button[id^="tag"]').forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('button[id^="tag"]').forEach(function(otherButton) {
+                    otherButton.classList.remove('active');
+                    otherButton.style.backgroundColor = '';
+                    otherButton.style.color = '';
+                });
+
+                // Add active class to the clicked button
+                button.classList.add('active');
+                button.style.backgroundColor = '#70b646';
+                button.style.color = '#111111';
+
+                var tagTitle = button.getAttribute('data-tag-title');
+                fetchContent(tagTitle);
+            });
+        });
+
+        // Fetch content for tag1 on page load and set it as active
+        var tag1Button = document.getElementById('tag1');
+        tag1Button.classList.add('active');
+        tag1Button.style.backgroundColor = '#70b646';
+        tag1Button.style.color = '#111111';
+        fetchContent('الشهر الثامن');
+    });
+
+    var slickNextButton = document.querySelector('.slick-next');
+
+    setTimeout(function() {
+        if (slickNextButton) {
+            slickNextButton.click();
+        }
+    }, 3000);
+</script>
