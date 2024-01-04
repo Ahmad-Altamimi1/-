@@ -1000,29 +1000,32 @@ use App\Models\poststags;
                             style="flex-direction: row-reverse;">
 
                             <li class="nav-item" role="presentation"><button aria-selected="true"
-                                    class="nav-link active" data-tag-title="الأعشاب" id="tag1"
-                                    type="button">الأعشاب</button>
+                                    class="nav-link active" data-tag-title="الشهر الأول" id="tag1"
+                                    type="button">الشهر الأول</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="سرطان الثدي" id="tag2" type="button">سرطان الثدي</button>
+                                    data-tag-title="الشهر الثاني" id="tag2" type="button"> الشهر الثاني</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="التغذية" id="tag3" type="button">التغذية</button>
+                                    data-tag-title="الشهر الثالث" id="tag3" type="button">الشهر الثالث</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الصحة النفسية" id="tag4" type="button">الصحة النفسية</button>
+                                    data-tag-title="الشهر الرابع" id="tag4" type="button"> الشهر الرابع</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="البشرة" id="tag5" type="button">البشرة</button>
+                                    data-tag-title="الشهر الخامس" id="tag4" type="button">الشهر الخامس </button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الحساسية" id="tag6" type="button">الحساسية</button>
+                                    data-tag-title="الشهر السادس" id="tag5" type="button"> الشهر السادس</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="أمراض الدم" id="tag6" type="button">أمراض الدم</button>
+                                    data-tag-title="الشهر السابع" id="tag6" type="button">الشهر السابع</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="طبكم TV" id="tag7" type="button"> طبكم TV</button>
+                                    data-tag-title="الشهر الثامن" id="tag7" type="button"> الشهر الثامن</button>
+                            </li>
+                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                                    data-tag-title="الشهر التاسع" id="tag8" type="button">الشهر التاسع </button>
                             </li>
 
 
@@ -1365,7 +1368,7 @@ use App\Models\poststags;
 
         // Function to fetch content based on tag title
         function fetchContent(tagTitle) {
-         
+
 
             // Fetch content using the fetch API
             fetch('/fetch-content?tagTitle=' + tagTitle)
