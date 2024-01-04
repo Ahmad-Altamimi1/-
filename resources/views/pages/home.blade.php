@@ -1106,7 +1106,7 @@ use App\Models\poststags;
                                 <a href="/posts/{{ $singlepost->id }}/show">
                                     <div class="inner">
                                         <img style="border-radius: 2px;"
-                                            src="{{ asset('storage/' . $singlepost->IMG . '') }}"
+                                            src="{{ asset( $singlepost->IMG ) }}"
                                             />
                                     </div>
                                 </a>
