@@ -153,6 +153,10 @@ $havevideo=true;
         return response()->json(['content' => $content]);
     }
 
+
+
+
+
     public function fetchContentbottom(Request $request)
     {
 
@@ -195,7 +199,7 @@ $slicedTags=[];
         // Get posts associated with the tag
         $posts_content = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
         $havevideo=false;
-        if (count($posts_thumbs)==0 ) {
+        if (count($posts_content)==0 ) {
 
 
             $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
