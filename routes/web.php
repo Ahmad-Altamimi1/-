@@ -23,6 +23,7 @@ Route::get('/', [HomeController::class, "index"])->name("home");
 //home
 Route::get('/hometest', [HomeController::class, "hometest"])->name("hometest");
 
+Route::get('/fetch-content', [HomeController::class, 'fetchContent']);
 
 // Posts management
 Route::get('/getPosts_recentposts_Popular', [HomeController::class, "getPosts"])->name("getPosts");
