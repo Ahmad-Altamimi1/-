@@ -918,9 +918,11 @@ use App\Models\poststags;
     }
     .trimester-one{
         position: absolute;
-    right: 0;
-    transform: rotate(20deg);
+    left: 47px;
+    bottom: 17px;
+    transform: rotate(-14deg);
     z-index: 2;
+
 
     }
     .trimester-tow{
@@ -930,20 +932,28 @@ use App\Models\poststags;
     }
     .trimester-three{
         position: absolute;
-    left: 0;
-    transform: rotate(-20deg);
+    right: 34px;
+    bottom: 25px;
+    transform: rotate(15deg);
     }
     .hearts-wrapper a {
         width: 300px;
     }
+    .months-Title{
+        background: #dacded;
+    padding: 7px;
+    color: black;
+    border-radius: 6px;
+    border: 2px solid #c8b8e0;
+    }
 </style>
-<div class="center_content container">
+<div class="center_content container" dir="rtl">
     <div class="center_content_Right">
 <div class="row pt-60 pb-40" style="width: 100%;">
     <div class="col-lg-12">
         <div class="section-title-area text-center">
             <h1 class="section-title section-title-border" style=" font-size: 24px;">
-                <span class="circle-title"> الحمل</span>
+                <span class="circle-title months-Title"> </span>
             </h1>
         </div>
     </div>
