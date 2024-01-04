@@ -1379,7 +1379,6 @@ use App\Models\poststags;
                     return response.json(); // Return the parsed JSON
                 })
                 .then(function(data) {
-                    loader.style.display = 'none';
                     console.log(data);
                     document.querySelector('.ahmadaltameme').innerHTML = data.content;
                 })
