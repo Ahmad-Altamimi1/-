@@ -703,12 +703,7 @@ article {
   }
 
   .hearts-wrapper {
-    width: 100%;
-    height: 350px;
-    /* margin: 0 auto; */
-    /* margin: 1% 0; */
-    margin-top: -50px;
-    margin-bottom: 70px;
+    position: relative;
     display: flex;
     justify-content: center;
 
@@ -921,6 +916,26 @@ use App\Models\poststags;
         grid-template-columns: 70% 30%;
         gap: 10px;
     }
+    .trimester-one{
+        position: absolute;
+    right: 0;
+    transform: rotate(20deg);
+    z-index: 2;
+
+    }
+    .trimester-tow{
+        position: relative;
+        z-index: 1;
+
+    }
+    .trimester-three{
+        position: absolute;
+    left: 0;
+    transform: rotate(-20deg);
+    }
+    .hearts-wrapper a {
+        width: 300px;
+    }
 </style>
 <div class="center_content container">
     <div class="center_content_Right">
@@ -934,9 +949,9 @@ use App\Models\poststags;
     </div>
 </div>
   <div class="hearts-wrapper">
-    <a class="trimester-circle" style="" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><img src="{{ asset('pages/img/months/اول 1.webp') }}" alt=""><div class="heart green">♥</div></a>
-    <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><img src="{{asset('pages/img/months/ثاني 2.webp')  }}" alt=""><div class="heart pink">♥</div></a>
-    <a class="trimester-circle"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
+    <a class="trimester-one" style="" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الأول')->first()->id]) }}"><img src="{{ asset('pages/img/months/اول 1.webp') }}" alt=""><div class="heart green">♥</div></a>
+    <a class="trimester-tow" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><img src="{{asset('pages/img/months/ثاني 2.webp')  }}" alt=""><div class="heart pink">♥</div></a>
+    <a class="trimester-three"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
   </div>
 
 </div> <!-- end center content Right -->
