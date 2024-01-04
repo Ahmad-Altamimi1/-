@@ -7,6 +7,7 @@ use App\Models\Homeslider;
 use App\Models\poststags;
 use App\Models\groups;
 use App\Models\Videos;
+use Illuminate\Support\Facades\View;
 
 use function PHPSTORM_META\map;
 

@@ -6,7 +6,6 @@ use App\Http\Controllers\postcontrol;
 use App\Http\Controllers\SlidersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\GroupController;
-use Illuminate\Support\Facades\View;
 
 use App\Models\groups;
 use App\Models\Post;
