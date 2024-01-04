@@ -876,6 +876,7 @@ for ($i = count($str_arr) - 1; $i >= 0; $i--) {
     {
         return view('auth.passwords.change-password');
     }
+    
     public function showtag(Request $request,$tag){
         $tagbyid = poststags::find($tag);
         $tags = poststags::all();

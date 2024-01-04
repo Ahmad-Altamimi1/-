@@ -42,13 +42,54 @@ class HomeController extends Controller
         $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
-        
+
         // $videos=;
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
+        $left_side_bar_content=  getposts_in_one_tag('أعتني بطفلك');
+        $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
         $defaultPosts = Post::take(4)->get();
 
         return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy',  'defaultPosts', 'first_tag'));
     }
+    public function getposts_in_one_tag($tagname){
+        $tagbyid = poststags::where('TITLE','=',$tagname)->first();
+        $tag=$tagbyid ->id;
+        $tags = poststags::all();
+        $allgroups = groups::all();
+        $postintag = [];
+        $groupnew = [];
+        $ids = [];
+
+        foreach ($allgroups as $value) {
+            $grouptag = $value->TAG;
+            $grouparray = explode(',', $grouptag);
+
+            if (in_array($tag, $grouparray)) {
+                $groupnew[] = $value;
+            }
+        }
+
+        foreach ($groupnew as $group) {
+            $grouptags = $group->TAG;
+            $grouparrays = explode(',', $grouptags);
+
+            $tagIndices = array_keys($grouparrays, $tag);
+
+            foreach ($tagIndices as $index) {
+                $slicedArray = array_slice($grouparrays, $index);
+
+
+            }
+            $postintag = Post::whereIn("TAG", $slicedArray)->orderBy('SHOW', 'asc')->paginate(6);
+
+            $otherIds = array_diff($grouparrays, $slicedArray);
+    if (in_array($tag, $grouparray)) {
+$groupnew[]= $value;
+}
+ }
+ return $postintag;
+    }
+
 
     public function fetchContent(Request $request)
     {
