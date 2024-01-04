@@ -995,6 +995,8 @@ use App\Models\poststags;
   </div>
 
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
+
+
     <section id="hero">
 
         <div class="container-xl">
@@ -1002,7 +1004,7 @@ use App\Models\poststags;
             <div class="row gy-4">
 
                 <div class="col-lg-12">
-
+                    <div id="postsTab" class="nav nav-tabs nav-pills nav-fill" role="tablist">
                     <!-- post tabs -->
                     <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
@@ -1058,6 +1060,7 @@ use App\Models\poststags;
                             </div>
                         </div>
 
+                    </div>
                     </div>
 
                 </div>
