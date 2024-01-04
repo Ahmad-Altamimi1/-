@@ -915,7 +915,14 @@ background-color: white !important;
 <?php
 use App\Models\poststags;
 ?>
-<div class="container">
+<style>
+    .center_content{
+        display: flex;
+        gap: 10px;
+    }
+</style>
+<div class="center_content container">
+    <div class="center_content_Right">
 <div class="row pt-60 pb-40" style="width: 100%;">
     <div class="col-lg-12">
         <div class="section-title-area text-center">
@@ -930,11 +937,13 @@ use App\Models\poststags;
     <a class="trimester-circle" href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثاني')->first()->id]) }}"><img src="{{asset('pages/img/months/ثاني 2.webp')  }}" alt=""><div class="heart pink">♥</div></a>
     <a class="trimester-circle"  href="{{ route('showtag', ['tag' => poststags::where('TITLE', '=', 'الثلث الثالث')->first()->id]) }}"><img src="{{ asset('pages/img/months/ثالث 3.webp') }}" alt=""><div class="heart blue">♥</div></a>
   </div>
-<!--Invisible Box -->
 
-</div>
+</div> <!-- end center content Right -->
+<div class="center_content_Left">
 
 
+</div><!-- end center content Left -->
+ </div> {{--end center content  --}}
  <div class="row pt-30 mt-30 " style="width: 100%;">
                     <div class="col-lg-12">
                         <div class="section-title-area text-center">
