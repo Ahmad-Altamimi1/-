@@ -1480,7 +1480,8 @@ button {
     visibility: visible;
     opacity: 1;
     z-index: 2;
-    transition: all 0.4s ease-in-out; 
+    transition: all 0.4s ease-in-out;
+    display: block
 }
 </style>
 
