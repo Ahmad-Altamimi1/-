@@ -46,10 +46,10 @@ class HomeController extends Controller
         // $videos=;
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
         $left_side_bar_content=  getposts_in_one_tag('أعتني بطفلك');
-        $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
+        // $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
         $defaultPosts = Post::take(4)->get();
 
-        return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy',  'defaultPosts', 'first_tag'));
+        return view('pages.home',compact('recentposts', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag'));
     }
     public function getposts_in_one_tag($tagname){
         $tagbyid = poststags::where('TITLE','=',$tagname)->first();

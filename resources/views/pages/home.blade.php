@@ -1100,7 +1100,7 @@ use App\Models\poststags;
             <?php
             $xx = 0;
             ?>
-            @foreach ($recentposts as $singlepost)
+            @foreach ($$left_side_bar_content as $singlepost)
                 @if (1)
                     @if ($xx <= 5)
                         <!-- post -->
