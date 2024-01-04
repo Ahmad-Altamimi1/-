@@ -5,6 +5,12 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+    <head>
+        <!-- Add the Slick Slider CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <!-- Add the Slick Slider theme CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+      </head>
 
         </div>
 <style>
@@ -1347,7 +1353,30 @@ use App\Models\poststags;
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+    <!-- Initialize the slider in your custom script -->
+    <script>
+      $(document).ready(function(){
+        $('.slider-container').slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: false,
+          dots: true,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+            // Add more breakpoints as needed
+          ]
+        });
+      });
+    </script>
     <script> window.onload = function ()
     {
         // var desiredHeight = "calc(100vh - 218px)";
