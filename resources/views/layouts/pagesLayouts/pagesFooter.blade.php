@@ -117,8 +117,8 @@
     {{-- <script src="{{ url('pages/js/plugins.js') }}"></script> --}}
     <script src="{{ url('pages/js/slick.min.js') }}"></script>
     <!-- Main JS -->
-    <script src="{{ url ('pages/js/main.js') }}"></script>
-    <script src="{{ url ('pages/js/contact.js') }}"></script>
+    {{-- <script src="{{ url ('pages/js/main.js') }}"></script> --}}
+    {{-- <script src="{{ url ('pages/js/contact.js') }}"></script> --}}
     <script>
         $('.multiple-items').slick({
             infinite: true,
