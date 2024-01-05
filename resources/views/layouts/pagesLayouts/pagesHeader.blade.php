@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="{{ url('assets/libs/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/tailwind.min.css') }}">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <!-- Place favicon.png in the root directory -->
@@ -33,12 +33,10 @@
     <!-- Font Icons css -->
     <link rel="stylesheet" href="{{ url('pages/css/font-icons.css') }}">
     <!-- plugins css -->
-    {{-- <link rel="stylesheet" href="{{ url('pages/css/plugins.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('pages/css/plugins.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
-    <link rel="stylesheet" href="{{ url('pages/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ url('pages/css/slick-theme.css') }}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
