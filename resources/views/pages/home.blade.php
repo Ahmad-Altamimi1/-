@@ -1488,7 +1488,7 @@ button {
     padding: 0;
 
 }
-.ltn__blog-area .row {
+.grid-row{
     display: grid;
     grid-template-columns: repeat(6,auto);
     grid-template-rows: repeat(2,235px)
@@ -1515,7 +1515,7 @@ border-radius: none;
                     </div>
                 </div>
             </div>
-            <div class="row " style="display: flex">
+            <div class="row grid-row" style="display: flex">
                 <!-- Blog Item -->
                 @foreach($tags as $tag)
                 @if($tag->TITLE == "أثناء الحمل")
