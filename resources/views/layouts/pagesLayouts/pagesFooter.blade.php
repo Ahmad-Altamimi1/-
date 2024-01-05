@@ -114,7 +114,7 @@
         <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
 
         <script src="{{ url('assets/js/app.js') }}"></script>
-    <script src="{{ url('pages/js/plugins.js') }}"></script>
+    {{-- <script src="{{ url('pages/js/plugins.js') }}"></script> --}}
     <script src="{{ url('pages/js/slick.min.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ url ('pages/js/main.js') }}"></script>
