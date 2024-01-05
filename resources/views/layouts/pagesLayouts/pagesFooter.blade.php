@@ -121,6 +121,13 @@
     <script src="{{ url ('pages/js/main.js') }}"></script>
     <script src="{{ url ('pages/js/contact.js') }}"></script>
     <script>
+        $('.multiple-items').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+    </script>
+    <script>
 document.addEventListener('DOMContentLoaded', function() {
     var prevButton = document.querySelector('.slick-prev');
       console.log('tt');
