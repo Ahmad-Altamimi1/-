@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="{{ url('assets/libs/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/tailwind.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <!-- Place favicon.png in the root directory -->
