@@ -1483,6 +1483,19 @@ button {
     transition: all 0.4s ease-in-out;
     display: block
 }
+.ltn__blog-area .content_section{
+    border: 2px solid #eee;
+    padding: 0;
+
+}
+.ltn__blog-area .row {
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows: repeat(2,235px)
+}
+.ltn__blog-area .ltn__blog-img a img {
+border-radius: none;
+}
 </style>
 
 </div>
@@ -1508,7 +1521,7 @@ button {
                 @if($tag->TITLE == "أثناء الحمل")
                 @foreach($tag->posts->take(6) as $post)
 
-                <div class="col-lg-2">
+                <div class="col-lg-2 content_section" >
                     <div class="ltn__blog-item">
                         <div class="ltn__blog-img">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}"><img src="{{ asset($post->IMG) }}" alt="#"></a>
