@@ -1489,7 +1489,7 @@ button {
 
 }
 .grid-row{
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(6,auto);
     grid-template-rows: repeat(2,235px)
 }
