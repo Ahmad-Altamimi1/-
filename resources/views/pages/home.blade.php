@@ -1489,9 +1489,10 @@ button {
 
 }
 .grid-row{
-    display: grid ;
+    /* display: grid ;
     grid-template-columns: repeat(6,auto);
-    grid-template-rows: repeat(2,235px)
+    grid-template-rows: repeat(2,235px) */
+    gap: 10px;
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: none;
