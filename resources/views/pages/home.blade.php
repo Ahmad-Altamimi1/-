@@ -4,7 +4,7 @@
 
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         </div>
@@ -1513,13 +1513,13 @@ button {
                         <div class="ltn__blog-img">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}"><img src="{{ asset($post->IMG) }}" alt="#"></a>
                         </div>
-                        <div class="ltn__blog-brief">
+                        <div class="ltn__blog-brief" style="padding: 0 !important">
                             <div class="ltn__blog-meta">
                                 <ul>
 
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
+                            <h3 class="ltn__blog" style="font-size: 16px"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
                         </div>
                     </div>
                 </div>
@@ -1630,7 +1630,7 @@ button {
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Add the Owl Carousel JS -->
     <script> window.onload = function ()
     {
