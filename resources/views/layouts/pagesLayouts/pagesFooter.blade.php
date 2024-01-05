@@ -113,6 +113,8 @@
 
         <script src="{{ url('assets/js/app.js') }}"></script>
     <script src="{{ url('pages/js/plugins.js') }}"></script>
+    <script src="{{ url('pages/js/plugins.js') }}"></script>
+    <script src="{{ url('pages/js/slick.main.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ url ('pages/js/main.js') }}"></script>
     <script src="{{ url ('pages/js/contact.js') }}"></script>

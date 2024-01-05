@@ -37,6 +37,8 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url('pages/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url('pages/css/slick-theme.css') }}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
