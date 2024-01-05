@@ -1048,7 +1048,7 @@ use App\Models\poststags;
                         <!-- tab navs -->
                         <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
                             style="flex-direction: row-reverse;">
-<div  data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+<div  class="multiple-items">
                             <li class="nav-item" role="presentation"><button aria-selected="true"
                                     class="nav-link active" data-tag-title="الشهر الأول" id="tag1"
                                     type="button">الشهر الأول</button>
@@ -1628,8 +1628,15 @@ button {
 
     @endsection
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+<script>
+    $('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+</script>
     <!-- Add the Owl Carousel JS -->
     <script> window.onload = function ()
     {
