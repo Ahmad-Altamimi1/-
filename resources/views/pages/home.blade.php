@@ -2,11 +2,11 @@
     @section('content')
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-        <link rel="stylesheet" type="text/css"
+        {{-- <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-        </div>
+        </div> --}}
         <style>
             article {
                 --img-scale: 1.001;
