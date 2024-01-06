@@ -1600,14 +1600,14 @@ height: 100%;
                                         <div class="item fade">
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
-
+                                                <a href="/tags/{{ $video->tag->id }}/show"
+                                                    class="category-badge lg">{{ $video->tag->TITLE }}</a>
                                                 <p style=" color: white;
                                                 height: 100%;
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;">
-                                                   <a href="/tags/{{ $video->tag->id }}/show"
-                                                    class="category-badge lg">{{ $video->tag->TITLE }}</a>
+
                                                 {{ $video->TITLE }}</p>
                                             </div>
 
