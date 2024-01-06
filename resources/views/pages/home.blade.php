@@ -1647,7 +1647,7 @@ grid-template-columns: 44% 51%;" >
                     @if($tag->TITLE == 'الشهر السابع')
 
 
-                       @foreach ( $tag->posts->take(3) as $post )
+                       @foreach ( $tag->posts->take(5) as $post )
 
                   <article style="    height: 96px;">
                     <div class="article-wrapper">
