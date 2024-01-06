@@ -1762,8 +1762,12 @@ border-radius: none;
 
 </script>
 
-{{-- to get months  --}}
+
 <script>
+    // -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start First section (Months)
+// -----------------------------------------------------------------------------------------------------------------------
+
     document.addEventListener('DOMContentLoaded', function() {
 
 
@@ -1821,13 +1825,17 @@ border-radius: none;
     });
 
 
+    // -----------------------------------------------------------------------------------------------------------------------
+                                            //  End First section (Months)
+// -----------------------------------------------------------------------------------------------------------------------
 
-//  end get months
 
 
 
+  // -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start Seconde section
+// -----------------------------------------------------------------------------------------------------------------------
 
-   // start second section
 document.addEventListener('DOMContentLoaded', function() {
 var initialContent = document.querySelector('.game-section').innerHTML;
 function fetchContentseconde(tagTitle) {
@@ -1870,6 +1878,61 @@ tag1Button.style.color = '#111111';
 fetchContentseconde('صحة الطفل');
 });
 
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  End Seconde section
+// -----------------------------------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start Thered section
+// -----------------------------------------------------------------------------------------------------------------------
+
+
+   // start second section
+   document.addEventListener('DOMContentLoaded', function() {
+var initialContent = document.querySelector('.game-section').innerHTML;
+function fetchContentseconde(tagTitle) {
+    fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+            document.querySelector('.game-section').innerHTML = data.content;
+        })
+        .catch(function(error) {
+            console.error(error);
+            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+        });
+}
+
+document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+        document.querySelectorAll('button[id^="baby"]').forEach(function(otherButton) {
+            otherButton.classList.remove('active');
+            otherButton.style.backgroundColor = '';
+            otherButton.style.color = '';
+        });
+        button.classList.add('active');
+        button.style.backgroundColor = '#70b646';
+        button.style.color = '#fff';
+        var tagTitle = button.getAttribute('data-tag-title');
+        fetchContentseconde(tagTitle);
+    });
+});
+
+var tag1Button = document.getElementById('baby1');
+tag1Button.classList.add('active');
+tag1Button.style.backgroundColor = '#d54368';
+tag1Button.style.color = '#111111';
+fetchContentseconde('صحة الطفل');
+});
+
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  End Thered section
+// -----------------------------------------------------------------------------------------------------------------------
     var slickNextButton = document.querySelector('.slick-next');
 
     setTimeout(function() {

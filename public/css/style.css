@@ -13792,10 +13792,10 @@ button:focus {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  color: #d54368 !important;
+  color: #fff !important;
   background: #d63384;
-  background:  transparent;
-  background:  transparent;
+  background-color:  #d63384 !important;
+
   border-color: transparent;
   background-size: 200% auto;
 }
