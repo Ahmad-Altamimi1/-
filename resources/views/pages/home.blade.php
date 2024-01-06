@@ -1488,9 +1488,9 @@ button {
 }
 .ltn__blog-area  .container .nav-tabs{
     position: absolute;
-    top: -47px;
+    top: -51px;
     left: 50%;
-    /* border: 2px solid #cdc9c9; */
+    border: 2px solid transparent;
     border-bottom: 2px solid #fff;
     transform: translateX(-50%);
 }
@@ -1520,7 +1520,9 @@ border-radius: none;
     background :transparent !important;
 }
 .tow-butoon button{
-     border: 2px solid #cdc9c9;}
+     border: 2px solid #cdc9c9;
+     border-bottom: 2px solid white;
+     }
 </style>
 
 </div>
