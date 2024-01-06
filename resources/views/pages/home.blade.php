@@ -1121,10 +1121,12 @@ use App\Models\poststags;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
         <div class="row" style="justify-content: center">
 <div class="col-sm-3 card_circle_image">
+    <a href="{{ route('showtag',['id'=>13]) }}">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
 </div>
     <p>أشهر الحمل</p>
+</a>
 </div>
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
@@ -1634,6 +1636,8 @@ grid-template-columns: 44% 51%;" >
                                                 align-items: center;
                                                 position:relative;
                                                 font-size:27px;
+                                                padding: 0 68px;
+}
                                                 "
                                                 >
   <a href="/tags/{{ $video->tag->id }}/show"
