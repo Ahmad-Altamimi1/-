@@ -49,10 +49,7 @@
 
 
 
-const WOW = require('wowjs');
 
-// Initialize WOW.js
-new WOW().init();
 
 
 
