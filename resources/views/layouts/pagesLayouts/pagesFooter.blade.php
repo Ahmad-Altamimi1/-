@@ -114,8 +114,9 @@
         <script src="{{ url('js/jquery.min.js') }}"></script>
         {{-- <script src="{{ url('js/jquery-3.2.1.min.js') }}"></script> --}}
         <script src="{{ url('js/owl.carousel.min.js') }}"></script>
+        <script>{{ asset('js/jquery.min.js') }}</script>
         <script src="{{ url('js/app.js') }}"></script>
-        <script src="{{ url('js/app.js') }}"></script>
+        {{-- <script src="{{ url('js/app.js') }}"></script> --}}
 
 
 
