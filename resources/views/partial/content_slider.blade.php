@@ -13,12 +13,10 @@
         @endforeach
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
-<script>
+
+{{-- <script>
 $(document).ready(function () {
     $(".custom-carousel").owlCarousel({
         autoWidth: true,
@@ -31,4 +29,35 @@ $(document).ready(function () {
     });
 });
 
+</script> --}}
+
+<script>
+    $(document).ready(function () {
+        $(".custom-carousel").owlCarousel({
+            loop: true,
+            margin: 10, // Adjust as needed
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1, // Number of items to show at different screen sizes
+                },
+                600: {
+                    items: 3,
+                },
+                1000: {
+                    items: 5,
+                }
+            }
+        });
+
+        $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+        });
+    });
 </script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>

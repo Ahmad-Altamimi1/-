@@ -1665,6 +1665,8 @@ height: 100%;
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="path/to/owl.carousel.min.js"></script>
 
     <!-- Add the Owl Carousel JS -->
     <script> window.onload = function ()
