@@ -321,6 +321,7 @@ article {
     .bodddy{
         flex-direction: column;
         gap: 0 ;
+        padding: 0;
     }
     main section{
         min-height: unset;
@@ -994,10 +995,7 @@ use App\Models\poststags;
     padding: 10px 20px 40px ;
     border-radius: 12px;
 }
-/* .col-sm-3 card_circle_image{
-    display: flex;
-    flex-direction: column;
-} */
+
 .circle_image {
     border-radius: 50%;
     width: 100px;
@@ -1016,6 +1014,11 @@ use App\Models\poststags;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media (max-width:767px){
+    .hearts-wrapper a{
+        width: 102px;
+    }
 }
 </style>
 <div class="center_content container pt-60" dir="rtl">
@@ -1111,7 +1114,7 @@ use App\Models\poststags;
         <p style="    text-align: center;
         font-size: 25px;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
-        <div class="row">
+        <div class="row" style="justify-content: center">
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
