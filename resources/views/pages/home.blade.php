@@ -1491,11 +1491,14 @@ button {
 .grid-row{
     display: grid ;
     grid-template-columns: repeat(6,auto);
-    grid-template-rows: repeat(2,235px);
+    grid-template-rows: repeat(2,270px);
     gap: 10px;
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: none;
+}
+.ltn__blog-img{
+    border-radius:0 !important;
 }
 </style>
 
@@ -1533,7 +1536,7 @@ border-radius: none;
 
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog" style="font-size: 14px"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
+                            <h3 class="ltn__blog" style="font-size: 14pxP;padding-right:10px"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
                         </div>
                     </div>
                 </div>
