@@ -1023,6 +1023,7 @@ use App\Models\poststags;
 .circle_image:hover{
 scale: 1.1;
 transition: 0.4s;
+border: 2px solid #d54368;
 }
 @media (max-width:767px){
     .hearts-wrapper a{
