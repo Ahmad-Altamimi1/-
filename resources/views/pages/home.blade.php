@@ -1577,10 +1577,10 @@ height: 100%;
             </li>
         </ul>
 <div class="flex">
-            <div class="row grid-row"  dir="rtl">
+            <div class="row grid-row right-half"  dir="rtl">
 
             </div>
-            <div class="row grid-row"  dir="rtl">
+            <div class="row grid-row left-half"  dir="rtl">
 
             </div>
         </div>
@@ -1978,7 +1978,7 @@ fetchContentseconde('صحة الطفل');
 
    // start second section
    document.addEventListener('DOMContentLoaded', function() {
-var initialContent = document.querySelector('.grid-row').innerHTML;
+var initialContent = document.querySelector('.right-half').innerHTML;
 function thirdfetchContent(tagTitle) {
     fetch('/third-fetch-content?tagTitle=' + tagTitle)
         .then(function(response) {
@@ -1988,39 +1988,88 @@ function thirdfetchContent(tagTitle) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data);
-            document.querySelector('.grid-row').innerHTML = data.content;
+            document.querySelector('.right-half').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.grid-row').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            document.querySelector('.right-half').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
-document.querySelectorAll('button[id^="care"]').forEach(function(button) {
-    button.addEventListener('click', function() {
-        document.querySelectorAll('button[id^="care"]').forEach(function(otherButton) {
-            otherButton.classList.remove('active');
-            otherButton.style.backgroundColor = '';
-            otherButton.style.color = '';
-        });
-        button.classList.add('active');
-        button.style.backgroundColor = '#70b646';
-        button.style.color = '#fff';
-        var tagTitle = button.getAttribute('data-tag-title');
-        thirdfetchContent(tagTitle);
-    });
-});
+// document.querySelectorAll('button[id^="care"]').forEach(function(button) {
+//     button.addEventListener('click', function() {
+//         document.querySelectorAll('button[id^="care"]').forEach(function(otherButton) {
+//             otherButton.classList.remove('active');
+//             otherButton.style.backgroundColor = '';
+//             otherButton.style.color = '';
+//         });
+//         button.classList.add('active');
+//         button.style.backgroundColor = '#70b646';
+//         button.style.color = '#fff';
+//         var tagTitle = button.getAttribute('data-tag-title');
+//         thirdfetchContent(tagTitle);
+//     });
+// });
 
-var tag1Button = document.getElementById('care1');
-tag1Button.classList.add('active');
-tag1Button.style.backgroundColor = '#d54368';
-tag1Button.style.color = '#fff';
+// var tag1Button = document.getElementById('care1');
+// tag1Button.classList.add('active');
+// tag1Button.style.backgroundColor = '#d54368';
+// tag1Button.style.color = '#fff';
 thirdfetchContent('أعتني بنفسكِ');
 });
 
 // -----------------------------------------------------------------------------------------------------------------------
                                             //  End Thered section
+// -----------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start 4 section
+// -----------------------------------------------------------------------------------------------------------------------
+
+
+   // start second section
+   document.addEventListener('DOMContentLoaded', function() {
+var initialContent = document.querySelector('.left-half').innerHTML;
+function thirdfetchContent(tagTitle) {
+    fetch('/third-fetch-content?tagTitle=' + tagTitle)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            document.querySelector('.left-half').innerHTML = data.content;
+        })
+        .catch(function(error) {
+            console.error(error);
+            document.querySelector('.left-half').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+        });
+}
+
+// document.querySelectorAll('button[id^="care"]').forEach(function(button) {
+//     button.addEventListener('click', function() {
+//         document.querySelectorAll('button[id^="care"]').forEach(function(otherButton) {
+//             otherButton.classList.remove('active');
+//             otherButton.style.backgroundColor = '';
+//             otherButton.style.color = '';
+//         });
+//         button.classList.add('active');
+//         button.style.backgroundColor = '#70b646';
+//         button.style.color = '#fff';
+//         var tagTitle = button.getAttribute('data-tag-title');
+//         thirdfetchContent(tagTitle);
+//     });
+// });
+
+// var tag1Button = document.getElementById('care1');
+// tag1Button.classList.add('active');
+// tag1Button.style.backgroundColor = '#d54368';
+// tag1Button.style.color = '#fff';
+thirdfetchContent("أعتني بطفلكِ");
+});
+
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  End 4 section
 // -----------------------------------------------------------------------------------------------------------------------
     var slickNextButton = document.querySelector('.slick-next');
 
