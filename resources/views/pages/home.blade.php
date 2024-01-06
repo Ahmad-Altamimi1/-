@@ -147,6 +147,7 @@ article {
   .ltn__blog-img img {
       aspect-ratio: 6/4;
       object-fit: cover;
+      height: 100% ;
 
   }
 
@@ -1510,6 +1511,7 @@ button {
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: 0;
+height: 100%;
 }
 .ltn__blog-img{
     border-radius:0 !important;
