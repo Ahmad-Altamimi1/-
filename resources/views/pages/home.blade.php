@@ -1506,7 +1506,7 @@ button {
 }
 .grid-row{
     display: grid ;
-    grid-template-columns: repeat(6,auto);
+    grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(2,270px);
     gap: 10px;
     border-top: 2px solid #d54368;
@@ -1576,13 +1576,14 @@ height: 100%;
                     data-tag-title="أعتني بطفلكِ" id="care" type="button">أعتني بطفلكِ  </button>
             </li>
         </ul>
-
+<div class="flex">
             <div class="row grid-row"  dir="rtl">
-                <!-- Blog Item -->
 
-
-                <!--  -->
             </div>
+            <div class="row grid-row"  dir="rtl">
+
+            </div>
+        </div>
         </div>
     </div>
 
