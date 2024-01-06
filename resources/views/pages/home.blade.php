@@ -1700,7 +1700,7 @@ grid-template-columns: 44% 51%;" >
             </div>
             <div class="post-content">
               <h3 class="post-title">
-                <a href="{{ $news->id] }}">{{ $news->TITLE }}</a>
+                <a href="{{ $news->id }}">{{ $news->TITLE }}</a>
               </h3>
               <p class="post-description">{{ $news->TITLE}}</p>
               {{-- <span class="post-date"><i class="fa fa-clock-o"></i>{{ $news['date'] }}</span> --}}
