@@ -1598,10 +1598,11 @@ height: 100%;
 
 
                                         <div class="item fade">|
-                                            <a href="/tags/{{ $video->tag->id }}/show"
-                                                class="category-badge lg">{{ $video->tag->TITLE }}</a>
+
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
+                                                <a href="/tags/{{ $video->tag->id }}/show"
+                                                    class="category-badge lg">{{ $video->tag->TITLE }}</a>
                                                 <p style=" color: white;
                                                 height: 100%;
                                                 display: flex;
