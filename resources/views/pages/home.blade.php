@@ -1020,6 +1020,10 @@ use App\Models\poststags;
     justify-content: center;
     align-items: center;
 }
+.circle_image:hover{
+scale: 1.1;
+transition: 0.4s;
+}
 @media (max-width:767px){
     .hearts-wrapper a{
         width: 102px;
