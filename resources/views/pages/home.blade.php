@@ -1514,11 +1514,7 @@ border-radius: none;
 .ltn__blog-img{
     border-radius:0 !important;
 }
-.link.active{
-    color: #d54368 !important;
-    background-color :transparent !important;
-    background :transparent !important;
-}
+
 </style>
 
 </div>
@@ -1534,11 +1530,11 @@ border-radius: none;
             <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
             style="flex-direction: row-reverse;">
 
-            <li class="nav-item" role="presentation"><button aria-selected="true"
+            <li class="" role="presentation"><button aria-selected="true"
                     class="nav-link active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
                     type="button"> صحتك ماما </button>
             </li>
-            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
+            <li class="" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
                     data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
             </li>
         </ul>
