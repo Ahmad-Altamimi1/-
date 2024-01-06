@@ -1511,10 +1511,11 @@ button {
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: 0;
+height: 100%;
 
 }
 .ltn__blog-area .ltn__blog-img a  {
-    width: 100%;
+    height: 100%;
     display: inline-block;
 
 }
