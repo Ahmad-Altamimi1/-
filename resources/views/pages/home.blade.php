@@ -1490,7 +1490,7 @@ button {
     position: absolute;
     top: -47px;
     left: 50%;
-    border: 2px solid #cdc9c9;
+    /* border: 2px solid #cdc9c9; */
     border-bottom: 2px solid #fff;
     transform: translateX(-50%);
 }
@@ -1519,7 +1519,8 @@ border-radius: none;
     background-color :transparent !important;
     background :transparent !important;
 }
-.tow-butoon button{    border: 2px solid #cdc9c9;}
+.tow-butoon button{
+     border: 2px solid #cdc9c9;}
 </style>
 
 </div>
