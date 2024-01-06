@@ -38,7 +38,7 @@ article {
   article h2 {
     margin: 0 0 18px 0;
 
-       font-size: 19px;
+       font-size: 13px;
 
     color: var(--title-color);
     transition: color 0.3s ease-out;
@@ -1540,8 +1540,8 @@ height: 100%;
     padding-top: 7px;
      }
     .injabytv .article-wrapper{
-        display: flex;
-    flex-direction: row-reverse;
+        display: grid;
+    grid-template-columns: 50% 50%;
     }
 </style>
 
@@ -1587,25 +1587,33 @@ height: 100%;
                     <!-- post -->
 
 
-                    <div class="lx-card carousel-container">
+                    <main style="    width: 48%;">
+                        <section class="has-dflex-center">
+                            <div class="lx-container-80">
+                                <div class="lx-row">
+                                    <div class="lx-card carousel-container">
 
 
-                        @foreach ($recentposts as $video)
+                                        @foreach ($recentposts as $video)
 
 
-                        <div class="item fade">
-                            <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
-                            <div class="text is-text-centered">
-                                <p > {{ $video->TITLE }}</p>
+                                        <div class="item fade">
+                                            <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
+                                            <div class="text is-text-centered">
+                                                <p style=" color: white;
+                                                height: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;"> {{ $video->TITLE }}</p>
+                                            </div>
+
+                                        </div> @endforeach
+
+                                        <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a></div>
+                                </div>
                             </div>
-
-                        </div> @endforeach
-
-                        <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a>
-                    {{-- </div> --}}
-                {{-- </div> --}}
-                {{-- </div> --}}
-                </div>
+                        </section>
+                    </main>
             </div>
             <div class="col-sm-4">
                 <div class="post-tabs rounded bordered injabytv">
@@ -1616,14 +1624,14 @@ height: 100%;
 
                        @foreach ( $tag->posts->take(3) as $post )
 
-                  <article>
+                  <article style="    height: 96px;">
                     <div class="article-wrapper">
                       <figure>
                         <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}"><img src="{{ $post->IMG }}" alt="" /></a>
                       </figure>
                       <div class="article-body">
                         <h2>{{ $post->TITLE }}</h2>
-                    
+
 
                       </div>
                     </div>
