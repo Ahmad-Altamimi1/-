@@ -1515,12 +1515,13 @@ height: 100%;
 
 }
 .ltn__blog-area .ltn__blog-img a  {
-    height: 100%;
     display: inline-block;
+    height: 100%;
 
 }
 .ltn__blog-img{
     border-radius:0 !important;
+    height: 50%;
 }
 .tow-butoon{
     color: #d54368 !important;
