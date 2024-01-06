@@ -1483,6 +1483,15 @@ button {
     transition: all 0.4s ease-in-out;
     display: block
 }
+.ltn__blog-area  .container{
+    position: relative;
+}
+.ltn__blog-area  .container ul{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .ltn__blog-area .content_section{
     border: 2px solid #eee;
     padding: 0;
@@ -1493,6 +1502,9 @@ button {
     grid-template-columns: repeat(6,auto);
     grid-template-rows: repeat(2,270px);
     gap: 10px;
+    border-top: 2px solid #cdc9c9;
+    padding-top: 26px;
+
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: none;
@@ -1512,14 +1524,19 @@ border-radius: none;
 
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title-area text-center">
-                        <h1 class="section-title section-title-border">فتاوى تخص المرأة</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row grid-row" >
+            <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
+            style="flex-direction: row-reverse;">
+
+            <li class="nav-item" role="presentation"><button aria-selected="true"
+                    class="nav-link active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
+                    type="button"> صحتك ماما </button>
+            </li>
+            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
+                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
+            </li>
+        </ul>
+
+            <div class="row grid-row"  dir="rtl">
                 <!-- Blog Item -->
                 @foreach($tags as $tag)
                 @if($tag->TITLE == "أثناء الحمل")
