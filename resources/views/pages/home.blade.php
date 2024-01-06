@@ -1581,7 +1581,7 @@ height: 100%;
                 <div class="post-carousel-lg">
 
                     <!-- post -->
-                
+
 
 
                     @foreach ($recentposts as $video)
@@ -1628,7 +1628,7 @@ height: 100%;
                         <div aria-labelledby="popular-tab" class="tab-pane fade show active" id="popular"
                             role="tabpanel">
 
-                            @foreach ($mostposts as $singlepost)
+                            @foreach ($recentposts as $singlepost)
                                 <div class="post post-over-content pt-3" style="text-align: center;">
                                     <div class="details clearfix">
 
