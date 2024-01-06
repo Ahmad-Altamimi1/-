@@ -1551,7 +1551,7 @@ height: 100%;
     font-size: 16px !important;
     }
     .category-badge:hover{
-        color: #d54368 !important;
+        color: #fff !important;
     }
 </style>
 
