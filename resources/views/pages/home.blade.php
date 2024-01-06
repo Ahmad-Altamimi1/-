@@ -1489,9 +1489,9 @@ button {
 
 }
 .grid-row{
-    /* display: grid ;
+    display: grid ;
     grid-template-columns: repeat(6,auto);
-    grid-template-rows: repeat(2,235px) */
+    grid-template-rows: repeat(2,235px);
     gap: 10px;
 }
 .ltn__blog-area .ltn__blog-img a img {
@@ -1522,7 +1522,7 @@ border-radius: none;
                 @if($tag->TITLE == "أثناء الحمل")
                 @foreach($tag->posts->take(6) as $post)
 
-                <div class="col-lg-2 content_section" >
+                <div class="content_section" >
                     <div class="ltn__blog-item">
                         <div class="ltn__blog-img">
                             <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}"><img src="{{ asset($post->IMG) }}" alt="#"></a>
