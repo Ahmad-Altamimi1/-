@@ -1572,7 +1572,134 @@ height: 100%;
         </div>
     </div>
 
+{{-- ---------------------------------------------------------------------------- --}}
+{{-- ---------------------------------------------------------------------------- --}}
+<section class="hero-carousel pt-5">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="post-carousel-lg">
 
+                    <!-- post -->
+                    <?php
+                    // $string = $group->TAG;
+                    // $str_arr = explode(',', $string);
+                    // $str_arr = array_filter($str_arr);
+                    use App\Models\poststags;
+                    ?>
+
+
+                    @foreach ($recentposts as $video)
+                        <div class="post featured-post-xl">
+                            <div class="details clearfix">
+
+                                {{-- @if (end($str_arr) == $singletag->id) --}}
+                                <a href="/tags/{{ $video->tag->id }}/show"
+                                    class="category-badge lg">{{ $video->tag->TITLE }}</a>
+
+
+                                <h4 class="post-title"><a
+                                        href="/videos/{{ $video->id }}/show">{{ $video->TITLE }}</a>
+                                </h4>
+                            </div>
+                            <a href="/videos/{{ $video->id }}/show">
+                                <div class="thumb rounded">
+                                    <div class="inner data-bg-image"
+                                        data-bg-image="{{ asset('storage/' . $video->IMG . '') }}"></div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="post-tabs rounded bordered">
+                    <!-- tab navs -->
+                    <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
+                        <li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true"
+                                class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab"
+                                role="tab" type="button">الأكثر
+                                مشاهدة</button>
+                        </li>
+                        <li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false"
+                                class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab"
+                                role="tab" type="button">الأحدث</button></li>
+                    </ul>
+                    <!-- tab contents -->
+                    <div class="tab-content" id="postsTabContent">
+                        <!-- loader -->
+
+                        <!-- popular posts -->
+                        <div aria-labelledby="popular-tab" class="tab-pane fade show active" id="popular"
+                            role="tabpanel">
+
+                            @foreach ($mostposts as $singlepost)
+                                <div class="post post-over-content pt-3" style="text-align: center;">
+                                    <div class="details clearfix">
+
+                                        <a href="/tags/{{ $singlepost->tag->id }}/show"
+                                            class="category-badge lg">{{ $singlepost->tag->TITLE }}</a>
+
+                                        <p style="margin: -19px 0; font-size: 15px; padding-top: 20px"
+                                            class="post-title"><a
+                                                href="/posts/{{ $singlepost->id }}/show">{{ Str::limit($singlepost->TITLE, 40) }}</a>
+                                        </p>
+                                    </div>
+                                    <a href="/posts/{{ $singlepost->id }}/show">
+                                        <div class="thumb rounded">
+                                            <div style="height: 90px" class="inner">
+                                                <img style="border-radius: 7px;"
+                                                    src="{{ asset('storage/' . $singlepost->IMG . '') }}"
+                                                    alt="{{ $singlepost->TITLE }}" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <!-- recent posts -->
+                        <div aria-labelledby="recent-tab" class="tab-pane fade" id="recent" role="tabpanel">
+                            <?php
+                            $xx = 0;
+                            ?>
+                            @foreach ($recentposts as $singlepost)
+                                {{-- @if ($xx <= 4 && $xx > 0) --}}
+                                <div class="post post-over-content pt-3" style="text-align: center;">
+                                    <div class="details clearfix">
+                                        <a href="/tags/{{ $singlepost->tag->id }}/show"
+                                            class="category-badge lg">{{ $singlepost->tag->TITLE }}</a>
+                                        <p style="margin: -19px 0; font-size: 15px; padding-top: 20px"
+                                            class="post-title"><a
+                                                href="/posts/{{ $singlepost->id }}/show">{{ Str::limit($singlepost->TITLE, 40) }}</a>
+                                        </p>
+                                    </div>
+                                    <a href="/posts/{{ $singlepost->id }}/show">
+                                        <div class="thumb rounded">
+                                            <div style="height: 90px" class="inner">
+                                                <img style="border-radius: 7px;"
+                                                    src="{{ asset('storage/' . $singlepost->IMG . '') }}"
+                                                    alt="{{ $singlepost->TITLE }}" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {{-- @endif --}}
+                                <?php
+                                $xx++;
+                                ?>
+                            @endforeach
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{-- ---------------------------------------------------------------------------- --}}
+{{-- ---------------------------------------------------------------------------- --}}
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
             <div class="row">
