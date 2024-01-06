@@ -1598,7 +1598,7 @@ grid-template-columns: 44% 51%;" >
 {{-- ---------------------------------------------------------------------------- --}}
 <section class="hero-carousel pt-5" dir="rtl">
     <div class="container-xl">
-        <div class="row">
+        <div class="row" dir="rtl">
             <div class="col-sm-8" style="height: 500px;">
                 {{-- <div class="post-carousel-lg"> --}}
 
