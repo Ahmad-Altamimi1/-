@@ -1488,8 +1488,10 @@ button {
 }
 .ltn__blog-area  .container ul{
     position: absolute;
-    top: 0;
+    top: -59px;
     left: 50%;
+    border: 2px solid #cdc9c9;
+    border-bottom: 2px solid #fff;
     transform: translateX(-50%);
 }
 .ltn__blog-area .content_section{
