@@ -1516,7 +1516,7 @@ border-radius: none;
                     </div>
                 </div>
             </div>
-            <div class="row grid-row" style="display: flex">
+            <div class="row grid-row" >
                 <!-- Blog Item -->
                 @foreach($tags as $tag)
                 @if($tag->TITLE == "أثناء الحمل")
