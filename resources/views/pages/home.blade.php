@@ -1628,7 +1628,8 @@ height: 100%;
                     </div>
                   </article>
                   @endforeach
-
+                  @endif
+                  @endforeach
 
                         </div>
                     </div>
