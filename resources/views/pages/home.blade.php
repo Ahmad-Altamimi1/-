@@ -1508,7 +1508,7 @@ button {
     transform: translateX(-50%);
 }
 .ltn__blog-area .content_section{
-    border: 2px solid #eee;
+    border: 2px solid #d54368;
     padding: 0;
 
 }
@@ -1561,6 +1561,9 @@ height: 100%;
     }
     .category-badge:hover{
         background-color: #fff !important;
+    }
+    .col-sm-8 main section .carousel-container .item .text{
+        background: linear-gradient(to top, #d54368 0%, #ffffff24 100%);
     }
 </style>
 
