@@ -1509,7 +1509,7 @@ button {
 
 }
 .ltn__blog-area .ltn__blog-img a img {
-border-radius: none;
+border-radius: 0;
 }
 .ltn__blog-img{
     border-radius:0 !important;
