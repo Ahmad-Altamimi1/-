@@ -1515,7 +1515,7 @@ border-radius: none;
     border-radius:0 !important;
 }
 .nav-link.active{
-    color: #d54368;
+    color: #d54368 !important;
     background-color :transparent !important;
     background :transparent !important;
 }
