@@ -1125,8 +1125,8 @@ use App\Models\poststags;
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
 </div>
-    <p>أشهر الحمل</p>
 </a>
+    <p>أشهر الحمل</p>
 </div>
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
