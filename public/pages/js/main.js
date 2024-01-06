@@ -49,8 +49,10 @@
 
 
 
+const WOW = require('wowjs');
 
-import WOW from 'wowjs';
+// Initialize WOW.js
+new WOW().init();
 
 
 
