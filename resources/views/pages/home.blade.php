@@ -1121,7 +1121,7 @@ use App\Models\poststags;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
         <div class="row" style="justify-content: center">
 <div class="col-sm-3 card_circle_image">
-    <a href="{{ route('showtag',['id'=>13]) }}">
+    <a href="{{ route('showtag',['tag'=>13]) }}">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
 </div>
