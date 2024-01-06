@@ -1486,7 +1486,7 @@ button {
 .ltn__blog-area  .container{
     position: relative;
 }
-.ltn__blog-area  .container ul{
+.ltn__blog-area  .container .nav-tabs{
     position: absolute;
     top: -59px;
     left: 50%;
