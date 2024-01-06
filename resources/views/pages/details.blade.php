@@ -206,7 +206,7 @@ right: 0;
                     <!-- ltn__product-item -->
                     @foreach ($otherPosts as $Otherpost)
 
-                    <div class="col-12">
+                    <div class="col-4">
                         <div class="ltn__product-item text-center">
                             <div class="product-img">
                                 <a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}"><img style="    object-fit: cover; aspect-ratio: 1;" src="{{ asset('../'. $Otherpost->IMG) }}" alt="#"></a>
@@ -335,7 +335,7 @@ right: 0;
                         <div class="widget ltn__menu-widget">
                             <h4 class="ltn__widget-title">الفئأت</h4>
                             <ul>
-                                @foreach ($tags as $tag)
+                                @foreach ($tags->take(4) as $tag)
                                 @if (count($tag->posts)>0)
                                     <li>
     <a href="{{ route('showtag', ['tag' => $tag->id]) }}">
