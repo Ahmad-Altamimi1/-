@@ -1592,11 +1592,7 @@ height: 100%;
                         <div class="item fade">
                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                             <div class="text is-text-centered">
-                                <p style=" color: white;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;"> {{ $video->TITLE }}</p>
+                                <p > {{ $video->TITLE }}</p>
                             </div>
 
                         </div> @endforeach
@@ -1609,80 +1605,29 @@ height: 100%;
             </div>
             <div class="col-sm-4">
                 <div class="post-tabs rounded bordered">
-                    <!-- tab navs -->
-                    <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
-                        <li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true"
-                                class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab"
-                                role="tab" type="button">الأكثر
-                                مشاهدة</button>
-                        </li>
-                        <li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false"
-                                class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab"
-                                role="tab" type="button">الأحدث</button></li>
-                    </ul>
-                    <!-- tab contents -->
-                    <div class="tab-content" id="postsTabContent">
-                        <!-- loader -->
+                    @foreach($tags as $tag)
 
-                        <!-- popular posts -->
-                        <div aria-labelledby="popular-tab" class="tab-pane fade show active" id="popular"
-                            role="tabpanel">
+                    @if($tag->TITLE == 'الشهر السابع')
 
-                            @foreach ($recentposts as $singlepost)
-                                <div class="post post-over-content pt-3" style="text-align: center;">
-                                    <div class="details clearfix">
 
-                                        <a href="/tags/{{ $singlepost->tag->id }}/show"
-                                            class="category-badge lg">{{ $singlepost->tag->TITLE }}</a>
+                       @foreach ( $tag->posts->take(3) as $post )
 
-                                        <p style="margin: -19px 0; font-size: 15px; padding-top: 20px"
-                                            class="post-title"><a
-                                                href="/posts/{{ $singlepost->id }}/show">{{ Str::limit($singlepost->TITLE, 40) }}</a>
-                                        </p>
-                                    </div>
-                                    <a href="/posts/{{ $singlepost->id }}/show">
-                                        <div class="thumb rounded">
-                                            <div style="height: 90px" class="inner">
-                                                <img style="border-radius: 7px;"
-                                                    src="{{ asset('storage/' . $singlepost->IMG . '') }}"
-                                                    alt="{{ $singlepost->TITLE }}" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            @endforeach
-                        </div>
-                        <!-- recent posts -->
-                        <div aria-labelledby="recent-tab" class="tab-pane fade" id="recent" role="tabpanel">
-                            <?php
-                            $xx = 0;
-                            ?>
-                            @foreach ($recentposts as $singlepost)
-                                {{-- @if ($xx <= 4 && $xx > 0) --}}
-                                <div class="post post-over-content pt-3" style="text-align: center;">
-                                    <div class="details clearfix">
-                                        <a href="/tags/{{ $singlepost->tag->id }}/show"
-                                            class="category-badge lg">{{ $singlepost->tag->TITLE }}</a>
-                                        <p style="margin: -19px 0; font-size: 15px; padding-top: 20px"
-                                            class="post-title"><a
-                                                href="/posts/{{ $singlepost->id }}/show">{{ Str::limit($singlepost->TITLE, 40) }}</a>
-                                        </p>
-                                    </div>
-                                    <a href="/posts/{{ $singlepost->id }}/show">
-                                        <div class="thumb rounded">
-                                            <div style="height: 90px" class="inner">
-                                                <img style="border-radius: 7px;"
-                                                    src="{{ asset('storage/' . $singlepost->IMG . '') }}"
-                                                    alt="{{ $singlepost->TITLE }}" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{-- @endif --}}
-                                <?php
-                                $xx++;
-                                ?>
-                            @endforeach
+                  <article>
+                    <div class="article-wrapper">
+                      <figure>
+                        <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}"><img src="{{ $post->IMG }}" alt="" /></a>
+                      </figure>
+                      <div class="article-body">
+                        <h2>{{ $post->TITLE }}</h2>
+                        <p>
+                            {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 30) }}
+
+                        </p>
+
+                      </div>
+                    </div>
+                  </article>
+                  @endforeach
 
 
                         </div>
