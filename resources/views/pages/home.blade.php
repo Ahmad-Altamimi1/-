@@ -1581,13 +1581,13 @@ height: 100%;
 <section class="hero-carousel pt-5">
     <div class="container-xl">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8" style="height: 500px;">
                 {{-- <div class="post-carousel-lg"> --}}
 
                     <!-- post -->
 
 
-                    <main style="    width: 48%;">
+                    <main style="    width: 100%;">
                         <section class="has-dflex-center">
                             <div class="lx-container-80">
                                 <div class="lx-row">
@@ -1597,7 +1597,9 @@ height: 100%;
                                         @foreach ($recentposts as $video)
 
 
-                                        <div class="item fade">
+                                        <div class="item fade">|
+                                            <a href="/tags/{{ $video->tag->id }}/show"
+                                                class="category-badge lg">{{ $video->tag->TITLE }}</a>
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
                                                 <p style=" color: white;
