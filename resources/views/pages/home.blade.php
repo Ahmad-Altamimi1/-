@@ -1597,8 +1597,7 @@ height: 100%;
                                         @foreach ($recentposts as $video)
 
 
-                                        <div class="item fade">|
-
+                                        <div class="item fade">
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
 
