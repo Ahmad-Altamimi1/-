@@ -1517,6 +1517,7 @@ border-radius: none;
 .nav-link.active{
     color: #d54368;
     background-color :transparent !important;
+    background :transparent !important;
 }
 </style>
 

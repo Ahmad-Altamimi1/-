@@ -13794,8 +13794,8 @@ button:focus {
 .nav-pills .show>.nav-link {
   color: #fff !important;
   background: #d63384;
-  background: -webkit-linear-gradient(left, #d63384 0%, #8dc56d 51%, #d63384 100%);
-  background: linear-gradient(to right, #d63384 0%, #8dc56d 51%, #d63384 100%);
+  background:  transparent;
+  background:  transparent;
   border-color: transparent;
   background-size: 200% auto;
 }
