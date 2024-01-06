@@ -1505,7 +1505,7 @@ button {
     grid-template-columns: repeat(6,auto);
     grid-template-rows: repeat(2,270px);
     gap: 10px;
-    border-top: 2px solid #cdc9c9;
+    border-top: 2px solid #d54368;
     padding-top: 26px;
 
 }
@@ -1529,7 +1529,7 @@ height: 100%;
     background :transparent !important;
 }
 .tow-butoon button{
-     border: 2px solid #cdc9c9;
+     border: 2px solid #d54368;
      border-bottom: 2px solid white;
      margin-right: 10px;
      border-radius: 6px;
