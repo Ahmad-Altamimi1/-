@@ -1539,6 +1539,10 @@ height: 100%;
      border-radius: 6px;
     padding-top: 7px;
      }
+    .injabytv .article-wrapper{
+        display: flex;
+    flex-direction: row-reverse;
+    }
 </style>
 
 </div>
@@ -1604,7 +1608,7 @@ height: 100%;
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="post-tabs rounded bordered">
+                <div class="post-tabs rounded bordered injabytv">
                     @foreach($tags as $tag)
 
                     @if($tag->TITLE == 'الشهر السابع')
@@ -1619,10 +1623,7 @@ height: 100%;
                       </figure>
                       <div class="article-body">
                         <h2>{{ $post->TITLE }}</h2>
-                        <p>
-                            {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 30) }}
-
-                        </p>
+                    
 
                       </div>
                     </div>
