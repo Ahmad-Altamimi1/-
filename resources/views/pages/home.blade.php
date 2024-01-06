@@ -1553,7 +1553,7 @@ border-radius: none;
 
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog" style="font-size: 14pxP;padding-right:10px"><a href="{{ route('ShoWarticle',['id'=>$post->id]) }}">{{ ($post->TITLE) }}</a></h3>
+                            <h3 class="ltn__blog" ><a href="{{ route('ShoWarticle',['id'=>$post->id]) }} " style="font-size: 14pxP;padding-right:10px">{{ ($post->TITLE) }}</a></h3>
                         </div>
                     </div>
                 </div>
