@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
     <!-- Responsive css -->
+    
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/latest/slick.css"/>
