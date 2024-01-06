@@ -1535,10 +1535,10 @@ border-radius: none;
             style="flex-direction: row-reverse;">
 
             <li class="tow-butoon" role="presentation"><button aria-selected="true"
-                    class="nav-link active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
+                    class="active-button" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
                     type="button"> صحتك ماما </button>
             </li>
-            <li class="tow-butoon" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
+            <li class="tow-butoon" role="presentation"><button aria-selected="true" style="width: 130px" class=""
                     data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
             </li>
         </ul>
