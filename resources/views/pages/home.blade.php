@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         </div>
 <style>
 
@@ -1700,24 +1703,37 @@ grid-template-columns: 44% 51%;" >
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div id="news-slider" class="owl-carousel owl-theme">
-          @foreach($newsList as $news)
-          <div class="post-slide">
-            <div class="post-img">
-              <img src="{{ $news->IMG }}" alt="">
-              <a href="{{ $news->id }}" class="over-layer"><i class="fa fa-link"></i></a>
-            </div>
-            <div class="post-content">
-              <h3 class="post-title">
-                <a href="{{ $news->id }}">{{ $news->TITLE }}</a>
-              </h3>
-              <p class="post-description">{{ $news->TITLE}}</p>
-              {{-- <span class="post-date"><i class="fa fa-clock-o"></i>{{ $news['date'] }}</span> --}}
-              <a href="{{ $news->id }}" class="read-more">read more</a>
-            </div>
+        <div id="news-slider" class="slick-carousel">
+            @foreach($newsList as $news)
+              <div class="post-slide">
+                <div class="post-img">
+                  <img src="{{ $news->IMG }}" alt="">
+                  <a href="{{ $news->id }}" class="over-layer"><i class="fa fa-link"></i></a>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="{{ $news->id }}">{{ $news->TITLE }}</a>
+                  </h3>
+                  <p class="post-description">{{ $news->TITLE}}</p>
+                  <a href="{{ $news->id }}" class="read-more">read more</a>
+                </div>
+              </div>
+            @endforeach
           </div>
-          @endforeach
-        </div>
+
+          <script>
+            $(document).ready(function(){
+              // Initialize Slick Carousel
+              $('.slick-carousel').slick({
+                slidesToShow: 3, // Adjust the number of slides to show
+                slidesToScroll: 1,
+                autoplay: true, // Set to true if you want the carousel to autoplay
+                autoplaySpeed: 2000 // Adjust the autoplay speed in milliseconds
+                // Add more options as needed
+              });
+            });
+          </script>
+
       </div>
     </div>
   </div>
