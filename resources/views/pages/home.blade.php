@@ -1695,16 +1695,16 @@ grid-template-columns: 44% 51%;" >
           @foreach($newsList as $news)
           <div class="post-slide">
             <div class="post-img">
-              <img src="{{ $news['image'] }}" alt="">
-              <a href="{{ $news['readMoreLink'] }}" class="over-layer"><i class="fa fa-link"></i></a>
+              <img src="{{ $news->IMG }}" alt="">
+              <a href="{{ $news->id }}" class="over-layer"><i class="fa fa-link"></i></a>
             </div>
             <div class="post-content">
               <h3 class="post-title">
-                <a href="{{ $news['readMoreLink'] }}">{{ $news['title'] }}</a>
+                <a href="{{ $news->id] }}">{{ $news->TITLE }}</a>
               </h3>
-              <p class="post-description">{{ $news['description'] }}</p>
-              <span class="post-date"><i class="fa fa-clock-o"></i>{{ $news['date'] }}</span>
-              <a href="{{ $news['readMoreLink'] }}" class="read-more">read more</a>
+              <p class="post-description">{{ $news->TITLE}}</p>
+              {{-- <span class="post-date"><i class="fa fa-clock-o"></i>{{ $news['date'] }}</span> --}}
+              <a href="{{ $news->id }}" class="read-more">read more</a>
             </div>
           </div>
           @endforeach
