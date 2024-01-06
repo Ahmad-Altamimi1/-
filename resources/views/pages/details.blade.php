@@ -34,6 +34,10 @@ h3{
 .image_and_description{
     position: relative;
 }
+.sticky{
+    position: sticky;
+    top: 0;
+}
 .description_for_image{
 position: absolute;
 bottom: 0;
@@ -206,7 +210,7 @@ right: 0;
                     <!-- ltn__product-item -->
                     @foreach ($otherPosts as $Otherpost)
 
-                    <div class="col-4">
+                    <div class="col-3">
                         <div class="ltn__product-item text-center">
                             <div class="product-img">
                                 <a href="{{ route('ShoWarticle',['id'=>$Otherpost->id]) }}"><img style="    object-fit: cover; aspect-ratio: 1;" src="{{ asset('../'. $Otherpost->IMG) }}" alt="#"></a>
@@ -291,6 +295,7 @@ right: 0;
                             </div>
                         </div>
                         <!-- Popular Post Widget -->
+                        <div class="sticky">
                            <div class="widget ltn__popular-post-widget">
                             <h2 class="ltn__widget-title">المقالات الحديثه</h2>
 
@@ -352,6 +357,8 @@ right: 0;
 
                             </ul>
                         </div>
+                        </div>
+
                         <!-- Tagcloud Widget -->
 
                         <!-- Social Media Widget -->
