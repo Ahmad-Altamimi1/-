@@ -1,5 +1,5 @@
 
-@foreach($third_section->take(12) as $post)
+@foreach($third_section->take(6) as $post)
 
 <div class="content_section" >
     <div class="ltn__blog-item">
