@@ -59,7 +59,7 @@ article {
   }
 
   .article-body {
-    padding: 24px;
+    padding: 0 22px 0 10px;
   }
 
   article a {
@@ -1545,6 +1545,7 @@ height: 100%;
     .injabytv .article-wrapper{
         display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 100px;
     }
     .category-badge{
         position: absolute;
@@ -1595,7 +1596,7 @@ grid-template-columns: 44% 51%;" >
 
 {{-- ---------------------------------------------------------------------------- --}}
 {{-- ---------------------------------------------------------------------------- --}}
-<section class="hero-carousel pt-5">
+<section class="hero-carousel pt-5" dir="rtl">
     <div class="container-xl">
         <div class="row">
             <div class="col-sm-8" style="height: 500px;">
