@@ -1488,7 +1488,7 @@ button {
 }
 .ltn__blog-area  .container .nav-tabs{
     position: absolute;
-    top: -51px;
+    top: -56px;
     left: 50%;
     border: 2px solid transparent;
     border-bottom: 2px solid #fff;
@@ -1542,11 +1542,11 @@ border-radius: none;
             style="flex-direction: row-reverse;">
 
             <li class="tow-butoon" role="presentation"><button aria-selected="true"
-                    class="active-button" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
-                    type="button"> صحتك ماما </button>
+                    class="active-button" style="width: 130px" data-tag-title="أعتني بنفسكِ" id="care1"
+                    type="button">  أعتني بنفسكِ </button>
             </li>
             <li class="tow-butoon" role="presentation"><button aria-selected="true" style="width: 130px" class=""
-                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
+                    data-tag-title="أعتني بطفلكِ" id="care" type="button">  </button>
             </li>
         </ul>
 
@@ -1761,6 +1761,8 @@ border-radius: none;
 });
 
 </script>
+
+{{-- to get months  --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
 
@@ -1815,35 +1817,26 @@ border-radius: none;
         tag1Button.classList.add('active');
         tag1Button.style.backgroundColor = '#70b646';
         tag1Button.style.color = '#111111';
-        fetchContent('الشهر الثامن');
+        fetchContent('الشهر الأول');
     });
 
 
 
+//  end get months
 
 
 
 
-
-
-// to fetxh data in bootom content
+   // start second section
 document.addEventListener('DOMContentLoaded', function() {
-
-
-// Store initial content
 var initialContent = document.querySelector('.game-section').innerHTML;
-
-// Function to fetch content based on tag title
-function fetchContent(tagTitle) {
-
-
-    // Fetch content using the fetch API
+function fetchContentseconde(tagTitle) {
     fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
         .then(function(response) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // Return the parsed JSON
+            return response.json();
         })
         .then(function(data) {
             console.log(data);
@@ -1855,32 +1848,26 @@ function fetchContent(tagTitle) {
         });
 }
 
-// Attach click event to buttons
 document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
     button.addEventListener('click', function() {
-        // Remove active class from all buttons
         document.querySelectorAll('button[id^="baby"]').forEach(function(otherButton) {
             otherButton.classList.remove('active');
             otherButton.style.backgroundColor = '';
             otherButton.style.color = '';
         });
-
-        // Add active class to the clicked button
         button.classList.add('active');
         button.style.backgroundColor = '#70b646';
-        button.style.color = '#111111';
-
+        button.style.color = '#fff';
         var tagTitle = button.getAttribute('data-tag-title');
-        fetchContent(tagTitle);
+        fetchContentseconde(tagTitle);
     });
 });
 
-// Fetch content for tag1 on page load and set it as active
 var tag1Button = document.getElementById('baby1');
 tag1Button.classList.add('active');
-tag1Button.style.backgroundColor = '#70b646';
+tag1Button.style.backgroundColor = '#d54368';
 tag1Button.style.color = '#111111';
-fetchContent('صحة الطفل');
+fetchContentseconde('صحة الطفل');
 });
 
     var slickNextButton = document.querySelector('.slick-next');
