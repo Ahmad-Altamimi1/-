@@ -13793,7 +13793,7 @@ button:focus {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #fff !important;
-  background: #d63384;
+  background: #d63384 !important;
   background-color:  #d63384 !important;
 
   border-color: transparent;
