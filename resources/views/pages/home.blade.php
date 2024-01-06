@@ -1583,28 +1583,26 @@ height: 100%;
                     <!-- post -->
 
 
-
-                    @foreach ($recentposts as $video)
-                        <div class="post featured-post-xl">
-                            <div class="details clearfix">
-
-                                {{-- @if (end($str_arr) == $singletag->id) --}}
-                                <a href="/tags/{{ $video->tag->id }}/show"
-                                    class="category-badge lg">{{ $video->tag->TITLE }}</a>
+                    <div class="lx-card carousel-container">
 
 
-                                <h4 class="post-title"><a
-                                        href="/videos/{{ $video->id }}/show">{{ $video->TITLE }}</a>
-                                </h4>
+                        @foreach ($recentposts as $video)
+
+
+                        <div class="item fade">
+                            <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
+                            <div class="text is-text-centered">
+                                <p style=" color: white;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;"> {{ $video->TITLE }}</p>
                             </div>
-                            <a href="/videos/{{ $video->id }}/show">
-                                <div class="thumb rounded">
-                                    <div class="inner data-bg-image"
-                                        data-bg-image="{{ asset('storage/' . $video->IMG . '') }}"></div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
+
+                        </div> @endforeach
+
+                        <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a></div>
+                </div>
                 </div>
             </div>
             <div class="col-sm-4">
