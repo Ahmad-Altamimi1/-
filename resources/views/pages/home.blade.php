@@ -1905,7 +1905,7 @@ var tag1Button = document.getElementById('care1');
 tag1Button.classList.add('active');
 tag1Button.style.backgroundColor = '#d54368';
 tag1Button.style.color = '#fff';
-fetchContentseconde('أعتني بنفسكِ');
+thirdfetchContent('أعتني بنفسكِ');
 });
 
 // -----------------------------------------------------------------------------------------------------------------------
