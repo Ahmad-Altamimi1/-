@@ -1548,7 +1548,10 @@ height: 100%;
         top: 33%;
     background-color: #d54368;
     padding: 10px;
-    font-size: 16px !important:
+    font-size: 16px !important;
+    }
+    .category-badge:hover{
+        color: #d54368 !important;
     }
 </style>
 
