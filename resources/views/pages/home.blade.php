@@ -1581,12 +1581,7 @@ height: 100%;
                 <div class="post-carousel-lg">
 
                     <!-- post -->
-                    <?php
-                    // $string = $group->TAG;
-                    // $str_arr = explode(',', $string);
-                    // $str_arr = array_filter($str_arr);
-                    use App\Models\poststags;
-                    ?>
+                
 
 
                     @foreach ($recentposts as $video)
