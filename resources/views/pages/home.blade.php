@@ -1488,6 +1488,9 @@ button {
     transition: all 0.4s ease-in-out;
     display: block
 }
+.ltn__blog{
+    padding: 8px 0 ;
+}
 .ltn__blog-area  .container{
     position: relative;
 }
