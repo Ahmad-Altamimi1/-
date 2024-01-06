@@ -1494,7 +1494,7 @@ button {
 .ltn__blog-area  .container .nav-tabs{
     position: absolute;
     top: -56px;
-    left: 50%;
+    left: 47%;
     border: 2px solid transparent;
     border-bottom: 2px solid #fff;
     transform: translateX(-50%);
@@ -1506,7 +1506,7 @@ button {
 }
 .grid-row{
     display: grid ;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,200px);
     grid-template-rows: repeat(2,270px);
     gap: 10px;
     border-top: 2px solid #d54368;
