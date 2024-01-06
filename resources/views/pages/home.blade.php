@@ -1522,6 +1522,9 @@ border-radius: none;
 .tow-butoon button{
      border: 2px solid #cdc9c9;
      border-bottom: 2px solid white;
+     margin-right: 10px;
+     border-radius: 6px;
+    padding-top: 7px;
      }
 </style>
 
