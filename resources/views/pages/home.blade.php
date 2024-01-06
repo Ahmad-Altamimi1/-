@@ -1489,7 +1489,7 @@ button {
     display: block
 }
 .ltn__blog{
-    padding: 8px 0 ;
+    padding:  0 8px ;
 }
 .ltn__blog-area  .container{
     position: relative;
