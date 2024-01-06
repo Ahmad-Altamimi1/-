@@ -1578,7 +1578,7 @@ height: 100%;
     <div class="container-xl">
         <div class="row">
             <div class="col-sm-8">
-                <div class="post-carousel-lg">
+                {{-- <div class="post-carousel-lg"> --}}
 
                     <!-- post -->
 
@@ -1601,9 +1601,10 @@ height: 100%;
 
                         </div> @endforeach
 
-                        <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a></div>
-                </div>
-                </div>
+                        <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a>
+                    {{-- </div> --}}
+                {{-- </div> --}}
+                {{-- </div> --}}
                 </div>
             </div>
             <div class="col-sm-4">
