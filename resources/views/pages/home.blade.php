@@ -1545,7 +1545,7 @@ height: 100%;
     .injabytv .article-wrapper{
         display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px;
+    grid-template-rows: 81px;
     }
     .category-badge{
         position: absolute;
@@ -1598,7 +1598,7 @@ grid-template-columns: 44% 51%;" >
 {{-- ---------------------------------------------------------------------------- --}}
 <section class="hero-carousel pt-5" dir="rtl">
     <div class="container-xl">
-        <div class="row" dir="rtl">
+        <div class="row" dir="ltr">
             <div class="col-sm-8" style="height: 500px;">
                 {{-- <div class="post-carousel-lg"> --}}
 
@@ -1650,7 +1650,7 @@ grid-template-columns: 44% 51%;" >
 
                        @foreach ( $tag->posts->take(5) as $post )
 
-                  <article style="    height: 96px;">
+                  <article style="    height: 81px;     margin-bottom: 16px;" dir="rtl">
                     <div class="article-wrapper">
                       <figure>
                         <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}"><img src="{{ $post->IMG }}" alt="" /></a>
