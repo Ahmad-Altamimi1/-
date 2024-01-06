@@ -50,7 +50,7 @@
 
 
 
-
+import WOW from 'wowjs';
 
 
 
