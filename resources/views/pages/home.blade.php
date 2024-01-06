@@ -1576,13 +1576,16 @@ height: 100%;
                     data-tag-title="أعتني بطفلكِ" id="care" type="button">أعتني بطفلكِ  </button>
             </li>
         </ul>
-<div class="flex">
+<div class="grid" style="    gap: 2px;
+display: grid;
+grid-template-columns: 44% 51%;" >
+<div class="row grid-row left-half"  dir="rtl">
+
+</div>
             <div class="row grid-row right-half"  dir="rtl">
 
             </div>
-            <div class="row grid-row left-half"  dir="rtl">
 
-            </div>
         </div>
         </div>
     </div>
