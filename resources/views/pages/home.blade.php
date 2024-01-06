@@ -1488,7 +1488,7 @@ button {
 }
 .ltn__blog-area  .container .nav-tabs{
     position: absolute;
-    top: -59px;
+    top: -47px;
     left: 50%;
     border: 2px solid #cdc9c9;
     border-bottom: 2px solid #fff;
@@ -1519,6 +1519,7 @@ border-radius: none;
     background-color :transparent !important;
     background :transparent !important;
 }
+.tow-butoon button{    border: 2px solid #cdc9c9;}
 </style>
 
 </div>
