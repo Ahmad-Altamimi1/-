@@ -1111,6 +1111,7 @@ use App\Models\poststags;
         <p style="    text-align: center;
         font-size: 25px;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
+        <div class="row">
 <div class="col-sm-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
@@ -1153,7 +1154,7 @@ use App\Models\poststags;
 </div>
     <p>اعتني بطفلك</p>
 </div>
-
+</div>
 </div>
 </div>
 </div> <!-- end center content Right -->
