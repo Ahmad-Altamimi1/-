@@ -1649,6 +1649,8 @@ grid-template-columns: 44% 51%;" >
                         </section>
                     </main>
             </div>
+
+
             <div class="col-sm-4">
                 <div class="post-tabs rounded bordered injabytv">
                     @foreach($tags as $tag)
@@ -1684,6 +1686,38 @@ grid-template-columns: 44% 51%;" >
 </section>
 {{-- ---------------------------------------------------------------------------- --}}
 {{-- ---------------------------------------------------------------------------- --}}
+{{-- ---------------------------------------------------------------------------- --}}
+{{-- ---------------------------------------------------------------------------- --}}
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="news-slider" class="owl-carousel">
+          @foreach($newsList as $news)
+          <div class="post-slide">
+            <div class="post-img">
+              <img src="{{ $news['image'] }}" alt="">
+              <a href="{{ $news['readMoreLink'] }}" class="over-layer"><i class="fa fa-link"></i></a>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">
+                <a href="{{ $news['readMoreLink'] }}">{{ $news['title'] }}</a>
+              </h3>
+              <p class="post-description">{{ $news['description'] }}</p>
+              <span class="post-date"><i class="fa fa-clock-o"></i>{{ $news['date'] }}</span>
+              <a href="{{ $news['readMoreLink'] }}" class="read-more">read more</a>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{-- ---------------------------------------------------------------------------- --}}
+{{-- ---------------------------------------------------------------------------- --}}
+
+
+
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
             <div class="row">

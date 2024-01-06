@@ -44,7 +44,7 @@ class HomeController extends Controller
         $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
-
+$newsList=$recentposts;
         // $videos=;
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
         $left_side_bar_content= $this->getposts_in_one_tag('أعتني بطفلك');
