@@ -1,8 +1,8 @@
 
-    <h2 class="line-title">Trending Games</h2>
+    <h2 class="line-title">ف</h2>
     <div class="owl-carousel custom-carousel owl-theme">
 
-        @foreach ($posts_content as $post)
+        @foreach ($posts_content->take(12) as $post)
 
             <div class="item" style="background-image: url({{ $post->IMG }});">
                 <div class="item-desc">
