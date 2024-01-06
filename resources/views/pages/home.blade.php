@@ -1545,6 +1545,10 @@ height: 100%;
     }
     .category-badge{
         position: absolute;
+        top: 33%;
+    background-color: #d54368;
+    padding: 10px;
+    font-size: 16px !important:
     }
 </style>
 
@@ -1609,9 +1613,12 @@ height: 100%;
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
-                                                position:relative">
+                                                position:relative;
+                                                font-size:27px;
+                                                "
+                                                >
   <a href="/tags/{{ $video->tag->id }}/show"
-    class="category-badge lg">{{ $video->tag->TITLE }}</a>
+    class="category-badge rounded lg">{{ $video->tag->TITLE }}</a>
                                                 {{ $video->TITLE }}</p>
                                             </div>
 
