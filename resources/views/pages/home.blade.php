@@ -24,6 +24,11 @@ article {
     overflow: hidden;
     border: #cdc7c7 1px solid ;
     text-align: right;
+
+  }
+  article:not(:last-of-type){
+    height: 81px;
+      margin-bottom: 16px;
   }
 
   article a::after {
@@ -1597,7 +1602,7 @@ grid-template-columns: 44% 51%;" >
 {{-- ---------------------------------------------------------------------------- --}}
 {{-- ---------------------------------------------------------------------------- --}}
 <section class="hero-carousel pt-5" dir="rtl">
-    <div class="container-xl">
+    <div class="container">
         <div class="row" dir="ltr">
             <div class="col-sm-8" style="height: 500px;">
                 {{-- <div class="post-carousel-lg"> --}}
@@ -1650,7 +1655,7 @@ grid-template-columns: 44% 51%;" >
 
                        @foreach ( $tag->posts->take(5) as $post )
 
-                  <article style="    height: 81px;     margin-bottom: 16px;" dir="rtl">
+                  <article style="    " dir="rtl">
                     <div class="article-wrapper">
                       <figure>
                         <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}"><img src="{{ $post->IMG }}" alt="" /></a>
