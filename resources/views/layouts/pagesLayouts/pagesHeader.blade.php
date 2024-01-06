@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
     <!-- Responsive css -->
-    
+
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
     {{-- /* gogle fonts  */ --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/latest/slick.css"/>
@@ -156,7 +156,7 @@
                                 {{-- </form> --}}
                             </div>
                                                         <div class="site-logo">
-                                                <a href="{{ route('home') }}"><img src="{{asset('../انجابي فكتور-01-01.jpg')}}"
+                                                <a href="{{ route('home') }}"><img src="{{asset('../لوجو ابيض.png')}}"
                                                         alt="Logo" style="
     width: 140px;
 "></a>
@@ -430,7 +430,7 @@ $slicedArray=[];
                                         <!-- header-search-1 -->
                                         <div class="col logo-column d-xl-none">
                                             <div class="site-logo">
-                                                <a href="{{ route('home') }}"><img src="../انجابي فكتور-01-01.jpg"
+                                                <a href="{{ route('home') }}"><img src="../لوجو ابيض.png"
                                                         alt="Logo" style="
     width: 140px;
 "></a>
