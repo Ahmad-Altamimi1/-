@@ -1514,7 +1514,7 @@ border-radius: none;
 .ltn__blog-img{
     border-radius:0 !important;
 }
-.nav-link.active{
+.link.active{
     color: #d54368 !important;
     background-color :transparent !important;
     background :transparent !important;
