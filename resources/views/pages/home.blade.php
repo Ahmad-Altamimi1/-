@@ -1869,7 +1869,7 @@ fetchContentseconde('صحة الطفل');
    document.addEventListener('DOMContentLoaded', function() {
 var initialContent = document.querySelector('.grid-row').innerHTML;
 function thirdfetchContent(tagTitle) {
-    fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
+    fetch('/third-fetch-content?tagTitle=' + tagTitle)
         .then(function(response) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
