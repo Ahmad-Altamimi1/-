@@ -1700,7 +1700,7 @@ grid-template-columns: 44% 51%;" >
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div id="news-slider" class="owl-carousel">
+        <div id="news-slider" class="owl-carousel owl-theme">
           @foreach($newsList as $news)
           <div class="post-slide">
             <div class="post-img">
