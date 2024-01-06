@@ -1703,7 +1703,7 @@ grid-template-columns: 44% 51%;" >
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div id="news-slider" class="slick-carousel">
+        {{-- <div id="news-slider" class="slick-carousel">
             @foreach($newsList as $news)
               <div class="post-slide">
                 <div class="post-img">
@@ -1719,7 +1719,7 @@ grid-template-columns: 44% 51%;" >
                 </div>
               </div>
             @endforeach
-          </div>
+          </div> --}}
 
           <script>
             $(document).ready(function(){
