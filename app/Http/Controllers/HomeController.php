@@ -271,15 +271,15 @@ $slicedTags=[];
     }
 
     $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
-    $posts_content = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+    $third_section = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
     $havevideo=false;
-    if (count($posts_content)==0 ) {
+    if (count($third_section)==0 ) {
 
 
         $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
     if ( count(Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get())>0) {
 $havevideo=true;
-        $posts_content = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+        $third_section = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
 
     }}
 
