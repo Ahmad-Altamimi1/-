@@ -91,6 +91,9 @@ $groupnew[]= $value;
     }
 
 
+        // -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start First section (Months)
+// -----------------------------------------------------------------------------------------------------------------------
     public function fetchContent(Request $request)
     {
 
@@ -127,10 +130,7 @@ $slicedTags=[];
             $otherIds = array_diff($grouparrays, $slicedArray);
         }
 
-        // Extract post IDs from the TAG column in groups
         $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
-
-        // Get posts associated with the tag
         $posts_thumbs = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
         $havevideo=false;
         if (count($posts_thumbs)==0 ) {
@@ -155,6 +155,16 @@ $havevideo=true;
 
 
 
+    // -----------------------------------------------------------------------------------------------------------------------
+                                            //  End First section (Months)
+// -----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+  // -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start Seconde section
+// -----------------------------------------------------------------------------------------------------------------------
 
 
     public function fetchContentbottom(Request $request)
@@ -193,10 +203,7 @@ $slicedTags=[];
             $otherIds = array_diff($grouparrays, $slicedArray);
         }
 
-        // Extract post IDs from the TAG column in groups
         $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
-
-        // Get posts associated with the tag
         $posts_content = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
         $havevideo=false;
         if (count($posts_content)==0 ) {
@@ -220,8 +227,75 @@ $havevideo=true;
 
 
 
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  End Seconde section
+// -----------------------------------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  Start Thered section
+// -----------------------------------------------------------------------------------------------------------------------
+public function thirdfetchContent(Request $request)
+{
+
+    $tagTitle = $request->input('tagTitle');
+$slicedTags=[];
+    $tag = poststags::where('TITLE', $tagTitle)->first();
+    $id = $tag->id;
+    $tagbyid = poststags::find($id);
+    $tags = poststags::all();
+    $allgroups = groups::all();
+    $groupnew = [];
+    $slicedArray = [];
+    $otherIds = [];
+
+    foreach ($allgroups as $value) {
+        $grouptag = $value->TAG;
+        $grouparray = explode(',', $grouptag);
+
+        if (in_array($id, $grouparray)) {
+            $groupnew[] = $value;
+        }
+    }
+
+    foreach ($groupnew as $group) {
+        $grouptags = $group->TAG;
+        $grouparrays = explode(',', $grouptags);
+
+        $tagIndices = array_keys($grouparrays, $id);
+
+        foreach ($tagIndices as $index) {
+            $slicedArray = array_merge($slicedArray, array_slice($grouparrays, $index));
+        }
+
+        $otherIds = array_diff($grouparrays, $slicedArray);
+    }
+
+    $postIdsInTag = Post::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
+    $posts_content = Post::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+    $havevideo=false;
+    if (count($posts_content)==0 ) {
 
 
+        $postIdsInTag = Videos::whereIn("TAG", $slicedArray)->pluck('id')->toArray();
+    if ( count(Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get())>0) {
+$havevideo=true;
+        $posts_content = Videos::whereIn("id", $postIdsInTag)->orderBy('id', 'asc')->get();
+
+    }}
+
+    $pageid = $id;
+
+
+
+    $content = View::make('partial.thirdsection', compact('third_section','havevideo'))->render();
+
+    return response()->json(['content' => $content]);
+}
+
+
+// -----------------------------------------------------------------------------------------------------------------------
+                                            //  End Thered section
+// -----------------------------------------------------------------------------------------------------------------------
 
 
 

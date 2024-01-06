@@ -1546,34 +1546,12 @@ border-radius: none;
                     type="button">  أعتني بنفسكِ </button>
             </li>
             <li class="tow-butoon" role="presentation"><button aria-selected="true" style="width: 130px" class=""
-                    data-tag-title="أعتني بطفلكِ" id="care" type="button">  </button>
+                    data-tag-title="أعتني بطفلكِ" id="care" type="button">أعتني بطفلكِ  </button>
             </li>
         </ul>
 
             <div class="row grid-row"  dir="rtl">
                 <!-- Blog Item -->
-                @foreach($tags as $tag)
-                @if($tag->TITLE == "أثناء الحمل")
-                @foreach($tag->posts->take(6) as $post)
-
-                <div class="content_section" >
-                    <div class="ltn__blog-item">
-                        <div class="ltn__blog-img">
-                            <a href="{{ route('ShoWarticle',['id'=>$post->id]) }}"><img src="{{ asset($post->IMG) }}" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief" style="padding: 0 !important">
-                            <div class="ltn__blog-meta">
-                                <ul>
-
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog" ><a href="{{ route('ShoWarticle',['id'=>$post->id]) }} " style="font-size: 14px;padding-right:10px">{{ ($post->TITLE) }}</a></h3>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-                @endif
-                @endforeach
 
 
                 <!--  -->
@@ -1873,8 +1851,8 @@ document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
 
 var tag1Button = document.getElementById('baby1');
 tag1Button.classList.add('active');
-tag1Button.style.backgroundColor = '#d54368';
-tag1Button.style.color = '#111111';
+tag1Button.style.backgroundColor = '#d54368 !important';
+tag1Button.style.color = '#fff !important';
 fetchContentseconde('صحة الطفل');
 });
 
@@ -1889,8 +1867,8 @@ fetchContentseconde('صحة الطفل');
 
    // start second section
    document.addEventListener('DOMContentLoaded', function() {
-var initialContent = document.querySelector('.game-section').innerHTML;
-function fetchContentseconde(tagTitle) {
+var initialContent = document.querySelector('.grid-row').innerHTML;
+function thirdfetchContent(tagTitle) {
     fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
         .then(function(response) {
             if (!response.ok) {
@@ -1900,17 +1878,17 @@ function fetchContentseconde(tagTitle) {
         })
         .then(function(data) {
             console.log(data);
-            document.querySelector('.game-section').innerHTML = data.content;
+            document.querySelector('.grid-row').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            document.querySelector('.grid-row').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
-document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
+document.querySelectorAll('button[id^="care"]').forEach(function(button) {
     button.addEventListener('click', function() {
-        document.querySelectorAll('button[id^="baby"]').forEach(function(otherButton) {
+        document.querySelectorAll('button[id^="care"]').forEach(function(otherButton) {
             otherButton.classList.remove('active');
             otherButton.style.backgroundColor = '';
             otherButton.style.color = '';
@@ -1919,15 +1897,15 @@ document.querySelectorAll('button[id^="baby"]').forEach(function(button) {
         button.style.backgroundColor = '#70b646';
         button.style.color = '#fff';
         var tagTitle = button.getAttribute('data-tag-title');
-        fetchContentseconde(tagTitle);
+        thirdfetchContent(tagTitle);
     });
 });
 
-var tag1Button = document.getElementById('baby1');
+var tag1Button = document.getElementById('care1');
 tag1Button.classList.add('active');
 tag1Button.style.backgroundColor = '#d54368';
-tag1Button.style.color = '#111111';
-fetchContentseconde('صحة الطفل');
+tag1Button.style.color = '#fff';
+fetchContentseconde('أعتني بنفسكِ');
 });
 
 // -----------------------------------------------------------------------------------------------------------------------
