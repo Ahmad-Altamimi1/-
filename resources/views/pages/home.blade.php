@@ -1604,6 +1604,7 @@ height: 100%;
                         <a class="prev has-dflex-center"><i class="fas fa-angle-left"  ></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right" ></i></a></div>
                 </div>
                 </div>
+                </div>
             </div>
             <div class="col-sm-4">
                 <div class="post-tabs rounded bordered">
