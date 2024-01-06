@@ -15,8 +15,8 @@
 
     <link rel="stylesheet" href="{{ url('css/animate.css') }}">
 
-    {{-- <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}"> --}}
-    {{-- <link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/magnific-popup.css') }}">
 
     <link rel="stylesheet" href="{{ url('css/bootstrap-datepicker.css') }}">

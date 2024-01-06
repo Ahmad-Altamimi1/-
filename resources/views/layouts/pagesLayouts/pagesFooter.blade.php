@@ -111,9 +111,9 @@
       <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
         <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
 
-        <script src="{{ url('js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ url('js/jquery.min.js') }}"></script>
+        {{-- <script src="{{ url('js/jquery-3.2.1.min.js') }}"></script> --}}
         <script src="{{ url('js/owl.carousel.min.js') }}"></script>
-        <script src="{{ url('js/app.js') }}"></script>
         <script src="{{ url('js/app.js') }}"></script>
         <script src="{{ url('js/app.js') }}"></script>
 
