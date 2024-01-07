@@ -1346,7 +1346,7 @@ button {
   display: -webkit-flex;
   align-items: flex-end;
   -webkit-align-items: flex-end !important;
-  background: #343434 no-repeat center center / cover !important;
+  background: #343434 no-repeat center center / cover ;
   border-radius: 16px;
   overflow: hidden !important;
   position: relative;
