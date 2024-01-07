@@ -100,7 +100,7 @@
         </footer>
     </div><!-- end site wrapper -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
-
+    @livewireScripts
     <!-- All JS Plugins -->
     <!-- Include WOW library -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
