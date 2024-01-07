@@ -1582,7 +1582,7 @@ height: 100%;
 </style>
 
 </div>
-{{-- <section class="game-section"> --}}
+<section class="game-section">
     <div class="custom-carousel">
 
         @foreach ($recentposts->take(12) as $post)
@@ -1594,7 +1594,7 @@ height: 100%;
         @endforeach
     
     </div>
-{{-- </section> --}}
+</section>
 {{-- End bottom content  --}}
 
 
@@ -2025,11 +2025,11 @@ function fetchContentseconde(tagTitle) {
         })
         .then(function(data) {
             console.log(data);
-            document.querySelector('.game-section').innerHTML = data.content;
+            // document.querySelector('.game-section').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            // document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
