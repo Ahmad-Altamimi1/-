@@ -2047,6 +2047,11 @@ div#popup span#close-btn {
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
+                @php
+                  $postCount = $tag->posts()->count();   
+                @endphp
+                @if ( ($postCount > 5) )
+                    
                 
             <div class="blog-container">  
             @foreach($item->posts->take(3) as $news)
@@ -2075,6 +2080,7 @@ div#popup span#close-btn {
                 <div id="popup-content">
                 </div>
             </div> --}}
+            @endif
             @endforeach
         </div>
    
