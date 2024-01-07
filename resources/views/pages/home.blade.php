@@ -1619,7 +1619,7 @@ height: 100%;
         <div class="tab-pane fade  " id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
             <section class="game-section">
                 <div class="custom-carousel">
-                    @foreach ($mama as $post)
+                    @foreach ($baby as $post)
                         <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                             <p class="tag_name">{{ $post->tag->TITLE }}</p>
                             <div class="item-desc">
