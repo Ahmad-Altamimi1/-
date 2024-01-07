@@ -1572,46 +1572,55 @@ height: 100%;
         border-radius: 39px !important;
     }
 </style>
-@php
-    /** @var \App\Http\Livewire\PostCarousel $component */
-@endphp
-{{-- {{@livewire('post-carousel')}} --}}
-<livewire:post-carousel />
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <div class="bottom_content">
     <div class="post-tabs rounded bordered" dir="ltr">
         <!-- tab navs -->
-        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
-            style="flex-direction: row-reverse;">
-
-            <li class="nav-item" role="presentation">
-                <button wire:click="selectTag('صحتك ماما')" aria-selected="{{ $selectedTag == 'صحتك ماما' ? 'true' : 'false' }}"
-                        class="nav-link health_button {{ $selectedTag == 'صحتك ماما' ? 'active' : '' }}" style="width: 130px" type="button"> صحتك ماما </button>
+        <ul class="nav nav-tabs" id="myTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+                   aria-controls="tab1" aria-selected="true">صحتك ماما</a>
             </li>
-            
-            <li class="nav-item" role="presentation">
-                <button wire:click="selectTag('صحة الطفل')" aria-selected="{{ $selectedTag == 'صحة الطفل' ? 'true' : 'false' }}"
-                        class="nav-link health_button {{ $selectedTag == 'صحة الطفل' ? 'active' : '' }}" style="width: 130px" type="button"> صحة الطفل </button>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab"
+                   aria-controls="tab2" aria-selected="false">صحة الطفل</a>
             </li>
-            
-            
         </ul>
     </div>
 </div>
-
 <section class="game-section">
     <div class="custom-carousel">
-        @foreach ($games as $post)
-            <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
-                <div class="item-desc">
-                    <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
-                    <p style="color: white " dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
+        <div class="tab-content" id="myTabsContent">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                @foreach ($games->take(1) as $post)
+                <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                    <div class="item-desc">
+                        <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
+                        
+                        <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
+                        </p>
+                    </div>
                 </div>
+            @endforeach
             </div>
-        @endforeach
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                @foreach ($games->take(12) as $post)
+                <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                    <div class="item-desc">
+                        <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
+                        
+                        <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+            </div>
+      
+    
     </div>
 </section>
-
 {{-- End bottom content  --}}
 
 
