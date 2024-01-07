@@ -1583,7 +1583,7 @@ height: 100%;
         border-radius: 6px;
 
     }
-    a#tab1-tab{
+    a#tab1-tab,a#tab2-tab{
         padding: 0px 13px !important;
         border: 1px solid #666666 !important;
         margin-right: 10px;
@@ -1596,6 +1596,7 @@ height: 100%;
         border-radius: 6px !important;
         border: 1px solid #d54368 !important;
     }
+
 </style>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
