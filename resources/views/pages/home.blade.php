@@ -2055,14 +2055,14 @@ div#popup span#close-btn {
                 <article>
                     <figure>
                         <div class="date-and-time">
-                            <span>Aug</span>
-                            <span>12</span>
-                            <span>2023</span>
+                            <span>{{$item->TITLE}}</span>
+                            {{-- <span>12</span>
+                            <span>2023</span> --}}
                         </div>
-                        <img src="{{ $news->IMG }}" alt="" loading="lazy" />
+                        <img src="{{ $news->IMG }}" alt="{{$item->TITLE}}" loading="lazy" />
                         <figcaption>
-                            <span>Luxury Brands</span>
-                            <span>By Admin | Luxury</span>
+                            <span>{{ $news->TITLE }}</span>
+                            {{-- <span>By Admin | Luxury</span> --}}
                         </figcaption>
                     </figure>
                 </article>
@@ -2081,7 +2081,7 @@ div#popup span#close-btn {
 
 
 
-              <div class="post-slide">
+              {{-- <div class="post-slide">
                 <div class="post-img">
                   <img src="{{ $news->IMG }}" alt="">
                   <a href="{{ $news->id }}" class="over-layer"><i class="fa fa-link"></i></a>
@@ -2093,7 +2093,7 @@ div#popup span#close-btn {
                   <p class="post-description">{{ $news->TITLE}}</p>
                   <a href="{{ $news->id }}" class="read-more">read more</a>
                 </div>
-              </div>
+              </div> --}}
             @endforeach
           </div>
 
