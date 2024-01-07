@@ -1583,6 +1583,13 @@ height: 100%;
         border-radius: 6px;
 
     }
+    a#tab1-tab{
+        padding: 0px 13px !important;
+        border: 1px solid #666666 !important;
+        margin-right: 10px;
+        border-radius: 6px !important;
+
+    }
     .nav-tabs .nav-link.active{
         color: #d54368 !important;
         padding: 0px 13px !important;
