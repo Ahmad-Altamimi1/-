@@ -2025,11 +2025,11 @@ function fetchContentseconde(tagTitle) {
         })
         .then(function(data) {
             console.log(data);
-            document.querySelector('.game-section').innerHTML = data.content;
+            // document.querySelector('.game-section').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            // document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
