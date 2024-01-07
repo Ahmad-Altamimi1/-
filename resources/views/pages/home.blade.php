@@ -2080,9 +2080,9 @@ div#popup span#close-btn {
                 <div id="popup-content">
                 </div>
             </div> --}}
-            @endif
             @endforeach
         </div>
+        @endif
    
 
 
