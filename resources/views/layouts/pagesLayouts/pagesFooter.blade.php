@@ -105,49 +105,11 @@
 
 
     <!-- preloader area end -->
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit.min.js" integrity="sha512-y2L19LN3n8wSmzg6I5FzQRey2/6Pwi5mTEZpEM8lJW2EEUgSPE/t/E0+rBWwUuY7HLfQ7P4Gvus9L7/1vM9SZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit-icons.min.js" integrity="sha512-kIXiHI1wSHtBxWjT9fcZOC2WzfuLiACZ6sC9Kg0/kJu5T4e4vsTRB5PzUcf1by/hJ9ZdKaFfS+PiXlV6bl5dGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- All JS Plugins -->
-    <script>
-        $('.contentslider').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
 
-    </script>
+    <!-- All JS Plugins -->
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
         <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
@@ -381,6 +343,46 @@ function showItem(carousel, index) {
 
    </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit.min.js" integrity="sha512-y2L19LN3n8wSmzg6I5FzQRey2/6Pwi5mTEZpEM8lJW2EEUgSPE/t/E0+rBWwUuY7HLfQ7P4Gvus9L7/1vM9SZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit-icons.min.js" integrity="sha512-kIXiHI1wSHtBxWjT9fcZOC2WzfuLiACZ6sC9Kg0/kJu5T4e4vsTRB5PzUcf1by/hJ9ZdKaFfS+PiXlV6bl5dGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script>
+    $('.contentslider').slick({
+dots: true,
+infinite: false,
+speed: 300,
+slidesToShow: 4,
+slidesToScroll: 4,
+responsive: [
+{
+  breakpoint: 1024,
+  settings: {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    dots: true
+  }
+},
+{
+  breakpoint: 600,
+  settings: {
+    slidesToShow: 2,
+    slidesToScroll: 2
+  }
+},
+{
+  breakpoint: 480,
+  settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+}
+// You can unslick at a given breakpoint now by adding:
+// settings: "unslick"
+// instead of a settings object
+]
+});</script>
 </body>
 </html>
