@@ -111,9 +111,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
     <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script> --}}
-
+    <script>
+      $(document).ready(function(){
+        // Initialize Slick Carousel
+        $('.slick-carousel').slick({
+          slidesToShow: 3, // Adjust the number of slides to show
+          slidesToScroll: 1,
+          autoplay: true, // Set to true if you want the carousel to autoplay
+          autoplaySpeed: 2000 // Adjust the autoplay speed in milliseconds
+          // Add more options as needed
+        });
+      });
+    </script>
 
     <script>
+      
 // Replace Owl Carousel initialization with Slick Carousel
 $('.custom-carousel').slick({
   variableWidth: true, // autoWidth equivalent

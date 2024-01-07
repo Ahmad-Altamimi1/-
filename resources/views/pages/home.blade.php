@@ -1717,7 +1717,7 @@ grid-template-columns: 44% 51%;" >
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        {{-- <div id="news-slider" class="slick-carousel">
+        <div id="news-slider" class="slick-carousel">
             @foreach($newsList as $news)
               <div class="post-slide">
                 <div class="post-img">
@@ -1733,20 +1733,9 @@ grid-template-columns: 44% 51%;" >
                 </div>
               </div>
             @endforeach
-          </div> --}}
+          </div>
 
-          <script>
-            $(document).ready(function(){
-              // Initialize Slick Carousel
-              $('.slick-carousel').slick({
-                slidesToShow: 3, // Adjust the number of slides to show
-                slidesToScroll: 1,
-                autoplay: true, // Set to true if you want the carousel to autoplay
-                autoplaySpeed: 2000 // Adjust the autoplay speed in milliseconds
-                // Add more options as needed
-              });
-            });
-          </script>
+
 
       </div>
     </div>
