@@ -1621,6 +1621,8 @@ height: 100%;
                 <div class="custom-carousel">
                     @foreach ($baby as $post)
                         <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                            <p class="tag_name">{{ $post->tag->TITLE }}</p>
+
                             <div class="item-desc">
                                 <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
                                 <p style="color: white" dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
