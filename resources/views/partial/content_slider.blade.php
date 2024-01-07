@@ -1,7 +1,7 @@
 {{-- <h2 class="line-title">ف</h2> --}}
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-<div class="slider-for">
+
 
     @foreach ($posts_content->take(12) as $post)
         <div class="item" style="background-image: url({{ $post->IMG }});">
@@ -11,7 +11,7 @@
         </div>
     @endforeach
 
-</div>
+
 {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  --}}
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
