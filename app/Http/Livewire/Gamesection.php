@@ -64,8 +64,8 @@ class PostCarousel extends Component
         $pageid = $id;
     
     
-        $recentPosts = $third_section ;
+        $games = $third_section ;
 
-        return view('pages.home', compact('recentPosts'));
+        return view('pages.home', compact('games'));
     }
 }

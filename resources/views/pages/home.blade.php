@@ -1591,7 +1591,7 @@ height: 100%;
 <section class="game-section">
     <div class="custom-carousel">
 
-        @foreach ($recentposts->take(12) as $post)
+        @foreach ($games->take(12) as $post)
             <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                 <div class="item-desc">
                     <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
