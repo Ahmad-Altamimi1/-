@@ -2048,7 +2048,7 @@ div#popup span#close-btn {
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
        
-                @if ( count($tag->posts) > 3) 
+                @if ( count($item->posts) > 3) 
                     
                 
             <div class="blog-container">  
