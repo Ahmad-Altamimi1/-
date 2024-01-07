@@ -1589,6 +1589,9 @@ height: 100%;
             <div class="item" style="background-image: url({{ $post->IMG }});">
                 <div class="item-desc">
                     <h3>{{ $post->TITLE }}</h3>
+                    
+                    <p> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
+                    </p>
                 </div>
             </div>
         @endforeach
