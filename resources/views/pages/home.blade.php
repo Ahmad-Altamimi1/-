@@ -1575,7 +1575,7 @@ height: 100%;
 @php
     /** @var \App\Http\Livewire\PostCarousel $component */
 @endphp
-{{@livewire('PostCarousel')}}
+{{@livewire('Gamesection')}}
 <div class="bottom_content">
     <div class="post-tabs rounded bordered" dir="ltr">
         <!-- tab navs -->
