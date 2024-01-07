@@ -38,12 +38,13 @@
     <link rel="stylesheet" href="{{ url('pages/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('pages/css/custom.css') }}">
     <!-- Responsive css -->
-
+{{-- slick slider  --}}
     <link rel="stylesheet" href="{{ url('pages/css/responsive.css') }}">
-    {{-- /* gogle fonts  */ --}}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/latest/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    {{-- /* gogle fonts  */ --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@800&family=Cairo:wght@700&display=swap"
     rel="stylesheet">

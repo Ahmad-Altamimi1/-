@@ -1,9 +1,8 @@
 <h2 class="line-title">ف</h2>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 
-<div class="slick-carousel custom-carousel">
+
+<div class="slick-carousel custom-carousel contentslider">
 
     @foreach ($posts_content->take(12) as $post)
         <div class="item" style="background-image: url({{ $post->IMG }});">
