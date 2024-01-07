@@ -2046,7 +2046,7 @@ div#popup span#close-btn {
 
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
-            @foreach ($selected_tags as $item)
+            @foreach ($tags as $item)
                 
             <div class="blog-container">  
             @foreach($item->posts->take(3) as $news)
