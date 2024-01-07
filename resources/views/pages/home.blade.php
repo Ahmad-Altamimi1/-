@@ -1355,9 +1355,9 @@ button {
   cursor: pointer;
 }
 .game-section .item.active {
-  width: 500px;
-  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  width: 500px !important;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25) !important;
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25) !important;
 }
 .game-section .item:after {
   content: "";
