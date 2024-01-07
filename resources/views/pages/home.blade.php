@@ -1326,6 +1326,7 @@ button {
   display: -webkit-flex;
 }
 .game-section .item {
+    position: relative;
   margin: 0 15px 60px !important;
   width: 320px !important;
   height: 400px !important;
@@ -1571,6 +1572,16 @@ height: 100%;
         background: #d63384 !important;
         border-radius: 39px !important;
     }
+    .tag_name{
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        width: 100px;
+        background-color: #d54368;
+        color: white;
+        border-radius: 6px;
+
+    }
 </style>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
@@ -1594,6 +1605,7 @@ height: 100%;
                 <div class="custom-carousel">
                     @foreach ($mama as $post)
                         <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                            <p class="tag_name">{{ $post->tag->TITLE }}</p>
                             <div class="item-desc">
                                 <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
                                 <p style="color: white" dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
@@ -1617,6 +1629,7 @@ height: 100%;
                     @endforeach
                 </div>
             </section>
+        </div>
 {{-- End bottom content  --}}
 
 
