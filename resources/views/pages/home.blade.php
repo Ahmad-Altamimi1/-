@@ -2067,14 +2067,14 @@ div#popup span#close-btn {
                     </figure>
                 </article>
       
-            <div class="overlay" id="overlay"></div>
-            <div class="popup" id="popup">
+            {{-- <div class="overlay" id="overlay"></div> --}}
+            {{-- <div class="popup" id="popup">
                 <span id="close-btn" class="material-symbols-outlined">
                     close
                 </span>
                 <div id="popup-content">
                 </div>
-            </div>
+            </div> --}}
         </div>
    
         @endforeach
