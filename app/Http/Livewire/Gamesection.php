@@ -14,7 +14,7 @@ class PostCarousel extends Component
 
     public function render()
     {
-        
+        dd($this->selectedTag);        
     $tagTitle = $this->selectedTag ;
     $slicedTags=[];
         $tag = poststags::where('TITLE', $tagTitle)->first();
