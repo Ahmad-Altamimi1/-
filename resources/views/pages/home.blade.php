@@ -1594,7 +1594,7 @@ height: 100%;
     <div class="custom-carousel">
         <div class="tab-content" id="myTabsContent">
             <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                @foreach ($games->take(1) as $post)
+                @foreach ($games->take(12) as $post)
                 <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                     <div class="item-desc">
                         <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
