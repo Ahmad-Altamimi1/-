@@ -2047,10 +2047,8 @@ div#popup span#close-btn {
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
-                @php
-                  $postCount = $tag->posts()->count();   
-                @endphp
-                @if ( ($postCount > 5) )
+       
+                @if ( count($tag->posts) > 3) 
                     
                 
             <div class="blog-container">  
