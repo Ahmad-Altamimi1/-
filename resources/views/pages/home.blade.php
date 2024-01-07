@@ -1583,12 +1583,19 @@ height: 100%;
         border-radius: 6px;
 
     }
+    .nav-tabs .nav-link.active{
+        color: #d54368 !important;
+        padding: 0px 13px !important;
+        border-radius: 6px !important;
+        border: 1px solid #d54368 !important;
+    }
 </style>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <div class="bottom_content container">
-        <ul class="nav nav-tabs" id="myTabs" role="tablist">
+        <ul class="nav nav-tabs" id="myTabs" role="tablist" style="    display: flex;
+        justify-content: end;">
             <li class="nav-item">
                 <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
                    aria-controls="tab1" aria-selected="true">صحتك ماما</a>
