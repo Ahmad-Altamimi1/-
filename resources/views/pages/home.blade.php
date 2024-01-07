@@ -1572,12 +1572,10 @@ height: 100%;
         border-radius: 39px !important;
     }
 </style>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<div class="bottom_content">
-    <div class="post-tabs rounded bordered" dir="ltr">
-        <!-- tab navs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <div class="bottom_content">
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
@@ -1589,38 +1587,36 @@ height: 100%;
             </li>
         </ul>
     </div>
-</div>
-<section class="game-section">
-    <div class="custom-carousel">
-        <div class="tab-content" id="myTabsContent">
-            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                @foreach ($games->take(12) as $post)
-                <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
-                    <div class="item-desc">
-                        <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
-                        
-                        <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
-                        </p>
-                    </div>
+
+    <div class="tab-content" id="myTabsContent">
+        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+            <section class="game-section">
+                <div class="custom-carousel">
+                    @foreach ($mama->take(12) as $post)
+                        <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                            <div class="item-desc">
+                                <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
+                                <p style="color: white" dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-            @endforeach
-            </div>
-            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                @foreach ($left_side_bar_content->take(12) as $post)
-                <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
-                    <div class="item-desc">
-                        <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
-                        
-                        <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
-                        </p>
-                    </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+            <section class="game-section">
+                <div class="custom-carousel">
+                    @foreach ($baby->take(12) as $post)
+                        <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
+                            <div class="item-desc">
+                                <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
+                                <p style="color: white" dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-            @endforeach
-            </div>
-      
-    
-    </div>
-</section>
+            </section>
 {{-- End bottom content  --}}
 
 

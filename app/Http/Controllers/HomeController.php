@@ -50,10 +50,12 @@ $games=$recentposts;
         // $videos=;
         $first_tag = poststags::where('TITLE','=','الشهر الثامن')->first();
         $left_side_bar_content= $this->getposts_in_one_tag('أعتني بطفلك');
+        $baby= $this->getposts_in_one_tag('صحة الطفل');
+        $mama= $this->getposts_in_one_tag('صحتك ماما');
         // $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
         $defaultPosts = Post::take(4)->get();
-            
-        return view('pages.home',compact('selectedTag','recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
+
+        return view('pages.home',compact('baby','mama','selectedTag','recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
     }
     public function getposts_in_one_tag($tagname){
         $tagbyid = poststags::where('TITLE','=',$tagname)->first();
