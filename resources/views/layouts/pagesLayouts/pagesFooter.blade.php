@@ -122,7 +122,7 @@ $('.custom-carousel').slick({
   slidesToScroll: 1, // Assuming you want to scroll one slide at a time
 });
 $(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
+  $(".custom-carousel .item").hover(function () {
     $(".custom-carousel .item").not($(this)).removeClass("active");
     $(this).toggleClass("active");
   });
