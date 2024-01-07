@@ -1271,7 +1271,7 @@ a:hover {
   outline: none;
 }
 a:hover {
-  color: #e73700;
+  color: #d54368;
 }
 h2 {
   margin-bottom: 48px;
@@ -1312,7 +1312,7 @@ button {
 }
 .line-title::after {
   width: 32px;
-  background: #e73700;
+  background: #d54368;
 }
 
 /******* Middle section CSS Start ******/
@@ -1616,7 +1616,7 @@ height: 100%;
     
 
     <div class="tab-content" id="myTabsContent">
-        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <div class="tab-pane fade  " id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
             <section class="game-section">
                 <div class="custom-carousel">
                     @foreach ($mama as $post)
@@ -1632,7 +1632,7 @@ height: 100%;
             </section>
         </div>
 
-        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+        <div class="tab-pane fade active show" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
             <section class="game-section">
                 <div class="custom-carousel">
                     @foreach ($baby as $post)
