@@ -1583,14 +1583,15 @@ height: 100%;
             style="flex-direction: row-reverse;">
 
             <li class="nav-item" role="presentation">
-                <button wire:click="selectTag('صحتك ماما')" aria-selected="{{ $component->selectedTag == 'صحتك ماما' ? 'true' : 'false' }}"
-                        class="nav-link health_button {{ $component->selectedTag == 'صحتك ماما' ? 'active' : '' }}" style="width: 130px" type="button"> صحتك ماما </button>
+                <button wire:click="selectTag('صحتك ماما')" aria-selected="{{ $this->selectedTag == 'صحتك ماما' ? 'true' : 'false' }}"
+                        class="nav-link health_button {{ $this->selectedTag == 'صحتك ماما' ? 'active' : '' }}" style="width: 130px" type="button"> صحتك ماما </button>
             </li>
-
+            
             <li class="nav-item" role="presentation">
-                <button wire:click="selectTag('صحة الطفل')" aria-selected="{{ $component->selectedTag == 'صحة الطفل' ? 'true' : 'false' }}"
-                        class="nav-link health_button {{ $component->selectedTag == 'صحة الطفل' ? 'active' : '' }}" style="width: 130px" type="button"> صحة الطفل </button>
+                <button wire:click="selectTag('صحة الطفل')" aria-selected="{{ $this->selectedTag == 'صحة الطفل' ? 'true' : 'false' }}"
+                        class="nav-link health_button {{ $this->selectedTag == 'صحة الطفل' ? 'active' : '' }}" style="width: 130px" type="button"> صحة الطفل </button>
             </li>
+            
         </ul>
     </div>
 </div>
