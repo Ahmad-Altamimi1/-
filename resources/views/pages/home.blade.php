@@ -1572,38 +1572,42 @@ height: 100%;
         border-radius: 39px !important;
     }
 </style>
+@php
+    /** @var \App\Http\Livewire\PostCarousel $component */
+@endphp
+
 <div class="bottom_content">
     <div class="post-tabs rounded bordered" dir="ltr">
         <!-- tab navs -->
         <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
             style="flex-direction: row-reverse;">
 
-            <li class="nav-item" role="presentation"><button aria-selected="true"
-                    class="nav-link health_button active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
-                    type="button"> صحتك ماما </button>
+            <li class="nav-item" role="presentation">
+                <button wire:click="selectTag('صحتك ماما')" aria-selected="{{ $component->selectedTag == 'صحتك ماما' ? 'true' : 'false' }}"
+                        class="nav-link health_button {{ $component->selectedTag == 'صحتك ماما' ? 'active' : '' }}" style="width: 130px" type="button"> صحتك ماما </button>
             </li>
-            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link health_button"
-                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
+
+            <li class="nav-item" role="presentation">
+                <button wire:click="selectTag('صحة الطفل')" aria-selected="{{ $component->selectedTag == 'صحة الطفل' ? 'true' : 'false' }}"
+                        class="nav-link health_button {{ $component->selectedTag == 'صحة الطفل' ? 'active' : '' }}" style="width: 130px" type="button"> صحة الطفل </button>
             </li>
         </ul>
     </div>
 </div>
+
 <section class="game-section">
     <div class="custom-carousel">
-
-        @foreach ($games->take(12) as $post)
+        @foreach ($games as $post)
             <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                 <div class="item-desc">
                     <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
-                    
-                    <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
-                    </p>
+                    <p style="color: white " dir="rtl">{{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}</p>
                 </div>
             </div>
         @endforeach
-    
     </div>
 </section>
+
 {{-- End bottom content  --}}
 
 
