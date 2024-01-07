@@ -2052,7 +2052,7 @@ div#popup span#close-btn {
                     
                 
             <div class="blog-container">  
-            @foreach($item->posts->take(3) as $news)
+            @foreach($item->posts->take(1) as $news)
 
 
                 <article>
