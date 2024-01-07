@@ -233,10 +233,11 @@ article {
    top: 0;
       background: linear-gradient(to left, #d54368, white);
   }
-  /* .slick-initialized .slick-slide{
+  .game-section .slick-initialized .slick-slide{
           border-radius: 0  64px 64px 0 ;
+          height: 400px;;
 
-  } */
+  }
   .ltn__slider-area {
       /* height: calc(100vh - 218px)!important; */
       }
