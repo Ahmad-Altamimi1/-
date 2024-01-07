@@ -6,8 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> --}}
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
         </div>
@@ -1066,23 +1066,23 @@ border: 2px solid #d54368;
                     <!-- post tabs -->
                     <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
-                        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
+                        <ul class="nav nav-tabs nav-pills nav-fill  autoplay" id="postsTab" role="tablist"
                             style="flex-direction: row-reverse;">
 
-                            <li class="nav-item" role="presentation"><button aria-selected="true"
+                             <li class="nav-item" role="presentation"><button aria-selected="true"
                                     class="nav-link active" data-tag-title="الشهر الأول" id="tag1"
                                     type="button">الشهر الأول</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر الثاني" id="tag2" type="button"> الشهر الثاني</button>
                             </li>
-                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر الثالث" id="tag3" type="button">الشهر الثالث</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر الرابع" id="tag4" type="button"> الشهر الرابع</button>
                             </li>
-                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر الخامس" id="tag4" type="button">الشهر الخامس </button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
@@ -1094,7 +1094,7 @@ border: 2px solid #d54368;
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر الثامن" id="tag7" type="button"> الشهر الثامن</button>
                             </li>
-                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
+                           <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
                                     data-tag-title="الشهر التاسع" id="tag8" type="button">الشهر التاسع </button>
                             </li>
 
@@ -1105,6 +1105,7 @@ border: 2px solid #d54368;
 
 
                         </ul>
+             
                         <!-- tab contents -->
                         <div class="tab-content" id="postsTabContent">
                             <!-- loader -->
@@ -1581,9 +1582,19 @@ height: 100%;
 </style>
 
 </div>
-<section class="game-section">
+{{-- <section class="game-section"> --}}
+    <div class="custom-carousel">
 
-</section>
+        @foreach ($recentposts->take(12) as $post)
+            <div class="item" style="background-image: url({{ $post->IMG }});">
+                <div class="item-desc">
+                    <h3>{{ $post->TITLE }}</h3>
+                </div>
+            </div>
+        @endforeach
+    
+    </div>
+{{-- </section> --}}
 {{-- End bottom content  --}}
 
 

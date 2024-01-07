@@ -225,12 +225,12 @@
         /* ---------------------------------------------------------
             9. Tooltip
         --------------------------------------------------------- */
-        $('[data-bs-toggle="tooltip"]').tooltip();
+        // $('[data-bs-toggle="tooltip"]').tooltip();
 
         /* --------------------------------------------------------
             10. Nice Select
         --------------------------------------------------------- */
-        $("select").niceSelect();
+        // $("select").niceSelect();
 
         /* --------------------------------------------------------
             11. Default active and hover item active
@@ -321,13 +321,13 @@
         /* --------------------------------------------------------
             14. LightCase jQuery Active
         --------------------------------------------------------- */
-        $("a[data-rel^=lightcase]").lightcase({
-            transition:
-                "elastic" /* none, fade, fadeInline, elastic, scrollTop, scrollRight, scrollBottom, scrollLeft, scrollHorizontal and scrollVertical */,
-            swipe: true,
-            maxWidth: 1170,
-            maxHeight: 600,
-        });
+        // $("a[data-rel^=lightcase]").lightcase({
+        //     transition:
+        //         "elastic" /* none, fade, fadeInline, elastic, scrollTop, scrollRight, scrollBottom, scrollLeft, scrollHorizontal and scrollVertical */,
+        //     swipe: true,
+        //     maxWidth: 1170,
+        //     maxHeight: 600,
+        // });
 
         /* --------------------------------------------------------
             15. Slider One Active
@@ -1112,10 +1112,10 @@
         --------------------------------------------------------- */
         // $('.ltn__counter').counterUp();
 
-        $(".counter").counterUp({
-            delay: 10,
-            time: 2000,
-        });
+        // $(".counter").counterUp({
+        //     delay: 10,
+        //     time: 2000,
+        // });
         $(".counter").addClass("animated fadeInDownBig");
         $("h3").addClass("animated fadeIn");
 
@@ -1200,21 +1200,21 @@
         /* ---------------------------------------------------------
             32. Price Slider
         --------------------------------------------------------- */
-        $(".slider-range").slider({
-            range: true,
-            min: 50,
-            max: 5000,
-            values: [50, 1500],
-            slide: function (event, ui) {
-                $(".amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-            },
-        });
-        $(".amount").val(
-            "$" +
-                $(".slider-range").slider("values", 0) +
-                " - $" +
-                $(".slider-range").slider("values", 1)
-        );
+        // $(".slider-range").slider({
+        //     range: true,
+        //     min: 50,
+        //     max: 5000,
+        //     values: [50, 1500],
+        //     slide: function (event, ui) {
+        //         $(".amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        //     },
+        // });
+        // $(".amount").val(
+        //     "$" +
+        //         $(".slider-range").slider("values", 0) +
+        //         " - $" +
+        //         $(".slider-range").slider("values", 1)
+        // );
 
         /* --------------------------------------------------------
             33. Quantity plus minus
@@ -1239,12 +1239,12 @@
         /* --------------------------------------------------------
             34. scrollUp active
         -------------------------------------------------------- */
-        $.scrollUp({
-            scrollText: '<i class="fa fa-angle-up"></i>',
-            easingType: "linear",
-            scrollSpeed: 900,
-            animation: "fade",
-        });
+        // $.scrollUp({
+        //     scrollText: '<i class="fa fa-angle-up"></i>',
+        //     easingType: "linear",
+        //     scrollSpeed: 900,
+        //     animation: "fade",
+        // });
 
         /* --------------------------------------------------------
             35. Parallax active ( About Section  )

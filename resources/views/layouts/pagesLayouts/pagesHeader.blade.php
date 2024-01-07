@@ -2,17 +2,23 @@
 {{-- <html class="no-js" lang="ar" dir="rtl">    --}}
 
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>إنجابي</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {{-- <link rel="stylesheet" href="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
-
+    <link rel="stylesheet" type="text/css" href="{{url('slick/slick.css')}}"/>
+    
+    <link rel="stylesheet" type="text/css" href="{{url('slick/slick-theme.css')}}"/>
     <link rel="stylesheet" href="{{ url('css/animate.css') }}">
 
     <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}">
@@ -25,7 +31,7 @@
 
     <link rel="stylesheet" href="{{ url('assets/libs/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/tailwind.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/css/uikit.min.css" integrity="sha512-+mRM9Fwup/p3VOaAPYNOuFUc/QhfwRl7s11uRp0OKn6hNGHohQxTpLa3RiCv3xeMWC9oHYzFTp5oUpKYuKMx1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <!-- Place favicon.png in the root directory -->

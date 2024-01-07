@@ -99,66 +99,63 @@
             </div>
         </footer>
     </div><!-- end site wrapper -->
-<!-- Body main wrapper end -->
-
-    <!-- preloader area start -->
-
-
-    <!-- preloader area end -->
 
     <!-- All JS Plugins -->
-
-
-
+    <!-- Include WOW library -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="{{ url('slick/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('slick/slick.js') }}"></script>
+    {{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
-        <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ url('assets/libs/lucide/umd/lucide.min.js') }}"></script>
+    <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script> --}}
 
 
-        <script src="{{ url('js/owl.carousel.min.js') }}"></script>
+    <script>
+// Replace Owl Carousel initialization with Slick Carousel
+$('.custom-carousel').slick({
+  variableWidth: true, // autoWidth equivalent
+  infinite: true, // loop equivalent
+  slidesToShow: 1, // Assuming you want one visible slide at a time
+  slidesToScroll: 1, // Assuming you want to scroll one slide at a time
+});
 
-        <script src="{{ url('js/app.js') }}"></script>
+// Use 'init' event to handle item click and toggle 'active' class
+$(document).ready(function () {
+  $('.custom-carousel').on('init', function () {
+    $('.custom-carousel .slick-slide').click(function () {
+      $('.custom-carousel .slick-slide').not($(this)).removeClass('active');
+      $(this).toggleClass('active');
+    });
+  });
+});
+
+  </script>
+      
+
+        {{-- <script src="{{ url('js/app.js') }}"></script> --}}
 
 
 
-        <!-- Include Slick Carousel JS -->
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-        <script>
-            $(document).ready(function(){
-                // Initialize Slick Carousel
-                $('.custom-carousel').slick({
-                    slidesToShow: 3, // Adjust the number of slides to show
-                    slidesToScroll: 1,
-                    autoplay: true, // Set to true if you want the carousel to autoplay
-                    autoplaySpeed: 2000 // Adjust the autoplay speed in milliseconds
-                    // Add more options as needed
-                });
-            });
-        </script>
-
-
-
-        <script src="{{ url('assets/js/app.js') }}"></script>
-    <script src="{{ url('pages/js/plugins.js') }}"></script>
+        {{-- <script src="{{ url('assets/js/app.js') }}"></script> --}}
+    {{-- <script src="{{ url('pages/js/plugins.js') }}"></script> --}}
 
     <!-- Main JS -->
     <script src="{{ url ('pages/js/main.js') }}"></script>
-    <script src="{{ url ('pages/js/contact.js') }}"></script>
+    {{-- <script src="{{ url ('pages/js/contact.js') }}"></script> --}}
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     var prevButton = document.querySelector('.slick-prev');
-      console.log('tt');
-
-      // Check if the button is found
       if (prevButton) {
-    console.log('tt');
         prevButton.click();
       }
     var searchInput = document.getElementById('searchInput');
     var searchResults = document.getElementById('searchResults');
  var searchContent = document.querySelector('#searchcontent');
-    // var closeIcon = document.querySelector('.for-search-close');
+
     searchInput.addEventListener('input', function() {
         var query = searchInput.value;
 
@@ -347,41 +344,6 @@ function showItem(carousel, index) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit.min.js" integrity="sha512-y2L19LN3n8wSmzg6I5FzQRey2/6Pwi5mTEZpEM8lJW2EEUgSPE/t/E0+rBWwUuY7HLfQ7P4Gvus9L7/1vM9SZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit-icons.min.js" integrity="sha512-kIXiHI1wSHtBxWjT9fcZOC2WzfuLiACZ6sC9Kg0/kJu5T4e4vsTRB5PzUcf1by/hJ9ZdKaFfS+PiXlV6bl5dGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script>
-    $('.contentslider').slick({
-dots: true,
-infinite: false,
-speed: 300,
-slidesToShow: 4,
-slidesToScroll: 4,
-responsive: [
-{
-  breakpoint: 1024,
-  settings: {
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    infinite: true,
-    dots: true
-  }
-},
-{
-  breakpoint: 600,
-  settings: {
-    slidesToShow: 2,
-    slidesToScroll: 2
-  }
-},
-{
-  breakpoint: 480,
-  settings: {
-    slidesToShow: 1,
-    slidesToScroll: 1
-  }
-}
-// You can unslick at a given breakpoint now by adding:
-// settings: "unslick"
-// instead of a settings object
-]
-});</script>
+
 </body>
 </html>

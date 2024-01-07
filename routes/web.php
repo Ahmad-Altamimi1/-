@@ -21,6 +21,9 @@ use App\Models\Post;
 |
 */
 Route::get('/', [HomeController::class, "index"])->name("home");
+Route::get('/testslide',function(){
+return view('testslide');
+});
 //home
 Route::get('/hometest', [HomeController::class, "hometest"])->name("hometest");
 
