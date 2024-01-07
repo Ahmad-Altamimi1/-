@@ -1588,9 +1588,9 @@ height: 100%;
         @foreach ($recentposts->take(12) as $post)
             <div class="item" style="background-image: url({{ $post->IMG }});">
                 <div class="item-desc">
-                    <h3>{{ $post->TITLE }}</h3>
+                    <h3 style="color: white">{{ $post->TITLE }}</h3>
                     
-                    <p> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
+                    <p style="color: white"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
                     </p>
                 </div>
             </div>
