@@ -1339,16 +1339,16 @@ button {
   display: -webkit-flex;
 }
 .game-section .item {
-  margin: 0 15px 60px;
-  width: 320px;
-  height: 400px;
-  display: flex;
+  margin: 0 15px 60px !important;
+  width: 320px !important;
+  height: 400px !important;
+  display: flex !important;
   display: -webkit-flex;
   align-items: flex-end;
-  -webkit-align-items: flex-end;
-  background: #343434 no-repeat center center / cover;
+  -webkit-align-items: flex-end !important;
+  background: #343434 no-repeat center center / cover !important;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: hidden !important;
   position: relative;
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
