@@ -1592,7 +1592,7 @@ height: 100%;
         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
             <section class="game-section">
                 <div class="custom-carousel">
-                    @foreach ($mama->take(12) as $post)
+                    @foreach ($mama as $post)
                         <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                             <div class="item-desc">
                                 <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
@@ -1607,7 +1607,7 @@ height: 100%;
         <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
             <section class="game-section">
                 <div class="custom-carousel">
-                    @foreach ($baby->take(12) as $post)
+                    @foreach ($baby as $post)
                         <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                             <div class="item-desc">
                                 <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
