@@ -743,6 +743,9 @@ article {
             background: #ac9999;
             transition: 0.4s;
             cursor: pointer;
+            display: flex;
+    justify-content: center;
+    align-items: center;
         }
         .has-dflex-center:hover{
 background-color: white !important;
