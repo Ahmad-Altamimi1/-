@@ -1253,21 +1253,7 @@ border: 2px solid #d54368;
  </div> {{--end center content  --}}
 
 {{-- Start bottom content  --}}
-<div class="bottom_content">
-    <div class="post-tabs rounded bordered" dir="ltr">
-        <!-- tab navs -->
-        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
-            style="flex-direction: row-reverse;">
 
-            <li class="nav-item" role="presentation"><button aria-selected="true"
-                    class="nav-link active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
-                    type="button"> صحتك ماما </button>
-            </li>
-            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link"
-                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
-            </li>
-        </ul>
-    </div>
 <style>
 
 a {
@@ -1586,7 +1572,21 @@ height: 100%;
         border-radius: 39px !important;
     }
 </style>
+<div class="bottom_content">
+    <div class="post-tabs rounded bordered" dir="ltr">
+        <!-- tab navs -->
+        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
+            style="flex-direction: row-reverse;">
 
+            <li class="nav-item" role="presentation"><button aria-selected="true"
+                    class="nav-link health_button active" style="width: 130px" data-tag-title="صحتك ماما" id="baby1"
+                    type="button"> صحتك ماما </button>
+            </li>
+            <li class="nav-item" role="presentation"><button aria-selected="true" style="width: 130px" class="nav-link health_button"
+                    data-tag-title="صحة الطفل" id="baby" type="button"> صحةالطفل </button>
+            </li>
+        </ul>
+    </div>
 </div>
 <section class="game-section">
     <div class="custom-carousel">

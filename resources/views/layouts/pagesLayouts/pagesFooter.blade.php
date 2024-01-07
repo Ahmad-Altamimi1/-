@@ -165,6 +165,10 @@ $(document).ready(function () {
     {{-- <script src="{{ url ('pages/js/contact.js') }}"></script> --}}
     <script>
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
+  
     var prevButton = document.querySelector('.slick-prev');
       if (prevButton) {
         prevButton.click();
