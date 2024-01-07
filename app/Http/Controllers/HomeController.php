@@ -45,6 +45,7 @@ class HomeController extends Controller
         $recentposts = Post::orderBy('DATE_SCHEDULER', 'asc')->take(4)->get();
         $Monthsofpregnancy= Post::where('Monthsofpregnancy',"=","1")->orderBy('id', 'desc')->get();
         $tags= poststags::all();
+        $selected_tags= poststags::inRandomOrder()->take(5);
 $newsList=$recentposts;
 $games=$recentposts;
         // $videos=;
@@ -55,7 +56,7 @@ $games=$recentposts;
         // $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
         $defaultPosts = Post::take(4)->get();
 
-        return view('pages.home',compact('baby','mama','selectedTag','recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
+        return view('pages.home',compact('selected_tags','baby','mama','selectedTag','recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
     }
     public function getposts_in_one_tag($tagname){
         $tagbyid = poststags::where('TITLE','=',$tagname)->first();

@@ -1775,7 +1775,7 @@ grid-template-columns: 44% 51%;" >
 
 .blog-container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 }
 
 * {
@@ -2046,7 +2046,41 @@ div#popup span#close-btn {
 
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
-            @foreach($newsList as $news)
+            @foreach ($selected_tags as $item)
+                
+            <div class="blog-container">  
+            @foreach($item->posts->take(3) as $news)
+
+
+                <article>
+                    <figure>
+                        <div class="date-and-time">
+                            <span>Aug</span>
+                            <span>12</span>
+                            <span>2023</span>
+                        </div>
+                        <img src="{{ $news->IMG }}" alt="" loading="lazy" />
+                        <figcaption>
+                            <span>Luxury Brands</span>
+                            <span>By Admin | Luxury</span>
+                        </figcaption>
+                    </figure>
+                </article>
+      
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+                <span id="close-btn" class="material-symbols-outlined">
+                    close
+                </span>
+                <div id="popup-content">
+                </div>
+            </div>
+        </div>
+   
+        @endforeach
+
+
+
               <div class="post-slide">
                 <div class="post-img">
                   <img src="{{ $news->IMG }}" alt="">
