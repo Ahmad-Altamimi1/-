@@ -1575,8 +1575,9 @@ height: 100%;
     .tag_name{
         position: absolute;
         top: 20px;
-        right: 100px;
-        width: 100px;
+        right: 20px;
+    width: fit-content;
+    padding: 5px 10px;
         background-color: #d54368;
         color: white;
         border-radius: 6px;
@@ -1597,7 +1598,7 @@ height: 100%;
                    aria-controls="tab2" aria-selected="false">صحة الطفل</a>
             </li>
         </ul>
-    </div>
+    
 
     <div class="tab-content" id="myTabsContent">
         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
@@ -1635,7 +1636,7 @@ height: 100%;
 {{-- End bottom content  --}}
 
 
-
+</div>
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
             <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
