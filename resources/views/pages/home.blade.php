@@ -1297,7 +1297,7 @@ h2 {
 }
 h3 {
   margin: 0 0 10px;
-  font-size: 28px;
+  font-size: 19px;
   line-height: 36px;
 }
 button {
@@ -1385,6 +1385,7 @@ button {
   -webkit-transform: none;
 }
 .game-section .item-desc p {
+    font-size: 13px;
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
@@ -1411,7 +1412,7 @@ button {
   }
   h3 {
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 19px;
     line-height: 32px;
   }
 
@@ -1586,11 +1587,11 @@ height: 100%;
     <div class="custom-carousel">
 
         @foreach ($recentposts->take(12) as $post)
-            <div class="item" style="background-image: url({{ $post->IMG }});">
+            <div class="item" style="background-image: url({{ $post->IMG }});" dir="rtl">
                 <div class="item-desc">
-                    <h3 style="color: white">{{ $post->TITLE }}</h3>
+                    <h3 style="color: white" dir="rtl">{{ $post->TITLE }}</h3>
                     
-                    <p style="color: white"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
+                    <p style="color: white " dir="rtl"> {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 60) }}
                     </p>
                 </div>
             </div>
