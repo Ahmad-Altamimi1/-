@@ -1585,13 +1585,13 @@ height: 100%;
 <section class="game-section">
     <div class="custom-carousel">
 
-        {{-- @foreach ($recentposts->take(12) as $post)
+        @foreach ($recentposts->take(12) as $post)
             <div class="item" style="background-image: url({{ $post->IMG }});">
                 <div class="item-desc">
                     <h3>{{ $post->TITLE }}</h3>
                 </div>
             </div>
-        @endforeach --}}
+        @endforeach
     
     </div>
 </section>
@@ -2014,7 +2014,7 @@ grid-template-columns: 44% 51%;" >
 // -----------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
-var initialContent = document.querySelector('.custom-carousel').innerHTML;
+var initialContent = document.querySelector('.game-section').innerHTML;
 function fetchContentseconde(tagTitle) {
     fetch('/fetch-content-bootom?tagTitle=' + tagTitle)
         .then(function(response) {
@@ -2025,11 +2025,11 @@ function fetchContentseconde(tagTitle) {
         })
         .then(function(data) {
             console.log(data);
-            document.querySelector('.custom-carousel').innerHTML = data.content;
+            document.querySelector('.game-section').innerHTML = data.content;
         })
         .catch(function(error) {
             console.error(error);
-            document.querySelector('.custom-carousel').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
+            document.querySelector('.game-section').innerHTML = '<p>لا يوجد عناصر لعرضها</p>';
         });
 }
 
