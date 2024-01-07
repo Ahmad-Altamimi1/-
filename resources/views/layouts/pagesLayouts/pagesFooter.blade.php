@@ -105,7 +105,7 @@
 
 
     <!-- preloader area end -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit.min.js" integrity="sha512-y2L19LN3n8wSmzg6I5FzQRey2/6Pwi5mTEZpEM8lJW2EEUgSPE/t/E0+rBWwUuY7HLfQ7P4Gvus9L7/1vM9SZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.5/js/uikit-icons.min.js" integrity="sha512-kIXiHI1wSHtBxWjT9fcZOC2WzfuLiACZ6sC9Kg0/kJu5T4e4vsTRB5PzUcf1by/hJ9ZdKaFfS+PiXlV6bl5dGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
