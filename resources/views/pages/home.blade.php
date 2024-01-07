@@ -1597,11 +1597,11 @@ height: 100%;
         <ul class="nav nav-tabs" id="myTabs" role="tablist" style="    display: flex;
         justify-content: end;">
             <li class="nav-item">
-                <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+                <a class="nav-link " id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
                    aria-controls="tab1" aria-selected="true">صحتك ماما</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab"
+                <a class="nav-link active" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab"
                    aria-controls="tab2" aria-selected="false">صحة الطفل</a>
             </li>
         </ul>
