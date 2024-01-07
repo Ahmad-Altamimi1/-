@@ -38,6 +38,7 @@ class HomeController extends Controller
         //         $slidercontent= $slider;
         //     };
         // };
+        $selectedTag = 'صحتك ماما';
         $videos = Videos::orderBy('id', 'DESC')->take(6)->get();
         $mostposts = Post::orderBy('REED', 'DESC')->take(4)->get();
 
@@ -52,7 +53,7 @@ $games=$recentposts;
         // $left_side_bar_content = poststags::where('TITLE','=','أعتني بطفلك')->first();
         $defaultPosts = Post::take(4)->get();
 
-        return view('pages.home',compact('recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
+        return view('pages.home',compact('selectedTag','recentposts','games', 'tags', 'Monthsofpregnancy', 'left_side_bar_content', 'defaultPosts', 'first_tag','newsList'));
     }
     public function getposts_in_one_tag($tagname){
         $tagbyid = poststags::where('TITLE','=',$tagname)->first();
