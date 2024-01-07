@@ -121,7 +121,12 @@ $('.custom-carousel').slick({
   slidesToShow: 1, // Assuming you want one visible slide at a time
   slidesToScroll: 1, // Assuming you want to scroll one slide at a time
 });
-
+$(document).ready(function () {
+  $(".custom-carousel .item").click(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
 // Use 'init' event to handle item click and toggle 'active' class
 $(document).ready(function () {
   $('.custom-carousel').on('init', function () {
