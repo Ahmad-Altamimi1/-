@@ -1581,6 +1581,10 @@ height: 100%;
     .col-sm-8 main section .carousel-container .item .text{
         background: linear-gradient(to top, #d54368 0%, #ffffff24 100%);
     }
+    .slick-prev ,.slick-next  {
+        background: #d63384 !important;
+        border-radius: 39px !important;
+    }
 </style>
 
 </div>
