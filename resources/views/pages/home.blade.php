@@ -2015,7 +2015,7 @@ div#popup span#close-btn {
             @php
              $x=0;   
             @endphp
-              @foreach ($tags->take(2) as $item)
+              @foreach ($tags as $item)
             @if ($x > 1)
                 @break
             @endif
