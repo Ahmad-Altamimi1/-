@@ -500,7 +500,7 @@ article {
       }
       .blog-slider__title{
         margin: 0 !important;
-        font-size: 
+        font-size: 16px !important;
       }
       .blog-slider__text{
         margin: 0 !important;
@@ -1595,6 +1595,24 @@ grid-template-columns: 44% 51%;
         grid-template-columns: repeat(3,120px);
     grid-template-rows: repeat(2,153px);
     }
+    .row.grid-row.right-half{
+        margin-top: 60px;
+    }
+    li.tow-butoon{
+    position: absolute;
+    top: 410px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-37%);
+}
+button#care {
+    position: absolute;
+    left: 38%;
+    top: 20px;
+}
+figcaption{
+    left: -132px;
+}
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: 0;
