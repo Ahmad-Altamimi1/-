@@ -1077,6 +1077,9 @@ border: 2px solid #d54368;
     .hearts-wrapper a{
         width: 115px;
     }
+    .card_circle_image p {
+        text-align: center;
+    }
     .month_group{
         display: grid;
     direction: rtl;
@@ -1091,6 +1094,10 @@ border: 2px solid #d54368;
     }
     .injaby_category{
         margin-top: 20px;
+    }
+    .circle_image{
+        width: 75px;
+    height: 75px;
     }
 }
 a.category-badge.position-absolute{
@@ -1187,7 +1194,7 @@ a.category-badge.position-absolute{
     </div>
 
 <div class="injaby_category">
-    <div class="row " style="justify-content: center">
+    <div class="row " style="justify-content: center;padding:0 20px">
         <p style="    text-align: center;
         font-size: 25px;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
