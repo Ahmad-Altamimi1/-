@@ -1784,7 +1784,7 @@ grid-template-columns: 44% 51%;" >
 	grid-template-columns: repeat(2, 1fr) !important;
     column-gap:20px;
 }
-.article1{
+.artical1{
     grid-column: 2;
     grid-row: 1 / span 2;
 }
