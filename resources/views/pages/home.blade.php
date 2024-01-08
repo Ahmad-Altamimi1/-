@@ -1128,7 +1128,7 @@ a.category-badge.position-absolute{
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
     <section id="hero">
 
-        <div class="container">
+        <div class="container-xl">
 
             <div class="row gy-4">
 

@@ -69,7 +69,7 @@ footer {
 }
 </style>
 <footer>
-            <div class="container-xl">
+            <div class="container">
                 <div class="footer-inner">
                     <div dir="rtl" class="row d-flex align-items-center gy-4">
                         <div class="col-sm-3">
