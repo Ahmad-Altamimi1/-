@@ -72,11 +72,11 @@ footer {
             <div class="container-xl">
                 <div class="footer-inner">
                     <div dir="rtl" class="row d-flex align-items-center gy-4">
-                        <div class="col-2">
+                        <div class="col-sm-3">
                             <img style="width: 190px;" src="{{ asset('انجابي فكتور-01-01.jpg') }}" alt="logo"
                                 class="mb-4" />
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-3">
                             <p>إنجابي هي منصة صحية تثقيفية نعل من خلالها على توفير المعلومات الطبية الموثوقة لصحة الأم والطفل خلال فترات الحمل والأمومة.</p>
                         </div>
                         <div class="col-1">
