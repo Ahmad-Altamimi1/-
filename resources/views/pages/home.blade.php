@@ -1780,6 +1780,7 @@ grid-template-columns: 44% 51%;" >
 .blog-container2 {
 	display: grid !important;
 	grid-template-columns: repeat(2, 1fr) !important;
+    column-gap:20px;
 }
 
 * {
@@ -1879,7 +1880,7 @@ figure:hover figcaption {
 }
 
 .date-and-time span:nth-child(3) {
-	color: #ff5722;
+	color: #d54368;
 }
 
 .date-and-time span {
@@ -1888,7 +1889,7 @@ figure:hover figcaption {
 }
 
 figure:hover .date-and-time {
-	background: #ff5722;
+	background: #d54368;
 }
 
 figure:hover .date-and-time span {
@@ -1906,7 +1907,7 @@ blockquote {
 }
 
 .blog-container article:hover blockquote {
-	background: #ff5722;
+	background: #d54368;
 	cursor: pointer;
 	color: #fff;
 }
@@ -2004,8 +2005,9 @@ div#popup span#close-btn {
 
 </style>
 
-<div class="container-fluid">
-    <div class="row">
+<div class="container">
+    <div class="row" style="    padding: 60px 0;
+    ">
 
         <div class="col-md-4">
             <div class="blog-container">
