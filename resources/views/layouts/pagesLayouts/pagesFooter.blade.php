@@ -99,7 +99,7 @@ footer {
                         </div>
                         <div style="text-align: center;" class="col-6">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-sm-2">
                                     <p>جميع المعلومات الواردة في الموقع هي
                                         لغايات المعرفة والثقافة الصحية ولا تغني عن استشارة المختصين</p>
                                 </div>
