@@ -1782,12 +1782,9 @@ grid-template-columns: 44% 51%;" >
 .blog-container2 {
 	display: grid !important;
 	grid-template-columns: repeat(2, 1fr) !important;
-    column-gap:20px;
+    column-gap:5px;
 }
-.artical1{
-    grid-column: 2;
-    grid-row: 1 / span 2;
-}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -2031,7 +2028,7 @@ div#popup span#close-btn {
             @foreach($item->posts->take(1) as $news)
 
 
-                <article >
+                <article>
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
@@ -2056,22 +2053,16 @@ div#popup span#close-btn {
 
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
-            
             @foreach ($tags as $item)
-            @php
-            $x=0;   
-           @endphp
+       
                 @if ( count($item->posts) > 3) 
-                
-                
+                    
                 
             <div class="blog-container blog-container2" style=" " >  
-            @foreach($item->posts->take(3) as $news)
-            @php
-            $x++;   
-           @endphp
+            @foreach($item->posts->take(4) as $news)
 
-                <article class="artical{{$x}}">
+
+                <article>
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
