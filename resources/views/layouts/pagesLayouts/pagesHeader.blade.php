@@ -426,6 +426,12 @@ $slicedArray=[];
                                 </nav>
                             </div>
                         </div>
+                        <style>
+                            .mobile-menu-toggle svg{
+                                width: 95px;
+    height: 85px;
+                            }
+                        </style>
                         <div class="col d-xl-none">
                             <div class="ltn__header-options d-xl-none">
                                 {{-- <ul> --}}
@@ -435,8 +441,10 @@ $slicedArray=[];
                                         <!-- mini-cart 2 -->
                                     {{-- <li> --}}
                                         <!-- header-search-1 -->
-                                        <div class="col logo-column d-xl-none">
-                                            <div class="site-logo">
+                                        <div class="col logo-column d-xl-none" style="display: flex;
+                                        justify-content: space-around;
+                                        align-items: center;">
+                                            <div class="site-logo" style="margin: 0">
                                                 <a href="{{ route('home') }}"><img src="../لوجو ابيض.png"
                                                         alt="Logo" style="
     width: 140px;
