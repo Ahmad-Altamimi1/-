@@ -1784,7 +1784,10 @@ grid-template-columns: 44% 51%;" >
 	grid-template-columns: repeat(2, 1fr) !important;
     column-gap:20px;
 }
-
+.article0{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -2028,7 +2031,7 @@ div#popup span#close-btn {
             @foreach($item->posts->take(1) as $news)
 
 
-                <article>
+                <article >
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
@@ -2059,10 +2062,10 @@ div#popup span#close-btn {
                     
                 
             <div class="blog-container blog-container2" style=" " >  
-            @foreach($item->posts->take(4) as $news)
+            @foreach($item->posts->take(3) as $news)
 
 
-                <article>
+                <article class="    {{$x}}">
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
