@@ -106,31 +106,31 @@ footer {
                             </div>
 
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-4 col-md-2">
                                     <i class="fa-solid fa-circle-info fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>عن أنجابي</p>
                                     </a>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-4 col-md-2">
                                     <i class="fa fa-phone fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>اتصل بنا</p>
                                     </a>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-4 col-md-2">
                                     <i class="fa fa-picture-o fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>اعلن معنا</p>
                                     </a>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-4 col-md-2">
                                     <i class="fa fa-address-book-o fa-2xl" aria-hidden="true"></i>
                                     <p>سياستنا</p>
 
 
                                 </div>
-                                <div class="col-2">
+                                <div class="col-4 col-md-2">
                                     <i class="fa fa-user fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
                                         <p>شروط الإستخدام</p>
