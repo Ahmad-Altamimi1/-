@@ -1655,6 +1655,7 @@ height: 100%;
     }
     .category-badge:hover{
         background-color: #fff !important;
+        color: #d54368 !important;
     }
     .col-sm-8 main section .carousel-container .item .text{
         background: linear-gradient(to top, #d54368 0%, #ffffff24 100%);
