@@ -331,9 +331,10 @@ article {
         display: grid;
     padding: 0;
     grid-template-columns: 53% 47%;
-    padding: 52px 10px;
+    padding: 52px 10px !important;
         gap: 0 ;
         padding: 0;
+        height: 81vh ;
     }
     main section{
         min-height: unset;
@@ -588,7 +589,7 @@ article {
            align-items: center;
       }
   .main-section-slider{
-widows: 97;
+width: 97%;
   }
 }
    .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -955,6 +956,7 @@ use App\Models\poststags;
         grid-template-columns: 70% 30%;
         gap: 10px;
     }
+
     .trimester-one{
         position: absolute;
     left: 118px;
@@ -983,6 +985,20 @@ use App\Models\poststags;
     transform: rotate(15deg);
     z-index: 2;
 
+    }
+    @media (max-width:767px){
+        .trimester-three{
+            right: 71px;
+        }
+        .trimester-one{
+            left: 71px;
+
+        }
+        .nav-pills .nav-link {
+            border-radius: 5px;
+    font-size: 10px;
+    padding: 3px 10px;
+        }
     }
     .trimester-three:hover{
         transition: 0.4s;
@@ -1056,9 +1072,22 @@ scale: 1.1;
 transition: 0.4s;
 border: 2px solid #d54368;
 }
+
 @media (max-width:767px){
     .hearts-wrapper a{
-        width: 102px;
+        width: 115px;
+    }
+    .month_group{
+        display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(5,auto);
+}
+    .months-Title {
+        padding: 3px;
+        font-size: 15px;
+    }
+    .center_content{
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -1091,36 +1120,36 @@ border: 2px solid #d54368;
                     <!-- post tabs -->
                     <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
-                        <ul class="nav nav-tabs nav-pills nav-fill  autoplay" id="postsTab" role="tablist"
+                        <ul class="nav nav-tabs nav-pills nav-fill month_group autoplay" id="postsTab" role="tablist"
                             style="flex-direction: row-reverse;">
 
                              <li class="nav-item" role="presentation"><button aria-selected="true"
                                     class="nav-link active" data-tag-title="الشهر الأول" id="tag1"
-                                    type="button">الشهر الأول</button>
+                                    type="button"> الأول</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر الثاني" id="tag2" type="button"> الشهر الثاني</button>
+                                    data-tag-title="الشهر الثاني" id="tag2" type="button"> الثاني</button>
                             </li>
                              <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر الثالث" id="tag3" type="button">الشهر الثالث</button>
+                                    data-tag-title="الشهر الثالث" id="tag3" type="button"> الثالث</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر الرابع" id="tag4" type="button"> الشهر الرابع</button>
+                                    data-tag-title="الشهر الرابع" id="tag4" type="button"> الرابع</button>
                             </li>
                              <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر الخامس" id="tag4" type="button">الشهر الخامس </button>
+                                    data-tag-title="الشهر الخامس" id="tag4" type="button"> الخامس </button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر السادس" id="tag5" type="button"> الشهر السادس</button>
+                                    data-tag-title="الشهر السادس" id="tag5" type="button"> السادس</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر السابع" id="tag6" type="button">الشهر السابع</button>
+                                    data-tag-title="الشهر السابع" id="tag6" type="button"> السابع</button>
                             </li>
                             <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر الثامن" id="tag7" type="button"> الشهر الثامن</button>
+                                    data-tag-title="الشهر الثامن" id="tag7" type="button"> الثامن</button>
                             </li>
                            <li class="nav-item" role="presentation"><button aria-selected="true" class="nav-link"
-                                    data-tag-title="الشهر التاسع" id="tag8" type="button">الشهر التاسع </button>
+                                    data-tag-title="الشهر التاسع" id="tag8" type="button"> التاسع </button>
                             </li>
 
 
@@ -1814,6 +1843,14 @@ grid-template-columns: 44% 51%;" >
 }
 #news-slider .slick-next {
     right: -51% !important;
+}
+@media (max-width:767px){
+    #news-slider .slick-next {
+        right: 0 !important;
+    }
+    #news-slider .slick-prev{
+        left: 0;
+    }
 }
 #news-slider article:not(:last-of-type){
 margin-bottom: 5px !important;
