@@ -2012,43 +2012,35 @@ div#popup span#close-btn {
     ">
 
         <div class="col-md-4">
-            <div class="blog-container">
+              @foreach ($tags->take(2) as $item)
+       
+                @if ( count($item->posts) > 3) 
+                    
+                
+            <div class="blog-container " style=" " >  
+            @foreach($item->posts->take(1) as $news)
+
+
                 <article>
                     <figure>
                         <div class="date-and-time">
-                            <span>Aug</span>
-                            <span>12</span>
-                            <span>2023</span>
+                            <span>{{$item->TITLE}}</span>
+                          
                         </div>
-                        <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80" alt="" loading="lazy" />
+                        <img src="{{ $news->IMG }}" alt="{{$item->TITLE}}" loading="lazy" />
                         <figcaption>
-                            <span>Luxury Brands</span>
-                            <span>By Admin | Luxury</span>
+                            <span>{{ $news->TITLE }}</span>
+                         
                         </figcaption>
                     </figure>
                 </article>
-                <article>
-                    <figure>
-                        <div class="date-and-time">
-                            <span>Sep</span>
-                            <span>2</span>
-                            <span>2023</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3552&q=80" alt="" loading="lazy" />
-                        <figcaption>
-                            <span>Real Estate Trends</span>
-                            <span>By Admin | Real Estate</span>
-                        </figcaption>
-                    </figure>
-                </article>
-            <div class="overlay" id="overlay"></div>
-            <div class="popup" id="popup">
-                <span id="close-btn" class="material-symbols-outlined">
-                    close
-                </span>
-                <div id="popup-content">
-                </div>
-            </div>
+    
+            @endforeach
+        </div>
+        @endif
+            @endforeach
+            
+           
         </div>
     </div>
 
