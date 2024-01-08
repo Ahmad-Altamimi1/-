@@ -3,7 +3,7 @@
 <div class="row">
 
 @foreach ($posts_thumbs->take(3) as $posts_thumb)
-<div class="col-sm-4 pt-3">
+<div class="col-sm-4 pt-3" style="    padding: 0 5px;">
         <div class="post post-grid rounded bordered" style="    height: 425px;">
             <div class="thumb top-rounded">
 
