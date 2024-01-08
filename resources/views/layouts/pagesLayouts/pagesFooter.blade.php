@@ -144,6 +144,8 @@ footer {
 
 
                         </div>
+                      </div>
+                    </div>
                         <div class="row">
                           <div class="col-sm-2">
                               <p>&copy;
@@ -156,8 +158,7 @@ footer {
                           </div>
                       </div>
 
-                    </div>
-                </div>
+                  
             </div>
         </footer>
     </div><!-- end site wrapper -->
