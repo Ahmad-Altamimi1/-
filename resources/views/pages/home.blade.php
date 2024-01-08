@@ -328,7 +328,10 @@ article {
   }
   @media screen and (max-width: 962px) {
     .bodddy{
-        flex-direction: column;
+        display: grid;
+    padding: 0;
+    grid-template-columns: 53% 47%;
+    padding: 52px 10px;
         gap: 0 ;
         padding: 0;
     }
@@ -360,9 +363,9 @@ article {
   }
    @media screen and (max-width: 768px) {
        .blog-slider {
-           min-height: 200px;
-           height: 300px !important;
-           margin-top: 135px;
+        min-height: 122px;
+    height: 189px !important;
+    margin-top: 135px;
       }
   }
    @media screen and (max-height: 500px) and (min-width: 992px) {
@@ -496,9 +499,12 @@ article {
       }
       .blog-slider__title{
         margin: 0 !important;
+        font-size: 
       }
       .blog-slider__text{
         margin: 0 !important;
+        font-size: 9px;
+   
         
       }
       .blog-slider__button{
@@ -546,10 +552,14 @@ article {
        text-align: center;
        letter-spacing: 1px;
   }
+  .main-section-slider{
+    width: 48%;
+  }
    @media screen and (max-width: 576px) {
        .blog-slider__button {
            width: 100%;
       }
+
   }
    .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
        bottom: 10px;
@@ -569,7 +579,7 @@ article {
   }
    @media screen and (max-width: 768px) {
        .blog-slider__pagination {
-           transform: translateX(-50%);
+        transform: translate(-50%,-12px);
            left: 50% !important;
            top: 205px;
            width: 100% !important;
@@ -577,7 +587,10 @@ article {
            justify-content: center;
            align-items: center;
       }
+  .main-section-slider{
+widows: 97;
   }
+}
    .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
        margin: 8px 0 !important;
   }
@@ -803,7 +816,7 @@ background-color: white !important;
               {{-- video section  --}}
 
 
-              <main style="    width: 48%;">
+              <main  class="main-section-slider">
                 <section class="has-dflex-center">
                     <div class="lx-container-80">
                         <div class="lx-row">
@@ -2039,7 +2052,7 @@ div#popup span#close-btn {
     <div class="row" style="    padding: 60px 0;flex-direction: row-reverse;    
     ">
 
-        <div class="col-md-4" style="padding: 0 !important">
+        <div class="col-md-4" >
             @php
              $x=0;   
             @endphp
@@ -2079,7 +2092,7 @@ div#popup span#close-btn {
         </div>
     
 
-            <div class="col-md-8" style="padding: 0 5px 0 0; !important">
+            <div class="col-md-8" >
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
        
