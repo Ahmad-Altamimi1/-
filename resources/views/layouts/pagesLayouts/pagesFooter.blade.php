@@ -116,7 +116,7 @@
       $(document).ready(function(){
         // Initialize Slick Carousel
         $('.slick-carousel').slick({
-          slidesToShow: 3, // Adjust the number of slides to show
+          slidesToShow: 1, // Adjust the number of slides to show
           slidesToScroll: 1,
           autoplay: true, // Set to true if you want the carousel to autoplay
           autoplaySpeed: 2000 // Adjust the autoplay speed in milliseconds

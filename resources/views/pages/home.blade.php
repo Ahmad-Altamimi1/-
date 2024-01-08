@@ -2047,14 +2047,10 @@ div#popup span#close-btn {
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
-       
-                @if ( count($item->posts) > 3) 
                     
                 
             <div class="blog-container" style=" " >  
             @foreach($item->posts->take(2) as $news)
-
-
                 <article>
                     <figure>
                         <div class="date-and-time">
@@ -2068,35 +2064,9 @@ div#popup span#close-btn {
                         </figcaption>
                     </figure>
                 </article>
-      
-            {{-- <div class="overlay" id="overlay"></div> --}}
-            {{-- <div class="popup" id="popup">
-                <span id="close-btn" class="material-symbols-outlined">
-                    close
-                </span>
-                <div id="popup-content">
-                </div>
-            </div> --}}
+    
             @endforeach
         </div>
-        @endif
-   
-
-
-
-              {{-- <div class="post-slide">
-                <div class="post-img">
-                  <img src="{{ $news->IMG }}" alt="">
-                  <a href="{{ $news->id }}" class="over-layer"><i class="fa fa-link"></i></a>
-                </div>
-                <div class="post-content">
-                  <h3 class="post-title">
-                    <a href="{{ $news->id }}">{{ $news->TITLE }}</a>
-                  </h3>
-                  <p class="post-description">{{ $news->TITLE}}</p>
-                  <a href="{{ $news->id }}" class="read-more">read more</a>
-                </div>
-              </div> --}}
             @endforeach
           </div>
 
