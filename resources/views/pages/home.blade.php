@@ -1592,7 +1592,7 @@ grid-template-columns: 44% 51%;
 }
 @media (max-width:767px){
     .grid-row{
-        grid-template-columns: repeat(3,120px);
+        grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(2,153px);
     }
     .row.grid-row.right-half{
@@ -1667,7 +1667,7 @@ height: 100%;
     }
     @media (max-width:767px){
         .ltn__blog{
-            font-size:10px;
+            font-size:8px;
             line-height: 1.8;
         }
     }
