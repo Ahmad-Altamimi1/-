@@ -1658,7 +1658,8 @@ height: 100%;
         color: #d54368 !important;
     }
     .col-sm-8 main section .carousel-container .item .text{
-        background: linear-gradient(to top, #d54368 0%, #ffffff24 100%);
+        /* background: linear-gradient(to top, #d54368 0%, #ffffff24 100%); */
+        background:  linear-gradient(to right, #d54368 0%, #ffffff24 50% , #d54368 100%);
     }
     .slick-prev ,.slick-next  {
         background: #d63384 !important;
@@ -1707,7 +1708,7 @@ height: 100%;
         <ul class="nav nav-tabs" id="myTabs" role="tablist" style="    display: flex;
         justify-content: end;">
             <li class="nav-item">
-                <a class="nav-link " id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+                <a class="nav-link " style="color:#666666 "  id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
                    aria-controls="tab1" aria-selected="true">صحتك ماما</a>
             </li>
             <li class="nav-item">
