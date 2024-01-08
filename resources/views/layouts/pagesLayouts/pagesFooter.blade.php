@@ -5,7 +5,68 @@
         margin-top: 20px;
         font-size: 14px
     }
+    @media screen and (max-width: 480px) {
 
+
+
+
+footer {
+    text-align: center !important;
+}
+
+.footer-inner {
+    padding: 20px !important;
+}
+
+.row.d-flex.align-items-center.gy-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+
+.col-1,
+.col-6 {
+    width: 100% !important;
+    text-align: center !important;
+    /* margin-bottom: 20px !important; /
+}
+
+#col-2 {
+    width: 100% !important;
+
+}
+
+#logooo {
+    width: 50%;
+
+}
+
+.col-2 {
+    / width: 50% !important; /
+    / Adjust the width as needed */
+    text-align: center !important;
+}
+
+.social-icons {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+
+    font-size: xx-large !important;
+
+}
+
+.social-icons li {
+    margin: 0 5px !important;
+}
+
+
+.col-2:nth-child(odd) {
+    clear: left !important;
+    margin: 0 10px 0 0 !important;
+
+}
+}
 </style>
 <footer>
             <div class="container-xl">
