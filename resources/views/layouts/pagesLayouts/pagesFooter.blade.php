@@ -140,7 +140,7 @@ footer {
 
 
                             <div class="row">
-                                <div class="col">
+                                <div class="col-sm-2">
                                     <p>&copy;
                                         <script>
                                             document.write(new Date().getFullYear());
