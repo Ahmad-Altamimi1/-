@@ -2051,21 +2051,20 @@ div#popup span#close-btn {
                 @if ( count($item->posts) > 3) 
                     
                 
-            <div class="blog-container">  
-            @foreach($item->posts->take(1) as $news)
+            <div class="blog-container" style=" " >  
+            @foreach($item->posts->take(2) as $news)
 
 
                 <article>
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
-                            {{-- <span>12</span>
-                            <span>2023</span> --}}
+                          
                         </div>
                         <img src="{{ $news->IMG }}" alt="{{$item->TITLE}}" loading="lazy" />
                         <figcaption>
                             <span>{{ $news->TITLE }}</span>
-                            {{-- <span>By Admin | Luxury</span> --}}
+                         
                         </figcaption>
                     </figure>
                 </article>
