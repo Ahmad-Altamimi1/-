@@ -52,6 +52,7 @@ article {
     transition: color 0.3s ease-out;
   }
 
+
   figure {
     margin: 0;
     padding: 0;
@@ -286,6 +287,9 @@ article {
   @media only screen and (max-width:767px){
       .containslidbar{
 
+      }
+      article h2{
+        margin: 0 14px 20px 0 !important;
       }
       .circle-title{
           padding: 5px 25px;
@@ -1124,7 +1128,7 @@ a.category-badge.position-absolute{
   <div class="pergant-month-slider"> <!-- PRODUCT SLIDER AREA START -->
     <section id="hero">
 
-        <div class="container-xl">
+        <div class="container">
 
             <div class="row gy-4">
 
@@ -1807,14 +1811,7 @@ height: 100%;
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
 
-                                                <p style=" color: white;
-                                                height: 100%;
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                position:relative;
-                                                font-size:27px;
-                                                padding: 0 68px;
+                                                <p style=" 
 }
                                                 "
                                                 >
