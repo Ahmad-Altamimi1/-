@@ -97,7 +97,7 @@ footer {
                                     </a></li>
                             </ul>
                         </div>
-                        <div style="text-align: center;" class="col-sm-6">
+                        <div style="text-align: center;" class="col-sm-5">
                             <div class="row">
                                 <div class="col-sm-12" style="DISPLAY: FLEX;
                                 ALIGN-ITEMS: CENTER;">
