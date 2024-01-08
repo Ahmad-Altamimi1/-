@@ -2056,16 +2056,22 @@ div#popup span#close-btn {
 
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
+            @php
+            $x=0;   
+           @endphp
             @foreach ($tags as $item)
        
                 @if ( count($item->posts) > 3) 
-                    
+                
+                
                 
             <div class="blog-container blog-container2" style=" " >  
             @foreach($item->posts->take(3) as $news)
+            @php
+            $x++;   
+           @endphp
 
-
-                <article class="    {{$x}}">
+                <article class="artical{{$x}}">
                     <figure>
                         <div class="date-and-time">
                             <span>{{$item->TITLE}}</span>
