@@ -1652,6 +1652,8 @@ height: 100%;
 
 
 </div>
+
+
 <div class="ltn__blog-area  pt-60 pb-30">
         <div class="container">
             <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist"
@@ -2090,101 +2092,7 @@ div#popup span#close-btn {
 {{-- ---------------------------------------------------------------------------- --}}
 {{-- ---------------------------------------------------------------------------- --}}
 
-
-
-<div class="ltn__blog-area  pt-60 pb-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title-area text-center">
-                        <h1 class="section-title section-title-border">خرافات شعبية</h1>
-                    </div>
-                </div>
-            </div>
-            </div>
-<section class="articles">
-                @foreach($tags as $tag)
-
-    @if($tag->TITLE == 'الشهر السابع')
-
-
-       @foreach ( $tag->posts->take(3) as $post )
-
-  <article>
-    <div class="article-wrapper">
-      <figure>
-        <a href="{{ route('ShoWarticle',["id"=>$post->id]) }}"><img src="{{ $post->IMG }}" alt="" /></a>
-      </figure>
-      <div class="article-body">
-        <h2>{{ $post->TITLE }}</h2>
-        <p>
-            {{ \Illuminate\Support\Str::limit($post->DESCRIPTION, 30) }}
-
-        </p>
-
-      </div>
-    </div>
-  </article>
-  @endforeach
-  @endif
-  @endforeach
-
-</section>
-</div>
-
-     <div class="row pt-30" style="width: 100%;">
-                    <div class="col-lg-12">
-                        <div class="section-title-area text-center" >
-                            <h1 class="section-title section-title-border" > موضوعات تهمك </h1>
-                        </div>
-                    </div>
-                </div>
-<div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 container">
-    @foreach ($defaultPosts as $defaultPost )
-                        <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-6 xl:col-span-6 ">
-                            <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl w-full relative p-4" style="border: 2px solid #eee;height:200px">
-                                <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
-                                    <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 " style="    padding-top: 26px;
-">
-
-                                          <a href="{{ route('ShoWarticle',["id"=>$defaultPost->id]) }}" class="text-lg sm:text-xl font-semibold  text-gray-600 dark:text-slate-200 block">
-                                                {{ $defaultPost->TITLE }}
-                                            </a>
-                                    </div><!--end col-->
-                                                                       <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
-
-                                        <div class=" h-full flex flex-col p-3">
-                                            <div class="w-full block">
-
-                                            </div>
-
-                                        <a href="{{ route('ShoWarticle',["id"=>$defaultPost['id']]) }}"><img src="{{asset ($defaultPost->IMG )}}" alt="" class="max-w-full h-auto rounded-xl"></a>
-
-                                            <div class="flex flex-wrap justify-between mt-auto">
-                                                <div class="flex items-center">
-                                                    <div class="w-8 h-8 rounded">
-                                                        {{-- <img class="w-full h-full overflow-hidden object-cover rounded object-center" src="{{ asset($defaultPost->tag->IMG ) }}" alt="logo" /> --}}
-                                                    </div>
-                                                    <div class="ml-2">
-
-                                                    </div>
-                                                </div>
-                                                <a href="{{ route('ShoWarticle',["id"=>$defaultPost->id]) }}" class="block text-slate-500 dark:text-slate-400 hover:text-slate-600 underline decoration-1 decoration-dashed underline-offset-4  decoration-primary-500 font-medium  focus:outline-none self-center" style='    position: absolute;
-    left: 42px;
-    bottom: 31px;'><i data-lucide="arrow-left" class="self-center inline-block ms-1 h-4 w-4"></i>قراءة المزيد </a>
-                                            </div>
-                                        </div><!--end card-body-->
-                                    </div><!--end col-->
-                                </div><!--end grid-->
-                            </div> <!--end card-->
-                        </div>
-    @endforeach
-
-                    </div>
-
-
-
-    @endsection
+@endsection
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
