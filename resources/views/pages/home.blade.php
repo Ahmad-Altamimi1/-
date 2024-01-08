@@ -1529,10 +1529,7 @@ grid-template-columns: 44% 51%;
         grid-template-columns: 1fr;
 
     }
-    .grid-row{
-        grid-template-columns: repeat(3,120px);
-    grid-template-rows: repeat(2,153px);
-    }
+  
   .line-title {
     width: 250px;
   }
@@ -1592,6 +1589,12 @@ grid-template-columns: 44% 51%;
     border-top: 2px solid #d54368;
     padding-top: 26px;
 
+}
+@media (max-width:767px){
+    .grid-row{
+        grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(2,153px);
+    }
 }
 .ltn__blog-area .ltn__blog-img a img {
 border-radius: 0;
