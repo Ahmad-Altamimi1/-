@@ -1598,7 +1598,7 @@ grid-template-columns: 44% 51%;
     .row.grid-row.right-half{
         margin-top: 60px;
     }
-    li.tow-butoon{
+    li.tow-butoon:last-of-type{
     position: absolute;
     top: 410px;
     z-index: 10;
