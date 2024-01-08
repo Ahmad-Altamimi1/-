@@ -172,7 +172,7 @@
                     <ul>
                         <li><a href="#" title="Facebook"><i class="icon-social-facebook"></i></a></li>
                         <li><a href="#" title="Twitter"><i class="icon-social-twitter"></i></a></li>
-                        <li><a href="#" title="Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" title="Tiktok"><i class="fa-brands fa-tiktok"> <img src="{{asset('tiktok.svg')}}" alt=""></i></a></li>
                         <li><a href="#" title="Youtube"><i class="icon-social-youtube"></i></a></li>
                         <li><a href="#" title="Instagram"><i class="icon-social-instagram"></i></a></li>
                     </ul>
