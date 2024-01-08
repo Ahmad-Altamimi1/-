@@ -170,14 +170,16 @@
                                             </div>
                                             <div class="ltn__social-media-2">
                     <ul>
-                        <li><a href="#" title="Facebook"><i class="icon-social-facebook"></i></a></li>
-                        <li><a href="#" title="Twitter"><i class="icon-social-twitter"></i></a></li>
-                        <li><a href="#" title="Tiktok"><i class="fa-brands fa-tiktok"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16" style="fill: white;">
+                        <li><a href="https://www.facebook.com/injaby1" target="_blank" title="Facebook"><i class="icon-social-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/injaby1" target="_blank"title="Twitter"><i class="icon-social-twitter"></i></a></li>
+                        <li><a  href="https://www.tiktok.com/@injaby1" target="_blank"  style="text-align: center;
+                            display: flex;
+                            padding-left: 9px;"  title="Tiktok"><i class="fa-brands fa-tiktok"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16" style="fill: white;">
                             <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                           </svg>
                           </i></a></li>
-                        <li><a href="#" title="Youtube"><i class="icon-social-youtube"></i></a></li>
-                        <li><a href="#" title="Instagram"><i class="icon-social-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/injaby1" target="_blank" title="Youtube"><i class="icon-social-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/injaby1/" target="_blank" title="Instagram"><i class="icon-social-instagram"></i></a></li>
                     </ul>
                 </div>
                         </div>
@@ -245,7 +247,7 @@
             <!-- ltn__header-middle-area start -->
             <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white plr--5---">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" style="justify-content:center">
                         <div class="col logo-column" style="margin-right: 50px">
 
                             <div class="header-search-wrap">
