@@ -84,6 +84,9 @@
                 height: 54px;
 
         }
+        [role=tab][aria-selected=true], [role=tab][aria-selected=true]:hover{
+            color: #666666 !important;
+        }
         .header-container{
             background-color: #d54368;
         }
@@ -144,7 +147,7 @@
                             <div class="header-search-2" style="    padding: 22px 0 0 0 !important ;position: relative;">
 
 
-                                    <input type="text" id="searchInput" placeholder="بحث"
+                                    <input dir="rtl" type="text" id="searchInput" placeholder="بحث"
                                         style="margin: 0;    text-align: right;">
                                         {{-- <span><i class="icon-magnifier"></i></span> --}}
                                     <ul id="searchResults" style="    position: absolute;

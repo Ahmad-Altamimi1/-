@@ -72,7 +72,8 @@ footer {
             <div class="container">
                 <div class="footer-inner">
                     <div dir="rtl" class="row d-flex align-items-center gy-4">
-                        <div class="col-sm-3">
+                        <div class="col-sm-3" style="    display: flex;
+                        justify-content: center;">
                             <img style="width: 190px;" src="{{ asset('انجابي فكتور-01-01.jpg') }}" alt="logo"
                                 class="mb-4" />
                         </div>
