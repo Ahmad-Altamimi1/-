@@ -428,12 +428,12 @@ $slicedArray=[];
                         </div>
                         <div class="col d-xl-none">
                             <div class="ltn__header-options d-xl-none">
-                                <ul>
+                                {{-- <ul> --}}
 
 
                                     {{-- <li> --}}
                                         <!-- mini-cart 2 -->
-                                    <li>
+                                    {{-- <li> --}}
                                         <!-- header-search-1 -->
                                         <div class="col logo-column d-xl-none">
                                             <div class="site-logo">
@@ -442,7 +442,7 @@ $slicedArray=[];
     width: 140px;
 "></a>
                                             </div>
-                                    </li>
+                                    {{-- </li> --}}
                                     {{-- </li>
                                     <li> --}}
                                         <!-- Mobile Menu Button -->
@@ -462,9 +462,9 @@ $slicedArray=[];
                                             </a>
                                         </div>
                                     </div>
-
+{{-- 
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </div>
                         </div>
                     </div>
