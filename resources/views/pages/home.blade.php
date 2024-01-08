@@ -944,7 +944,7 @@ use App\Models\poststags;
         z-index: 1;
 
     }
-    .trimester-tow:hover{
+    .trimester-tow:hover,  .trimester-one:hover{
         transition: 0.4s;
 
         scale: 1.1;
@@ -1788,6 +1788,18 @@ grid-template-columns: 44% 51%;" >
     padding: 30px 16px;
     border-radius: 0 !important;
 }
+#news-slider .slick-next {
+    right: -51% !important;
+}
+#news-slider article:not(:last-of-type){
+margin-bottom: 5px !important;
+}
+#news-slider  .slick-next:before,#news-slider  .slick-prev:before{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 * {
 	margin: 0;
@@ -1798,6 +1810,7 @@ grid-template-columns: 44% 51%;" >
 	height: 40vh;
 	background: #fff;
 	font-family: "Oswald", sans-serif;
+    margin-bottom: 5px;
 }
 
 .blog-container article:nth-child(5) {
@@ -2015,7 +2028,7 @@ div#popup span#close-btn {
     <div class="row" style="    padding: 60px 0;flex-direction: row-reverse;    
     ">
 
-        <div class="col-md-4">
+        <div class="col-md-4" style="padding: 0 !important">
             @php
              $x=0;   
             @endphp
@@ -2055,7 +2068,7 @@ div#popup span#close-btn {
         </div>
     
 
-            <div class="col-md-8">
+            <div class="col-md-8" style="padding: 0 5px 0 0; !important">
         <div id="news-slider" class="slick-carousel">
             @foreach ($tags as $item)
        

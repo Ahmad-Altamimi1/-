@@ -442,10 +442,9 @@ $slicedArray=[];
     width: 140px;
 "></a>
                                             </div>
-                                        </div>
                                     </li>
-                                    </li>
-                                    <li>
+                                    {{-- </li>
+                                    <li> --}}
                                         <!-- Mobile Menu Button -->
                                         <div class="mobile-menu-toggle d-xl-none">
                                             <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
@@ -462,6 +461,8 @@ $slicedArray=[];
                                                 </svg>
                                             </a>
                                         </div>
+                                    </div>
+
                                     </li>
                                 </ul>
                             </div>
