@@ -1693,7 +1693,7 @@ grid-template-columns: 44% 51%;" >
 
 
                     <main style="    width: 100%;">
-                        <section class="has-dflex-center">
+                        <section class="">
                             <div class="lx-container-80">
                                 <div class="lx-row">
                                     <div class="lx-card carousel-container">
@@ -2008,7 +2008,7 @@ div#popup span#close-btn {
 </style>
 
 <div class="container">
-    <div class="row" style="    padding: 60px 0;
+    <div class="row" style="    padding: 60px 0;flex-direction: row-reverse;    
     ">
 
         <div class="col-md-4">
