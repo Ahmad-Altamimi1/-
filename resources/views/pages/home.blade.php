@@ -1518,19 +1518,21 @@ button {
     -webkit-transform: translateY(calc(100% - 42px));
   }
 }
+.left-right-section{
+     gap: 2px;
+display: grid;
+grid-template-columns: 44% 51%;
+}
 
 @media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
-  }
+    .left-right-section{
+        grid-template-columns: 1fr;
+
+    }
+    .grid-row{
+        grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(2,153px);
+    }
   .line-title {
     width: 250px;
   }
@@ -1564,6 +1566,7 @@ button {
 }
 .ltn__blog{
     padding:  0 8px ;
+    font-size: 14px;
 }
 .ltn__blog-area  .container{
     position: relative;
@@ -1638,6 +1641,12 @@ height: 100%;
         background: #d63384 !important;
         border-radius: 39px !important;
     }
+    @media (max-width:767px){
+        .ltn__blog{
+            font-size:10px;
+            line-height: 1.8;
+        }
+    }
     .tag_name{
         position: absolute;
         top: 20px;
@@ -1654,7 +1663,7 @@ height: 100%;
         border: 1px solid #666666 !important;
         margin-right: 10px;
         border-radius: 6px !important;
-        color: #666666; 
+        color: #666666 ; 
 
     }
     .bottom_content .nav-tabs .nav-link.active{
@@ -1734,9 +1743,7 @@ height: 100%;
                     data-tag-title="أعتني بطفلكِ" id="care" type="button">أعتني بطفلكِ  </button>
             </li>
         </ul>
-<div class="grid" style="    gap: 2px;
-display: grid;
-grid-template-columns: 44% 51%;" >
+<div class="grid left-right-section"  >
 <div class="row grid-row left-half"  dir="rtl">
 
 </div>

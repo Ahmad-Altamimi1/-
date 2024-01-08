@@ -12,7 +12,7 @@
 
                 </ul>
             </div>
-            <h3 class="ltn__blog" ><a href="{{ route('ShoWarticle',['id'=>$post->id]) }} " style="font-size: 14px;padding-right:10px">{{ ($post->TITLE) }}</a></h3>
+            <h3 class="ltn__blog" ><a href="{{ route('ShoWarticle',['id'=>$post->id]) }} " style="padding-right:10px">{{ ($post->TITLE) }}</a></h3>
         </div>
     </div>
 </div>
