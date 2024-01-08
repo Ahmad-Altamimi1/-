@@ -2050,7 +2050,7 @@ div#popup span#close-btn {
                     
                 
             <div class="blog-container" style=" " >  
-            @foreach($item->posts->take(2) as $news)
+            @foreach($item->posts->take(3) as $news)
                 <article>
                     <figure>
                         <div class="date-and-time">
