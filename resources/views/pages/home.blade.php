@@ -2049,7 +2049,7 @@ div#popup span#close-btn {
             
            
         </div>
-    </div>
+    
 
             <div class="col-md-8">
         <div id="news-slider" class="slick-carousel">
