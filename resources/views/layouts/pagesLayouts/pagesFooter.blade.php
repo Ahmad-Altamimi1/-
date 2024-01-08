@@ -105,7 +105,7 @@ footer {
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row" style="    justify-content: center;">
                                 <div class="col-4 col-md-2">
                                     <i class="fa-solid fa-circle-info fa-2xl" aria-hidden="true"></i>
                                     <a href="#">
