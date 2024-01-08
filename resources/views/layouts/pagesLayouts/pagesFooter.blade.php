@@ -99,7 +99,8 @@ footer {
                         </div>
                         <div style="text-align: center;" class="col-sm-6">
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-sm-12" style="DISPLAY: FLEX;
+                                ALIGN-ITEMS: CENTER;">
                                     <p>جميع المعلومات الواردة في الموقع هي
                                         لغايات المعرفة والثقافة الصحية ولا تغني عن استشارة المختصين</p>
                                 </div>
@@ -139,21 +140,21 @@ footer {
                             </div>
 
 
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <p>&copy;
-                                        <script>
-                                            document.write(new Date().getFullYear());
-                                        </script> كافة الحقوق محفوظة | تم تصميمه من
-                                        قبل <a href="https://doroobgroup.com/" target="_blank">دروب
-                                            السلام</a>
-                                    </p>
-                                </div>
-                            </div>
-
+              
 
 
                         </div>
+                        <div class="row">
+                          <div class="col-sm-2">
+                              <p>&copy;
+                                  <script>
+                                      document.write(new Date().getFullYear());
+                                  </script> كافة الحقوق محفوظة | تم تصميمه من
+                                  قبل <a href="https://doroobgroup.com/" target="_blank">دروب
+                                      السلام</a>
+                              </p>
+                          </div>
+                      </div>
 
                     </div>
                 </div>
