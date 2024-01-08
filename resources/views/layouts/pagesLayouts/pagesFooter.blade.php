@@ -147,7 +147,7 @@ footer {
                       </div>
                     </div>
                         <div class="row">
-                          <div class="col-sm-2">
+                          <div class="col-sm-12" style="text-align: center">
                               <p>&copy;
                                   <script>
                                       document.write(new Date().getFullYear());
