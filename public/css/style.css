@@ -6,13 +6,7 @@
  */
 
 
-footer{
-    margin-top: 45px;
-    border-top: 1px solid;
-    border-radius: 6px;
-    padding-top: 35px;
 
-}
 .ltn__widget-title{
 
     border-radius: 8px;
@@ -13277,9 +13271,7 @@ font-size: 22PX !important;
 /*=================================================================*/
 /*                      FOOTER
 /*=================================================================*/
-footer {
-    margin-top: 61px;
-}
+
 
 footer .footer-inner {
   border-top: solid 1px #EBEBEB;
