@@ -1703,6 +1703,13 @@ height: 100%;
     .col-lg-12{
         padding: 0 !important;
     }
+    .slider_Title{
+        color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    }
 
 </style>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -1811,9 +1818,7 @@ height: 100%;
                                             <div class="image"><img src="{{ asset($video->IMG) }}" /></div>
                                             <div class="text is-text-centered">
 
-                                                <p style=" 
-}
-                                                "
+                                                <p class="slider_Title"
                                                 >
   <a href="/tags/{{ $video->tag->id }}/show"
     class="category-badge rounded lg">{{ $video->tag->TITLE }}</a>
