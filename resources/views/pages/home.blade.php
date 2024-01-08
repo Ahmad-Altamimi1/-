@@ -1774,8 +1774,12 @@ grid-template-columns: 44% 51%;" >
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 .blog-container {
-	display: grid;
+	display: grid !important;
 	grid-template-columns: repeat(1, 1fr);
+}
+.blog-container2 {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr) !important;
 }
 
 * {
@@ -2051,7 +2055,7 @@ div#popup span#close-btn {
                 @if ( count($item->posts) > 3) 
                     
                 
-            <div class="blog-container" style=" " >  
+            <div class="blog-container blog-container2" style=" " >  
             @foreach($item->posts->take(4) as $news)
 
 
