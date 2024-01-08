@@ -2012,10 +2012,17 @@ div#popup span#close-btn {
     ">
 
         <div class="col-md-4">
+            @php
+             $x=0;   
+            @endphp
               @foreach ($tags->take(2) as $item)
-       
-                @if ( count($item->posts) > 3) 
-                    
+            @if ($x > 1)
+                @break
+            @endif
+                @if ( count($item->posts) > 1) 
+                @php
+                $x++;   
+               @endphp
                 
             <div class="blog-container " style=" " >  
             @foreach($item->posts->take(1) as $news)
