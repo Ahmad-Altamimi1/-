@@ -1134,7 +1134,7 @@ a.category-badge.position-absolute{
                     <div class="post-tabs rounded bordered" dir="ltr">
                         <!-- tab navs -->
                         <ul class="nav nav-tabs nav-pills nav-fill month_group autoplay" id="postsTab" role="tablist"
-                            style="flex-direction: row-reverse;">
+                            dir="rtl">
 
                              <li class="nav-item" role="presentation"><button aria-selected="true"
                                     class="nav-link active" data-tag-title="الشهر الأول" id="tag1"
@@ -1599,11 +1599,12 @@ grid-template-columns: 44% 51%;
         margin-top: 60px;
     }
     li.tow-butoon:last-of-type{
-    position: absolute;
-    top: 410px;
+        position: absolute;
+    top: 390px;
     z-index: 10;
-    left: 50%;
-    transform: translateX(-37%);
+    left: 12%;
+    z-index: 10;
+    transform: translateX(-50%);
 }
 button#care {
     position: absolute;
