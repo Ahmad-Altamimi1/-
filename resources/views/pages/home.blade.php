@@ -1089,6 +1089,12 @@ border: 2px solid #d54368;
     .center_content{
         grid-template-columns: 1fr;
     }
+    .injaby_category{
+        margin-top: 20px;
+    }
+}
+a.category-badge.position-absolute{
+    background: #d54368;
 }
 </style>
 <div class="center_content container pt-60" dir="rtl">
@@ -1186,7 +1192,7 @@ border: 2px solid #d54368;
         font-size: 25px;
         padding: 0 0 30px 0;">أقسام إنجابي </p>
         <div class="row" style="justify-content: center">
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
     <a href="{{ route('showtag',['tag'=>13]) }}">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnancy_10217205.png') }}" alt="">
@@ -1194,37 +1200,37 @@ border: 2px solid #d54368;
 </a>
     <p>أشهر الحمل</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/video_2306737.png') }}" alt="">
 </div>
     <p>إنجابي TV</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/fetus_8041564.png') }}" alt="">
 </div>
     <p>صحة الطفل</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/maternity_7901883.png') }}" alt="">
 </div>
     <p>صحتك ماما</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/pregnant_6205006.png') }}" alt="">
 </div>
     <p>منوعات إنجابي</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/maternity_4577177.png') }}" alt="">
 </div>
     <p>اعتني بنفسك</p>
 </div>
-<div class="col-sm-3 card_circle_image">
+<div class="col-3 card_circle_image">
 <div class="circle_image">
     <img class="" src="{{ asset('pages/img/category/love_7409875.png') }}" alt="">
 </div>
