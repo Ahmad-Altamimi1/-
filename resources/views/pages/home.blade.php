@@ -470,7 +470,7 @@ article {
   }
    @media screen and (max-width: 768px) {
        .blog-slider__img {
-        transform: translateY(-92%%);
+        transform: translateY(-92%);
         width: 48%;
         height: 164px;
       }
