@@ -1694,6 +1694,9 @@ height: 100%;
         border-radius: 6px !important;
         border: 1px solid #d54368 !important;
     }
+    .col-lg-12{
+        padding: 0 !important;
+    }
 
 </style>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
