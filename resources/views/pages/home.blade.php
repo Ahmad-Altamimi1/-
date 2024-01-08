@@ -1070,6 +1070,8 @@ use App\Models\poststags;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
 }
 .circle_image:hover{
 scale: 1.1;
