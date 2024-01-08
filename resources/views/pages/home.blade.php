@@ -1709,6 +1709,13 @@ height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;    
+    font-size: 24px;
+    }
+    @media (max-width:767px){
+        .slider_Title{
+            font-size: 16px;
+   
+    }
     }
 
 </style>
