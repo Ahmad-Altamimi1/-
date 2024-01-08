@@ -1654,6 +1654,7 @@ height: 100%;
         border: 1px solid #666666 !important;
         margin-right: 10px;
         border-radius: 6px !important;
+        color: #666666; 
 
     }
     .bottom_content .nav-tabs .nav-link.active{
