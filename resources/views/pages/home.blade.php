@@ -1784,7 +1784,7 @@ grid-template-columns: 44% 51%;" >
 	grid-template-columns: repeat(2, 1fr) !important;
     column-gap:5px;
 }
-.blog-container2 .slick-prev,.blog-container2 .slick-next{
+#news-slider .slick-prev,#news-slider .slick-next{
     padding: 30px 16px;
     border-radius: 0 !important;
 }
